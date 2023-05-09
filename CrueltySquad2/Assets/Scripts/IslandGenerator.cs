@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class IslandGenerator : MonoBehaviour
 {
     public bool regenTerrain;
-    public IslandGenerator islandBottom;
     Mesh mesh;
 
     Vector3 offsetPosition;
@@ -16,13 +15,14 @@ public class IslandGenerator : MonoBehaviour
     [Range(25, 250)] public int zSize;
     [Range(0, 99999)] public int seed;
 
-    [Range(1, 10)] public int octaves;
+    [Range(5, 15)] public int octaves;
     [Range(1, 10)] public float frequencyMultiplier;
     [Range(0.1f, 1)] public float amplitudeMultiplier;
-    [Range(1, 10)] public float heightMultiplier;
+    [Range(1, 50)] public float heightMultiplier;
     [Range(12.5f, 125)] public float center;
-    [Range(0.01f, 0.1f)] public float fallOff;
+    [Range(0.001f, 0.01f)] public float fallOff;
     public float bottomVertHeight;
+    public float extraNoice;
     float fallOffX;
     float fallOffZ;
     float fallOffXZ;
@@ -48,11 +48,6 @@ public class IslandGenerator : MonoBehaviour
         GetComponent<MeshFilter>().mesh = mesh;
         CreateShape();
         UpdateMesh();
-
-        if (islandBottom != null)
-        {
-            islandBottom.StartGenerating(seed);
-        }
     }
 
     // Update is called once per frame
@@ -93,6 +88,7 @@ public class IslandGenerator : MonoBehaviour
                 {
                     y = bottomVertHeight;
                 }
+                y += bottomVertHeight + Random.Range(-extraNoice, extraNoice);
                 vertices[i] = new Vector3(x, y, z);
                 i++;
             }
