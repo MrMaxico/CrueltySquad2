@@ -13,6 +13,7 @@ public class IslandGenerator : MonoBehaviour
 
     [Range(25, 250)] public int xSize = 250;
     [Range(25, 250)] public int zSize = 250;
+    [Range(50, 125)] public int islandRadius = 75;
     [Range(0, 99999)] public int seed;
 
     [Range(5, 15)] public int octaves = 10;
@@ -34,12 +35,14 @@ public class IslandGenerator : MonoBehaviour
     public Texture2D texture;
     public float minHeight = 0f;
     public float maxHeight = 1f;
-    public float greenThreshold = 0.3f;
-    public float whiteThreshold = 1f;
+    public float sandThreshold = 0.735f;
+    public float greenThreshold = 0.785f;
+    public float whiteThreshold = 0.95f;
 
     public Color greenColor = Color.green;
     public Color grayColor = Color.gray;
     public Color whiteColor = Color.white;
+    public Color sandColor = new Color(0.85f, 0.75f, 0.4f);
 
     // Start is called before the first frame update
     public void Start()
@@ -54,15 +57,6 @@ public class IslandGenerator : MonoBehaviour
         }
     }
 
-    public void StartGenerating(int n_seed)
-    {
-        seed = n_seed;
-        mesh = new Mesh();
-        GetComponent<MeshFilter>().mesh = mesh;
-        CreateShape();
-        UpdateMesh();
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -71,6 +65,15 @@ public class IslandGenerator : MonoBehaviour
             regenTerrain = false;
             StartGenerating(Random.Range(0, 99999));
         }
+    }
+
+    public void StartGenerating(int n_seed)
+    {
+        seed = n_seed;
+        mesh = new Mesh();
+        GetComponent<MeshFilter>().mesh = mesh;
+        CreateShape();
+        UpdateMesh();
     }
 
     //generates a random terrain using a seed
@@ -97,9 +100,13 @@ public class IslandGenerator : MonoBehaviour
                     freq *= frequencyMultiplier;
                 }
                 float y = noieHeight;
-                if (y < bottomVertHeight)
+                if (y < bottomVertHeight && !IsBeach(x, z))
                 {
                     y = bottomVertHeight - (Mathf.PerlinNoise((x * .03f * lowGroundFrequencyMultiplier) + seed, (z * .03f * lowGroundFrequencyMultiplier) + seed) * lowGroundHeightMultiplier);
+                }
+                else if (y < bottomVertHeight)
+                {
+                    y = bottomVertHeight - (DistanceFromCenter(x, z) - islandRadius) - (Mathf.PerlinNoise((x * .03f * lowGroundFrequencyMultiplier) + seed, (z * .03f * lowGroundFrequencyMultiplier) + seed) * lowGroundHeightMultiplier);
                 }
                 y += bottomVertHeight + Random.Range(-extraNoice, extraNoice);
                 vertices[i] = new Vector3(x, y, z);
@@ -162,9 +169,13 @@ public class IslandGenerator : MonoBehaviour
 
             // Set the pixel color based on the height
             Color pixelColor;
-            if (normalizedHeight < greenThreshold)
+            if (normalizedHeight < greenThreshold && normalizedHeight >= sandThreshold)
             {
                 pixelColor = greenColor;
+            }
+            else if (normalizedHeight < sandThreshold)
+            {
+                pixelColor = sandColor;
             }
             else if (normalizedHeight >= whiteThreshold)
             {
@@ -197,5 +208,22 @@ public class IslandGenerator : MonoBehaviour
         // Assign the material to the mesh renderer
         MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
         meshRenderer.material = material;
+    }
+
+    bool IsBeach(float n_x, float n_z)
+    {
+        if (DistanceFromCenter(n_x, n_z) > islandRadius)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    float DistanceFromCenter(float n_x, float n_z)
+    {
+        return Vector3.Distance(new Vector3(n_x, 0, n_z), new Vector3(center, 0, center));
     }
 }
