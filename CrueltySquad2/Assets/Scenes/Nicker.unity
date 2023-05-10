@@ -379,15 +379,26 @@ MonoBehaviour:
   regenTerrain: 0
   xSize: 250
   zSize: 250
-  seed: 16115
+  seed: 41803
   octaves: 10
   frequencyMultiplier: 2
+  lowGroundFrequencyMultiplier: 1
   amplitudeMultiplier: 0.3
-  heightMultiplier: 20
+  heightMultiplier: 120
+  lowGroundHeightMultiplier: 10
   center: 125
-  fallOff: 0.0011
-  bottomVertHeight: 0
+  fallOff: 0.004
+  bottomVertHeight: 80
   extraNoice: 0.3
+  meshFilter: {fileID: 1309648549}
+  texture: {fileID: 0}
+  minHeight: 0
+  maxHeight: 205
+  greenThreshold: 0.785
+  whiteThreshold: 0.95
+  greenColor: {r: 0, g: 0.5471698, b: 0, a: 1}
+  grayColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  whiteColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1309648551
 Transform:
   m_ObjectHideFlags: 0
@@ -422,8 +433,7 @@ MeshRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 8bdec0d4dcd6dd3448c2ecc97e4a6f81, type: 2}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

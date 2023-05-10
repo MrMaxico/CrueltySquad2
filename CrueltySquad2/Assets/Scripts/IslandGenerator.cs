@@ -11,22 +11,35 @@ public class IslandGenerator : MonoBehaviour
     Vector3 offsetPosition;
     Vector3[] vertices;
 
-    [Range(25, 250)] public int xSize;
-    [Range(25, 250)] public int zSize;
+    [Range(25, 250)] public int xSize = 250;
+    [Range(25, 250)] public int zSize = 250;
     [Range(0, 99999)] public int seed;
 
-    [Range(5, 15)] public int octaves;
-    [Range(1, 10)] public float frequencyMultiplier;
-    [Range(0.1f, 1)] public float amplitudeMultiplier;
-    [Range(1, 50)] public float heightMultiplier;
-    [Range(12.5f, 125)] public float center;
-    [Range(0.001f, 0.01f)] public float fallOff;
-    public float bottomVertHeight;
-    public float extraNoice;
+    [Range(5, 15)] public int octaves = 10;
+    [Range(1, 10)] public float frequencyMultiplier = 2;
+    [Range(1, 10)] public float lowGroundFrequencyMultiplier = 1;
+    [Range(0.1f, 1)] public float amplitudeMultiplier = 0.3f;
+    [Range(1, 250)] public float heightMultiplier = 120;
+    [Range(1, 10)] public float lowGroundHeightMultiplier = 10;
+    [Range(12.5f, 125)] public float center = 125;
+    [Range(0.001f, 0.01f)] public float fallOff = 0.004f;
+    [Range(0, 250)] public float bottomVertHeight = 80;
+    [Range(0.1f, 1)] public float extraNoice = 0.3f;
     float fallOffX;
     float fallOffZ;
     float fallOffXZ;
     int[] triangles;
+
+    public MeshFilter meshFilter;
+    public Texture2D texture;
+    public float minHeight = 0f;
+    public float maxHeight = 1f;
+    public float greenThreshold = 0.3f;
+    public float whiteThreshold = 1f;
+
+    public Color greenColor = Color.green;
+    public Color grayColor = Color.gray;
+    public Color whiteColor = Color.white;
 
     // Start is called before the first frame update
     public void Start()
@@ -86,7 +99,7 @@ public class IslandGenerator : MonoBehaviour
                 float y = noieHeight;
                 if (y < bottomVertHeight)
                 {
-                    y = bottomVertHeight;
+                    y = bottomVertHeight - (Mathf.PerlinNoise((x * .03f * lowGroundFrequencyMultiplier) + seed, (z * .03f * lowGroundFrequencyMultiplier) + seed) * lowGroundHeightMultiplier);
                 }
                 y += bottomVertHeight + Random.Range(-extraNoice, extraNoice);
                 vertices[i] = new Vector3(x, y, z);
@@ -125,5 +138,64 @@ public class IslandGenerator : MonoBehaviour
         mesh.RecalculateNormals();
 
         GetComponent<MeshCollider>().sharedMesh = mesh;
+
+        GenerateTexture();
+    }
+
+    void GenerateTexture()
+    {
+
+        mesh = meshFilter.mesh;
+        vertices = mesh.vertices;
+        int[] triangles = mesh.triangles;
+        Vector2[] uvs = new Vector2[vertices.Length];
+
+        int textureWidth = Mathf.RoundToInt(Mathf.Sqrt(vertices.Length));
+        int textureHeight = Mathf.RoundToInt(Mathf.Sqrt(vertices.Length));
+        texture = new Texture2D(textureWidth, textureHeight);
+        texture.filterMode = FilterMode.Point;
+
+        for (int i = 0; i < vertices.Length; i++)
+        {
+            float height = vertices[i].y;
+            float normalizedHeight = Mathf.InverseLerp(minHeight, maxHeight, height);
+
+            // Set the pixel color based on the height
+            Color pixelColor;
+            if (normalizedHeight < greenThreshold)
+            {
+                pixelColor = greenColor;
+            }
+            else if (normalizedHeight >= whiteThreshold)
+            {
+                pixelColor = whiteColor;
+            }
+            else
+            {
+                pixelColor = grayColor;
+            }
+
+            int x = i % texture.width;
+            int y = i / texture.width;
+            texture.SetPixel(x, y, pixelColor);
+
+            // Calculate UV coordinates
+            uvs[i] = new Vector2((float)x / texture.width, (float)y / texture.height);
+        }
+
+        // Apply the changes to the texture
+        texture.Apply();
+
+        // Assign the UV coordinates to the mesh
+        mesh.uv = uvs;
+
+        // Create a new material with the generated texture
+        Material material = new Material(Shader.Find("Universal Render Pipeline/Lit"));
+        material.mainTexture = texture;
+        material.SetFloat("_Smoothness", 0);
+
+        // Assign the material to the mesh renderer
+        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+        meshRenderer.material = material;
     }
 }
