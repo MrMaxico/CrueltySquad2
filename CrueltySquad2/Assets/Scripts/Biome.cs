@@ -7,11 +7,14 @@ using UnityEngine;
 public class Biome : ScriptableObject
 {
     public string biomeName;
-    public Color color;
+    [Header("Terrain color will be a color between these two colors. It's important the RGBA values of ColorA are lower than the values of ColorB")]
+    public Color colorA;
+    public Color colorB;
 
-    public Biome(string n_name, Color n_color)
+    public Biome(string n_name, Color n_colorA, Color n_colorB)
     {
         name = n_name;
-        color = n_color;
+        colorA = n_colorA;
+        colorB = n_colorB;
     }
 }

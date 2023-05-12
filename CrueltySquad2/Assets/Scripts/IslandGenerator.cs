@@ -39,6 +39,8 @@ public class IslandGenerator : MonoBehaviour
     public float greenThreshold = 0.785f;
     public float whiteThreshold = 0.95f;
 
+    int colorSeed;
+
     public Biome lowerArea;
     public Biome higherArea;
     public Biome topArea;
@@ -73,6 +75,7 @@ public class IslandGenerator : MonoBehaviour
     public void StartGenerating(int n_seed)
     {
         seed = n_seed;
+        colorSeed = Random.Range(0, 99999);
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
         CreateShape();
@@ -175,19 +178,19 @@ public class IslandGenerator : MonoBehaviour
             Color pixelColor;
             if (normalizedHeight < greenThreshold && normalizedHeight >= sandThreshold)
             {
-                pixelColor = lowerArea.color;
+                pixelColor = TerrainColor(new Vector2(vertices[i].x, vertices[i].z), lowerArea);
             }
             else if (normalizedHeight < sandThreshold)
             {
-                pixelColor = bottomArea.color;
+                pixelColor = TerrainColor(new Vector2(vertices[i].x, vertices[i].z), bottomArea);
             }
             else if (normalizedHeight >= whiteThreshold)
             {
-                pixelColor = topArea.color;
+                pixelColor = TerrainColor(new Vector2(vertices[i].x, vertices[i].z), topArea);
             }
             else
             {
-                pixelColor = higherArea.color;
+                pixelColor = TerrainColor(new Vector2(vertices[i].x, vertices[i].z), higherArea);
             }
 
             int x = i % texture.width;
@@ -262,13 +265,37 @@ public class IslandGenerator : MonoBehaviour
     {
         for (int i = 0; i < n_allowedBiomes.Count; i++)
         {
-            Debug.Log($"Looking for {n_allowedBiomes[i].color}");
-            Debug.Log($"{Mathf.RoundToInt(n_position.x)} {Mathf.RoundToInt(n_position.z)}");
-            if (n_allowedBiomes[i].color == texture.GetPixel(Mathf.RoundToInt(n_position.x), Mathf.RoundToInt(n_position.z)))
+            bool rValid = false;
+            bool gValid = false;
+            bool bValid = false;
+            Color pixelColor = texture.GetPixel(Mathf.RoundToInt(n_position.x), Mathf.RoundToInt(n_position.z));
+            Color allowedBiomeColorA = n_allowedBiomes[i].colorA;
+            Color allowedBiomeColorB = n_allowedBiomes[i].colorB;
+            if (pixelColor.r >= allowedBiomeColorA.r && pixelColor.r <= allowedBiomeColorB.r)
+            {
+                rValid = true;
+            }
+
+            if (pixelColor.g >= allowedBiomeColorA.g && pixelColor.g <= allowedBiomeColorB.g)
+            {
+                gValid = true;
+            }
+
+            if (pixelColor.b >= allowedBiomeColorA.b && pixelColor.b <= allowedBiomeColorB.b)
+            {
+                bValid = true;
+            }
+
+            if (rValid && gValid && bValid)
             {
                 return true;
             }
         }
         return false;
+    }
+
+    Color TerrainColor(Vector2 n_texturePosition, Biome n_biome)
+    {
+        return Color.Lerp(n_biome.colorA, n_biome.colorB, Mathf.PerlinNoise((n_texturePosition.x * .01f * lowGroundFrequencyMultiplier) + colorSeed, (n_texturePosition.y * .01f * lowGroundFrequencyMultiplier) + colorSeed));
     }
 }
