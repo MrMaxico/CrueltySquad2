@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9411e39b001651c41abff753c0011848, type: 3}
+  m_Name: LittleRocks_1
+  m_EditorClassIdentifier: 
+  structurePrefab: {fileID: 7531167887758586563, guid: c43b9094b55f4634995bf2ece8c998a1,
+    type: 3}
+  minimalInstances: 20
+  maximalInstances: 50
+  allowedBiomes:
+  - {fileID: 11400000, guid: 6eda92a647189534d99701a503fe656c, type: 2}
+  - {fileID: 11400000, guid: 0a79697240e27434596175cb09d07cc8, type: 2}
