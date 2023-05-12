@@ -16,8 +16,8 @@ public class IslandGenerator : MonoBehaviour
     [Range(50, 125)] public int islandRadius = 75;
     [Range(0, 99999)] public int seed;
 
-    [Range(5, 15)] public int octaves = 10;
-    [Range(1, 10)] public float frequencyMultiplier = 2;
+    [Range(5, 15)] public int octaves = 15;
+    [Range(1, 10)] public float frequencyMultiplier = 1;
     [Range(1, 10)] public float lowGroundFrequencyMultiplier = 1;
     [Range(0.1f, 1)] public float amplitudeMultiplier = 0.3f;
     [Range(1, 250)] public float heightMultiplier = 120;
@@ -43,6 +43,8 @@ public class IslandGenerator : MonoBehaviour
     public Color grayColor = Color.gray;
     public Color whiteColor = Color.white;
     public Color sandColor = new Color(0.85f, 0.75f, 0.4f);
+
+    public List<Structure> structures;
 
     // Start is called before the first frame update
     public void Start()

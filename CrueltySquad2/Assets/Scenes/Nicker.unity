@@ -330,7 +330,7 @@ Transform:
   m_GameObject: {fileID: 464610351}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 125, y: 139, z: 125}
-  m_LocalScale: {x: 1000, y: 0.1, z: 1000}
+  m_LocalScale: {x: 10000, y: 0.1, z: 10000}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -478,15 +478,15 @@ MonoBehaviour:
   xSize: 250
   zSize: 250
   islandRadius: 100
-  seed: 41803
-  octaves: 10
-  frequencyMultiplier: 2
+  seed: 87839
+  octaves: 15
+  frequencyMultiplier: 1
   lowGroundFrequencyMultiplier: 1
   amplitudeMultiplier: 0.3
   heightMultiplier: 120
   lowGroundHeightMultiplier: 10
   center: 125
-  fallOff: 0.004
+  fallOff: 0.00498
   bottomVertHeight: 80
   extraNoice: 0.3
   meshFilter: {fileID: 1309648549}
