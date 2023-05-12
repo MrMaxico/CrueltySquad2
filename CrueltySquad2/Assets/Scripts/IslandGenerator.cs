@@ -39,12 +39,13 @@ public class IslandGenerator : MonoBehaviour
     public float greenThreshold = 0.785f;
     public float whiteThreshold = 0.95f;
 
-    public Color greenColor = Color.green;
-    public Color grayColor = Color.gray;
-    public Color whiteColor = Color.white;
-    public Color sandColor = new Color(0.85f, 0.75f, 0.4f);
+    public Biome lowerArea;
+    public Biome higherArea;
+    public Biome topArea;
+    public Biome bottomArea;
 
     public List<Structure> structures;
+    Vector3 invalidPosition;
 
     // Start is called before the first frame update
     public void Start()
@@ -149,6 +150,7 @@ public class IslandGenerator : MonoBehaviour
         GetComponent<MeshCollider>().sharedMesh = mesh;
 
         GenerateTexture();
+        SpawnStructures();
     }
 
     void GenerateTexture()
@@ -173,19 +175,19 @@ public class IslandGenerator : MonoBehaviour
             Color pixelColor;
             if (normalizedHeight < greenThreshold && normalizedHeight >= sandThreshold)
             {
-                pixelColor = greenColor;
+                pixelColor = lowerArea.color;
             }
             else if (normalizedHeight < sandThreshold)
             {
-                pixelColor = sandColor;
+                pixelColor = bottomArea.color;
             }
             else if (normalizedHeight >= whiteThreshold)
             {
-                pixelColor = whiteColor;
+                pixelColor = topArea.color;
             }
             else
             {
-                pixelColor = grayColor;
+                pixelColor = higherArea.color;
             }
 
             int x = i % texture.width;
@@ -212,6 +214,18 @@ public class IslandGenerator : MonoBehaviour
         meshRenderer.material = material;
     }
 
+    void SpawnStructures()
+    {
+        foreach (Structure n_structure in structures)
+        {
+            int n_spawnAmount = Random.Range(n_structure.minimalInstances, n_structure.maximalInstances);
+            for (int i = 0; i < n_spawnAmount; i++)
+            {
+                Instantiate(n_structure.structurePrefab, RandomPosition(n_structure.allowedBiomes), Quaternion.identity);
+            }
+        }
+    }
+
     bool IsBeach(float n_x, float n_z)
     {
         if (DistanceFromCenter(n_x, n_z) > islandRadius)
@@ -227,5 +241,34 @@ public class IslandGenerator : MonoBehaviour
     float DistanceFromCenter(float n_x, float n_z)
     {
         return Vector3.Distance(new Vector3(n_x, 0, n_z), new Vector3(center, 0, center));
+    }
+
+    Vector3 RandomPosition(List<Biome> n_allowedBiomes)
+    {
+        Vector3 n_inAirPos = new Vector3(Random.Range(center - islandRadius, center + islandRadius), 500, Random.Range(center - islandRadius, center + islandRadius));
+        if (Physics.Raycast(n_inAirPos, -Vector3.up, out RaycastHit hitpoint, 1000))
+        {
+            if (hitpoint.transform.gameObject.TryGetComponent<IslandGenerator>(out IslandGenerator n_island) && CheckValidBiome(n_inAirPos, n_allowedBiomes))
+            {
+                Debug.Log("Valid position found");
+                return hitpoint.point;
+            }
+        }
+        Debug.Log("Position resulted invalid, trying to find a new one");
+        return invalidPosition;
+    }
+
+    bool CheckValidBiome(Vector3 n_position, List<Biome> n_allowedBiomes)
+    {
+        for (int i = 0; i < n_allowedBiomes.Count; i++)
+        {
+            Debug.Log($"Looking for {n_allowedBiomes[i].color}");
+            Debug.Log($"{Mathf.RoundToInt(n_position.x)} {Mathf.RoundToInt(n_position.z)}");
+            if (n_allowedBiomes[i].color == texture.GetPixel(Mathf.RoundToInt(n_position.x), Mathf.RoundToInt(n_position.z)))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }
