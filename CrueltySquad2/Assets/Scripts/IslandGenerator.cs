@@ -8,7 +8,6 @@ public class IslandGenerator : MonoBehaviour
     public bool regenTerrain;
     Mesh mesh;
 
-    Vector3 offsetPosition;
     Vector3[] vertices;
 
     [Range(25, 250)] public int xSize = 250;
@@ -47,11 +46,13 @@ public class IslandGenerator : MonoBehaviour
     public Biome bottomArea;
 
     public List<Structure> structures;
+    public List<GameObject> spawnedStructures;
     Vector3 invalidPosition;
 
     // Start is called before the first frame update
     public void Start()
     {
+        //if a seed is already chosen it gets generated, otherwise it just picks a random seed
         if (seed != 0)
         {
             StartGenerating(seed);
@@ -65,9 +66,15 @@ public class IslandGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //when you trigger the bool in the inspector, a new terrain generates
         if (regenTerrain)
         {
             regenTerrain = false;
+            for (int i = spawnedStructures.Count - 1; i >= 0; i--)
+            {
+                Destroy(spawnedStructures[i]);
+                spawnedStructures.Remove(spawnedStructures[i]);
+            }
             StartGenerating(Random.Range(0, 99999));
         }
     }
@@ -224,7 +231,8 @@ public class IslandGenerator : MonoBehaviour
             int n_spawnAmount = Random.Range(n_structure.minimalInstances, n_structure.maximalInstances);
             for (int i = 0; i < n_spawnAmount; i++)
             {
-                Instantiate(n_structure.structurePrefab, RandomPosition(n_structure.allowedBiomes), Quaternion.identity);
+                StructureSpawnInfo n_spawnInfo = StructureSpawnData(n_structure.allowedBiomes);
+                spawnedStructures.Add(Instantiate(n_structure.structurePrefab, n_spawnInfo.position, n_spawnInfo.rotation));
             }
         }
     }
@@ -246,19 +254,27 @@ public class IslandGenerator : MonoBehaviour
         return Vector3.Distance(new Vector3(n_x, 0, n_z), new Vector3(center, 0, center));
     }
 
-    Vector3 RandomPosition(List<Biome> n_allowedBiomes)
+    StructureSpawnInfo StructureSpawnData(List<Biome> n_allowedBiomes)
     {
+        Vector3 n_postion = new Vector3();
+        Quaternion n_rotation = new Quaternion();
         Vector3 n_inAirPos = new Vector3(Random.Range(center - islandRadius, center + islandRadius), 500, Random.Range(center - islandRadius, center + islandRadius));
         if (Physics.Raycast(n_inAirPos, -Vector3.up, out RaycastHit hitpoint, 1000))
         {
             if (hitpoint.transform.gameObject.TryGetComponent<IslandGenerator>(out IslandGenerator n_island) && CheckValidBiome(n_inAirPos, n_allowedBiomes))
             {
                 Debug.Log("Valid position found");
-                return hitpoint.point;
+                n_postion = hitpoint.point;
+                n_rotation = Quaternion.FromToRotation(Vector3.up, hitpoint.normal);
+                n_rotation *= Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
+                return new StructureSpawnInfo(n_postion, n_rotation);
             }
         }
         Debug.Log("Position resulted invalid, trying to find a new one");
-        return invalidPosition;
+        n_postion = invalidPosition;
+        n_rotation = Quaternion.FromToRotation(Vector3.up, invalidPosition);
+        n_rotation *= Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
+        return new StructureSpawnInfo(n_postion, n_rotation);
     }
 
     bool CheckValidBiome(Vector3 n_position, List<Biome> n_allowedBiomes)
@@ -297,5 +313,17 @@ public class IslandGenerator : MonoBehaviour
     Color TerrainColor(Vector2 n_texturePosition, Biome n_biome)
     {
         return Color.Lerp(n_biome.colorA, n_biome.colorB, Mathf.PerlinNoise((n_texturePosition.x * .01f * lowGroundFrequencyMultiplier) + colorSeed, (n_texturePosition.y * .01f * lowGroundFrequencyMultiplier) + colorSeed));
+    }
+}
+
+public class StructureSpawnInfo
+{
+    public Vector3 position;
+    public Quaternion rotation;
+
+    public StructureSpawnInfo(Vector3 n_position, Quaternion n_rotation)
+    {
+        position = n_position;
+        rotation = n_rotation;
     }
 }

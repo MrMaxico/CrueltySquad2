@@ -628,7 +628,7 @@ MonoBehaviour:
   xSize: 250
   zSize: 250
   islandRadius: 100
-  seed: 87839
+  seed: 94519
   octaves: 15
   frequencyMultiplier: 1
   lowGroundFrequencyMultiplier: 1
@@ -654,6 +654,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0e7b35ed2137bfd47829deae81796c1f, type: 2}
   - {fileID: 11400000, guid: 3cb31730024799c4d8636a0530cf9fa2, type: 2}
   - {fileID: 11400000, guid: 0ed190434b688424bac80ffd476ecac1, type: 2}
+  spawnedStructures: []
 --- !u!4 &1309648551
 Transform:
   m_ObjectHideFlags: 0
