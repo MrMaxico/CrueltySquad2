@@ -12,21 +12,35 @@ public class IslandGenerator : MonoBehaviour
     Vector3[] vertices;
 
     [Space(20)]
+    [Header("Generation values")]
+    [Tooltip("Set the length of the island")]
     [Range(25, 250)] public int xSize = 250;
+    [Tooltip("Set the width of the island")]
     [Range(25, 250)] public int zSize = 250;
+    [Tooltip("Set the radius of the island. The rest of the island will be a beach. This value should always be lower than half of the xSize and zSize")]
     [Range(50, 125)] public int islandRadius = 75;
+    [Tooltip("Set the seed for the generation")]
     [Range(0, 99999)] public int seed;
-
+    [Tooltip("Set the amount of layers of noise that will generate on top of each other")]
     [Range(5, 15)] public int octaves = 15;
+    [Tooltip("Set the frequency of noise")]
     [Range(1, 4)] public float frequencyMultiplier = 1;
+    [Tooltip("Set the frequency of noise in the lower area")]
     [Range(1, 4)] public float lowGroundFrequencyMultiplier = 1;
+    [Tooltip("Set the intensity of the noise")]
     [Range(0.1f, 1)] public float amplitudeMultiplier = 0.3f;
+    [Tooltip("Set the multiplier on the height of the noise")]
     [Range(1, 250)] public float heightMultiplier = 120;
+    [Tooltip("Set the multiplier on the height of the noise of the lower area")]
     [Range(1, 10)] public float lowGroundHeightMultiplier = 10;
+    [Tooltip("Set the center of the island. Most times, this should be half of xSize and zSize")]
     [Range(12.5f, 125)] public float center = 125;
+    [Tooltip("Set the falloff of the height on the edges of the island")]
     [Range(0.001f, 0.01f)] public float fallOff = 0.004f;
+    [Tooltip("Set height level of the lower area")]
     [Range(0, 250)] public float bottomVertHeight = 80;
-    [Range(0.1f, 1)] public float extraNoice = 0.3f;
+    [Tooltip("Set the extra noise for a triangle shaped terrain. 0 for smooth terrain")]
+    [Range(0, 1)] public float extraNoice = 0.1f;
     float fallOffX;
     float fallOffZ;
     float fallOffXZ;
