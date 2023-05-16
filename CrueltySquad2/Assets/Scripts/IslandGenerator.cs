@@ -5,19 +5,21 @@ using UnityEngine.AI;
 
 public class IslandGenerator : MonoBehaviour
 {
-    public bool regenTerrain;
-    Mesh mesh;
+    [Tooltip("Trigger this bool to regenerate the terrain")]
+    [SerializeField] bool regenTerrain;
 
+    Mesh mesh;
     Vector3[] vertices;
 
+    [Space(20)]
     [Range(25, 250)] public int xSize = 250;
     [Range(25, 250)] public int zSize = 250;
     [Range(50, 125)] public int islandRadius = 75;
     [Range(0, 99999)] public int seed;
 
     [Range(5, 15)] public int octaves = 15;
-    [Range(1, 10)] public float frequencyMultiplier = 1;
-    [Range(1, 10)] public float lowGroundFrequencyMultiplier = 1;
+    [Range(1, 4)] public float frequencyMultiplier = 1;
+    [Range(1, 4)] public float lowGroundFrequencyMultiplier = 1;
     [Range(0.1f, 1)] public float amplitudeMultiplier = 0.3f;
     [Range(1, 250)] public float heightMultiplier = 120;
     [Range(1, 10)] public float lowGroundHeightMultiplier = 10;
@@ -231,14 +233,19 @@ public class IslandGenerator : MonoBehaviour
             int n_spawnAmount = Random.Range(n_structure.minimalInstances, n_structure.maximalInstances);
             for (int i = 0; i < n_spawnAmount; i++)
             {
-                StructureSpawnInfo n_spawnInfo = StructureSpawnData(n_structure.allowedBiomes);
+                StructureSpawnInfo n_spawnInfo = StructureSpawnData(n_structure);
                 GameObject spawnedStructure = Instantiate(n_structure.structurePrefab, n_spawnInfo.position, n_spawnInfo.rotation);
                 while (spawnedStructure.transform.position == invalidPosition)
                 {
                     Debug.Log("Position resulted invalid, trying to find a new one");
-                    n_spawnInfo = StructureSpawnData(n_structure.allowedBiomes);
+                    n_spawnInfo = StructureSpawnData(n_structure);
                     spawnedStructure.transform.position = n_spawnInfo.position;
                     spawnedStructure.transform.rotation = n_spawnInfo.rotation;
+                }
+                if (n_structure.variableSize)
+                {
+                    float n_scale = Random.Range(n_structure.minSize, n_structure.maxSize);
+                    spawnedStructure.transform.localScale = new Vector3(n_scale, n_scale, n_scale);
                 }
                 spawnedStructures.Add(spawnedStructure);
             }
@@ -262,19 +269,26 @@ public class IslandGenerator : MonoBehaviour
         return Vector3.Distance(new Vector3(n_x, 0, n_z), new Vector3(center, 0, center));
     }
 
-    StructureSpawnInfo StructureSpawnData(List<Biome> n_allowedBiomes)
+    StructureSpawnInfo StructureSpawnData(Structure n_structure)
     {
         Vector3 n_postion = new Vector3();
         Quaternion n_rotation = new Quaternion();
         Vector3 n_inAirPos = new Vector3(Random.Range(center - islandRadius, center + islandRadius), 500, Random.Range(center - islandRadius, center + islandRadius));
         if (Physics.Raycast(n_inAirPos, -Vector3.up, out RaycastHit hitpoint, 1000))
         {
-            if (hitpoint.transform.gameObject.TryGetComponent<IslandGenerator>(out IslandGenerator n_island) && CheckValidBiome(n_inAirPos, n_allowedBiomes))
+            if (hitpoint.transform.gameObject.TryGetComponent<IslandGenerator>(out IslandGenerator n_island) && CheckValidBiome(n_inAirPos, n_structure.allowedBiomes))
             {
                 Debug.Log("Valid position found");
                 n_postion = hitpoint.point;
-                n_rotation = Quaternion.FromToRotation(Vector3.up, hitpoint.normal);
-                n_rotation *= Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
+                if (!n_structure.ignoreSlopes)
+                {
+                    n_rotation = Quaternion.FromToRotation(Vector3.up, hitpoint.normal);
+                    n_rotation *= Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
+                }
+                else
+                {
+                    n_rotation = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
+                }
                 return new StructureSpawnInfo(n_postion, n_rotation);
             }
         }
