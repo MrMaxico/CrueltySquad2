@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour {
     [Header("changeable variables", order = 0)]
     public int speed;
+    public int sprintSpeed;
     public int jumpPower;
     public bool infJump;
     [Header("Debug variables", order = 1)]
@@ -45,9 +46,15 @@ public class PlayerController : MonoBehaviour {
         v = Input.GetAxis("Vertical");
         h = Input.GetAxis("Horizontal");
 
+        
+
         move.x = h;
         move.z = v;
-        transform.Translate(move * Time.deltaTime * speed);
+        if (Input.GetKey(KeyCode.LeftShift)) {
+            transform.Translate(move * Time.deltaTime * sprintSpeed);
+        } else {
+            transform.Translate(move * Time.deltaTime * speed);
+        }
 
         //Jump
         Vector3 jump = new Vector3();
