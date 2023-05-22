@@ -837,6 +837,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3879703686753168683}
+  - component: {fileID: 860659174135577010}
   - component: {fileID: -4348016331452478216}
   m_Layer: 0
   m_Name: flyEnemy
@@ -862,6 +863,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &860659174135577010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4511667148044793745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bcb282b6036a18429a357bd96ae023e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterAttack: {fileID: 0}
 --- !u!64 &-4348016331452478216
 MeshCollider:
   m_ObjectHideFlags: 0
