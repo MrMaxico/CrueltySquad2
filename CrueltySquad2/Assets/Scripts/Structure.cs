@@ -23,16 +23,6 @@ public class Structure : ScriptableObject
     [Space(20)]
     [Tooltip("Check this to ignore rotating to the slopes of the terrain at spawning")]
     public bool ignoreSlopes;
-
-    public Structure(GameObject n_structurePrefab, int n_minimalInstances, int n_maximalInstances, List<Biome> n_allowedBiomes, bool n_variableSize, float n_minSize, float n_maxSize, bool n_ignoreSlopes)
-    {
-        structurePrefab = n_structurePrefab;
-        minimalInstances = n_minimalInstances;
-        maximalInstances = n_maximalInstances;
-        allowedBiomes = n_allowedBiomes;
-        variableSize = n_variableSize;
-        minSize = n_minSize;
-        maxSize = n_maxSize;
-        ignoreSlopes = n_ignoreSlopes;
-    }
+    [Tooltip("Use this to spawn this structure higher above the ground")]
+    public float spawnAltitude;
 }

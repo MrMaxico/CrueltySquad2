@@ -271,7 +271,7 @@ public class IslandGenerator : MonoBehaviour
             for (int i = 0; i < n_spawnAmount; i++)
             {
                 StructureSpawnInfo n_spawnInfo = StructureSpawnData(n_structure);
-                GameObject spawnedStructure = Instantiate(n_structure.structurePrefab, n_spawnInfo.position, n_spawnInfo.rotation);
+                GameObject spawnedStructure = Instantiate(n_structure.structurePrefab, n_spawnInfo.position + new Vector3(0, n_structure.spawnAltitude, 0), n_spawnInfo.rotation);
                 while (spawnedStructure.transform.position == invalidPosition)
                 {
                     Debug.Log("Position resulted invalid, trying to find a new one");

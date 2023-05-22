@@ -412,12 +412,14 @@ MonoBehaviour:
   sandThreshold: 0.735
   greenThreshold: 0.785
   whiteThreshold: 0.95
+  maxGreenAreaThreshold: 0
   lowerArea: {fileID: 11400000, guid: 6eda92a647189534d99701a503fe656c, type: 2}
   higherArea: {fileID: 11400000, guid: 4dcb19931a3add44a89a96c0e2aab5e7, type: 2}
   topArea: {fileID: 11400000, guid: fd67e301d234960449400749d47cbdd0, type: 2}
   bottomArea: {fileID: 11400000, guid: 0a79697240e27434596175cb09d07cc8, type: 2}
   structures:
   - {fileID: 11400000, guid: 499d8a87fc4fa7c45a32fc4e1c994393, type: 2}
+  - {fileID: 11400000, guid: fcaf7d0da095e414aaa98e2ba492780f, type: 2}
   - {fileID: 11400000, guid: 0e7b35ed2137bfd47829deae81796c1f, type: 2}
   - {fileID: 11400000, guid: 3cb31730024799c4d8636a0530cf9fa2, type: 2}
   - {fileID: 11400000, guid: 0ed190434b688424bac80ffd476ecac1, type: 2}
