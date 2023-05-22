@@ -306,7 +306,7 @@ public class IslandGenerator : MonoBehaviour
         return Vector3.Distance(new Vector3(n_x, 0, n_z), new Vector3(center, 0, center));
     }
 
-    StructureSpawnInfo StructureSpawnData(Structure n_structure)
+    public StructureSpawnInfo StructureSpawnData(Structure n_structure)
     {
         Vector3 n_postion = new Vector3();
         Quaternion n_rotation = new Quaternion();

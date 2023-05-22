@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4075267945015694172}
   - component: {fileID: 8082758235316235901}
   - component: {fileID: 2824649604559676624}
+  - component: {fileID: 8300363695330607883}
+  - component: {fileID: 4521313816334640956}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -98,3 +100,36 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8300363695330607883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3670661320710848870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed48e50a31852734faaec2cbfb1ba473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthManager: {fileID: 4521313816334640956}
+  enemySpawns:
+  - {fileID: 11400000, guid: 83882dc9652b18a4493e3fd32ce3fc96, type: 2}
+  - {fileID: 11400000, guid: 12f0fb6b557dbab4da6cb126e358ec28, type: 2}
+  preperationTime: 10
+  spawnInterval: 1
+  onDeathEnemySpawnAmount: 100
+  generator: {fileID: 0}
+--- !u!114 &4521313816334640956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3670661320710848870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba15951d3b58eb2419c326b6c126c584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100

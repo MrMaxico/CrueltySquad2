@@ -4,15 +4,44 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] Health healthManager;
+    [Space(20)]
+    [SerializeField] EnemySpawn[] enemySpawns;
+    [SerializeField] float preperationTime;
+    bool preparing = true;
+    [SerializeField] float spawnInterval;
+    [SerializeField] int onDeathEnemySpawnAmount;
+
+    private void Start()
     {
-        
+        StartCoroutine(SpawnCycle());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator SpawnCycle()
     {
-        
+        if (preparing)
+        {
+            yield return new WaitForSeconds(preperationTime);
+            preparing = false;
+        }
+        Instantiate(RandomEnemySpawn().enemyPrefab, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(spawnInterval);
+        if (healthManager.IsAlive())
+        {
+            StartCoroutine(SpawnCycle());
+        }
+    }
+
+    EnemySpawn RandomEnemySpawn()
+    {
+        List<EnemySpawn> enemySpawnChanceList = new List<EnemySpawn>();
+        foreach (EnemySpawn enemySpawn in enemySpawns)
+        {
+            for (int i = 0; i < enemySpawn.spawnChance; i++)
+            {
+                enemySpawnChanceList.Add(enemySpawn);
+            }
+        }
+        return enemySpawnChanceList[Mathf.RoundToInt(Random.Range(0, enemySpawnChanceList.Count))];
     }
 }

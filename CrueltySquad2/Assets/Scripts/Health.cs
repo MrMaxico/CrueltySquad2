@@ -22,6 +22,18 @@ public class Health : MonoBehaviour
         return health;
     }
 
+    public bool IsAlive()
+    {
+        if (health > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     //damage the player
     public void Damage(float amount)
     {
