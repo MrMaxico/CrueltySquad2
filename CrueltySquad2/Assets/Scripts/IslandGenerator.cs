@@ -53,6 +53,7 @@ public class IslandGenerator : MonoBehaviour
     public float sandThreshold = 0.735f;
     public float greenThreshold = 0.785f;
     public float whiteThreshold = 0.95f;
+    public float maxGreenAreaThreshold;
 
     int colorSeed;
 
@@ -191,37 +192,59 @@ public class IslandGenerator : MonoBehaviour
         int textureHeight = Mathf.RoundToInt(Mathf.Sqrt(vertices.Length));
         texture = new Texture2D(textureWidth, textureHeight);
         texture.filterMode = FilterMode.Point;
-
+        // Find the maximum height among the vertices
+        float maxVertexHeight = float.MinValue;
         for (int i = 0; i < vertices.Length; i++)
         {
-            float height = vertices[i].y;
-            float normalizedHeight = Mathf.InverseLerp(minHeight, maxHeight, height);
+            maxVertexHeight = Mathf.Max(maxVertexHeight, vertices[i].y);
+        }
 
-            // Set the pixel color based on the height
+        // Assign colors based on vertex and triangle height
+        for (int i = 0; i < triangles.Length; i += 3)
+        {
+            int vertexIndex1 = triangles[i];
+            int vertexIndex2 = triangles[i + 1];
+            int vertexIndex3 = triangles[i + 2];
+
+            float height1 = vertices[vertexIndex1].y;
+            float height2 = vertices[vertexIndex2].y;
+            float height3 = vertices[vertexIndex3].y;
+
+            float averageHeight = (height1 + height2 + height3) / 3f;
+            float normalizedVertexHeight = Mathf.InverseLerp(minHeight, maxHeight, averageHeight);
+            float normalizedTriangleHeight = Mathf.InverseLerp(minHeight, maxHeight, Mathf.Max(height1, height2, height3));
+
+            // Set the pixel color based on the vertex and triangle heights
             Color pixelColor;
-            if (normalizedHeight < greenThreshold && normalizedHeight >= sandThreshold)
+            if (normalizedVertexHeight < sandThreshold)
             {
-                pixelColor = TerrainColor(new Vector2(vertices[i].x, vertices[i].z), lowerArea);
+                pixelColor = TerrainColor(vertices[vertexIndex1], bottomArea);
             }
-            else if (normalizedHeight < sandThreshold)
+            else if (normalizedVertexHeight < greenThreshold)
             {
-                pixelColor = TerrainColor(new Vector2(vertices[i].x, vertices[i].z), bottomArea);
+                // Calculate the interpolation factor between sand and green
+                pixelColor = TerrainColor(vertices[vertexIndex1], lowerArea);
             }
-            else if (normalizedHeight >= whiteThreshold)
+            else if (normalizedVertexHeight >= whiteThreshold)
             {
-                pixelColor = TerrainColor(new Vector2(vertices[i].x, vertices[i].z), topArea);
+                pixelColor = TerrainColor(vertices[vertexIndex1], topArea);
             }
             else
             {
-                pixelColor = TerrainColor(new Vector2(vertices[i].x, vertices[i].z), higherArea);
+                // Calculate the interpolation factor between green and gray
+                float t = Mathf.InverseLerp(greenThreshold - maxGreenAreaThreshold, whiteThreshold, normalizedVertexHeight);
+                pixelColor = Color.Lerp(TerrainColor(vertices[vertexIndex1], lowerArea), TerrainColor(vertices[vertexIndex1], higherArea), t);
             }
 
-            int x = i % texture.width;
-            int y = i / texture.width;
-            texture.SetPixel(x, y, pixelColor);
+            // Assign the pixel color to the vertices of the triangle
+            texture.SetPixel(vertexIndex1 % textureWidth, vertexIndex1 / textureWidth, pixelColor);
+            texture.SetPixel(vertexIndex2 % textureWidth, vertexIndex2 / textureWidth, pixelColor);
+            texture.SetPixel(vertexIndex3 % textureWidth, vertexIndex3 / textureWidth, pixelColor);
 
-            // Calculate UV coordinates
-            uvs[i] = new Vector2((float)x / texture.width, (float)y / texture.height);
+            // Assign UV coordinates to the vertices of the triangle
+            uvs[vertexIndex1] = new Vector2((float)(vertexIndex1 % textureWidth) / textureWidth, (float)(vertexIndex1 / textureWidth) / textureHeight);
+            uvs[vertexIndex2] = new Vector2((float)(vertexIndex2 % textureWidth) / textureWidth, (float)(vertexIndex2 / textureWidth) / textureHeight);
+            uvs[vertexIndex3] = new Vector2((float)(vertexIndex3 % textureWidth) / textureWidth, (float)(vertexIndex3 / textureWidth) / textureHeight);
         }
 
         // Apply the changes to the texture
