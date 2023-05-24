@@ -1370,8 +1370,8 @@ RectTransform:
   m_Father: {fileID: 1262864638}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.0000064074993}
-  m_AnchorMax: {x: 1, y: 0.6227039}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4083,7 +4083,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &965896817
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4173,21 +4173,20 @@ MonoBehaviour:
     Sit labore iusto aut molestias officiis ad quos internos sed quibusdam illum
     aut iure blanditiis.
 
-    
 
-    Quo autem molestiae sed natus expedita est
-    incidunt consequatur. In culpa esse ab itaque laboriosam non magni architecto?
-    Ut voluptatibus deserunt id dolor inventore rem dignissimos autem et tenetur
-    illum qui Quis voluptas.
 
-    
+    Quo autem molestiae sed natus expedita est incidunt
+    consequatur. In culpa esse ab itaque laboriosam non magni architecto? Ut voluptatibus
+    deserunt id dolor inventore rem dignissimos autem et tenetur illum qui Quis voluptas.
 
-    Ut officiis magni et consequatur facilis
-    rem voluptatum consequatur et dolor quae est pariatur expedita et error dolorum
-    non rerum iusto. Et adipisci accusantium ab ipsum dolor quo laudantium exercitationem
-    et obcaecati quasi est beatae earum. Et necessitatibus quod eum incidunt velit
-    et iure magnam est illum officiis 33 eligendi ducimus ut dolor harum quo exercitationem
-    illum?'
+
+
+    Ut
+    officiis magni et consequatur facilis rem voluptatum consequatur et dolor quae
+    est pariatur expedita et error dolorum non rerum iusto. Et adipisci accusantium
+    ab ipsum dolor quo laudantium exercitationem et obcaecati quasi est beatae earum.
+    Et necessitatibus quod eum incidunt velit et iure magnam est illum officiis 33
+    eligendi ducimus ut dolor harum quo exercitationem illum?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 430140faf981a264b8585120c41aa256, type: 2}
   m_sharedMaterial: {fileID: -6916542482865797197, guid: 430140faf981a264b8585120c41aa256,
@@ -4398,7 +4397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1086840513
 RectTransform:
   m_ObjectHideFlags: 0
