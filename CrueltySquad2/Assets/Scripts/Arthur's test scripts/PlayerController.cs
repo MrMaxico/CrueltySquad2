@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour {
     public int camSensitivity;
     public Transform cam;
     public Rigidbody rb;
+    public PickUpController pickUpController;
 
 
     // Update is called once per frame
@@ -83,6 +84,18 @@ public class PlayerController : MonoBehaviour {
 
 
         cam.localEulerAngles = new Vector3(cameraPitch, 0, 0);
+
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
+            pickUpController.secondaryHolder.gameObject.SetActive(false);
+            pickUpController.primaryholder.gameObject.SetActive(true);
+            pickUpController.holdingSecondary = false;
+            pickUpController.holdingPrimary = true;
+        } else if (Input.GetKeyDown(KeyCode.Alpha2)) {
+            pickUpController.primaryholder.gameObject.SetActive(false);
+            pickUpController.secondaryHolder.gameObject.SetActive(true);
+            pickUpController.holdingPrimary = false;
+            pickUpController.holdingSecondary = true;
+        }
     }
 
 

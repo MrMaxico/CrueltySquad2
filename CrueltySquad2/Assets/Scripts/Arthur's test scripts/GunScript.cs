@@ -1,0 +1,99 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GunScript : MonoBehaviour
+{
+    public Transform muzzle;
+    public float bulletSpeed = 20f;
+    public float fireRate = 0.2f;
+    public float bloom = 0.05f;
+    public float maxDistance = 100f;
+    public LayerMask hitLayers;
+    public GunData currentGunData;
+    private float nextFireTime;
+    private Vector3 originalRotation;
+    public PickUpController pickUpController;
+    public bool shot;
+    public bool reloading;
+    private void Start() {
+        originalRotation = transform.localRotation.eulerAngles;
+    }
+
+    private void Update() {
+        if(pickUpController.holdingSecondary && pickUpController.secondary != null) {
+            currentGunData = pickUpController.secondary.GetComponent<GunData>();
+        }else if(pickUpController.holdingPrimary && pickUpController.primary != null) {
+            currentGunData = pickUpController.primary.GetComponent<GunData>();
+        } else {
+            currentGunData = null;
+        }
+        if (currentGunData != null) {
+            if (Input.GetMouseButton(0) && Time.time >= nextFireTime && currentGunData.currentAmmo >= 0 && !reloading) {
+                nextFireTime = Time.time + currentGunData.fireRate;
+                if (currentGunData.gunType == GunType.Pistol && !shot) {
+                    Fire();
+                    shot = true;
+                } else if(currentGunData.gunType == GunType.Shotgun && !shot) {
+                    FireShotgun();
+                    shot = true;
+                } else if(currentGunData.gunType == GunType.Rifle) {
+                    Fire();
+                }
+            }else if(Input.GetMouseButton(0) && currentGunData.currentAmmo <= 0) {
+                StartCoroutine(Reload());
+            }
+            if (Input.GetKeyDown(KeyCode.R)) {
+                StartCoroutine(Reload());
+            }
+        }
+        if (Input.GetMouseButtonUp(0) && shot == true) {
+            shot = false;
+        }
+    }
+
+    private void Fire() {
+        currentGunData.currentAmmo -= 1;
+        // Add random rotation for bloom effect
+        Vector3 bloomRotation = Random.insideUnitCircle * currentGunData.bloom;
+        Quaternion rotation = Quaternion.Euler(originalRotation + bloomRotation);
+
+        // Raycast from muzzle position
+        Ray ray = new Ray(muzzle.position, muzzle.forward);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, maxDistance, hitLayers)) {
+            // Perform hit detection and damage logic here
+            Debug.Log("Hit: " + hit.collider.gameObject.name);
+        }
+
+        // Draw a debug line to visualize the raycast
+        Debug.DrawRay(ray.origin, ray.direction * maxDistance, Color.red, 0.1f);
+    }
+    private void FireShotgun() {
+        currentGunData.currentAmmo -= 1;
+        // Iterate over the number of shotgun pellets
+        for (int i = 0; i < currentGunData.shotgunPelletCount; i++) {
+            // Calculate a random direction for each pellet within the shotgun spread angle
+            Vector3 pelletDirection = Quaternion.Euler(Random.Range(-currentGunData.shotgunSpreadAngle, currentGunData.shotgunSpreadAngle), Random.Range(-currentGunData.shotgunSpreadAngle, currentGunData.shotgunSpreadAngle), 0f) * muzzle.forward;
+
+            // Raycast from muzzle position
+            Ray ray = new Ray(muzzle.position, pelletDirection);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, maxDistance, hitLayers)) {
+                // Perform hit detection and damage logic here
+                Debug.Log("Hit: " + hit.collider.gameObject.name);
+            }
+
+            // Draw a debug line to visualize the raycast
+            Debug.DrawRay(ray.origin, ray.direction * maxDistance, Color.red, 0.1f);
+        }
+    }
+    private IEnumerator Reload() {
+        reloading = true;
+        yield return new WaitForSeconds(currentGunData.reloadspeed);
+        currentGunData.currentAmmo = currentGunData.magSize;
+        reloading = false;
+    }
+}

@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PickUpController : MonoBehaviour {
-    public Transform primaryHolder;
+    public Transform primaryholder;
     public Transform primary;
-    public GameObject secondaryHolder;
+    public Transform secondaryHolder;
+    public Transform secondary;
+    public Transform holder;
     public float dropForwardForce;
     public float dropUpwardForce;
     public GameObject cam;
@@ -14,13 +16,19 @@ public class PickUpController : MonoBehaviour {
     public bool holdingSecondary;
     public bool pickUpDelay;
 
-
+    private void Start() {
+        holdingPrimary = true;
+        holdingSecondary = false;
+    }
     // Update is called once per frame
     void Update() {
         if (Input.GetKey(KeyCode.E)) {
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 1000)) {
-                if (hit.transform.CompareTag("Gun") && !pickUpDelay) {
-                    if (primary == null) {
+                if (hit.transform && !pickUpDelay && hit.transform.CompareTag("Gun")) {
+                    if (holdingPrimary && primary == null) {
+                        Debug.Log("Gun");
+                        PickUpGun(hit.transform);
+                    } else if (holdingSecondary && secondary == null){
                         Debug.Log("Gun");
                         PickUpGun(hit.transform);
                     } else {
@@ -31,14 +39,21 @@ public class PickUpController : MonoBehaviour {
                 }
             }
         }
+
     }
 
     void PickUpGun(Transform gunTransform) {
-        primary = gunTransform;
         Rigidbody gunRigidbody = gunTransform.GetComponent<Rigidbody>();
-        gunTransform.SetParent(primaryHolder);
-        gunTransform.position = primaryHolder.position;
-        gunTransform.rotation = primaryHolder.rotation;
+        if (holdingPrimary) {
+            holder = primaryholder;
+            primary = gunTransform;
+        } else if(holdingSecondary) {
+            holder = secondaryHolder;
+            secondary = gunTransform;
+        }
+        gunTransform.SetParent(holder);
+        gunTransform.position = holder.position;
+        gunTransform.rotation = holder.rotation;
         gunTransform.GetComponent<BoxCollider>().enabled = false;
         gunRigidbody.useGravity = false;
         gunRigidbody.freezeRotation = true;
@@ -47,9 +62,14 @@ public class PickUpController : MonoBehaviour {
         // Additional gun pickup logic if needed
     }
     void SwapGun(Transform gunTransform) {
-        Rigidbody gunRigidbody = primary.GetComponent<Rigidbody>();
+        if (holdingPrimary) {
+            holder = primaryholder;
+        } else if (holdingSecondary) {
+            holder = secondaryHolder;
+        }
+        Rigidbody gunRigidbody = holder.GetChild(0).GetComponent<Rigidbody>();
         //Set parent to null
-        primary.SetParent(null);
+        holder.GetChild(0).SetParent(null);
 
         //Make Rigidbody not kinematic and BoxCollider normal
         gunRigidbody.isKinematic = false;
@@ -64,7 +84,11 @@ public class PickUpController : MonoBehaviour {
         //Add random rotation
         float random = Random.Range(-1f, 1f);
         gunRigidbody.AddTorque(new Vector3(random, random, random) * 10);
-        primary.GetComponent<BoxCollider>().enabled = true;
+        if (holdingPrimary) {
+            primary.GetComponent<BoxCollider>().enabled = true;
+        } else {
+            secondary.GetComponent<BoxCollider>().enabled = true;
+        }
         StartCoroutine(PickUpDelay(gunTransform));
     }
     IEnumerator PickUpDelay(Transform gunTransform) {
