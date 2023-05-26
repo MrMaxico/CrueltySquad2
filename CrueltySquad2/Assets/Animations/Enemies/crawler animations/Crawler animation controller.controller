@@ -22,8 +22,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -8814048815895312637, guid: 424b6b59cb2a5344abf958a9bf843293,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: 546546e61996fb444aa82a6b36b6017f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -87,7 +86,7 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
+  - m_ConditionMode: 1
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
@@ -333,7 +332,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Crawler|CrawlerWalk
-  m_Speed: 1
+  m_Speed: 2.2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 5691305958713414844}
@@ -348,8 +347,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 2846427944427989784, guid: 424b6b59cb2a5344abf958a9bf843293,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: 7c3195bdfe7459f4aa06be194a6caa2e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -403,8 +401,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -7617519583078473465, guid: 424b6b59cb2a5344abf958a9bf843293,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: 822c101d20775874186ebde5ba9ee0b9, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -432,8 +429,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -2603695826403106554, guid: 424b6b59cb2a5344abf958a9bf843293,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: 368ebf8409aeb8941b123fcf0909f860, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
