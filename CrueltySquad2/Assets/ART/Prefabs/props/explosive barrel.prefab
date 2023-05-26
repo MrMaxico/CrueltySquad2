@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3394764805529105889}
   - component: {fileID: 1779901586382813764}
   - component: {fileID: 4564270980000681614}
+  - component: {fileID: 6900878043383727662}
   m_Layer: 0
   m_Name: explosive barrel
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6900878043383727662
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618685086161121115}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8691780276856062721, guid: 030f2e9155abbb547af9f61b6c2449b0, type: 3}
