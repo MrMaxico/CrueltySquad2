@@ -9,6 +9,9 @@ public class Structure : ScriptableObject
     [Tooltip("The prefab that generates")]
     public GameObject structurePrefab;
     [Space(20)]
+    [Tooltip("What type of structure is this?")]
+    public StructureType structureType;
+    [Space(20)]
     [Tooltip("The minimal amount of prefabs that needs to be spawned")]
     public int minimalInstances;
     [Tooltip("The maximal amount of prefabs that needs to be spawned")]
@@ -25,4 +28,11 @@ public class Structure : ScriptableObject
     public bool ignoreSlopes;
     [Tooltip("Use this to spawn this structure higher above the ground")]
     public float spawnAltitude;
+
+    public enum StructureType
+    {
+        enviroment,
+        spawner,
+        player
+    }
 }

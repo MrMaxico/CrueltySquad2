@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   structurePrefab: {fileID: 3670661320710848870, guid: dd556558fc5e7b2498249c3e289ae060,
     type: 3}
-  minimalInstances: 3
-  maximalInstances: 3
+  structureType: 1
+  minimalInstances: 1
+  maximalInstances: 1
   allowedBiomes:
   - {fileID: 11400000, guid: 6eda92a647189534d99701a503fe656c, type: 2}
   variableSize: 0
   minSize: 0
   maxSize: 0
   ignoreSlopes: 1
+  spawnAltitude: 0

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class IslandGenerator : MonoBehaviour
 {
@@ -178,6 +177,7 @@ public class IslandGenerator : MonoBehaviour
 
         GenerateTexture();
         SpawnStructures();
+
     }
 
     void GenerateTexture()
@@ -284,6 +284,10 @@ public class IslandGenerator : MonoBehaviour
                     float n_scale = Random.Range(n_structure.minSize, n_structure.maxSize);
                     spawnedStructure.transform.localScale = new Vector3(n_scale, n_scale, n_scale);
                 }
+                if (n_structure.structureType == Structure.StructureType.spawner)
+                {
+                    spawnedStructure.GetComponent<Spawner>().generator = this;
+                }
                 spawnedStructures.Add(spawnedStructure);
             }
         }
@@ -371,6 +375,11 @@ public class IslandGenerator : MonoBehaviour
     Color TerrainColor(Vector2 n_texturePosition, Biome n_biome)
     {
         return Color.Lerp(n_biome.colorA, n_biome.colorB, Mathf.PerlinNoise((n_texturePosition.x * .01f * lowGroundFrequencyMultiplier) + colorSeed, (n_texturePosition.y * .01f * lowGroundFrequencyMultiplier) + colorSeed));
+    }
+
+    public Vector3[] GetVerts()
+    {
+        return vertices;
     }
 }
 

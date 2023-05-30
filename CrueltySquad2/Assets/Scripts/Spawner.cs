@@ -11,6 +11,8 @@ public class Spawner : MonoBehaviour
     bool preparing = true;
     [SerializeField] float spawnInterval;
     [SerializeField] int onDeathEnemySpawnAmount;
+    [Space(20)]
+    public IslandGenerator generator;
 
     private void Start()
     {
@@ -24,7 +26,8 @@ public class Spawner : MonoBehaviour
             yield return new WaitForSeconds(preperationTime);
             preparing = false;
         }
-        Instantiate(RandomEnemySpawn().enemyPrefab, transform.position, Quaternion.identity);
+        GameObject spawnedEnemy = Instantiate(RandomEnemySpawn().enemyPrefab, transform.position, Quaternion.identity);
+        spawnedEnemy.GetComponent<Enemy>().generator = generator;
         yield return new WaitForSeconds(spawnInterval);
         if (healthManager.IsAlive())
         {

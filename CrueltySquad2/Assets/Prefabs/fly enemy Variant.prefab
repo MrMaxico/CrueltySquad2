@@ -505,7 +505,7 @@ PrefabInstance:
     - target: {fileID: 4511667148044793745, guid: 7f43446b440dcaf4ca0ecc5688c7926a,
         type: 3}
       propertyPath: m_Name
-      value: fly enemy
+      value: fly enemy Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4652377860538407927, guid: 7f43446b440dcaf4ca0ecc5688c7926a,
         type: 3}
@@ -918,6 +918,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &-7102326830257469145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012534499939443947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fccfb354b2db77d4abe4c49b412d26f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: 0
+  generator: {fileID: 0}
+  player: {fileID: 0}
+  neighbors: 
+--- !u!114 &-552270707450609433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012534499939443947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac1ede1fe925c884d9e7f2dcf34725ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6850512783793337537 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8034560864536471483, guid: 7f43446b440dcaf4ca0ecc5688c7926a,

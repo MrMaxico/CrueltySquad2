@@ -16,12 +16,13 @@ public class Health : MonoBehaviour
         }
     }
 
-    //return the current amount of health
+    //returns the current amount of health
     public float GetHealth()
     {
         return health;
     }
 
+    //this bool can be used to quickly check if the entity is alive
     public bool IsAlive()
     {
         if (health > 0)
