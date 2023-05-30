@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
     public Transform cam;
     public Rigidbody rb;
     public PickUpController pickUpController;
+    public GunScript gunScript;
 
 
     // Update is called once per frame
@@ -85,12 +86,12 @@ public class PlayerController : MonoBehaviour {
 
         cam.localEulerAngles = new Vector3(cameraPitch, 0, 0);
 
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {
+        if (Input.GetKeyDown(KeyCode.Alpha1) && !gunScript.reloading) {
             pickUpController.secondaryHolder.gameObject.SetActive(false);
             pickUpController.primaryholder.gameObject.SetActive(true);
             pickUpController.holdingSecondary = false;
             pickUpController.holdingPrimary = true;
-        } else if (Input.GetKeyDown(KeyCode.Alpha2)) {
+        } else if (Input.GetKeyDown(KeyCode.Alpha2) && !gunScript.reloading) {
             pickUpController.primaryholder.gameObject.SetActive(false);
             pickUpController.secondaryHolder.gameObject.SetActive(true);
             pickUpController.holdingPrimary = false;

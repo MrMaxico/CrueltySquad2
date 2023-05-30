@@ -54,7 +54,7 @@ public class PickUpController : MonoBehaviour {
         gunTransform.SetParent(holder);
         gunTransform.position = holder.position;
         gunTransform.rotation = holder.rotation;
-        gunTransform.GetComponent<BoxCollider>().enabled = false;
+        gunTransform.GetComponent<MeshCollider>().enabled = false;
         gunRigidbody.useGravity = false;
         gunRigidbody.freezeRotation = true;
         gunRigidbody.isKinematic = true;
@@ -85,9 +85,9 @@ public class PickUpController : MonoBehaviour {
         float random = Random.Range(-1f, 1f);
         gunRigidbody.AddTorque(new Vector3(random, random, random) * 10);
         if (holdingPrimary) {
-            primary.GetComponent<BoxCollider>().enabled = true;
+            primary.GetComponent<MeshCollider>().enabled = true;
         } else {
-            secondary.GetComponent<BoxCollider>().enabled = true;
+            secondary.GetComponent<MeshCollider>().enabled = true;
         }
         StartCoroutine(PickUpDelay(gunTransform));
     }
