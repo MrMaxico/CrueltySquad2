@@ -3,15 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PickUpController : MonoBehaviour {
+    [Header("Holders for Guns", order = 0)]
     public Transform primaryholder;
     public Transform primary;
     public Transform secondaryHolder;
     public Transform secondary;
     public Transform holder;
+    [Header("Medkit Pickup Radius and variables", order = 1)]
+    public Transform medkitPickUpSphere;
+    public float medkitPickUpRadius;
+    public float medkitHealPercentage;
+    [Header("Drop variables", order = 2)]
     public float dropForwardForce;
     public float dropUpwardForce;
+    [Header("References", order = 3)]
     public GameObject cam;
     public RaycastHit hit;
+    public Health playerHealth;
+    [Header("Boolians", order = 4)]
     public bool holdingPrimary;
     public bool holdingSecondary;
     public bool pickUpDelay;
@@ -39,7 +48,20 @@ public class PickUpController : MonoBehaviour {
                 }
             }
         }
+        Collider[] colliders = Physics.OverlapSphere(medkitPickUpSphere.transform.position, medkitPickUpRadius);
+        foreach (Collider collider in colliders) {
 
+            if (collider.CompareTag("Medkit") && playerHealth.GetHealth() <= playerHealth.GetMaxHealth()) {
+                Debug.Log("healing");
+                playerHealth.Heal(playerHealth.GetMaxHealth() * medkitHealPercentage / 100);
+                Destroy(collider.gameObject);
+            }
+        }
+
+    }
+    private void OnDrawGizmosSelected() {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(medkitPickUpSphere.transform.position, medkitPickUpRadius);
     }
 
     void PickUpGun(Transform gunTransform) {

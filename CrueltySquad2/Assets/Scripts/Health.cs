@@ -27,6 +27,11 @@ public class Health : MonoBehaviour
         return health;
     }
 
+    //returns the current Maximum amount of health
+    public float GetMaxHealth() {
+        return maxHealth;
+    }
+
     //this bool can be used to quickly check if the entity is alive
     public bool IsAlive()
     {
