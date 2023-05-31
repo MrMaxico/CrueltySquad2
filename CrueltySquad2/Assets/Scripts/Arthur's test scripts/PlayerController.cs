@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
     [Header("Debug variables", order = 1)]
     public float cameraPitch = 0.0f;
     public bool canJump;
+    private Vector3 movement;
     [Header("Config variables", order = 2)]
     public int camSensitivity;
     public Transform cam;
@@ -41,17 +42,9 @@ public class PlayerController : MonoBehaviour {
         Vector3 rotateBody = new Vector3();
         Vector3 rotateCam = new Vector3();
 
-        float v = new float();
-        float h = new float();
+
         float j = new float();
 
-        v = Input.GetAxis("Vertical");
-        h = Input.GetAxis("Horizontal");
-
-        
-
-        move.x = h;
-        move.z = v;
         if (Input.GetKey(KeyCode.LeftShift)) {
             transform.Translate(move * Time.deltaTime * sprintSpeed);
         } else {
@@ -98,7 +91,27 @@ public class PlayerController : MonoBehaviour {
             pickUpController.holdingSecondary = true;
         }
     }
+    private void FixedUpdate()
+    {
+        //movement
+        movement.x = Input.GetAxis("Horizontal");
+        movement.z = Input.GetAxis("Vertical");
+        MovePlayer();
+    }
 
+    private void MovePlayer()
+    {
+        Vector3 moveVector = new Vector3();
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            moveVector = cam.transform.TransformDirection(movement) * sprintSpeed * Time.deltaTime;
+        }
+        else
+        {
+            moveVector = cam.transform.TransformDirection(movement) * speed * Time.deltaTime;
+        }
+        rb.velocity = new Vector3(moveVector.x, rb.velocity.y, moveVector.z);
+    }
 
 
 }

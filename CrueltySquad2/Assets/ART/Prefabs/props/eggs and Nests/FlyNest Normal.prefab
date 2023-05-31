@@ -192,6 +192,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6677913534082418745}
   - component: {fileID: 4455101577262758636}
+  - component: {fileID: 7397461631327375516}
+  - component: {fileID: 6303953448152420848}
   m_Layer: 0
   m_Name: FlyNest Normal
   m_TagString: Untagged
@@ -230,6 +232,37 @@ CapsuleCollider:
   m_Height: 1.03
   m_Direction: 1
   m_Center: {x: 0, y: 0.47, z: 0}
+--- !u!114 &7397461631327375516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6334143924725207683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed48e50a31852734faaec2cbfb1ba473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthManager: {fileID: 0}
+  enemySpawns: []
+  preperationTime: 10
+  spawnInterval: 4
+  onDeathEnemySpawnAmount: 10
+  generator: {fileID: 0}
+--- !u!114 &6303953448152420848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6334143924725207683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba15951d3b58eb2419c326b6c126c584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &6564729533878060128
 GameObject:
   m_ObjectHideFlags: 0

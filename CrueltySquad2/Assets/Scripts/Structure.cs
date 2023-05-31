@@ -28,6 +28,7 @@ public class Structure : ScriptableObject
     public bool ignoreSlopes;
     [Tooltip("Use this to spawn this structure higher above the ground")]
     public float spawnAltitude;
+    
 
     public enum StructureType
     {
