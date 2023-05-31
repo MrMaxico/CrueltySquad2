@@ -5,6 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] float health;
+    [SerializeField] float maxHealth;
 
     // Update is called once per frame
     private void Update()
@@ -13,6 +14,10 @@ public class Health : MonoBehaviour
         if (health < 0)
         {
             health = 0;
+        }
+        else if (health > maxHealth)
+        {
+            health = maxHealth;
         }
     }
 
@@ -45,5 +50,10 @@ public class Health : MonoBehaviour
     public void Heal(float amount)
     {
         health += amount;
+    }
+
+    public void SetMaxHealth(float max)
+    {
+        maxHealth = max;
     }
 }

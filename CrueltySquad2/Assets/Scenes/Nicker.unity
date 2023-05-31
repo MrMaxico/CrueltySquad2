@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 464610354}
   - component: {fileID: 464610353}
   - component: {fileID: 464610352}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,6 @@ GameObject:
   - component: {fileID: 1309648549}
   - component: {fileID: 1309648548}
   - component: {fileID: 1309648552}
-  - component: {fileID: 1309648554}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -425,9 +424,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3cb31730024799c4d8636a0530cf9fa2, type: 2}
   - {fileID: 11400000, guid: 0ed190434b688424bac80ffd476ecac1, type: 2}
   - {fileID: 11400000, guid: ef49a3c3676a2db40b545682b0fac132, type: 2}
-  - {fileID: 11400000, guid: 832c6436c663daf43b4ef39760888dde, type: 2}
-  - {fileID: 11400000, guid: 6702a546be5330c439f392bf2add9a01, type: 2}
   spawnedStructures: []
+  grid: {fileID: 1999619422}
 --- !u!4 &1309648551
 Transform:
   m_ObjectHideFlags: 0
@@ -484,20 +482,54 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1309648554
+--- !u!1 &1999619421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1999619423}
+  - component: {fileID: 1999619422}
+  m_Layer: 0
+  m_Name: Grid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1999619422
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309648547}
+  m_GameObject: {fileID: 1999619421}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa626c206457614eb4e609fb2bacea8, type: 3}
+  m_Script: {fileID: 11500000, guid: 276cf1ea996b89547b70191bced05e6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  generator: {fileID: 1309648550}
+  gridSize: {x: 0, y: 0}
   nodeSize: {x: 1, y: 1, z: 1}
+  calculateGridSizeBasedOnIslandFormat: 1
   unwalkable:
     serializedVersion: 2
     m_Bits: 128
-  generator: {fileID: 1309648550}
+--- !u!4 &1999619423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999619421}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 300, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

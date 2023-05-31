@@ -4,56 +4,84 @@ using UnityEngine;
 
 public class Grid : MonoBehaviour
 {
-    public Vector3 nodeSize;
-    public LayerMask unwalkable;
     public IslandGenerator generator;
+    public Vector2 gridSize;
+    public Vector3 nodeSize;
+    public bool calculateGridSizeBasedOnIslandFormat;
+    public Node[,] nodes;
+    public LayerMask unwalkable;
 
-    private void Start()
+    public void CreateGrid(IslandGenerator n_generator)
     {
-        generator = GetComponent<IslandGenerator>();
+        generator = n_generator;
+
+        if (calculateGridSizeBasedOnIslandFormat)
+        {
+            gridSize.x = generator.xSize / nodeSize.x;
+            gridSize.y = generator.zSize / nodeSize.z;
+        }
+
+        nodes = new Node[Mathf.RoundToInt(gridSize.x + 2), Mathf.RoundToInt(gridSize.y + 2)];
+
+        for (int i = 0; i < gridSize.x + 2; i++)
+        {
+            for (int j = 0; j < gridSize.y + 2; j++)
+            {
+                nodes[i, j] = new Node(new Vector3(i * nodeSize.x, transform.position.y, j * nodeSize.y), IsNodeWalkable(new Vector3(i * nodeSize.x, transform.position.y, j * nodeSize.y)));
+            }
+        }
+    }
+
+    public bool IsNodeWalkable(Vector3 n_position)
+    {
+        if (Physics.Raycast(n_position, -transform.up, out RaycastHit hit, 1000))
+        {
+            if (hit.point.y > (generator.bottomVertHeight + generator.extraNoice) * 2)
+            {
+                return false;
+            }
+            else
+            {
+                return !(Physics.CheckSphere(hit.point, nodeSize.x, unwalkable));
+            }
+        }
+        return false;
     }
 
     public void OnDrawGizmos()
     {
-        List<Field> fields = Fields(generator.GetVerts());
-        for (int i = 0; i < fields.Count; i++)
+        if (nodes == null)
         {
-            if (fields[i].walkable)
-            {
-                Gizmos.color = Color.white;
-            }
-            else
-            {
-                Gizmos.color = Color.red;
-            }
-            Gizmos.DrawCube(fields[i].position, nodeSize);
+            return;
         }
-    }
 
-    public List<Field> Fields(Vector3[] positions)
-    {
-        List<Field> fields = new List<Field>(capacity: positions.Length);
-        for (int i = 0; i < positions.Length; i++)
+        for (int i = 0; i < gridSize.x + 2; i++)
         {
-            fields.Add(new Field(positions[i], CheckIfFieldIsWalkable(positions[i])));
+            for (int j = 0; j < gridSize.y + 2; j++)
+            {
+                if (nodes[i, j].walkable)
+                {
+                    Gizmos.color = Color.white;
+                }
+                else
+                {
+                    Gizmos.color = Color.red;
+                }
+                Gizmos.DrawCube(nodes[i, j].position, nodeSize);
+            }
         }
-        return fields;
-    }
-
-    bool CheckIfFieldIsWalkable(Vector3 fieldPosition)
-    {
-        return !(Physics.CheckSphere(fieldPosition, nodeSize.x, unwalkable));
     }
 }
 
-public class Field 
+public class Node : ScriptableObject
 {
     public Vector3 position;
     public bool walkable;
+    List<Node> neighbours;
 
-    public Field(Vector3 n_pos, bool n_walk)
+    public Node(Vector3 n_position, bool n_walkable)
     {
-        position = n_pos;
-        walkable = n_walk;
+        position = n_position;
+        walkable = n_walkable;
     }
 }

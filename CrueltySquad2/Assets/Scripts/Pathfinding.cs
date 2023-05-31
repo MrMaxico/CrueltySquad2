@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pathfinding : MonoBehaviour
 {
-    public Grid grid;
+    public OldGrid grid;
     public IslandGenerator generator;
 
     public List<Vector3> FindPath(Vector3 start, Vector3 end)

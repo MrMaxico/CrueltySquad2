@@ -65,6 +65,8 @@ public class IslandGenerator : MonoBehaviour
     public List<GameObject> spawnedStructures;
     Vector3 invalidPosition;
 
+    public Grid grid;
+
     // Start is called before the first frame update
     public void Start()
     {
@@ -178,6 +180,7 @@ public class IslandGenerator : MonoBehaviour
         GenerateTexture();
         SpawnStructures();
 
+        grid.CreateGrid(this);
     }
 
     void GenerateTexture()
