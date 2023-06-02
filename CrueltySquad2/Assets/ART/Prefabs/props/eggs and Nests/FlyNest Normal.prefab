@@ -244,8 +244,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed48e50a31852734faaec2cbfb1ba473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthManager: {fileID: 0}
-  enemySpawns: []
+  healthManager: {fileID: 6303953448152420848}
+  enemySpawns:
+  - {fileID: 11400000, guid: 83882dc9652b18a4493e3fd32ce3fc96, type: 2}
   preperationTime: 10
   spawnInterval: 4
   onDeathEnemySpawnAmount: 10
@@ -263,6 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  maxHealth: 0
 --- !u!1 &6564729533878060128
 GameObject:
   m_ObjectHideFlags: 0
