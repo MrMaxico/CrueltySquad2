@@ -1,12 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
+
+public enum HealthType {
+    Enemy,
+    Player,
+    prop,
+    // Add more gun types as needed
+}
 public class Health : MonoBehaviour
 {
     [SerializeField] float health;
     [SerializeField] float maxHealth;
-
+    [SerializeField] float shield;
+    [SerializeField] float maxShield;
+    public GameObject healthBar;
+    public TextMeshProUGUI maxHealthText;
+    public HealthType healthType;
+    private void Start() {
+        if (healthType == HealthType.Player) {
+            updateHealthBar();
+            maxShield = maxHealth / 4;
+        }
+    }
     // Update is called once per frame
     private void Update()
     {
@@ -48,17 +67,37 @@ public class Health : MonoBehaviour
     //damage the player
     public void Damage(float amount)
     {
+        if (healthType == HealthType.Player && shield != 0) {
+            if(shield < amount) {
+                amount -= shield;
+                shield = 0;
+            }
+        }
         health -= amount;
+        if (healthType == HealthType.Player) {
+            updateHealthBar();
+        }
     }
 
     //Clean way to heal player instead of dealing negative damage
     public void Heal(float amount)
     {
         health += amount;
+        if (healthType == HealthType.Player) {
+            updateHealthBar();
+        }
     }
 
     public void SetMaxHealth(float max)
     {
         maxHealth = max;
+        if(healthType == HealthType.Player) {
+            updateHealthBar();
+        }
+    }
+    //Only for player:
+    public void updateHealthBar() {
+        healthBar.GetComponent<Slider>().value = health / maxHealth;
+        maxHealthText.text = health.ToString();
     }
 }
