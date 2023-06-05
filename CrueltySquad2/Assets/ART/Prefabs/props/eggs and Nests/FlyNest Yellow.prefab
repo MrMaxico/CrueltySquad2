@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2518738777859587936}
   - component: {fileID: 8514242557865548082}
+  - component: {fileID: 7285109809011929393}
   m_Layer: 0
   m_Name: FlyNest Yellow
   m_TagString: Untagged
@@ -80,6 +81,26 @@ CapsuleCollider:
   m_Height: 1.03
   m_Direction: 1
   m_Center: {x: 0, y: 0.47, z: 0}
+--- !u!95 &7285109809011929393
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3008276175633130970}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f73c5a7190a7cd4db09d2d4bacdab22, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &3117219254164124912
 GameObject:
   m_ObjectHideFlags: 0

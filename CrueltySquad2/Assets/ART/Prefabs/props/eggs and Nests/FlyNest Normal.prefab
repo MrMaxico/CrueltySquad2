@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 4455101577262758636}
   - component: {fileID: 7397461631327375516}
   - component: {fileID: 6303953448152420848}
+  - component: {fileID: 8105229620461105695}
   m_Layer: 0
   m_Name: FlyNest Normal
   m_TagString: Untagged
@@ -265,6 +266,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   maxHealth: 100
+--- !u!95 &8105229620461105695
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6334143924725207683}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f73c5a7190a7cd4db09d2d4bacdab22, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &6564729533878060128
 GameObject:
   m_ObjectHideFlags: 0
