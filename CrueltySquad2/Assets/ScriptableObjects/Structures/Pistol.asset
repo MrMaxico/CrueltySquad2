@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9411e39b001651c41abff753c0011848, type: 3}
+  m_Name: Pistol
+  m_EditorClassIdentifier: 
+  structurePrefab: {fileID: 3685379672084113396, guid: c88368ae1ee451246a2a7f5a93238568,
+    type: 3}
+  structureType: 0
+  minimalInstances: 10
+  maximalInstances: 10
+  allowedBiomes:
+  - {fileID: 11400000, guid: 6eda92a647189534d99701a503fe656c, type: 2}
+  variableSize: 0
+  minSize: 0
+  maxSize: 0
+  ignoreSlopes: 1
+  spawnAltitude: 1

@@ -220,9 +220,13 @@ MonoBehaviour:
   secondaryHolder: {fileID: 1152122061}
   secondary: {fileID: 0}
   holder: {fileID: 0}
+  medkitPickUpSphere: {fileID: 0}
+  medkitPickUpRadius: 0
+  medkitHealPercentage: 0
   dropForwardForce: 10
   dropUpwardForce: 10
   cam: {fileID: 3350939800970284990}
+  playerHealth: {fileID: 0}
   holdingPrimary: 1
   holdingSecondary: 0
   pickUpDelay: 0
