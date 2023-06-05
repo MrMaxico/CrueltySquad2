@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Health))]
 public class Enemy : MonoBehaviour
 {
     [SerializeField] EnemyTypes enemyType;
@@ -11,6 +12,8 @@ public class Enemy : MonoBehaviour
     [Space(20)]
     public float speed;
     [Space(20)]
+    public bool angry;
+    Vector3 idleDestination;
     public float followDistance;
     public List<Vector3> path;
     public float pathRefreshRate;
@@ -30,16 +33,39 @@ public class Enemy : MonoBehaviour
             return;
         }
 
-        if (path.Count > 0)
+        if (player != null && Vector3.Distance(transform.position, player.transform.position) < followDistance)
+        {
+            angry = true;
+        }
+        else if (player != null && Vector3.Distance(transform.position, player.transform.position) >= followDistance)
+        {
+            angry = false;
+        }
+
+        if (path.Count > 1)
         {
             transform.position = Vector3.MoveTowards(transform.position, path[1], speed * Time.deltaTime);
         }
+        else if (path.Count > 0)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, path[0], speed * Time.deltaTime);
+        }
+
+        //if (!angry && path.Count == 0)
+        //{
+        //    idleDestination = generator.grid.RandomNode().position;
+        //}
+
+        //if (!angry)
+        //{
+        //    path = generator.grid.FindPath(transform.position, idleDestination);
+        //}
     }
 
     private IEnumerator FindPath()
     {
         yield return new WaitForSeconds(pathRefreshRate);
-        if (player != null && Vector3.Distance(transform.position, player.transform.position) < followDistance)
+        if (angry)
         {
             path = generator.grid.FindPath(transform.position, player.transform.position);
         }

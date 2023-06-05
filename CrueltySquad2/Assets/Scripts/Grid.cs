@@ -139,7 +139,7 @@ public class Grid : MonoBehaviour
                 {
                     if (j >= 0 && j < gridSize.y + 1)
                     {
-                        if (nodes[i, j].walkable)
+                        if (nodes[i, j].walkable && nodes[i, j] != nodes[x_index, y_index])
                         {
                             returnList.Add(nodes[i, j]);
                         }
@@ -158,7 +158,7 @@ public class Grid : MonoBehaviour
 
         for (int i = 0; i <= gridSize.x + 1; i++)
         {
-            for (int j = 0; j <= gridSize.x + 1; j++)
+            for (int j = 0; j <= gridSize.y + 1; j++)
             {
                 if (Vector3.Distance(position, nodes[i, j].position) < distanceToCurrentClosest && nodes[i, j].walkable)
                 {
@@ -172,7 +172,28 @@ public class Grid : MonoBehaviour
 
     private float GetDistance(Node nodeA, Node nodeB)
     {
-        return Vector3.Distance(nodeA.position, nodeB.position);
+        Vector3 nodeApos = nodeA.position;
+        Vector3 nodeBpos = nodeB.position;
+        nodeApos.y = 0;
+        nodeBpos.y = 0;
+        return Vector3.Distance(nodeApos, nodeBpos);
+    }
+
+    public Node RandomNode()
+    {
+        List<Node> walkableNodes = new List<Node> { };
+        for (int i = 0; i <= gridSize.x + 1; i++)
+        {
+            for (int j = 0; j <= gridSize.y + 1; j++)
+            {
+                if (nodes[i, j].walkable)
+                {
+                    walkableNodes.Add(nodes[i, j]);
+                }
+            }
+        }
+
+        return walkableNodes[Random.Range(0, walkableNodes.Count - 1)];
     }
 
     //public void OnDrawGizmos()
