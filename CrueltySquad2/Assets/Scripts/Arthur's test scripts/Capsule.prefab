@@ -62,6 +62,37 @@ Transform:
   m_Father: {fileID: 3350939800970284989}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1922950897
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1922950898}
+  m_Layer: 0
+  m_Name: MedkitPickUpSphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1922950898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922950897}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.95, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3350939800944548647}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3350939800944548653
 GameObject:
   m_ObjectHideFlags: 0
@@ -77,6 +108,8 @@ GameObject:
   - component: {fileID: 3350939800944548651}
   - component: {fileID: 3350939800944548652}
   - component: {fileID: 1725525705}
+  - component: {fileID: 3350939801529218546}
+  - component: {fileID: 3350939801529218547}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Player
@@ -97,6 +130,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3350939800970284989}
+  - {fileID: 1922950898}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -220,12 +254,46 @@ MonoBehaviour:
   secondaryHolder: {fileID: 1152122061}
   secondary: {fileID: 0}
   holder: {fileID: 0}
+  medkitPickUpSphere: {fileID: 1922950898}
+  medkitPickUpRadius: 2
+  medkitHealPercentage: 30
   dropForwardForce: 10
   dropUpwardForce: 10
   cam: {fileID: 3350939800970284990}
+  playerHealth: {fileID: 3350939801529218546}
   holdingPrimary: 1
   holdingSecondary: 0
   pickUpDelay: 0
+--- !u!114 &3350939801529218546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3350939800944548653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba15951d3b58eb2419c326b6c126c584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  maxHealth: 100
+--- !u!114 &3350939801529218547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3350939800944548653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bff81e55d4ee7b147becdf638b79ccc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLevel: 1
+  playerExp: 0
+  playerMaxHealth: 100
+  healthcript: {fileID: 3350939801529218546}
 --- !u!1 &3350939800970284990
 GameObject:
   m_ObjectHideFlags: 0
