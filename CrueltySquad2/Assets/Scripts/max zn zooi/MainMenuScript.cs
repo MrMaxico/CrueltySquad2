@@ -58,6 +58,7 @@ public class MainMenuScript : MonoBehaviour
         Screen.fullScreen = isFullScreen;
     }
 
+
     //Graphics Quality//
 
     public void low(bool quality)
