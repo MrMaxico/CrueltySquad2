@@ -2044,8 +2044,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 120
   maxHealth: 180
+  shield: 0
+  maxShield: 0
   healthBar: {fileID: 916123118666419938}
-  maxHealthText: {fileID: 8759160864811122919}
+  maxHealthText: {fileID: 1177568749112799578}
   healthType: 1
 --- !u!114 &7101324643810257025
 MonoBehaviour:

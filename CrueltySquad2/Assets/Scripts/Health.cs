@@ -18,12 +18,14 @@ public class Health : MonoBehaviour
     [SerializeField] float shield;
     [SerializeField] float maxShield;
     public GameObject healthBar;
+    public GameObject shieldBar;
     public TextMeshProUGUI maxHealthText;
     public HealthType healthType;
     private void Start() {
         if (healthType == HealthType.Player) {
             updateHealthBar();
             maxShield = maxHealth / 4;
+            updateShieldBar();
         }
     }
     // Update is called once per frame
@@ -99,5 +101,9 @@ public class Health : MonoBehaviour
     public void updateHealthBar() {
         healthBar.GetComponent<Slider>().value = health / maxHealth;
         maxHealthText.text = health.ToString();
+    }
+    public void updateShieldBar() {
+        shieldBar.GetComponent<Slider>().value = shield / maxShield;
+        maxHealthText.text = shield.ToString();
     }
 }

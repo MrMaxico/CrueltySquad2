@@ -5,10 +5,6 @@ using UnityEngine;
 public class GunScript : MonoBehaviour
 {
     public Transform muzzle;
-    public float bulletSpeed = 20f;
-    public float fireRate = 0.2f;
-    public float bloom = 0.05f;
-    public float maxDistance = 100f;
     public LayerMask hitLayers;
     public GunData currentGunData;
     private float nextFireTime;
@@ -62,13 +58,13 @@ public class GunScript : MonoBehaviour
         Ray ray = new Ray(muzzle.position, muzzle.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, maxDistance, hitLayers)) {
+        if (Physics.Raycast(ray, out hit, currentGunData.range, hitLayers)) {
             // Perform hit detection and damage logic here
             Debug.Log("Hit: " + hit.collider.gameObject.name);
         }
 
         // Draw a debug line to visualize the raycast
-        Debug.DrawRay(ray.origin, ray.direction * maxDistance, Color.red, 0.1f);
+        Debug.DrawRay(ray.origin, ray.direction * currentGunData.range, Color.red, 0.1f);
     }
     private void FireShotgun() {
         currentGunData.currentAmmo -= 1;
@@ -81,13 +77,13 @@ public class GunScript : MonoBehaviour
             Ray ray = new Ray(muzzle.position, pelletDirection);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, maxDistance, hitLayers)) {
+            if (Physics.Raycast(ray, out hit, currentGunData.range, hitLayers)) {
                 // Perform hit detection and damage logic here
                 Debug.Log("Hit: " + hit.collider.gameObject.name);
             }
 
             // Draw a debug line to visualize the raycast
-            Debug.DrawRay(ray.origin, ray.direction * maxDistance, Color.red, 0.1f);
+            Debug.DrawRay(ray.origin, ray.direction * currentGunData.range, Color.red, 0.1f);
         }
     }
     private IEnumerator Reload() {
