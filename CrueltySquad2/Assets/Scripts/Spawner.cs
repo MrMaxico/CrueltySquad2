@@ -37,7 +37,7 @@ public class Spawner : MonoBehaviour
 
     EnemySpawn RandomEnemySpawn()
     {
-        List<EnemySpawn> enemySpawnChanceList = new List<EnemySpawn>();
+        List<EnemySpawn> enemySpawnChanceList = new();
         foreach (EnemySpawn enemySpawn in enemySpawns)
         {
             for (int i = 0; i < enemySpawn.spawnChance; i++)

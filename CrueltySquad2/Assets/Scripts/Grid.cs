@@ -47,8 +47,8 @@ public class Grid : MonoBehaviour
         Node startNode = GetClosestNode(startPosition);
         Node targetNode = GetClosestNode(targetPosition);
 
-        List<Node> openSet = new List<Node>();
-        HashSet<Node> closedSet = new HashSet<Node>();
+        List<Node> openSet = new();
+        HashSet<Node> closedSet = new();
         openSet.Add(startNode);
 
         while (openSet.Count > 0)
@@ -56,7 +56,7 @@ public class Grid : MonoBehaviour
             Node currentNode = openSet[0];
             for (int i = 1; i < openSet.Count; i++)
             {
-                if (openSet[i].fCost < currentNode.fCost || (openSet[i].fCost == currentNode.fCost && openSet[i].hCost < currentNode.hCost))
+                if (openSet[i].FCost < currentNode.FCost || (openSet[i].FCost == currentNode.FCost && openSet[i].hCost < currentNode.hCost))
                     currentNode = openSet[i];
             }
 
@@ -90,7 +90,7 @@ public class Grid : MonoBehaviour
 
     private List<Vector3> GeneratePath(Node startNode, Node targetNode)
     {
-        LinkedList<Vector3> path = new LinkedList<Vector3>();
+        LinkedList<Vector3> path = new();
         Node currentNode = targetNode;
 
         while (currentNode != startNode)
@@ -129,7 +129,7 @@ public class Grid : MonoBehaviour
 
     public List<Node> GetNeighbours(Node[,] nodes, int x_index, int y_index)
     {
-        List<Node> returnList = new List<Node> { };
+        List<Node> returnList = new() { };
 
         for (int i = x_index - 1; i <= x_index + 1; i++)
         {
@@ -154,7 +154,7 @@ public class Grid : MonoBehaviour
     public Node GetClosestNode(Vector3 position)
     {
         float distanceToCurrentClosest = 9999;
-        Vector2 index = new Vector2(0,0);
+        Vector2 index = new(0,0);
 
         for (int i = 0; i <= gridSize.x + 1; i++)
         {
@@ -181,7 +181,7 @@ public class Grid : MonoBehaviour
 
     public Node RandomNode()
     {
-        List<Node> walkableNodes = new List<Node> { };
+        List<Node> walkableNodes = new() { };
         for (int i = 0; i <= gridSize.x + 1; i++)
         {
             for (int j = 0; j <= gridSize.y + 1; j++)
@@ -237,5 +237,5 @@ public class Node : ScriptableObject
         neighbors = new List<Node>();
     }
 
-    public float fCost => gCost + hCost;
+    public float FCost => gCost + hCost;
 }

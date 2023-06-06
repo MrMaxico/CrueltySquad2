@@ -938,6 +938,8 @@ MonoBehaviour:
   followDistance: 50
   path: []
   pathRefreshRate: 0.1
+  flyEnemyFlightHeight: 0.5
+  renderer: {fileID: 7875277404480983303}
 --- !u!114 &4602576331531273584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -952,6 +954,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   maxHealth: 50
+  shield: 0
+  maxShield: 0
+  healthBar: {fileID: 0}
+  maxHealthText: {fileID: 0}
+  healthType: 0
 --- !u!1 &6850512783793337537 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8034560864536471483, guid: 7f43446b440dcaf4ca0ecc5688c7926a,
@@ -1054,3 +1061,9 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!137 &7875277404480983303 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6763013070895334013, guid: 7f43446b440dcaf4ca0ecc5688c7926a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3499745087614980986}
+  m_PrefabAsset: {fileID: 0}

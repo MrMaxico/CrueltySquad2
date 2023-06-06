@@ -193,7 +193,7 @@ public class IslandGenerator : MonoBehaviour
 
         int textureWidth = Mathf.RoundToInt(Mathf.Sqrt(vertices.Length));
         int textureHeight = Mathf.RoundToInt(Mathf.Sqrt(vertices.Length));
-        texture = new Texture2D(textureWidth, textureHeight);
+        texture = new(textureWidth, textureHeight);
         texture.filterMode = FilterMode.Point;
         // Find the maximum height among the vertices
         float maxVertexHeight = float.MinValue;
@@ -215,7 +215,7 @@ public class IslandGenerator : MonoBehaviour
 
             float averageHeight = (height1 + height2 + height3) / 3f;
             float normalizedVertexHeight = Mathf.InverseLerp(minHeight, maxHeight, averageHeight);
-            float normalizedTriangleHeight = Mathf.InverseLerp(minHeight, maxHeight, Mathf.Max(height1, height2, height3));
+            //float normalizedTriangleHeight = Mathf.InverseLerp(minHeight, maxHeight, Mathf.Max(height1, height2, height3));
 
             // Set the pixel color based on the vertex and triangle heights
             Color pixelColor;
@@ -245,9 +245,9 @@ public class IslandGenerator : MonoBehaviour
             texture.SetPixel(vertexIndex3 % textureWidth, vertexIndex3 / textureWidth, pixelColor);
 
             // Assign UV coordinates to the vertices of the triangle
-            uvs[vertexIndex1] = new Vector2((float)(vertexIndex1 % textureWidth) / textureWidth, (float)(vertexIndex1 / textureWidth) / textureHeight);
-            uvs[vertexIndex2] = new Vector2((float)(vertexIndex2 % textureWidth) / textureWidth, (float)(vertexIndex2 / textureWidth) / textureHeight);
-            uvs[vertexIndex3] = new Vector2((float)(vertexIndex3 % textureWidth) / textureWidth, (float)(vertexIndex3 / textureWidth) / textureHeight);
+            uvs[vertexIndex1] = new((float)(vertexIndex1 % textureWidth) / textureWidth, (float)(vertexIndex1 / textureWidth) / textureHeight);
+            uvs[vertexIndex2] = new((float)(vertexIndex2 % textureWidth) / textureWidth, (float)(vertexIndex2 / textureWidth) / textureHeight);
+            uvs[vertexIndex3] = new((float)(vertexIndex3 % textureWidth) / textureWidth, (float)(vertexIndex3 / textureWidth) / textureHeight);
         }
 
         // Apply the changes to the texture
@@ -257,7 +257,7 @@ public class IslandGenerator : MonoBehaviour
         mesh.uv = uvs;
 
         // Create a new material with the generated texture
-        Material material = new Material(Shader.Find("Universal Render Pipeline/Lit"));
+        Material material = new(Shader.Find("Universal Render Pipeline/Lit"));
         material.mainTexture = texture;
         material.SetFloat("_Smoothness", 0);
 
@@ -279,8 +279,7 @@ public class IslandGenerator : MonoBehaviour
                 {
                     Debug.Log("Position resulted invalid, trying to find a new one");
                     n_spawnInfo = StructureSpawnData(n_structure);
-                    spawnedStructure.transform.position = n_spawnInfo.position;
-                    spawnedStructure.transform.rotation = n_spawnInfo.rotation;
+                    spawnedStructure.transform.SetLocalPositionAndRotation(n_spawnInfo.position, n_spawnInfo.rotation);
                 }
                 if (n_structure.variableSize)
                 {
@@ -315,9 +314,9 @@ public class IslandGenerator : MonoBehaviour
 
     public StructureSpawnInfo StructureSpawnData(Structure n_structure)
     {
-        Vector3 n_postion = new Vector3();
-        Quaternion n_rotation = new Quaternion();
-        Vector3 n_inAirPos = new Vector3(Random.Range(center - islandRadius, center + islandRadius), 500, Random.Range(center - islandRadius, center + islandRadius));
+        Vector3 n_postion = new();
+        Quaternion n_rotation = new();
+        Vector3 n_inAirPos = new(Random.Range(center - islandRadius, center + islandRadius), 500, Random.Range(center - islandRadius, center + islandRadius));
         if (Physics.Raycast(n_inAirPos, -Vector3.up, out RaycastHit hitpoint, 1000))
         {
             if (hitpoint.transform.gameObject.TryGetComponent<IslandGenerator>(out IslandGenerator n_island) && CheckValidBiome(n_inAirPos, n_structure.allowedBiomes))

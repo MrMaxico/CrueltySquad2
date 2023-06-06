@@ -17,6 +17,12 @@ public class Enemy : MonoBehaviour
     public float followDistance;
     public List<Vector3> path;
     public float pathRefreshRate;
+    [Space(20)]
+    [Tooltip("You only need this variable if the enemy is an fly enemy")]
+    [SerializeField] float flyEnemyFlightHeight;
+    [Space(20)]
+    public Renderer renderer;
+    bool activeIdle;
 
     private void Start()
     {
@@ -51,15 +57,19 @@ public class Enemy : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, path[0], speed * Time.deltaTime);
         }
 
-        //if (!angry && path.Count == 0)
-        //{
-        //    idleDestination = generator.grid.RandomNode().position;
-        //}
+        if (!angry && path.Count == 0)
+        {
+            idleDestination = generator.grid.RandomNode().position;
+        }
 
-        //if (!angry)
-        //{
-        //    path = generator.grid.FindPath(transform.position, idleDestination);
-        //}
+        if (renderer.isVisible && activeIdle == false)
+        {
+            activeIdle = true;
+        }
+        else if (!renderer.isVisible && activeIdle == true)
+        {
+            activeIdle = false;
+        }
     }
 
     private IEnumerator FindPath()
@@ -68,6 +78,34 @@ public class Enemy : MonoBehaviour
         if (angry)
         {
             path = generator.grid.FindPath(transform.position, player.transform.position);
+        }
+        else if (!angry && activeIdle)
+        {
+            path = generator.grid.FindPath(transform.position, idleDestination);
+        }
+
+        if (enemyType == EnemyTypes.flyEnemy)
+        {
+            float averageHeight = 0;
+            foreach (Vector3 waypoint in path)
+            {
+                averageHeight += waypoint.y;
+            }
+
+            averageHeight /= path.Count;
+
+            for (int i = 0; i < path.Count; i++)
+            {
+                if (path[i].y > averageHeight)
+                {
+                    averageHeight = path[i].y + (flyEnemyFlightHeight / 3);
+                }
+            }
+
+            for (int i = 0; i < path.Count; i++)
+            {
+                path[i] = new Vector3(path[i].x, averageHeight + flyEnemyFlightHeight, path[i].z);
+            }
         }
         StartCoroutine(FindPath());
     }
