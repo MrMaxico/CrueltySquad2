@@ -53,8 +53,7 @@ public class PickUpController : MonoBehaviour {
 
             if (collider.CompareTag("Medkit") && playerHealth.GetHealth() <= playerHealth.GetMaxHealth()) {
                 Debug.Log("healing");
-                //playerHealth.Heal(playerHealth.GetMaxHealth() * medkitHealPercentage / 100);
-                playerHealth.Damage(80);
+                playerHealth.Heal(playerHealth.GetMaxHealth() * medkitHealPercentage / 100);
                 Destroy(collider.gameObject);
             }
         }

@@ -42,9 +42,6 @@ public class PlayerController : MonoBehaviour {
         Vector3 rotateBody = new Vector3();
         Vector3 rotateCam = new Vector3();
 
-
-        float j = new float();
-
         if (Input.GetKey(KeyCode.LeftShift)) {
             transform.Translate(move * Time.deltaTime * sprintSpeed);
         } else {

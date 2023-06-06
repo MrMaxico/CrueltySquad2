@@ -17,14 +17,24 @@ public class Health : MonoBehaviour
     [SerializeField] float maxHealth;
     [SerializeField] float shield;
     [SerializeField] float maxShield;
-    public GameObject healthBar;
-    public GameObject shieldBar;
-    public TextMeshProUGUI maxHealthText;
+    [Header("Type of user", order = 0)]
     public HealthType healthType;
+    [Header("Health", order = 1)]
+    public GameObject healthBar;
+    public TextMeshProUGUI maxHealthText;
+    [Header("Shield (Only for player)", order = 2)]
+    public GameObject shieldBar;
+    public TextMeshProUGUI maxShieldText;
+    public float shieldRegenTime;
+    public float shieldRegenAmount;
+    public bool inCombat;
+    public float inCombatShieldRegenDelay;
+    public float timeOutOfCombat;
     private void Start() {
         if (healthType == HealthType.Player) {
             updateHealthBar();
             maxShield = maxHealth / 4;
+            shield = maxShield;
             updateShieldBar();
         }
     }
@@ -39,6 +49,15 @@ public class Health : MonoBehaviour
         else if (health > maxHealth)
         {
             health = maxHealth;
+        }
+        // Update the current time
+        timeOutOfCombat += Time.deltaTime;
+        
+        // Check if it's time to regenerate the shield
+        if (timeOutOfCombat >= shieldRegenTime && shield <= maxShield && inCombat == false) {
+            timeOutOfCombat = 0f; // Reset the timer
+            shield += shieldRegenAmount;
+            updateShieldBar();
         }
     }
 
@@ -73,11 +92,13 @@ public class Health : MonoBehaviour
             if(shield < amount) {
                 amount -= shield;
                 shield = 0;
+                updateShieldBar();
             }
         }
         health -= amount;
         if (healthType == HealthType.Player) {
             updateHealthBar();
+            StartCoroutine(InCombatShieldRegenDelay());
         }
     }
 
@@ -100,10 +121,26 @@ public class Health : MonoBehaviour
     //Only for player:
     public void updateHealthBar() {
         healthBar.GetComponent<Slider>().value = health / maxHealth;
-        maxHealthText.text = health.ToString();
+        maxHealthText.text = Mathf.Round(health).ToString();
     }
     public void updateShieldBar() {
         shieldBar.GetComponent<Slider>().value = shield / maxShield;
-        maxHealthText.text = shield.ToString();
+        maxShieldText.text = Mathf.Round(shield).ToString();
+    }
+
+    //returns the current amount of shield
+    public float GetShield() {
+        return shield;
+    }
+
+    //returns the current Maximum amount of shield
+    public float GetMaxShield() {
+        return maxShield;
+    }
+    private IEnumerator InCombatShieldRegenDelay() {
+        inCombat = true;
+        timeOutOfCombat = 0f;
+        yield return new WaitForSeconds(inCombatShieldRegenDelay);
+        inCombat = false;
     }
 }
