@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Profiling;
 
 [RequireComponent(typeof(Health))]
 public class Enemy : MonoBehaviour
@@ -17,6 +18,7 @@ public class Enemy : MonoBehaviour
     public float followDistance;
     public List<Vector3> path;
     public float pathRefreshRate;
+    float pathRefreshTimer;
     [Space(20)]
     [Tooltip("You only need this variable if the enemy is an fly enemy")]
     [SerializeField] float flyEnemyFlightHeight;
@@ -28,11 +30,19 @@ public class Enemy : MonoBehaviour
     {
         path = new List<Vector3> { };
 
-        StartCoroutine(FindPath());
+        FindPath();
     }
 
     private void Update()
     {
+        pathRefreshTimer += Time.deltaTime;
+
+        if (pathRefreshTimer > pathRefreshRate)
+        {
+            pathRefreshTimer = 0;
+            FindPath();
+        }
+
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player");
@@ -72,9 +82,9 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private IEnumerator FindPath()
+    private void FindPath()
     {
-        yield return new WaitForSeconds(pathRefreshRate);
+        Profiler.BeginSample($"Finding path");
         if (angry)
         {
             path = generator.grid.FindPath(transform.position, player.transform.position);
@@ -83,9 +93,11 @@ public class Enemy : MonoBehaviour
         {
             path = generator.grid.FindPath(transform.position, idleDestination);
         }
+        Profiler.EndSample();
 
         if (enemyType == EnemyTypes.flyEnemy)
         {
+            Profiler.BeginSample("Lifting path up in the air for flying enemies");
             float averageHeight = 0;
             foreach (Vector3 waypoint in path)
             {
@@ -104,10 +116,15 @@ public class Enemy : MonoBehaviour
 
             for (int i = 0; i < path.Count; i++)
             {
-                path[i] = new Vector3(path[i].x, averageHeight + flyEnemyFlightHeight, path[i].z);
+                //path[i] = new Vector3(path[i].x, averageHeight + flyEnemyFlightHeight, path[i].z);
+                Vector3 newWaypoint;
+                newWaypoint.x = path[i].x;
+                newWaypoint.y = averageHeight + flyEnemyFlightHeight;
+                newWaypoint.z = path[i].z;
+                path[i] = newWaypoint;
             }
+            Profiler.EndSample();
         }
-        StartCoroutine(FindPath());
     }
 
     public enum EnemyTypes

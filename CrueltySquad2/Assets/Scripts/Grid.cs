@@ -27,7 +27,15 @@ public class Grid : MonoBehaviour
         {
             for (int j = 0; j < gridSize.y + 2; j++)
             {
-                nodes[i, j] = new Node(new Vector3(i * nodeSize.x, FindHeight(new Vector3(i * nodeSize.x, transform.position.y, j * nodeSize.y)), j * nodeSize.y), IsNodeWalkable(new Vector3(i * nodeSize.x, transform.position.y, j * nodeSize.y)));
+                //nodes[i, j] = new Node(new Vector3(i * nodeSize.x, FindHeight(new Vector3(i * nodeSize.x, transform.position.y, j * nodeSize.y)), j * nodeSize.y), IsNodeWalkable(new Vector3(i * nodeSize.x, transform.position.y, j * nodeSize.y)));
+                Vector3 newPosition;
+                bool newWalkable;
+                newPosition.x = i * nodeSize.x;
+                newPosition.y = transform.position.y;
+                newPosition.z = j * nodeSize.y;
+                newWalkable = IsNodeWalkable(newPosition);
+                newPosition.y = FindHeight(newPosition);
+                nodes[i, j] = new(newPosition, newWalkable);
             }
         }
 
@@ -154,7 +162,9 @@ public class Grid : MonoBehaviour
     public Node GetClosestNode(Vector3 position)
     {
         float distanceToCurrentClosest = 9999;
-        Vector2 index = new(0,0);
+        Vector2 index;
+        index.x = 0;
+        index.y = 0;
 
         for (int i = 0; i <= gridSize.x + 1; i++)
         {
@@ -196,29 +206,29 @@ public class Grid : MonoBehaviour
         return walkableNodes[Random.Range(0, walkableNodes.Count - 1)];
     }
 
-    //public void OnDrawGizmos()
-    //{
-    //    if (nodes == null)
-    //    {
-    //        return;
-    //    }
+    public void OnDrawGizmos()
+    {
+        if (nodes == null)
+        {
+            return;
+        }
 
-    //    for (int i = 0; i < gridSize.x + 2; i++)
-    //    {
-    //        for (int j = 0; j < gridSize.y + 2; j++)
-    //        {
-    //            if (nodes[i, j].walkable)
-    //            {
-    //                Gizmos.color = Color.white;
-    //            }
-    //            else
-    //            {
-    //                Gizmos.color = Color.red;
-    //            }
-    //            Gizmos.DrawCube(nodes[i, j].position, nodeSize);
-    //        }
-    //    }
-    //}
+        for (int i = 0; i < gridSize.x + 2; i++)
+        {
+            for (int j = 0; j < gridSize.y + 2; j++)
+            {
+                if (nodes[i, j].walkable)
+                {
+                    Gizmos.color = Color.white;
+                }
+                else
+                {
+                    Gizmos.color = Color.red;
+                }
+                Gizmos.DrawCube(nodes[i, j].position, nodeSize);
+            }
+        }
+    }
 }
 
 public class Node : ScriptableObject
