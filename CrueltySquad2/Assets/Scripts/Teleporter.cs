@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Teleporter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int spawnersLeft;
+    bool open;
+
+    private void Update()
     {
-        
+        if (spawnersLeft < 1)
+        {
+            open = true;
+        }
+        else
+        {
+            open = false;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public IEnumerator Teleport()
     {
-        
+        //fancy animations
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        yield return null;
     }
 }

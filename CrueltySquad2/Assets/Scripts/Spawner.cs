@@ -16,7 +16,18 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
+        generator.Teleporter().GetComponent<Teleporter>().spawnersLeft += 1;
         StartCoroutine(SpawnCycle());
+    }
+
+    private void Update()
+    {
+        if (!healthManager.IsAlive())
+        {
+            generator.Teleporter().GetComponent<Teleporter>().spawnersLeft -= 1;
+            //add better looking death of spawner later
+            Destroy(this.gameObject);
+        }
     }
 
     IEnumerator SpawnCycle()
