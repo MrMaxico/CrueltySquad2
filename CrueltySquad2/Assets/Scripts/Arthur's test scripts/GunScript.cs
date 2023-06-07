@@ -46,6 +46,7 @@ public class GunScript : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && shot == true) {
             shot = false;
         }
+
     }
 
     private void Fire() {
@@ -80,10 +81,16 @@ public class GunScript : MonoBehaviour
             if (Physics.Raycast(ray, out hit, currentGunData.range, hitLayers)) {
                 // Perform hit detection and damage logic here
                 Debug.Log("Hit: " + hit.collider.gameObject.name);
+                DamageShotEnemy(hit);
             }
 
             // Draw a debug line to visualize the raycast
             Debug.DrawRay(ray.origin, ray.direction * currentGunData.range, Color.red, 0.1f);
+        }
+    }
+    public void DamageShotEnemy(RaycastHit hit) {
+        if (hit.transform.CompareTag("Enemy")) {
+            hit.transform.GetComponent<Health>().Damage(currentGunData.damagePerBullet);
         }
     }
     private IEnumerator Reload() {

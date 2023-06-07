@@ -8,6 +8,7 @@ public enum GunType {
 }
 
 public class GunData : MonoBehaviour {
+    public float damagePerBullet;
     public float magSize = 30f;
     public float currentAmmo = 30f;
     public float fireRate = 0.5f;

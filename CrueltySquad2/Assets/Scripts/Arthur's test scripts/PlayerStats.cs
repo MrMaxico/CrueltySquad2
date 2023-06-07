@@ -9,7 +9,6 @@ public class PlayerStats : MonoBehaviour
     public float playerMaxHealth;
     public Health healthcript;
     private float healthModifier;
-    private float shield;
 
     public void AddExp(float exp) {
         playerExp += exp;
