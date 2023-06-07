@@ -314,8 +314,8 @@ public class IslandGenerator : MonoBehaviour
 
     public StructureSpawnInfo StructureSpawnData(Structure n_structure)
     {
-        Vector3 n_postion = new();
-        Quaternion n_rotation = new();
+        Vector3 n_postion;
+        Quaternion n_rotation;
         Vector3 n_inAirPos = new(Random.Range(center - islandRadius, center + islandRadius), 500, Random.Range(center - islandRadius, center + islandRadius));
         if (Physics.Raycast(n_inAirPos, -Vector3.up, out RaycastHit hitpoint, 1000))
         {
@@ -335,10 +335,12 @@ public class IslandGenerator : MonoBehaviour
                 return new StructureSpawnInfo(n_postion, n_rotation);
             }
         }
-        n_postion = invalidPosition;
-        n_rotation = Quaternion.FromToRotation(Vector3.up, invalidPosition);
-        n_rotation *= Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
-        return new StructureSpawnInfo(n_postion, n_rotation);
+        Debug.Log("Returning invalid position");
+        //n_postion = invalidPosition;
+        //n_rotation = Quaternion.FromToRotation(Vector3.up, invalidPosition);
+        //n_rotation *= Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
+        //return new StructureSpawnInfo(n_postion, n_rotation);
+        return StructureSpawnData(n_structure);
     }
 
     bool CheckValidBiome(Vector3 n_position, List<Biome> n_allowedBiomes)
