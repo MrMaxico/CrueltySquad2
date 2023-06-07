@@ -9,18 +9,18 @@ public enum HealthType {
     Enemy,
     Player,
     prop,
-    // Add more gun types as needed
 }
 public class Health : MonoBehaviour
 {
     [SerializeField] float health;
     [SerializeField] float maxHealth;
-    [SerializeField] float shield;
+    public float shield;
     [SerializeField] float maxShield;
+    public float xpOnDeath = 10;
     [Header("Type of user", order = 0)]
     public HealthType healthType;
     public GameObject deathSplash;
-    [Header("Health", order = 1)]
+    [Header("HealthBar (Only For Player)", order = 1)]
     public GameObject healthBar;
     public TextMeshProUGUI maxHealthText;
     [Header("Shield (Only for player)", order = 2)]
@@ -43,7 +43,7 @@ public class Health : MonoBehaviour
     private void Update()
     {
         //makes sure the health is never negative
-        if (health < 0)
+        if (health <= 0)
         {
             if (healthType == HealthType.Enemy) {
                 GameObject.Instantiate(deathSplash, transform.position, transform.rotation);
@@ -109,7 +109,11 @@ public class Health : MonoBehaviour
     //Clean way to heal player instead of dealing negative damage
     public void Heal(float amount)
     {
-        health += amount;
+        if (health + amount > maxHealth) {
+            health = maxHealth;
+        } else {
+            health += amount;
+        }
         if (healthType == HealthType.Player) {
             updateHealthBar();
         }

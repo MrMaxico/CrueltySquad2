@@ -11,6 +11,7 @@ public class GunScript : MonoBehaviour
     private Vector3 originalRotation;
     public PickUpController pickUpController;
     public PlayerController playerController;
+    public PlayerStats playerStats;
     public bool shot;
     public bool reloading;
     private void Start() {
@@ -92,6 +93,9 @@ public class GunScript : MonoBehaviour
     }
     public void DamageShotEnemy(RaycastHit hit) {
         if (hit.transform.CompareTag("Enemy")) {
+            if(hit.transform.GetComponent<Health>().GetHealth() <= currentGunData.damagePerBullet) {
+                playerStats.AddExp(hit.transform.GetComponent<Health>().xpOnDeath);
+            }
             hit.transform.GetComponent<Health>().Damage(currentGunData.damagePerBullet);
             playerController.UpdateEnemyHealthBar(hit);
         }
