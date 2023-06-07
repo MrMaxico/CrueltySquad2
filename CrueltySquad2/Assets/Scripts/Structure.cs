@@ -33,6 +33,7 @@ public class Structure : ScriptableObject
     {
         enviroment,
         spawner,
-        player
+        player,
+        teleporter
     }
 }

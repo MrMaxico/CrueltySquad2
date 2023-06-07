@@ -61,8 +61,10 @@ public class IslandGenerator : MonoBehaviour
     public Biome topArea;
     public Biome bottomArea;
 
+    [Tooltip("Start with the player, then the teleporter, after that you can add the rest")]
     public List<Structure> structures;
     public List<GameObject> spawnedStructures;
+    GameObject teleporter;
     Vector3 invalidPosition;
 
     public Grid grid;
@@ -290,6 +292,10 @@ public class IslandGenerator : MonoBehaviour
                 {
                     spawnedStructure.GetComponent<Spawner>().generator = this;
                 }
+                else if (n_structure.structureType == Structure.StructureType.teleporter)
+                {
+                    teleporter = spawnedStructure;
+                }
                 spawnedStructures.Add(spawnedStructure);
             }
         }
@@ -384,6 +390,11 @@ public class IslandGenerator : MonoBehaviour
     public Vector3[] GetVerts()
     {
         return vertices;
+    }
+
+    public GameObject Teleporter()
+    {
+        return teleporter;
     }
 }
 
