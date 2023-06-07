@@ -19,6 +19,7 @@ public class Health : MonoBehaviour
     [SerializeField] float maxShield;
     [Header("Type of user", order = 0)]
     public HealthType healthType;
+    public GameObject deathSplash;
     [Header("Health", order = 1)]
     public GameObject healthBar;
     public TextMeshProUGUI maxHealthText;
@@ -44,7 +45,10 @@ public class Health : MonoBehaviour
         //makes sure the health is never negative
         if (health < 0)
         {
-            health = 0;
+            if (healthType == HealthType.Enemy) {
+                GameObject.Instantiate(deathSplash, transform.position, transform.rotation);
+                Destroy(this.gameObject);
+            }
         }
         else if (health > maxHealth)
         {

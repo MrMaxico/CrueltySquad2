@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerController : MonoBehaviour {
     [Header("changeable variables", order = 0)]
@@ -12,6 +14,11 @@ public class PlayerController : MonoBehaviour {
     [Header("Debug variables", order = 1)]
     public float cameraPitch = 0.0f;
     public bool canJump;
+    public bool enemyHealthBarActive;
+    public Slider enemyHealthBar;
+    public TextMeshProUGUI enemyHealthBarName;
+    public Animator enemyHealthBarAnimator;
+    private float timer;
     private Vector3 movement;
     [Header("Config variables", order = 2)]
     public int camSensitivity;
@@ -37,16 +44,8 @@ public class PlayerController : MonoBehaviour {
         }
     }
     void Update() {
-        //Movement
-        Vector3 move = new Vector3();
         Vector3 rotateBody = new Vector3();
         Vector3 rotateCam = new Vector3();
-
-        if (Input.GetKey(KeyCode.LeftShift)) {
-            transform.Translate(move * Time.deltaTime * sprintSpeed);
-        } else {
-            transform.Translate(move * Time.deltaTime * speed);
-        }
 
         //Jump
         Vector3 jump = new Vector3();
@@ -87,6 +86,35 @@ public class PlayerController : MonoBehaviour {
             pickUpController.holdingPrimary = false;
             pickUpController.holdingSecondary = true;
         }
+        if (enemyHealthBarActive) {
+            timer += Time.deltaTime; // Increase the timer by the elapsed time
+
+            if (timer >= 0.5) {
+                // Perform your raycast here
+                Ray ray = new Ray(cam.transform.position, cam.transform.forward);
+                RaycastHit hit;
+
+                if (Physics.Raycast(ray, out hit, 1000)) {
+                    // Raycast hit something, do something with the hit information
+                    if (hit.transform.CompareTag("Enemy")) {
+                        UpdateEnemyHealthBar(hit);
+                    } else {
+                        enemyHealthBarAnimator.SetBool("isActive", false);
+                    }
+                } else {
+                    enemyHealthBarAnimator.SetBool("isActive", false);
+                }
+
+                timer = 0f; // Reset the timer
+            }
+        }
+    }
+    public void UpdateEnemyHealthBar(RaycastHit hit) {
+        Debug.Log("Updating Enemy Heath bar");
+        enemyHealthBarAnimator.SetBool("isActive", true);
+        Debug.Log(hit.transform.GetComponent<Health>().GetHealth() / hit.transform.GetComponent<Health>().GetMaxHealth());
+        enemyHealthBar.value = hit.transform.GetComponent<Health>().GetHealth() / hit.transform.GetComponent<Health>().GetMaxHealth();
+        enemyHealthBarName.text = hit.transform.gameObject.name.ToString();
     }
     private void FixedUpdate()
     {
@@ -101,11 +129,11 @@ public class PlayerController : MonoBehaviour {
         Vector3 moveVector = new Vector3();
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            moveVector = cam.transform.TransformDirection(movement) * sprintSpeed * Time.deltaTime;
+            moveVector = transform.TransformDirection(movement) * sprintSpeed * Time.deltaTime;
         }
         else
         {
-            moveVector = cam.transform.TransformDirection(movement) * speed * Time.deltaTime;
+            moveVector = transform.TransformDirection(movement) * speed * Time.deltaTime;
         }
         rb.velocity = new Vector3(moveVector.x, rb.velocity.y, moveVector.z);
     }

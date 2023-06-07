@@ -10,6 +10,7 @@ public class GunScript : MonoBehaviour
     private float nextFireTime;
     private Vector3 originalRotation;
     public PickUpController pickUpController;
+    public PlayerController playerController;
     public bool shot;
     public bool reloading;
     private void Start() {
@@ -62,6 +63,7 @@ public class GunScript : MonoBehaviour
         if (Physics.Raycast(ray, out hit, currentGunData.range, hitLayers)) {
             // Perform hit detection and damage logic here
             Debug.Log("Hit: " + hit.collider.gameObject.name);
+            DamageShotEnemy(hit);
         }
 
         // Draw a debug line to visualize the raycast
@@ -91,6 +93,7 @@ public class GunScript : MonoBehaviour
     public void DamageShotEnemy(RaycastHit hit) {
         if (hit.transform.CompareTag("Enemy")) {
             hit.transform.GetComponent<Health>().Damage(currentGunData.damagePerBullet);
+            playerController.UpdateEnemyHealthBar(hit);
         }
     }
     private IEnumerator Reload() {
