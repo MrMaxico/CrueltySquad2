@@ -121,6 +121,7 @@ MonoBehaviour:
   range: 100
   reloadspeed: 1
   gunType: 1
+  gunStatUI: {fileID: 730344543000078124}
   shotgunSpreadAngle: 15
   shotgunPelletCount: 15
 --- !u!1001 &5849251693290508667
@@ -130,6 +131,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4066409501961796942}
     m_Modifications:
+    - target: {fileID: 6561185086211303589, guid: a23ebab5fd4173544b24593c704037ba,
+        type: 3}
+      propertyPath: m_text
+      value: 'Mag Size:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561185086236704374, guid: a23ebab5fd4173544b24593c704037ba,
+        type: 3}
+      propertyPath: m_text
+      value: 'Damage:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561185086551129557, guid: a23ebab5fd4173544b24593c704037ba,
+        type: 3}
+      propertyPath: m_text
+      value: 'Reload Speed:'
+      objectReference: {fileID: 0}
     - target: {fileID: 6561185086943212272, guid: a23ebab5fd4173544b24593c704037ba,
         type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -262,6 +278,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a23ebab5fd4173544b24593c704037ba, type: 3}
+--- !u!1 &730344543000078124 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6561185085876663895, guid: a23ebab5fd4173544b24593c704037ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 5849251693290508667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &730344544066462605 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6561185086943212278, guid: a23ebab5fd4173544b24593c704037ba,

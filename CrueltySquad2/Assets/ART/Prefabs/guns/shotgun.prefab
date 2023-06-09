@@ -255,6 +255,7 @@ MonoBehaviour:
   range: 100
   reloadspeed: 1
   gunType: 2
+  gunStatUI: {fileID: 365905871607813892}
   shotgunSpreadAngle: 15
   shotgunPelletCount: 15
 --- !u!1 &7592711516125522514
@@ -494,6 +495,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a23ebab5fd4173544b24593c704037ba, type: 3}
+--- !u!1 &365905871607813892 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6561185085876663895, guid: a23ebab5fd4173544b24593c704037ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 6781847511287800147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &365905872707785637 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6561185086943212278, guid: a23ebab5fd4173544b24593c704037ba,
