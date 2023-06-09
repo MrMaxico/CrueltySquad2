@@ -89,6 +89,7 @@ public class Enemy : MonoBehaviour
         if (angry)
         {
             path = generator.grid.FindPath(transform.position, player.transform.position);
+            transform.transform.LookAt(player.transform);
         }
         else if (!angry && activeIdle)
         {

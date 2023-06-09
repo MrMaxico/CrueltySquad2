@@ -2053,6 +2053,7 @@ MonoBehaviour:
   xpOnDeath: 10
   healthType: 1
   deathSplash: {fileID: 0}
+  gunsToDropOnKill: []
   healthBar: {fileID: 916123118666419938}
   maxHealthText: {fileID: 1177568749112799578}
   shieldBar: {fileID: 0}
@@ -2225,8 +2226,8 @@ MonoBehaviour:
     m_Bits: 2147483647
   currentGunData: {fileID: 0}
   pickUpController: {fileID: 1725525705}
-  playerController: {fileID: 0}
-  playerStats: {fileID: 0}
+  playerController: {fileID: 3350939800944548652}
+  playerStats: {fileID: 7101324643810257025}
   shot: 0
   reloading: 0
 --- !u!1 &3435416109685718031
