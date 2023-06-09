@@ -942,7 +942,7 @@ GameObject:
   - component: {fileID: 4602576331531273584}
   m_Layer: 0
   m_Name: flyEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -995,7 +995,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 4424951466265651155, guid: 149bfd0cfa3102f4a83788286095ee43, type: 3}
 --- !u!82 &1913650535
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1126,6 +1126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyType: 0
   generator: {fileID: 0}
+  spawner: {fileID: 0}
   player: {fileID: 0}
   speed: 10
   angry: 0
