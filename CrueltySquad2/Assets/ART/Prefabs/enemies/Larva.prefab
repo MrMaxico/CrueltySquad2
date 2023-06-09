@@ -290,6 +290,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8151258067159337269}
   - component: {fileID: 7245451659316638150}
+  - component: {fileID: -8058398626043715902}
+  - component: {fileID: -5535227784523301044}
   m_Layer: 0
   m_Name: Larva
   m_TagString: Untagged
@@ -328,3 +330,54 @@ CapsuleCollider:
   m_Height: 0.31
   m_Direction: 2
   m_Center: {x: 0, y: 0.06, z: 0}
+--- !u!114 &-8058398626043715902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8814888807458509711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba15951d3b58eb2419c326b6c126c584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  maxHealth: 1
+  shield: 0
+  maxShield: 0
+  xpOnDeath: 10
+  healthType: 0
+  deathSplash: {fileID: 7051397275747083860, guid: fee8b3bef35c2c740a77d960aeead8ea,
+    type: 3}
+  healthBar: {fileID: 0}
+  maxHealthText: {fileID: 0}
+  shieldBar: {fileID: 0}
+  maxShieldText: {fileID: 0}
+  shieldRegenTime: 0
+  shieldRegenAmount: 0
+  inCombat: 0
+  inCombatShieldRegenDelay: 0
+  timeOutOfCombat: 0
+--- !u!114 &-5535227784523301044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8814888807458509711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fccfb354b2db77d4abe4c49b412d26f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: 0
+  generator: {fileID: 0}
+  player: {fileID: 0}
+  speed: 0
+  angry: 0
+  followDistance: 0
+  path: []
+  pathRefreshRate: 0
+  flyEnemyFlightHeight: 0
+  renderer: {fileID: 0}

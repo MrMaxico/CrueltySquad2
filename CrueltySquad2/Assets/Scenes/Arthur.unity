@@ -175,6 +175,7 @@ MonoBehaviour:
   healthType: 0
   deathSplash: {fileID: 7051397275747083860, guid: fee8b3bef35c2c740a77d960aeead8ea,
     type: 3}
+  gunsToDropOnKill: []
   healthBar: {fileID: 298270457}
   maxHealthText: {fileID: 0}
   shieldBar: {fileID: 0}
@@ -621,6 +622,7 @@ MonoBehaviour:
   healthType: 0
   deathSplash: {fileID: 7051397275747083860, guid: fee8b3bef35c2c740a77d960aeead8ea,
     type: 3}
+  gunsToDropOnKill: []
   healthBar: {fileID: 298270457}
   maxHealthText: {fileID: 0}
   shieldBar: {fileID: 0}
@@ -670,6 +672,7 @@ MonoBehaviour:
   healthType: 0
   deathSplash: {fileID: 7051397275747083860, guid: fee8b3bef35c2c740a77d960aeead8ea,
     type: 3}
+  gunsToDropOnKill: []
   healthBar: {fileID: 298270457}
   maxHealthText: {fileID: 0}
   shieldBar: {fileID: 0}
@@ -1392,6 +1395,10 @@ PrefabInstance:
     - target: {fileID: 1725525705, guid: d03fc2f98d9e7394caeee431e2524846, type: 3}
       propertyPath: medkitPickUpRadius
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725525705, guid: d03fc2f98d9e7394caeee431e2524846, type: 3}
+      propertyPath: medkitHealPercentage
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1402957547013441499, guid: d03fc2f98d9e7394caeee431e2524846,
         type: 3}

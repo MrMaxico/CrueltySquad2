@@ -328,10 +328,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0273260f417880742a466f808dffaaec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerBullet: 25
   magSize: 10
   currentAmmo: 10
   fireRate: 0.5
   bloom: 0.05
+  range: 100
   reloadspeed: 1
   gunType: 0
   shotgunSpreadAngle: 15

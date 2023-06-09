@@ -19,11 +19,13 @@ public class Health : MonoBehaviour
     public float xpOnDeath = 10;
     [Header("Type of user", order = 0)]
     public HealthType healthType;
+    [Header("Death (Only for Enemies)", order = 1)]
     public GameObject deathSplash;
-    [Header("HealthBar (Only For Player)", order = 1)]
+    public GameObject[] gunsToDropOnKill;
+    [Header("HealthBar (Only For Player)", order = 2)]
     public GameObject healthBar;
     public TextMeshProUGUI maxHealthText;
-    [Header("Shield (Only for player)", order = 2)]
+    [Header("Shield (Only for player)", order = 3)]
     public GameObject shieldBar;
     public TextMeshProUGUI maxShieldText;
     public float shieldRegenTime;
@@ -47,7 +49,10 @@ public class Health : MonoBehaviour
         {
             if (healthType == HealthType.Enemy) {
                 GameObject.Instantiate(deathSplash, transform.position, transform.rotation);
+                int randomIndex = Random.Range(0, gunsToDropOnKill.Length);
+                GameObject.Instantiate(gunsToDropOnKill[randomIndex]);
                 Destroy(this.gameObject);
+
             }
         }
         else if (health > maxHealth)

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2089301631454230812}
   - component: {fileID: 4258795056894954966}
   - component: {fileID: 2151208768402914132}
+  - component: {fileID: 2683572364233374492}
   m_Layer: 7
   m_Name: crate
   m_TagString: Untagged
@@ -97,3 +98,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 0.8, z: 0.8}
   m_Center: {x: 0, y: 0.4, z: 0}
+--- !u!114 &2683572364233374492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2313368043168099331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba15951d3b58eb2419c326b6c126c584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  maxHealth: 100
+  shield: 0
+  maxShield: 0
+  xpOnDeath: 10
+  healthType: 2
+  deathSplash: {fileID: 0}
+  gunsToDropOnKill: []
+  healthBar: {fileID: 0}
+  maxHealthText: {fileID: 0}
+  shieldBar: {fileID: 0}
+  maxShieldText: {fileID: 0}
+  shieldRegenTime: 0
+  shieldRegenAmount: 0
+  inCombat: 0
+  inCombatShieldRegenDelay: 0
+  timeOutOfCombat: 0
