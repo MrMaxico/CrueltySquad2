@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour {
     public TextMeshProUGUI enemyHealthBarName;
     public Animator enemyHealthBarAnimator;
     private float timer;
+    private float gunStatsTimer;
+    private GameObject lastGunStats;
     private Vector3 movement;
     [Header("Config variables", order = 2)]
     public int camSensitivity;
@@ -107,6 +109,24 @@ public class PlayerController : MonoBehaviour {
 
                 timer = 0f; // Reset the timer
             }
+        }
+        gunStatsTimer += Time.deltaTime; // Increase the timer by the elapsed time
+        if (gunStatsTimer >= 0.5) {
+            // Perform your raycast here
+            Ray ray = new Ray(cam.transform.position, cam.transform.forward);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 1000)) {
+                // Raycast hit something, do something with the hit information
+                if (hit.transform.CompareTag("Gun")) {
+                    lastGunStats = hit.transform.GetComponent<GunData>().gunStatUI.transform.parent.gameObject;
+                    hit.transform.GetComponent<GunData>().gunStatUI.transform.parent.gameObject.SetActive(true);
+                } else {
+                    lastGunStats.SetActive(false);
+                }
+            }
+
+            timer = 0f; // Reset the timer
         }
     }
     public void UpdateEnemyHealthBar(RaycastHit hit) {

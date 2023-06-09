@@ -348,6 +348,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4594354731552446329}
     m_Modifications:
+    - target: {fileID: 6561185085876663895, guid: a23ebab5fd4173544b24593c704037ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6561185086943212272, guid: a23ebab5fd4173544b24593c704037ba,
         type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -477,6 +482,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Worldspace weapon stats (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561185086943212285, guid: a23ebab5fd4173544b24593c704037ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a23ebab5fd4173544b24593c704037ba, type: 3}

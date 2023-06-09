@@ -63,7 +63,7 @@ public class Health : MonoBehaviour
         timeOutOfCombat += Time.deltaTime;
         
         // Check if it's time to regenerate the shield
-        if (timeOutOfCombat >= shieldRegenTime && shield <= maxShield && inCombat == false) {
+        if (timeOutOfCombat >= shieldRegenTime && shield <= maxShield && inCombat == false && healthType == HealthType.Player) {
             timeOutOfCombat = 0f; // Reset the timer
             shield += shieldRegenAmount;
             updateShieldBar();
