@@ -13,6 +13,7 @@ public class MainMenuScript : MonoBehaviour
     public GameObject creditsUI;
 
     public AudioSource buttonClick;
+    public AudioSource buttonHover;
 
     public AudioMixer audioMixer;
 
@@ -175,6 +176,11 @@ public class MainMenuScript : MonoBehaviour
     {
         buttonClick.Play();
         QualitySettings.SetQualityLevel(qualityIndex);
+    }
+
+    public void ButtonHover()
+    {
+        buttonHover.Play();
     }
 
     // public void AdjustBrightness(float value)

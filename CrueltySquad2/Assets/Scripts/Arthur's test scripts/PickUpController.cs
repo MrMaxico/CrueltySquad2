@@ -48,7 +48,7 @@ public class PickUpController : MonoBehaviour {
                 }
                 else if (hit.transform.CompareTag("Teleporter"))
                 {
-                    StartCoroutine(hit.transform.parent.transform.gameObject.GetComponent<Teleporter>().Teleport());
+                    hit.transform.parent.transform.gameObject.GetComponent<Teleporter>().Teleport();
                 }
             }
         }
