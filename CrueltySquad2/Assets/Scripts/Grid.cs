@@ -23,21 +23,26 @@ public class Grid : MonoBehaviour
 
         nodes = new Node[Mathf.RoundToInt(gridSize.x + 2), Mathf.RoundToInt(gridSize.y + 2)];
 
-        for (int i = 0; i < gridSize.x + 2; i++)
-        {
-            for (int j = 0; j < gridSize.y + 2; j++)
-            {
-                //nodes[i, j] = new Node(new Vector3(i * nodeSize.x, FindHeight(new Vector3(i * nodeSize.x, transform.position.y, j * nodeSize.y)), j * nodeSize.y), IsNodeWalkable(new Vector3(i * nodeSize.x, transform.position.y, j * nodeSize.y)));
-                Vector3 newPosition;
-                bool newWalkable;
-                newPosition.x = i * nodeSize.x;
-                newPosition.y = transform.position.y;
-                newPosition.z = j * nodeSize.y;
-                newWalkable = IsNodeWalkable(newPosition);
-                newPosition.y = FindHeight(newPosition);
-                nodes[i, j] = new(newPosition, newWalkable);
-            }
-        }
+        StartCoroutine(GenerateNodesCoroutine());
+
+        //for-loop that does the same as the Coroutine, but freezes the game
+        //   vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
+        //for (int i = 0; i < gridSize.x + 2; i++)
+        //{
+        //    for (int j = 0; j < gridSize.y + 2; j++)
+        //    {
+        //        //nodes[i, j] = new Node(new Vector3(i * nodeSize.x, FindHeight(new Vector3(i * nodeSize.x, transform.position.y, j * nodeSize.y)), j * nodeSize.y), IsNodeWalkable(new Vector3(i * nodeSize.x, transform.position.y, j * nodeSize.y)));
+        //        Vector3 newPosition;
+        //        bool newWalkable;
+        //        newPosition.x = i * nodeSize.x;
+        //        newPosition.y = transform.position.y;
+        //        newPosition.z = j * nodeSize.y;
+        //        newWalkable = IsNodeWalkable(newPosition);
+        //        newPosition.y = FindHeight(newPosition);
+        //        nodes[i, j] = new(newPosition, newWalkable);
+        //    }
+        //}
 
         for (int i = 0; i < gridSize.x + 2; i++)
         {
@@ -48,6 +53,30 @@ public class Grid : MonoBehaviour
                 nodes[i, j].hCost = 9999;
             }
         }
+    }
+
+    IEnumerator GenerateNodesCoroutine()
+    {
+        for (int i = 0; i < gridSize.x + 2; i++)
+        {
+            for (int j = 0; j < gridSize.y + 2; j++)
+            {
+                Vector3 newPosition;
+                bool newWalkable;
+                newPosition.x = i * nodeSize.x;
+                newPosition.y = transform.position.y;
+                newPosition.z = j * nodeSize.y;
+                newWalkable = IsNodeWalkable(newPosition);
+                newPosition.y = FindHeight(newPosition);
+                nodes[i, j] = new Node(newPosition, newWalkable);
+            }
+
+            // Yield after each iteration to allow the game to continue running
+            yield return new WaitForEndOfFrame();
+        }
+
+        // Execution completed
+        Debug.Log("Nodes generation completed");
     }
 
     public List<Vector3> FindPath(Vector3 startPosition, Vector3 targetPosition)
