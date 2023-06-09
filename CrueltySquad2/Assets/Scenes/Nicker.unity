@@ -3802,7 +3802,7 @@ MonoBehaviour:
   xSize: 250
   zSize: 250
   islandRadius: 100
-  seed: 94519
+  seed: 0
   octaves: 15
   frequencyMultiplier: 1
   lowGroundFrequencyMultiplier: 1
@@ -3827,6 +3827,7 @@ MonoBehaviour:
   bottomArea: {fileID: 11400000, guid: 0a79697240e27434596175cb09d07cc8, type: 2}
   structures:
   - {fileID: 11400000, guid: 499d8a87fc4fa7c45a32fc4e1c994393, type: 2}
+  - {fileID: 11400000, guid: 16e2cc78d62e2aa4aaa5530516046632, type: 2}
   - {fileID: 11400000, guid: fcaf7d0da095e414aaa98e2ba492780f, type: 2}
   - {fileID: 11400000, guid: 0e7b35ed2137bfd47829deae81796c1f, type: 2}
   - {fileID: 11400000, guid: 3cb31730024799c4d8636a0530cf9fa2, type: 2}

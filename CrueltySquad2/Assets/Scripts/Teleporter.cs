@@ -22,8 +22,15 @@ public class Teleporter : MonoBehaviour
 
     public IEnumerator Teleport()
     {
-        //fancy animations
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        yield return null;
+        if (open)
+        {
+            //fancy animations
+            yield return new WaitForSecondsRealtime(1); //replace 1 with the amount of seconds of the length of the animation
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else
+        {
+            yield return new WaitForEndOfFrame();
+        }
     }
 }

@@ -1998,6 +1998,10 @@ MonoBehaviour:
   infJump: 0
   cameraPitch: 0
   canJump: 0
+  enemyHealthBarActive: 0
+  enemyHealthBar: {fileID: 0}
+  enemyHealthBarName: {fileID: 0}
+  enemyHealthBarAnimator: {fileID: 0}
   camSensitivity: 5
   cam: {fileID: 3350939800970284989}
   rb: {fileID: 3350939800944548651}
@@ -2046,7 +2050,9 @@ MonoBehaviour:
   maxHealth: 180
   shield: 0
   maxShield: 0
+  xpOnDeath: 10
   healthType: 1
+  deathSplash: {fileID: 0}
   healthBar: {fileID: 916123118666419938}
   maxHealthText: {fileID: 1177568749112799578}
   shieldBar: {fileID: 0}
@@ -2070,8 +2076,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerLevel: 0
   playerExp: 0
+  nextLevelUpExp: 0
   playerMaxHealth: 180
+  xpBar: {fileID: 0}
+  levelText: {fileID: 0}
   healthcript: {fileID: 1402957547013441499}
+  healthMultiplier: 1.2
+  meleeDamage: 100
+  meleedamageMultiplier: 1.2
 --- !u!1 &3350939800970284990
 GameObject:
   m_ObjectHideFlags: 0
@@ -2087,7 +2099,7 @@ GameObject:
   - component: {fileID: 1632680530}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2213,6 +2225,8 @@ MonoBehaviour:
     m_Bits: 2147483647
   currentGunData: {fileID: 0}
   pickUpController: {fileID: 1725525705}
+  playerController: {fileID: 0}
+  playerStats: {fileID: 0}
   shot: 0
   reloading: 0
 --- !u!1 &3435416109685718031
