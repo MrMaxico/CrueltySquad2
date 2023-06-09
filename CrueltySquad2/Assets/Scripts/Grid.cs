@@ -10,6 +10,7 @@ public class Grid : MonoBehaviour
     public bool calculateGridSizeBasedOnIslandFormat;
     public Node[,] nodes;
     public LayerMask unwalkable;
+    public GameObject loadingScreen;
 
     public void CreateGrid(IslandGenerator n_generator)
     {
@@ -44,15 +45,7 @@ public class Grid : MonoBehaviour
         //    }
         //}
 
-        for (int i = 0; i < gridSize.x + 2; i++)
-        {
-            for (int j = 0; j < gridSize.y + 2; j++)
-            {
-                nodes[i, j].neighbors = GetNeighbours(nodes, i, j);
-                nodes[i, j].gCost = 9999;
-                nodes[i, j].hCost = 9999;
-            }
-        }
+        
     }
 
     IEnumerator GenerateNodesCoroutine()
@@ -77,6 +70,22 @@ public class Grid : MonoBehaviour
 
         // Execution completed
         Debug.Log("Nodes generation completed");
+        StartCoroutine(GetNeighoursCoroutine());
+    }
+
+    IEnumerator GetNeighoursCoroutine()
+    {
+        for (int i = 0; i < gridSize.x + 2; i++)
+        {
+            for (int j = 0; j < gridSize.y + 2; j++)
+            {
+                nodes[i, j].neighbors = GetNeighbours(nodes, i, j);
+                nodes[i, j].gCost = 9999;
+                nodes[i, j].hCost = 9999;
+            }
+            yield return new WaitForEndOfFrame();
+        }
+        loadingScreen.SetActive(false);
     }
 
     public List<Vector3> FindPath(Vector3 startPosition, Vector3 targetPosition)
