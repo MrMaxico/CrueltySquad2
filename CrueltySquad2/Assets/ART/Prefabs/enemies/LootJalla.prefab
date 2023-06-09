@@ -1186,6 +1186,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5377288689930834558}
   - component: {fileID: 2566184088057076486}
+  - component: {fileID: 6368172830985461527}
+  - component: {fileID: -196825257648440110}
   m_Layer: 0
   m_Name: LootJalla
   m_TagString: Untagged
@@ -1224,6 +1226,57 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &6368172830985461527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4743459456124045508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba15951d3b58eb2419c326b6c126c584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 150
+  maxHealth: 150
+  shield: 0
+  maxShield: 0
+  xpOnDeath: 10
+  healthType: 0
+  deathSplash: {fileID: 0}
+  gunsToDropOnKill: []
+  healthBar: {fileID: 0}
+  maxHealthText: {fileID: 0}
+  shieldBar: {fileID: 0}
+  maxShieldText: {fileID: 0}
+  shieldRegenTime: 0
+  shieldRegenAmount: 0
+  inCombat: 0
+  inCombatShieldRegenDelay: 0
+  timeOutOfCombat: 0
+--- !u!114 &-196825257648440110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4743459456124045508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fccfb354b2db77d4abe4c49b412d26f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: 1
+  generator: {fileID: 0}
+  player: {fileID: 0}
+  speed: 8
+  angry: 0
+  followDistance: 30
+  path: []
+  pathRefreshRate: 0.1
+  flyEnemyFlightHeight: 0.5
+  renderer: {fileID: 5627299878077381103}
 --- !u!1 &4800211093864074740
 GameObject:
   m_ObjectHideFlags: 0

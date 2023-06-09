@@ -52,7 +52,6 @@ public class Health : MonoBehaviour
                 int randomIndex = Random.Range(0, gunsToDropOnKill.Length);
                 GameObject.Instantiate(gunsToDropOnKill[randomIndex]);
                 Destroy(this.gameObject);
-
             }
         }
         else if (health > maxHealth)
