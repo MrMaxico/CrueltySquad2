@@ -1146,14 +1146,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba15951d3b58eb2419c326b6c126c584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
-  maxHealth: 50
+  health: 80
+  maxHealth: 80
   shield: 0
   maxShield: 0
   xpOnDeath: 10
   healthType: 0
   deathSplash: {fileID: 7051397275747083860, guid: fee8b3bef35c2c740a77d960aeead8ea,
     type: 3}
+  gunsToDropOnKill:
+  - {fileID: 8727148447041403267, guid: cab80110cbe443e42be05462952db51f, type: 3}
+  - {fileID: 5757830153032026586, guid: 73b525c524275584788cf1f76c237516, type: 3}
+  - {fileID: 3685379672084113396, guid: c88368ae1ee451246a2a7f5a93238568, type: 3}
   healthBar: {fileID: 0}
   maxHealthText: {fileID: 0}
   shieldBar: {fileID: 0}

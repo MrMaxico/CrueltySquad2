@@ -1345,9 +1345,11 @@ GameObject:
   - component: {fileID: 5871246922743611898}
   - component: {fileID: 8596551747813358825}
   - component: {fileID: 5988360007182109878}
+  - component: {fileID: 1704609736146485741}
+  - component: {fileID: 3958637398480195917}
   m_Layer: 0
   m_Name: crawler
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1388,6 +1390,7 @@ MonoBehaviour:
   - {fileID: 0}
   monsterAttack2: []
   walking: []
+  normalsound: []
 --- !u!136 &8596551747813358825
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1422,6 +1425,60 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1704609736146485741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6113339365441053707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fccfb354b2db77d4abe4c49b412d26f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: 1
+  generator: {fileID: 0}
+  player: {fileID: 0}
+  speed: 8
+  angry: 0
+  followDistance: 30
+  path: []
+  pathRefreshRate: 0.1
+  flyEnemyFlightHeight: 0.5
+  renderer: {fileID: 0}
+--- !u!114 &3958637398480195917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6113339365441053707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba15951d3b58eb2419c326b6c126c584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  maxHealth: 100
+  shield: 0
+  maxShield: 0
+  xpOnDeath: 10
+  healthType: 0
+  deathSplash: {fileID: 0}
+  gunsToDropOnKill:
+  - {fileID: 8727148447041403267, guid: cab80110cbe443e42be05462952db51f, type: 3}
+  - {fileID: 5757830153032026586, guid: 73b525c524275584788cf1f76c237516, type: 3}
+  - {fileID: 3685379672084113396, guid: c88368ae1ee451246a2a7f5a93238568, type: 3}
+  healthBar: {fileID: 0}
+  maxHealthText: {fileID: 0}
+  shieldBar: {fileID: 0}
+  maxShieldText: {fileID: 0}
+  shieldRegenTime: 0
+  shieldRegenAmount: 0
+  inCombat: 0
+  inCombatShieldRegenDelay: 0
+  timeOutOfCombat: 0
 --- !u!1 &6120365479548104984
 GameObject:
   m_ObjectHideFlags: 0

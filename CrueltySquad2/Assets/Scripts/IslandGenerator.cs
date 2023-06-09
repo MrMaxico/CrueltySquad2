@@ -279,7 +279,6 @@ public class IslandGenerator : MonoBehaviour
                 GameObject spawnedStructure = Instantiate(n_structure.structurePrefab, n_spawnInfo.position + new Vector3(0, n_structure.spawnAltitude, 0), n_spawnInfo.rotation);
                 while (spawnedStructure.transform.position == invalidPosition)
                 {
-                    Debug.Log("Position resulted invalid, trying to find a new one");
                     n_spawnInfo = StructureSpawnData(n_structure);
                     spawnedStructure.transform.SetLocalPositionAndRotation(n_spawnInfo.position, n_spawnInfo.rotation);
                 }
@@ -327,7 +326,6 @@ public class IslandGenerator : MonoBehaviour
         {
             if (hitpoint.transform.gameObject.TryGetComponent<IslandGenerator>(out IslandGenerator n_island) && CheckValidBiome(n_inAirPos, n_structure.allowedBiomes))
             {
-                Debug.Log("Valid position found");
                 n_postion = hitpoint.point;
                 if (!n_structure.ignoreSlopes)
                 {
@@ -341,11 +339,6 @@ public class IslandGenerator : MonoBehaviour
                 return new StructureSpawnInfo(n_postion, n_rotation);
             }
         }
-        Debug.Log("Returning invalid position");
-        //n_postion = invalidPosition;
-        //n_rotation = Quaternion.FromToRotation(Vector3.up, invalidPosition);
-        //n_rotation *= Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
-        //return new StructureSpawnInfo(n_postion, n_rotation);
         return StructureSpawnData(n_structure);
     }
 

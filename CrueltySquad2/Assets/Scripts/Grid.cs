@@ -85,6 +85,7 @@ public class Grid : MonoBehaviour
             }
             yield return new WaitForEndOfFrame();
         }
+        Debug.Log("Nodes neighbouring completed");
         loadingScreen.SetActive(false);
     }
 

@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] EnemyTypes enemyType;
     [Space(20)]
     public IslandGenerator generator;
+    public Spawner spawner;
     public GameObject player;
     [Space(20)]
     public float speed;

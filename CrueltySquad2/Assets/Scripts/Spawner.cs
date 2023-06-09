@@ -5,6 +5,8 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] Health healthManager;
+    [SerializeField] int spawnCap;
+    int spawnedEnemies;
     [Space(20)]
     [SerializeField] EnemySpawn[] enemySpawns;
     [SerializeField] float preperationTime;
@@ -30,6 +32,11 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    public void OnEnemyKill()
+    {
+        spawnedEnemies--;
+    }
+
     IEnumerator SpawnCycle()
     {
         if (preparing)
@@ -37,8 +44,13 @@ public class Spawner : MonoBehaviour
             yield return new WaitForSeconds(preperationTime);
             preparing = false;
         }
-        GameObject spawnedEnemy = Instantiate(RandomEnemySpawn().enemyPrefab, transform.position, Quaternion.identity);
-        spawnedEnemy.GetComponent<Enemy>().generator = generator;
+        if (spawnedEnemies < spawnCap)
+        {
+            GameObject spawnedEnemy = Instantiate(RandomEnemySpawn().enemyPrefab, transform.position, Quaternion.identity);
+            spawnedEnemy.GetComponent<Enemy>().generator = generator;
+            spawnedEnemy.GetComponent<Enemy>().spawner = this;
+            spawnedEnemies++;
+        }
         yield return new WaitForSeconds(spawnInterval);
         if (healthManager.IsAlive())
         {
