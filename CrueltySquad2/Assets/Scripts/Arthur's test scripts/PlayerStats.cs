@@ -17,6 +17,7 @@ public class PlayerStats : MonoBehaviour
     public float meleeDamage = 100f;
     public float meleedamageMultiplier = 1.2f;
     private void Start() {
+        playerLevel = 1;
         nextLevelUpExp = 50;
         UpdateXPBar();
     }
