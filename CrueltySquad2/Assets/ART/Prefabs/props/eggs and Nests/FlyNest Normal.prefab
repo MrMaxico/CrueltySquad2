@@ -211,8 +211,8 @@ Transform:
   m_GameObject: {fileID: 6334143924725207683}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.102175, y: -21.33507, z: -1.6019384}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2131055137298282531}
   - {fileID: 4941711685476922507}
@@ -246,6 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthManager: {fileID: 6303953448152420848}
+  spawnCap: 5
   enemySpawns:
   - {fileID: 11400000, guid: 83882dc9652b18a4493e3fd32ce3fc96, type: 2}
   preperationTime: 10
@@ -266,6 +267,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   maxHealth: 100
+  shield: 0
+  maxShield: 0
+  xpOnDeath: 10
+  healthType: 0
+  deathSplash: {fileID: 0}
+  gunsToDropOnKill: []
+  healthBar: {fileID: 0}
+  maxHealthText: {fileID: 0}
+  shieldBar: {fileID: 0}
+  maxShieldText: {fileID: 0}
+  shieldRegenTime: 0
+  shieldRegenAmount: 0
+  inCombat: 0
+  inCombatShieldRegenDelay: 0
+  timeOutOfCombat: 0
 --- !u!95 &8105229620461105695
 Animator:
   serializedVersion: 5

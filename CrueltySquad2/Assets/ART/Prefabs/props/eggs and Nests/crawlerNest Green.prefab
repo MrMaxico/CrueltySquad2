@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 80674972889603992}
   - component: {fileID: 6986453834996188230}
+  - component: {fileID: -6007826255658738229}
+  - component: {fileID: -9089907726358001920}
   m_Layer: 0
   m_Name: crawlerNest Green
   m_TagString: Untagged
@@ -48,6 +50,56 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1579241630799410176, guid: 74633c684ab2b114c934a43339de3093, type: 3}
+--- !u!114 &-6007826255658738229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744586909009380642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed48e50a31852734faaec2cbfb1ba473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthManager: {fileID: 6303953448152420848, guid: b3df371b8bd589d428725b58979ecbf0,
+    type: 3}
+  spawnCap: 5
+  enemySpawns:
+  - {fileID: 11400000, guid: 83882dc9652b18a4493e3fd32ce3fc96, type: 2}
+  preperationTime: 10
+  spawnInterval: 7
+  onDeathEnemySpawnAmount: 10
+  generator: {fileID: 0}
+--- !u!114 &-9089907726358001920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744586909009380642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba15951d3b58eb2419c326b6c126c584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  maxHealth: 100
+  shield: 0
+  maxShield: 0
+  xpOnDeath: 10
+  healthType: 0
+  deathSplash: {fileID: 0}
+  gunsToDropOnKill: []
+  healthBar: {fileID: 0}
+  maxHealthText: {fileID: 0}
+  shieldBar: {fileID: 0}
+  maxShieldText: {fileID: 0}
+  shieldRegenTime: 0
+  shieldRegenAmount: 0
+  inCombat: 0
+  inCombatShieldRegenDelay: 0
+  timeOutOfCombat: 0
 --- !u!1 &4498641857153531153
 GameObject:
   m_ObjectHideFlags: 0

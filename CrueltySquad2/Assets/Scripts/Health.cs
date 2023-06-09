@@ -51,6 +51,7 @@ public class Health : MonoBehaviour
                 GameObject.Instantiate(deathSplash, transform.position, transform.rotation);
                 int randomIndex = Random.Range(0, gunsToDropOnKill.Length);
                 GameObject.Instantiate(gunsToDropOnKill[randomIndex]);
+                GetComponent<Enemy>().spawner.OnEnemyKill();
                 Destroy(this.gameObject);
             }
         }
