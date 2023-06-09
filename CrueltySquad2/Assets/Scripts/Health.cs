@@ -47,7 +47,7 @@ public class Health : MonoBehaviour
         //makes sure the health is never negative
         if (health <= 0)
         {
-            if (healthType == HealthType.Enemy) {
+            if (healthType == HealthType.Enemy || healthType == HealthType.prop) {
                 GameObject.Instantiate(deathSplash, transform.position, transform.rotation);
                 int randomIndex = Random.Range(0, gunsToDropOnKill.Length);
                 GameObject.Instantiate(gunsToDropOnKill[randomIndex]);
