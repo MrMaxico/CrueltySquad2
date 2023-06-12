@@ -18,6 +18,12 @@ public class Teleporter : MonoBehaviour
         {
             open = false;
         }
+
+        if (Input.GetKey(KeyCode.T))
+        {
+            open = true;
+            Teleport();
+        }
     }
 
     public void Teleport()

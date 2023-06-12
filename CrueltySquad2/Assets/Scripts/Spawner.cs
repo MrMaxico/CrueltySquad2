@@ -22,16 +22,6 @@ public class Spawner : MonoBehaviour
         StartCoroutine(SpawnCycle());
     }
 
-    private void Update()
-    {
-        if (!healthManager.IsAlive())
-        {
-            generator.Teleporter().GetComponent<Teleporter>().spawnersLeft -= 1;
-            //add better looking death of spawner later
-            Destroy(this.gameObject);
-        }
-    }
-
     public void OnEnemyKill()
     {
         spawnedEnemies--;
