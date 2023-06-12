@@ -154,9 +154,9 @@ public class Health : MonoBehaviour
             Debug.Log("Enemy Died");
             if (healthType == HealthType.Enemy) {
                 GameObject.Instantiate(deathSplash, transform.position, transform.rotation);
-                GetComponent<Enemy>().spawner.OnEnemyKill();
                 int randomIndex = Random.Range(0, gunsToDropOnKill.Length);
-                GameObject.Instantiate(gunsToDropOnKill[randomIndex]);
+                GameObject.Instantiate(gunsToDropOnKill[randomIndex], transform.position, transform.rotation);
+                GetComponent<Enemy>().spawner.OnEnemyKill();
             }
             else if (healthType == HealthType.prop)
             {

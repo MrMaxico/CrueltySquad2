@@ -3222,6 +3222,7 @@ MonoBehaviour:
   enemyHealthBar: {fileID: 2040124205293756320}
   enemyHealthBarName: {fileID: 665099745792568487}
   enemyHealthBarAnimator: {fileID: 4490433523870591784}
+  timer: 0
   camSensitivity: 5
   cam: {fileID: 3350939800970284989}
   rb: {fileID: 3350939800944548651}
@@ -3450,6 +3451,10 @@ MonoBehaviour:
   playerStats: {fileID: 7101324643810257025}
   shot: 0
   reloading: 0
+  hitParticlePrefab: {fileID: 4094557581506998284, guid: 71d6d5fc7da7595478e9cd494723acea,
+    type: 3}
+  enemyHitParticlePrefab: {fileID: 7051397275747083860, guid: fee8b3bef35c2c740a77d960aeead8ea,
+    type: 3}
 --- !u!1 &3460297258912950493
 GameObject:
   m_ObjectHideFlags: 0

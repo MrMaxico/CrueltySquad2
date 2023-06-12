@@ -99,7 +99,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 5391627347386441668, guid: 2bd883e436cfafd449234daa59496f6e, type: 3}
 --- !u!114 &314357679171043139
@@ -117,7 +117,7 @@ MonoBehaviour:
   damagePerBullet: 30
   magSize: 30
   currentAmmo: 30
-  fireRate: 1
+  fireRate: 10
   bloom: 0.05
   range: 100
   reloadspeed: 1

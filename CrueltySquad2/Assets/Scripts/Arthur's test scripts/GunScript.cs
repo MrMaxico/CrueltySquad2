@@ -15,6 +15,8 @@ public class GunScript : MonoBehaviour
     public bool shot;
     public bool reloading;
     public List<RaycastHit> lastHits = new List<RaycastHit>();
+    public GameObject hitParticlePrefab;
+    public GameObject enemyHitParticlePrefab;
     private void Start() {
         originalRotation = transform.localRotation.eulerAngles;
     }
@@ -65,6 +67,11 @@ public class GunScript : MonoBehaviour
         if (Physics.Raycast(ray, out hit, currentGunData.range, hitLayers)) {
             // Perform hit detection and damage logic here
             Debug.Log("Hit: " + hit.collider.gameObject.name);
+            if (hit.transform.CompareTag("Enemy")) {
+                Instantiate(enemyHitParticlePrefab, hit.point, Quaternion.identity);
+            } else {
+                Instantiate(hitParticlePrefab, hit.point, Quaternion.identity);
+            }
             DamageShotEnemy(hit);
         }
 
@@ -91,11 +98,16 @@ public class GunScript : MonoBehaviour
                         hit.transform.GetComponent<Health>().EnemyDeath();
                         playerStats.AddExp(hit.transform.GetComponent<Health>().xpOnDeath);
                     }
+                    if (hit.transform.CompareTag("Enemy")) {
+                        Instantiate(enemyHitParticlePrefab, hit.point, Quaternion.identity);
+                    }
                     if (a == 0 || lastHits[a - 1].collider != hit.collider && a >= 1) {
                         lastHits.Add(hit);
                         a++;
                     }
                     hit.transform.GetComponent<Health>().Damage(currentGunData.damagePerBullet);
+                } else {
+                    Instantiate(hitParticlePrefab, hit.point, Quaternion.identity);
                 }
             }
             // Draw a debug line to visualize the raycast
