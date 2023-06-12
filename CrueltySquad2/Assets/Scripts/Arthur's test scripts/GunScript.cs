@@ -14,6 +14,7 @@ public class GunScript : MonoBehaviour
     public PlayerStats playerStats;
     public bool shot;
     public bool reloading;
+    public List<RaycastHit> lastHits = new List<RaycastHit>();
     private void Start() {
         originalRotation = transform.localRotation.eulerAngles;
     }
@@ -72,6 +73,7 @@ public class GunScript : MonoBehaviour
     }
     private void FireShotgun() {
         currentGunData.currentAmmo -= 1;
+        int a = 0;
         // Iterate over the number of shotgun pellets
         for (int i = 0; i < currentGunData.shotgunPelletCount; i++) {
             // Calculate a random direction for each pellet within the shotgun spread angle
@@ -80,16 +82,29 @@ public class GunScript : MonoBehaviour
             // Raycast from muzzle position
             Ray ray = new Ray(muzzle.position, pelletDirection);
             RaycastHit hit;
-
+            Debug.Log("Stink Ding");
             if (Physics.Raycast(ray, out hit, currentGunData.range, hitLayers)) {
                 // Perform hit detection and damage logic here
                 Debug.Log("Hit: " + hit.collider.gameObject.name + "With: " + currentGunData.gunType);
-                DamageShotEnemy(hit);
+                if (hit.transform.CompareTag("Enemy") || hit.transform.CompareTag("Destroyable")) {
+                    if (hit.transform.GetComponent<Health>().GetHealth() <= currentGunData.damagePerBullet && !hit.transform.CompareTag("Destroyable")) {
+                        hit.transform.GetComponent<Health>().EnemyDeath();
+                        playerStats.AddExp(hit.transform.GetComponent<Health>().xpOnDeath);
+                    }
+                    if (a == 0 || lastHits[a - 1].collider != hit.collider && a >= 1) {
+                        lastHits.Add(hit);
+                        a++;
+                    }
+                    hit.transform.GetComponent<Health>().Damage(currentGunData.damagePerBullet);
+                }
             }
-
             // Draw a debug line to visualize the raycast
             Debug.DrawRay(ray.origin, ray.direction * currentGunData.range, Color.red, 0.1f);
         }
+        foreach (RaycastHit hit in lastHits) {
+            //playerController.UpdateEnemyHealthBar(hit);
+        }
+
     }
     public void DamageShotEnemy(RaycastHit hit) {
         if (hit.transform.CompareTag("Enemy") || hit.transform.CompareTag("Destroyable")) {

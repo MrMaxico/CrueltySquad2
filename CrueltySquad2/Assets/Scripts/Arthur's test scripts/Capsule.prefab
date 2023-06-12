@@ -1998,10 +1998,10 @@ MonoBehaviour:
   infJump: 0
   cameraPitch: 0
   canJump: 0
-  enemyHealthBarActive: 0
-  enemyHealthBar: {fileID: 0}
-  enemyHealthBarName: {fileID: 0}
-  enemyHealthBarAnimator: {fileID: 0}
+  enemyHealthBarActive: 1
+  enemyHealthBar: {fileID: 4633560704927909975}
+  enemyHealthBarName: {fileID: 8354608557524270466}
+  enemyHealthBarAnimator: {fileID: 8843711275615392747}
   camSensitivity: 5
   cam: {fileID: 3350939800970284989}
   rb: {fileID: 3350939800944548651}
@@ -2025,8 +2025,8 @@ MonoBehaviour:
   secondary: {fileID: 0}
   holder: {fileID: 0}
   medkitPickUpSphere: {fileID: 325297030}
-  medkitPickUpRadius: 0
-  medkitHealPercentage: 0
+  medkitPickUpRadius: 2
+  medkitHealPercentage: 25
   dropForwardForce: 10
   dropUpwardForce: 10
   cam: {fileID: 3350939800970284990}
@@ -2046,7 +2046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba15951d3b58eb2419c326b6c126c584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 120
+  health: 180
   maxHealth: 180
   shield: 0
   maxShield: 0
@@ -2056,12 +2056,12 @@ MonoBehaviour:
   gunsToDropOnKill: []
   healthBar: {fileID: 916123118666419938}
   maxHealthText: {fileID: 1177568749112799578}
-  shieldBar: {fileID: 0}
-  maxShieldText: {fileID: 0}
-  shieldRegenTime: 0
-  shieldRegenAmount: 0
+  shieldBar: {fileID: 4603413031561332526}
+  maxShieldText: {fileID: 8662802082542234387}
+  shieldRegenTime: 0.1
+  shieldRegenAmount: 0.2
   inCombat: 0
-  inCombatShieldRegenDelay: 0
+  inCombatShieldRegenDelay: 10
   timeOutOfCombat: 0
 --- !u!114 &7101324643810257025
 MonoBehaviour:
@@ -2079,8 +2079,8 @@ MonoBehaviour:
   playerExp: 0
   nextLevelUpExp: 0
   playerMaxHealth: 180
-  xpBar: {fileID: 0}
-  levelText: {fileID: 0}
+  xpBar: {fileID: 4165429842377736159}
+  levelText: {fileID: 2221477520489293748}
   healthcript: {fileID: 1402957547013441499}
   healthMultiplier: 1.2
   meleeDamage: 100
