@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour {
     public Slider enemyHealthBar;
     public TextMeshProUGUI enemyHealthBarName;
     public Animator enemyHealthBarAnimator;
-    private float timer;
+    public float timer;
     private float gunStatsTimer;
     private GameObject lastGunStats;
     private Vector3 movement;
@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour {
     public Rigidbody rb;
     public PickUpController pickUpController;
     public GunScript gunScript;
+    private bool raycastHit;
 
 
     // Update is called once per frame
@@ -95,18 +96,20 @@ public class PlayerController : MonoBehaviour {
                 // Perform your raycast here
                 Ray ray = new Ray(cam.transform.position, cam.transform.forward);
                 RaycastHit hit;
-
                 if (Physics.Raycast(ray, out hit, 1000)) {
+                    raycastHit = true;
+                    Debug.Log("Kaas 2");
                     // Raycast hit something, do something with the hit information
                     if (hit.transform.CompareTag("Enemy")) {
                         UpdateEnemyHealthBar(hit);
                     } else {
                         enemyHealthBarAnimator.SetBool("isActive", false);
                     }
-                } else {
+                }
+                if (!raycastHit) {
                     enemyHealthBarAnimator.SetBool("isActive", false);
                 }
-
+                raycastHit = false;
                 timer = 0f; // Reset the timer
             }
         }
@@ -126,7 +129,7 @@ public class PlayerController : MonoBehaviour {
                 }
             }
 
-            timer = 0f; // Reset the timer
+            gunStatsTimer = 0f; // Reset the timer
         }
     }
     public void UpdateEnemyHealthBar(RaycastHit hit) {
