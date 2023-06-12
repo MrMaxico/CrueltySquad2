@@ -63,12 +63,13 @@ public class Enemy : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, path[1], speed * Time.deltaTime);
         }
-        else if (path.Count > 0)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, path[0], speed * Time.deltaTime);
-        }
+        //else if (path.Count > 0)
+        //{
+        //    transform.position = Vector3.MoveTowards(transform.position, path[0], speed * Time.deltaTime);
+        //}
 
-        if (!angry && path.Count == 0)
+        //if (!angry && path.Count == 0) //
+        if (!angry && path.Count == 1)
         {
             idleDestination = generator.grid.RandomNode().position;
         }
