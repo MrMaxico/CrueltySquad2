@@ -158,6 +158,10 @@ public class Health : MonoBehaviour
                 int randomIndex = Random.Range(0, gunsToDropOnKill.Length);
                 GameObject.Instantiate(gunsToDropOnKill[randomIndex]);
             }
+            else if (healthType == HealthType.prop)
+            {
+                GetComponent<Spawner>().generator.Teleporter().GetComponent<Teleporter>().spawnersLeft -= 1;
+            }
             Destroy(this.gameObject);
         }
     }
