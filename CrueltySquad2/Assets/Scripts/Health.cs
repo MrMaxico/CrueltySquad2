@@ -47,14 +47,7 @@ public class Health : MonoBehaviour
         //makes sure the health is never negative
         if (health <= 0)
         {
-            if (healthType == HealthType.Enemy || healthType == HealthType.prop) {
-                Debug.Log("Enemy Died");
-                GameObject.Instantiate(deathSplash, transform.position, transform.rotation);
-                int randomIndex = Random.Range(0, gunsToDropOnKill.Length);
-                GameObject.Instantiate(gunsToDropOnKill[randomIndex]);
-                GetComponent<Enemy>().spawner.OnEnemyKill();
-                Destroy(this.gameObject);
-            }
+            EnemyDeath();
         }
         else if (health > maxHealth)
         {
@@ -70,7 +63,6 @@ public class Health : MonoBehaviour
             updateShieldBar();
         }
     }
-
     //returns the current amount of health
     public float GetHealth()
     {
@@ -156,5 +148,15 @@ public class Health : MonoBehaviour
         timeOutOfCombat = 0f;
         yield return new WaitForSeconds(inCombatShieldRegenDelay);
         inCombat = false;
+    }
+    public void EnemyDeath() {
+        if (healthType == HealthType.Enemy || healthType == HealthType.prop) {
+            Debug.Log("Enemy Died");
+            GameObject.Instantiate(deathSplash, transform.position, transform.rotation);
+            int randomIndex = Random.Range(0, gunsToDropOnKill.Length);
+            GameObject.Instantiate(gunsToDropOnKill[randomIndex]);
+            GetComponent<Enemy>().spawner.OnEnemyKill();
+            Destroy(this.gameObject);
+        }
     }
 }
