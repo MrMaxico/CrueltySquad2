@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GunScript : MonoBehaviour
 {
@@ -12,8 +13,10 @@ public class GunScript : MonoBehaviour
     public PickUpController pickUpController;
     public PlayerController playerController;
     public PlayerStats playerStats;
+    public TextMeshProUGUI ammoCount;
     public bool shot;
     public bool reloading;
+    public GameObject reloadAnim;
     public List<RaycastHit> lastHits = new List<RaycastHit>();
     public GameObject hitParticlePrefab;
     public GameObject enemyHitParticlePrefab;
@@ -56,6 +59,7 @@ public class GunScript : MonoBehaviour
 
     private void Fire() {
         currentGunData.currentAmmo -= 1;
+        updateAmmoCount();
         // Add random rotation for bloom effect
         Vector3 bloomRotation = Random.insideUnitCircle * currentGunData.bloom;
         Quaternion rotation = Quaternion.Euler(originalRotation + bloomRotation);
@@ -80,7 +84,7 @@ public class GunScript : MonoBehaviour
     }
     private void FireShotgun() {
         currentGunData.currentAmmo -= 1;
-        int a = 0;
+        updateAmmoCount();
         // Iterate over the number of shotgun pellets
         for (int i = 0; i < currentGunData.shotgunPelletCount; i++) {
             // Calculate a random direction for each pellet within the shotgun spread angle
@@ -89,7 +93,6 @@ public class GunScript : MonoBehaviour
             // Raycast from muzzle position
             Ray ray = new Ray(muzzle.position, pelletDirection);
             RaycastHit hit;
-            Debug.Log("Stink Ding");
             if (Physics.Raycast(ray, out hit, currentGunData.range, hitLayers)) {
                 // Perform hit detection and damage logic here
                 Debug.Log("Hit: " + hit.collider.gameObject.name + "With: " + currentGunData.gunType);
@@ -101,10 +104,6 @@ public class GunScript : MonoBehaviour
                     if (hit.transform.CompareTag("Enemy")) {
                         Instantiate(enemyHitParticlePrefab, hit.point, Quaternion.identity);
                     }
-                    if (a == 0 || lastHits[a - 1].collider != hit.collider && a >= 1) {
-                        lastHits.Add(hit);
-                        a++;
-                    }
                     hit.transform.GetComponent<Health>().Damage(currentGunData.damagePerBullet);
                 } else {
                     Instantiate(hitParticlePrefab, hit.point, Quaternion.identity);
@@ -112,9 +111,6 @@ public class GunScript : MonoBehaviour
             }
             // Draw a debug line to visualize the raycast
             Debug.DrawRay(ray.origin, ray.direction * currentGunData.range, Color.red, 0.1f);
-        }
-        foreach (RaycastHit hit in lastHits) {
-            //playerController.UpdateEnemyHealthBar(hit);
         }
 
     }
@@ -128,10 +124,23 @@ public class GunScript : MonoBehaviour
             playerController.UpdateEnemyHealthBar(hit);
         }
     }
+    public void updateAmmoCount() {
+        if (pickUpController.holdingPrimary) {
+            ammoCount.text = pickUpController.primary.GetComponent<GunData>().currentAmmo.ToString();
+        } else if (pickUpController.holdingSecondary){
+            ammoCount.text = pickUpController.secondary.GetComponent<GunData>().currentAmmo.ToString();
+        }
+    }
+
     private IEnumerator Reload() {
         reloading = true;
+        ammoCount.enabled = false;
+        reloadAnim.SetActive(true);
         yield return new WaitForSeconds(currentGunData.reloadspeed);
         currentGunData.currentAmmo = currentGunData.magSize;
+        reloadAnim.SetActive(false);
+        ammoCount.enabled = true;
+        updateAmmoCount();
         reloading = false;
     }
 }

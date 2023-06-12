@@ -69,6 +69,7 @@ public class PickUpController : MonoBehaviour {
     }
 
     void PickUpGun(Transform gunTransform) {
+        this.GetComponent<PlayerController>().lastGunStats.SetActive(false);
         Rigidbody gunRigidbody = gunTransform.GetComponent<Rigidbody>();
         if (holdingPrimary) {
             holder = primaryholder;
@@ -86,6 +87,7 @@ public class PickUpController : MonoBehaviour {
         gunRigidbody.isKinematic = true;
         pickUpDelay = false;
         gunTransform.GetComponent<GunData>().lootBeam.SetActive(false);
+        cam.GetComponent<GunScript>().updateAmmoCount();
         // Additional gun pickup logic if needed
     }
     void SwapGun(Transform gunTransform) {

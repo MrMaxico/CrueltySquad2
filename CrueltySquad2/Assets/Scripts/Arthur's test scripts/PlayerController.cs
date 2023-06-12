@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour {
     public Animator enemyHealthBarAnimator;
     public float timer;
     private float gunStatsTimer;
-    private GameObject lastGunStats;
+    public GameObject lastGunStats;
     private Vector3 movement;
     [Header("Config variables", order = 2)]
     public int camSensitivity;
@@ -84,11 +84,13 @@ public class PlayerController : MonoBehaviour {
             pickUpController.primaryholder.gameObject.SetActive(true);
             pickUpController.holdingSecondary = false;
             pickUpController.holdingPrimary = true;
+            gunScript.updateAmmoCount();
         } else if (Input.GetKeyDown(KeyCode.Alpha2) && !gunScript.reloading) {
             pickUpController.primaryholder.gameObject.SetActive(false);
             pickUpController.secondaryHolder.gameObject.SetActive(true);
             pickUpController.holdingPrimary = false;
             pickUpController.holdingSecondary = true;
+            gunScript.updateAmmoCount();
         }
         if (enemyHealthBarActive) {
             timer += Time.deltaTime; // Increase the timer by the elapsed time
