@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9411e39b001651c41abff753c0011848, type: 3}
-  m_Name: Bush
+  m_Name: RadarBase
   m_EditorClassIdentifier: 
-  structurePrefab: {fileID: 2343327611421686984, guid: 28cfcda2c73a13945b28a0b38f259953,
+  structurePrefab: {fileID: 291013531659266260, guid: eeb05759d8318a24cbaed61bc00ade84,
     type: 3}
   structureType: 0
-  minimalInstances: 15
-  maximalInstances: 40
+  minimalInstances: 1
+  maximalInstances: 1
   allowedBiomes:
   - {fileID: 11400000, guid: 6eda92a647189534d99701a503fe656c, type: 2}
-  variableSize: 1
-  minSize: 0.8
-  maxSize: 1.8
-  ignoreSlopes: 0
+  variableSize: 0
+  minSize: 0
+  maxSize: 0
+  ignoreSlopes: 1
   spawnAltitude: 0

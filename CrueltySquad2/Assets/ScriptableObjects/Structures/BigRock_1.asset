@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9411e39b001651c41abff753c0011848, type: 3}
-  m_Name: Bush
+  m_Name: BigRock_1
   m_EditorClassIdentifier: 
-  structurePrefab: {fileID: 2343327611421686984, guid: 28cfcda2c73a13945b28a0b38f259953,
+  structurePrefab: {fileID: 184506673734334620, guid: 974307c4fdb116543aa24fc32d0d098c,
     type: 3}
   structureType: 0
-  minimalInstances: 15
-  maximalInstances: 40
+  minimalInstances: 10
+  maximalInstances: 25
   allowedBiomes:
+  - {fileID: 11400000, guid: 0a79697240e27434596175cb09d07cc8, type: 2}
   - {fileID: 11400000, guid: 6eda92a647189534d99701a503fe656c, type: 2}
   variableSize: 1
-  minSize: 0.8
-  maxSize: 1.8
+  minSize: 1
+  maxSize: 2
   ignoreSlopes: 0
   spawnAltitude: 0
