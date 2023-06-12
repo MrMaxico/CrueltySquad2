@@ -48,6 +48,7 @@ public class Health : MonoBehaviour
         if (health <= 0)
         {
             if (healthType == HealthType.Enemy || healthType == HealthType.prop) {
+                Debug.Log("Enemy Died");
                 GameObject.Instantiate(deathSplash, transform.position, transform.rotation);
                 int randomIndex = Random.Range(0, gunsToDropOnKill.Length);
                 GameObject.Instantiate(gunsToDropOnKill[randomIndex]);
