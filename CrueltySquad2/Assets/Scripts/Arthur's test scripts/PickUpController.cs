@@ -85,6 +85,7 @@ public class PickUpController : MonoBehaviour {
         gunRigidbody.freezeRotation = true;
         gunRigidbody.isKinematic = true;
         pickUpDelay = false;
+        gunTransform.GetComponent<GunData>().lootBeam.SetActive(false);
         // Additional gun pickup logic if needed
     }
     void SwapGun(Transform gunTransform) {
@@ -101,6 +102,9 @@ public class PickUpController : MonoBehaviour {
         gunRigidbody.isKinematic = false;
         gunRigidbody.useGravity = true;
         gunRigidbody.freezeRotation = false;
+
+        gunRigidbody.GetComponent<GunData>().lootBeam.SetActive(true);
+
         //Gun carries momentum of player
         gunRigidbody.velocity = this.GetComponent<Rigidbody>().velocity;
 

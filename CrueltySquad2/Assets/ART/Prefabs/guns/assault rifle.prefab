@@ -122,6 +122,7 @@ MonoBehaviour:
   reloadspeed: 1
   gunType: 1
   gunStatUI: {fileID: 730344543000078124}
+  lootBeam: {fileID: 2641309374711046733}
   shotgunSpreadAngle: 15
   shotgunPelletCount: 15
 --- !u!1001 &5849251693290508667
@@ -384,6 +385,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 909e7fd0100aa86418109786769a86f7, type: 3}
+--- !u!1 &2641309374711046733 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8708148553062041556, guid: 909e7fd0100aa86418109786769a86f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 6664867961785279897}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6367292904516429965 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 298210849951501588, guid: 909e7fd0100aa86418109786769a86f7,

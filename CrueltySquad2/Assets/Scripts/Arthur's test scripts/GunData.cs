@@ -18,6 +18,7 @@ public class GunData : MonoBehaviour {
     public float reloadspeed = 1f;
     public GunType gunType = GunType.Pistol;
     public GameObject gunStatUI;
+    public GameObject lootBeam;
     [Header("Settings for shotguns", order = 0)]
     public float shotgunSpreadAngle = 15f;
     public float shotgunPelletCount = 15f;
