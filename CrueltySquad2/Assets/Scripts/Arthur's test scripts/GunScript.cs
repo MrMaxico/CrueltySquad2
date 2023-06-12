@@ -83,7 +83,7 @@ public class GunScript : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, currentGunData.range, hitLayers)) {
                 // Perform hit detection and damage logic here
-                Debug.Log("Hit: " + hit.collider.gameObject.name);
+                Debug.Log("Hit: " + hit.collider.gameObject.name + "With: " + currentGunData.gunType);
                 DamageShotEnemy(hit);
             }
 
