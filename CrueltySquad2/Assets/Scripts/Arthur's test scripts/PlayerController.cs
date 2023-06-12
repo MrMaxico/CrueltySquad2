@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour {
     public Rigidbody rb;
     public PickUpController pickUpController;
     public GunScript gunScript;
+    public GameObject pickUpUI;
     private bool raycastHit;
 
 
