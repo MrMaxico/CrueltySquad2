@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7465930677029266371}
   - component: {fileID: 7465930677029266380}
-  - component: {fileID: 7465930677029266381}
   - component: {fileID: 7465930677029266370}
   m_Layer: 0
   m_Name: thumbnail camera
@@ -77,14 +76,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7465930677029266381
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7465930677029266368}
-  m_Enabled: 1
 --- !u!114 &7465930677029266370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +119,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7465930677036965966}
   - component: {fileID: 7465930677036965963}
-  - component: {fileID: 7465930677036965960}
   - component: {fileID: 7465930677036965961}
   m_Layer: 0
   m_Name: logbook camera
@@ -195,14 +185,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7465930677036965960
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7465930677036965967}
-  m_Enabled: 1
 --- !u!114 &7465930677036965961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,7 +262,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7465930677142155528}
   - component: {fileID: 7465930677142155573}
-  - component: {fileID: 7465930677142155530}
   - component: {fileID: 7465930677142155531}
   m_Layer: 0
   m_Name: thumbnail camera
@@ -347,14 +328,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7465930677142155530
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7465930677142155529}
-  m_Enabled: 1
 --- !u!114 &7465930677142155531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,7 +489,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7465930677184768247}
   - component: {fileID: 7465930677184768240}
-  - component: {fileID: 7465930677184768241}
   - component: {fileID: 7465930677184768246}
   m_Layer: 0
   m_Name: thumbnail camera
@@ -583,14 +555,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7465930677184768241
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7465930677184768244}
-  m_Enabled: 1
 --- !u!114 &7465930677184768246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,7 +662,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7465930677281200519}
   - component: {fileID: 7465930677281200512}
-  - component: {fileID: 7465930677281200513}
   - component: {fileID: 7465930677281200518}
   m_Layer: 0
   m_Name: thumbnail camera
@@ -765,14 +728,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7465930677281200513
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7465930677281200516}
-  m_Enabled: 1
 --- !u!114 &7465930677281200518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1002,7 +957,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7465930677514036883}
   - component: {fileID: 7465930677514036892}
-  - component: {fileID: 7465930677514036893}
   - component: {fileID: 7465930677514036882}
   m_Layer: 0
   m_Name: thumbnail camera
@@ -1069,14 +1023,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7465930677514036893
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7465930677514036880}
-  m_Enabled: 1
 --- !u!114 &7465930677514036882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1238,7 +1184,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7465930677618680863}
   - component: {fileID: 7465930677618680856}
-  - component: {fileID: 7465930677618680857}
   - component: {fileID: 7465930677618680862}
   m_Layer: 0
   m_Name: logbook camera
@@ -1305,14 +1250,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7465930677618680857
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7465930677618680860}
-  m_Enabled: 1
 --- !u!114 &7465930677618680862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1656,7 +1593,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7465930678012321099}
   - component: {fileID: 7465930678012321140}
-  - component: {fileID: 7465930678012321141}
   - component: {fileID: 7465930678012321098}
   m_Layer: 0
   m_Name: logbook camera
@@ -1723,14 +1659,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7465930678012321141
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7465930678012321096}
-  m_Enabled: 1
 --- !u!114 &7465930678012321098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1958,7 +1886,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7465930678083007421}
   - component: {fileID: 7465930678083007422}
-  - component: {fileID: 7465930678083007423}
   - component: {fileID: 7465930678083007420}
   m_Layer: 0
   m_Name: thumbnail camera
@@ -2025,14 +1952,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7465930678083007423
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7465930678083007410}
-  m_Enabled: 1
 --- !u!114 &7465930678083007420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2076,7 +1995,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7465930678091180379}
   - component: {fileID: 7465930678091180356}
-  - component: {fileID: 7465930678091180357}
   - component: {fileID: 7465930678091180378}
   m_Layer: 0
   m_Name: logbook camera
@@ -2143,14 +2061,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7465930678091180357
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7465930678091180376}
-  m_Enabled: 1
 --- !u!114 &7465930678091180378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2444,7 +2354,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7465930678287828936}
   - component: {fileID: 7465930678287828981}
-  - component: {fileID: 7465930678287828938}
   - component: {fileID: 7465930678287828939}
   m_Layer: 0
   m_Name: logbook camera
@@ -2511,14 +2420,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7465930678287828938
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7465930678287828937}
-  m_Enabled: 1
 --- !u!114 &7465930678287828939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2596,7 +2497,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7465930678352418304}
   - component: {fileID: 7465930678352418317}
-  - component: {fileID: 7465930678352418306}
   - component: {fileID: 7465930678352418307}
   m_Layer: 0
   m_Name: logbook camera
@@ -2663,14 +2563,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7465930678352418306
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7465930678352418305}
-  m_Enabled: 1
 --- !u!114 &7465930678352418307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2898,7 +2790,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7465930678627744034}
   - component: {fileID: 7465930678627744047}
-  - component: {fileID: 7465930678627744044}
   - component: {fileID: 7465930678627744045}
   m_Layer: 0
   m_Name: thumbnail camera
@@ -2965,14 +2856,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7465930678627744044
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7465930678627744035}
-  m_Enabled: 1
 --- !u!114 &7465930678627744045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3048,7 +2931,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7465930678709778886}
   - component: {fileID: 7465930678709778883}
-  - component: {fileID: 7465930678709778880}
   - component: {fileID: 7465930678709778881}
   m_Layer: 0
   m_Name: logbook camera
@@ -3115,14 +2997,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7465930678709778880
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7465930678709778887}
-  m_Enabled: 1
 --- !u!114 &7465930678709778881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3166,7 +3040,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7465930678750695462}
   - component: {fileID: 7465930678750695459}
-  - component: {fileID: 7465930678750695456}
   - component: {fileID: 7465930678750695457}
   m_Layer: 0
   m_Name: thumbnail camera
@@ -3233,14 +3106,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7465930678750695456
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7465930678750695463}
-  m_Enabled: 1
 --- !u!114 &7465930678750695457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3318,7 +3183,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7465930678889659532}
   - component: {fileID: 7465930678889659529}
-  - component: {fileID: 7465930678889659534}
   - component: {fileID: 7465930678889659535}
   m_Layer: 0
   m_Name: logbook camera
@@ -3385,14 +3249,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7465930678889659534
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7465930678889659533}
-  m_Enabled: 1
 --- !u!114 &7465930678889659535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3436,7 +3292,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7465930678896928699}
   - component: {fileID: 7465930678896928676}
-  - component: {fileID: 7465930678896928677}
   - component: {fileID: 7465930678896928698}
   m_Layer: 0
   m_Name: logbook camera
@@ -3503,14 +3358,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7465930678896928677
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7465930678896928696}
-  m_Enabled: 1
 --- !u!114 &7465930678896928698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3554,7 +3401,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7465930678965361957}
   - component: {fileID: 7465930678965361958}
-  - component: {fileID: 7465930678965361959}
   - component: {fileID: 7465930678965361956}
   m_Layer: 0
   m_Name: thumbnail camera
@@ -3621,14 +3467,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7465930678965361959
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7465930678965361978}
-  m_Enabled: 1
 --- !u!114 &7465930678965361956
 MonoBehaviour:
   m_ObjectHideFlags: 0
