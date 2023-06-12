@@ -270,7 +270,7 @@ public class Grid : MonoBehaviour
     }
 }
 
-public class Node : ScriptableObject
+public class Node
 {
     public Vector3 position;
     public bool walkable;
