@@ -40,6 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1152122061}
+  - component: {fileID: 8565279687313705808}
   m_Layer: 0
   m_Name: SecondaryHolder
   m_TagString: Untagged
@@ -62,6 +63,20 @@ Transform:
   m_Father: {fileID: 3350939800970284989}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8565279687313705808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152122060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14adb6c330678a145bcb28995fd3df83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smooth: 8
+  swayMultiplier: 7
 --- !u!1 &1708610412
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,6 +86,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1708610413}
+  - component: {fileID: 4778409974764507517}
   m_Layer: 0
   m_Name: PrimaryHolder
   m_TagString: Untagged
@@ -93,6 +109,20 @@ Transform:
   m_Father: {fileID: 3350939800970284989}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4778409974764507517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708610412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14adb6c330678a145bcb28995fd3df83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smooth: 8
+  swayMultiplier: 7
 --- !u!1 &71068365406570390
 GameObject:
   m_ObjectHideFlags: 0
@@ -3232,6 +3262,7 @@ MonoBehaviour:
   pickUpController: {fileID: 1725525705}
   gunScript: {fileID: 1632680530}
   pickUpUI: {fileID: 6801802443218844238}
+  weaponPopupSound: {fileID: 0}
 --- !u!114 &1725525705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3461,6 +3492,8 @@ MonoBehaviour:
     type: 3}
   enemyHitParticlePrefab: {fileID: 7051397275747083860, guid: fee8b3bef35c2c740a77d960aeead8ea,
     type: 3}
+  shootingSound: {fileID: 0}
+  reloadSound: {fileID: 0}
 --- !u!1 &3460297258912950493
 GameObject:
   m_ObjectHideFlags: 0

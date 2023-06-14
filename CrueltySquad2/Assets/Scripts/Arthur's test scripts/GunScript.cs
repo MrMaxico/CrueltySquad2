@@ -20,6 +20,8 @@ public class GunScript : MonoBehaviour
     public List<RaycastHit> lastHits = new List<RaycastHit>();
     public GameObject hitParticlePrefab;
     public GameObject enemyHitParticlePrefab;
+    public AudioSource shootingSound;
+    public AudioSource reloadSound;
     private void Start() {
         originalRotation = transform.localRotation.eulerAngles;
     }
