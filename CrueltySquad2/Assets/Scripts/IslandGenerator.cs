@@ -9,6 +9,7 @@ public class IslandGenerator : MonoBehaviour
 
     Mesh mesh;
     Vector3[] vertices;
+    public Biome[,] verticeBiome;
 
     [Space(20)]
     [Header("Generation values")]
@@ -204,7 +205,8 @@ public class IslandGenerator : MonoBehaviour
             maxVertexHeight = Mathf.Max(maxVertexHeight, vertices[i].y);
         }
 
-        // Assign colors based on vertex and triangle height
+        verticeBiome = new Biome[xSize + 2, zSize + 2];
+        // Assign colors and biomes based on vertex and triangle height
         for (int i = 0; i < triangles.Length; i += 3)
         {
             int vertexIndex1 = triangles[i];
@@ -224,21 +226,33 @@ public class IslandGenerator : MonoBehaviour
             if (normalizedVertexHeight < sandThreshold)
             {
                 pixelColor = TerrainColor(vertices[vertexIndex1], bottomArea);
+                verticeBiome[Mathf.RoundToInt(vertices[vertexIndex1].x), Mathf.RoundToInt(vertices[vertexIndex1].z)] = bottomArea;
+                verticeBiome[Mathf.RoundToInt(vertices[vertexIndex2].x), Mathf.RoundToInt(vertices[vertexIndex2].z)] = bottomArea;
+                verticeBiome[Mathf.RoundToInt(vertices[vertexIndex3].x), Mathf.RoundToInt(vertices[vertexIndex3].z)] = bottomArea;
             }
             else if (normalizedVertexHeight < greenThreshold)
             {
                 // Calculate the interpolation factor between sand and green
                 pixelColor = TerrainColor(vertices[vertexIndex1], lowerArea);
+                verticeBiome[Mathf.RoundToInt(vertices[vertexIndex1].x), Mathf.RoundToInt(vertices[vertexIndex1].z)] = lowerArea;
+                verticeBiome[Mathf.RoundToInt(vertices[vertexIndex2].x), Mathf.RoundToInt(vertices[vertexIndex2].z)] = lowerArea;
+                verticeBiome[Mathf.RoundToInt(vertices[vertexIndex3].x), Mathf.RoundToInt(vertices[vertexIndex3].z)] = lowerArea;
             }
             else if (normalizedVertexHeight >= whiteThreshold)
             {
                 pixelColor = TerrainColor(vertices[vertexIndex1], topArea);
+                verticeBiome[Mathf.RoundToInt(vertices[vertexIndex1].x), Mathf.RoundToInt(vertices[vertexIndex1].z)] = topArea;
+                verticeBiome[Mathf.RoundToInt(vertices[vertexIndex2].x), Mathf.RoundToInt(vertices[vertexIndex2].z)] = topArea;
+                verticeBiome[Mathf.RoundToInt(vertices[vertexIndex3].x), Mathf.RoundToInt(vertices[vertexIndex3].z)] = topArea;
             }
             else
             {
                 // Calculate the interpolation factor between green and gray
                 float t = Mathf.InverseLerp(greenThreshold - maxGreenAreaThreshold, whiteThreshold, normalizedVertexHeight);
                 pixelColor = Color.Lerp(TerrainColor(vertices[vertexIndex1], lowerArea), TerrainColor(vertices[vertexIndex1], higherArea), t);
+                verticeBiome[Mathf.RoundToInt(vertices[vertexIndex1].x), Mathf.RoundToInt(vertices[vertexIndex1].z)] = higherArea;
+                verticeBiome[Mathf.RoundToInt(vertices[vertexIndex2].x), Mathf.RoundToInt(vertices[vertexIndex2].z)] = higherArea;
+                verticeBiome[Mathf.RoundToInt(vertices[vertexIndex3].x), Mathf.RoundToInt(vertices[vertexIndex3].z)] = higherArea;
             }
 
             // Assign the pixel color to the vertices of the triangle
@@ -346,28 +360,8 @@ public class IslandGenerator : MonoBehaviour
     {
         for (int i = 0; i < n_allowedBiomes.Count; i++)
         {
-            bool rValid = false;
-            bool gValid = false;
-            bool bValid = false;
-            Color pixelColor = texture.GetPixel(Mathf.RoundToInt(n_position.x), Mathf.RoundToInt(n_position.z));
-            Color allowedBiomeColorA = n_allowedBiomes[i].colorA;
-            Color allowedBiomeColorB = n_allowedBiomes[i].colorB;
-            if (pixelColor.r >= allowedBiomeColorA.r && pixelColor.r <= allowedBiomeColorB.r)
-            {
-                rValid = true;
-            }
-
-            if (pixelColor.g >= allowedBiomeColorA.g && pixelColor.g <= allowedBiomeColorB.g)
-            {
-                gValid = true;
-            }
-
-            if (pixelColor.b >= allowedBiomeColorA.b && pixelColor.b <= allowedBiomeColorB.b)
-            {
-                bValid = true;
-            }
-
-            if (rValid && gValid && bValid)
+            Debug.Log(verticeBiome[Mathf.RoundToInt(n_position.x), Mathf.RoundToInt(n_position.z)].biomeName);
+            if (verticeBiome[Mathf.RoundToInt(n_position.x), Mathf.RoundToInt(n_position.z)] == n_allowedBiomes[i])
             {
                 return true;
             }

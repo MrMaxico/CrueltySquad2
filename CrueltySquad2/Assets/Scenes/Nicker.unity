@@ -3956,6 +3956,7 @@ GameObject:
   - component: {fileID: 1309648549}
   - component: {fileID: 1309648548}
   - component: {fileID: 1309648552}
+  - component: {fileID: 1309648553}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Ground
@@ -4099,6 +4100,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1309648553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309648547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b42939260f929745bcdd7e11066980a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToCheckBiomeOf: {fileID: 0}
+  output: 
 --- !u!1 &1319966850
 GameObject:
   m_ObjectHideFlags: 0
