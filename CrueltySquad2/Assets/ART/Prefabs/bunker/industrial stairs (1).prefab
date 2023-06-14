@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8883953197651603043}
   - component: {fileID: 5541116152974352838}
   - component: {fileID: 7710453389848990988}
+  - component: {fileID: 6796922503909580088}
   m_Layer: 0
   m_Name: industrial stairs (1)
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6796922503909580088
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8071001325993227481}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4290095667286961172, guid: f2efa0a66733dfd4bac1fdd48dcb4419, type: 3}
