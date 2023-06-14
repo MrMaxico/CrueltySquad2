@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour {
     public Slider enemyHealthBar;
     public TextMeshProUGUI enemyHealthBarName;
     public Animator enemyHealthBarAnimator;
+    private Animator weaponStatsAnimator;
     public float timer;
     private float gunStatsTimer;
     public GameObject lastGunStats;
@@ -30,7 +31,6 @@ public class PlayerController : MonoBehaviour {
     public GunScript gunScript;
     public GameObject pickUpUI;
     private bool raycastHit;
-    public AudioSource weaponPopupSound;
 
 
     // Update is called once per frame
@@ -126,10 +126,9 @@ public class PlayerController : MonoBehaviour {
             if (Physics.Raycast(ray, out hit, 1000)) {
                 // Raycast hit something, do something with the hit information
                 if (hit.transform.CompareTag("Gun")) {
-                    lastGunStats = hit.transform.GetComponent<GunData>().gunStatUI.transform.parent.gameObject;
-                    weaponPopupSound.Play();
-                    weaponPopupSound.pitch = Random.Range(0.9f, 1.1f);
-                    hit.transform.GetComponent<GunData>().gunStatUI.transform.parent.gameObject.SetActive(true);
+                    lastGunStats = hit.transform.GetComponent<GunData>().gunStatUI.transform.parent.parent.gameObject;
+                    hit.transform.GetComponent<GunData>().gunStatUI.transform.parent.parent.gameObject.SetActive(true);
+                    hit.transform.GetComponent<GunData>().gunStatUI.transform.parent.GetComponent<Animator>().Play("weapon stats popup");
                 } else {
                     lastGunStats.SetActive(false);
                 }

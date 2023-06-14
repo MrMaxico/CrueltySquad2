@@ -3127,6 +3127,7 @@ GameObject:
   - component: {fileID: 1725525705}
   - component: {fileID: 1402957547013441499}
   - component: {fileID: 7101324643810257025}
+  - component: {fileID: 7704085561168789091}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Player
@@ -3143,7 +3144,7 @@ Transform:
   m_GameObject: {fileID: 3350939800944548653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.87, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3350939800970284989}
@@ -3262,7 +3263,6 @@ MonoBehaviour:
   pickUpController: {fileID: 1725525705}
   gunScript: {fileID: 1632680530}
   pickUpUI: {fileID: 6801802443218844238}
-  weaponPopupSound: {fileID: 0}
 --- !u!114 &1725525705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3341,6 +3341,103 @@ MonoBehaviour:
   healthMultiplier: 1.2
   meleeDamage: 100
   meleedamageMultiplier: 1.2
+--- !u!82 &7704085561168789091
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3350939800944548653}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -5655002689109311560, guid: dd9152d01f3b26b4d8bf6b6a6ca11e3d,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 43f45b6bb3ac6ed48ad6ae1c9cb01fe7, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.71
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3350939800970284990
 GameObject:
   m_ObjectHideFlags: 0
@@ -3369,7 +3466,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3350939800970284990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.73, z: 0}
+  m_LocalPosition: {x: 0, y: 0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
