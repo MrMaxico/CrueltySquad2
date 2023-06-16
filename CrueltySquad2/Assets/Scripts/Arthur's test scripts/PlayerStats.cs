@@ -6,10 +6,10 @@ using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
-    public int playerLevel;
-    public float playerExp;
-    public float nextLevelUpExp;
-    public float playerMaxHealth;
+    static int playerLevel;
+    static float playerExp;
+    static float nextLevelUpExp;
+    static float playerMaxHealth;
     public Slider xpBar;
     public TextMeshProUGUI levelText;
     public Health healthcript;
