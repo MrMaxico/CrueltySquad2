@@ -990,10 +990,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4511667148044793745}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4424951466265651155, guid: 149bfd0cfa3102f4a83788286095ee43, type: 3}
 --- !u!82 &1913650535
@@ -1133,8 +1133,16 @@ MonoBehaviour:
   followDistance: 30
   path: []
   pathRefreshRate: 0.1
+  pLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  damage: 10
+  relativeHitPosition: {x: 0, y: 0.77, z: 0.85}
+  attackSpeed: 2
+  attackTimer: 0
   flyEnemyFlightHeight: 0.5
   renderer: {fileID: 6763013070895334013}
+  activeIdle: 0
 --- !u!114 &4602576331531273584
 MonoBehaviour:
   m_ObjectHideFlags: 0
