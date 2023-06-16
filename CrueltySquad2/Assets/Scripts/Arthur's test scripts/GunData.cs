@@ -25,7 +25,7 @@ public class GunData : MonoBehaviour {
     // Other gun-related variables and functions can be added here
 
     public void Start() {
-        gunStatUI.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = gameObject.name; //Weapon name
+        gunStatUI.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = gunType.ToString(); //Weapon name
         gunStatUI.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "lvl: 1".ToString(); //make Level of gun
         gunStatUI.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = " "; //make modifier name
         if (gunType == GunType.Shotgun) {

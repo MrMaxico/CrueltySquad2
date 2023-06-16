@@ -90,17 +90,20 @@ public class Health : MonoBehaviour
     //damage the player
     public void Damage(float amount)
     {
-        if (healthType == HealthType.Player && shield != 0) {
-            if(shield < amount) {
+        if (healthType == HealthType.Player) {
+            if(amount >= shield) {
                 amount -= shield;
                 shield = 0;
-                updateShieldBar();
+                health -= amount;
+            } else {
+                shield -= amount;
             }
-        }
-        health -= amount;
-        if (healthType == HealthType.Player) {
+            updateShieldBar();
             updateHealthBar();
             StartCoroutine(InCombatShieldRegenDelay());
+        }
+        if (healthType == HealthType.Enemy) {
+            health -= amount;
         }
     }
 
