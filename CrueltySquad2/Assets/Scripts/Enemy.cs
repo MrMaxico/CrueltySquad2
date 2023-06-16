@@ -6,7 +6,7 @@ using UnityEngine.Profiling;
 [RequireComponent(typeof(Health))]
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] EnemyTypes enemyType;
+    public EnemyTypes enemyType;
     [Space(20)]
     public IslandGenerator generator;
     public Spawner spawner;

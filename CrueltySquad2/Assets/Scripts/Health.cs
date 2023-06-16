@@ -102,7 +102,7 @@ public class Health : MonoBehaviour
             updateHealthBar();
             StartCoroutine(InCombatShieldRegenDelay());
         }
-        if (healthType == HealthType.Enemy) {
+        if (healthType == HealthType.Enemy || healthType == HealthType.prop) {
             health -= amount;
         }
     }

@@ -142,7 +142,7 @@ public class PlayerController : MonoBehaviour {
         enemyHealthBarAnimator.SetBool("isActive", true);
         Debug.Log(hit.transform.GetComponent<Health>().GetHealth() / hit.transform.GetComponent<Health>().GetMaxHealth());
         enemyHealthBar.value = hit.transform.GetComponent<Health>().GetHealth() / hit.transform.GetComponent<Health>().GetMaxHealth();
-        enemyHealthBarName.text = hit.transform.gameObject.name.ToString();
+        enemyHealthBarName.text = hit.transform.GetComponent<Enemy>().enemyType.ToString();
     }
     private void FixedUpdate()
     {
