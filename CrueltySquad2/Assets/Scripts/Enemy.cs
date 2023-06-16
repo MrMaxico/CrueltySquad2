@@ -21,11 +21,17 @@ public class Enemy : MonoBehaviour
     public float pathRefreshRate;
     float pathRefreshTimer;
     [Space(20)]
+    public LayerMask pLayer;
+    public float damage;
+    public Vector3 relativeHitPosition;
+    public float attackSpeed;
+    public float attackTimer;
+    [Space(20)]
     [Tooltip("You only need this variable if the enemy is an fly enemy")]
     [SerializeField] float flyEnemyFlightHeight;
     [Space(20)]
     public Renderer renderer;
-    bool activeIdle;
+    public bool activeIdle;
 
     private void Start()
     {
@@ -58,10 +64,47 @@ public class Enemy : MonoBehaviour
         {
             angry = false;
         }
+        
+        if (attackTimer > 0)
+        {
+            attackTimer -= Time.deltaTime;
+        }
 
         if (path.Count > 1)
         {
             transform.position = Vector3.MoveTowards(transform.position, path[1], speed * Time.deltaTime);
+        }
+        else if (angry && path.Count == 1)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position - transform.forward * (relativeHitPosition.z * 1.5f), speed * Time.deltaTime);
+            if (enemyType == EnemyTypes.flyEnemy)
+            {
+                if (attackTimer <= 0)
+                {
+                    Vector3 spherePosition = transform.position + transform.forward * relativeHitPosition.z +
+                                             transform.right * relativeHitPosition.x +
+                                             transform.up * relativeHitPosition.y;
+                    if (Physics.CheckSphere(spherePosition, .3f, pLayer))
+                    {
+                        player.GetComponent<Health>().Damage(damage);
+                        attackTimer = attackSpeed;
+                    }
+                }
+            }
+            else if (enemyType == EnemyTypes.crawlerEnemy)
+            {
+                if (attackTimer <= 0)
+                {
+                    Vector3 spherePosition = transform.position + transform.forward * relativeHitPosition.z +
+                                             transform.right * relativeHitPosition.x +
+                                             transform.up * relativeHitPosition.y;
+                    if (Physics.CheckSphere(spherePosition, .3f, pLayer))
+                    {
+                        player.GetComponent<Health>().Damage(damage);
+                        attackTimer = attackSpeed;
+                    }
+                }
+            }
         }
         //else if (path.Count > 0)
         //{
@@ -100,34 +143,46 @@ public class Enemy : MonoBehaviour
 
         if (enemyType == EnemyTypes.flyEnemy)
         {
-            Profiler.BeginSample("Lifting path up in the air for flying enemies");
-            float averageHeight = 0;
-            foreach (Vector3 waypoint in path)
+            if (activeIdle || angry)
             {
-                averageHeight += waypoint.y;
-            }
-
-            averageHeight /= path.Count;
-
-            for (int i = 0; i < path.Count; i++)
-            {
-                if (path[i].y > averageHeight)
+                Profiler.BeginSample("Lifting path up in the air for flying enemies");
+                float averageHeight = 0;
+                foreach (Vector3 waypoint in path)
                 {
-                    averageHeight = path[i].y + (flyEnemyFlightHeight / 3);
+                    averageHeight += waypoint.y;
                 }
-            }
 
-            for (int i = 0; i < path.Count; i++)
-            {
-                //path[i] = new Vector3(path[i].x, averageHeight + flyEnemyFlightHeight, path[i].z);
-                Vector3 newWaypoint;
-                newWaypoint.x = path[i].x;
-                newWaypoint.y = averageHeight + flyEnemyFlightHeight;
-                newWaypoint.z = path[i].z;
-                path[i] = newWaypoint;
+                averageHeight /= path.Count;
+
+                for (int i = 0; i < path.Count; i++)
+                {
+                    if (path[i].y > averageHeight)
+                    {
+                        averageHeight = path[i].y + (flyEnemyFlightHeight / 3);
+                    }
+                }
+
+                for (int i = 0; i < path.Count; i++)
+                {
+                    //path[i] = new Vector3(path[i].x, averageHeight + flyEnemyFlightHeight, path[i].z);
+                    Vector3 newWaypoint;
+                    newWaypoint.x = path[i].x;
+                    newWaypoint.y = averageHeight + flyEnemyFlightHeight;
+                    newWaypoint.z = path[i].z;
+                    path[i] = newWaypoint;
+                }
+                Profiler.EndSample();
             }
-            Profiler.EndSample();
         }
+    }
+
+    public void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Vector3 spherePosition = transform.position + transform.forward * relativeHitPosition.z +
+                                 transform.right * relativeHitPosition.x +
+                                 transform.up * relativeHitPosition.y;
+        Gizmos.DrawSphere(spherePosition, .3f);
     }
 
     public enum EnemyTypes

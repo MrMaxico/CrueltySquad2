@@ -3128,7 +3128,7 @@ GameObject:
   - component: {fileID: 1402957547013441499}
   - component: {fileID: 7101324643810257025}
   - component: {fileID: 7704085561168789091}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3247,7 +3247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 600
   sprintSpeed: 1200
-  jumpPower: 10
+  jumpPower: 1
   infJump: 0
   cameraPitch: 0
   canJump: 0

@@ -1446,8 +1446,16 @@ MonoBehaviour:
   followDistance: 30
   path: []
   pathRefreshRate: 0.1
+  pLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  damage: 10
+  relativeHitPosition: {x: 0, y: 0, z: 0.85}
+  attackSpeed: 2
+  attackTimer: 0
   flyEnemyFlightHeight: 0.5
-  renderer: {fileID: 0}
+  renderer: {fileID: 751887907167583691}
+  activeIdle: 0
 --- !u!114 &3958637398480195917
 MonoBehaviour:
   m_ObjectHideFlags: 0
