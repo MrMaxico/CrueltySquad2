@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9411e39b001651c41abff753c0011848, type: 3}
   m_Name: Chest
   m_EditorClassIdentifier: 
-  structurePrefab: {fileID: 0}
+  structurePrefab: {fileID: 7906151971914510243, guid: 6f0edc3b518ce894ca1d1efc73f28844,
+    type: 3}
   structureType: 0
-  minimalInstances: 0
-  maximalInstances: 0
-  allowedBiomes: []
+  minimalInstances: 1
+  maximalInstances: 2
+  allowedBiomes:
+  - {fileID: 11400000, guid: 6eda92a647189534d99701a503fe656c, type: 2}
   variableSize: 0
-  minSize: 0
-  maxSize: 0
+  minSize: 1
+  maxSize: 1
   ignoreSlopes: 0
   spawnAltitude: 0
