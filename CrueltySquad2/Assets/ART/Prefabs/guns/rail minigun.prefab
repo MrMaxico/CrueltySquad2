@@ -93,9 +93,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3985468866760022157}
   - component: {fileID: 4324839365179884084}
+  - component: {fileID: 7018123527893281267}
+  - component: {fileID: 11591579810887109}
   m_Layer: 0
   m_Name: rail minigun
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,9 +132,49 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1628856504322475369, guid: 95dd9bcd2a66f1c4481a5560fe23800f, type: 3}
+--- !u!114 &7018123527893281267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4324839365179884087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0273260f417880742a466f808dffaaec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePerBullet: 8
+  magSize: 200
+  currentAmmo: 200
+  fireRate: 0.05
+  bloom: 0.1
+  range: 200
+  reloadspeed: 4
+  gunType: 1
+  gunStatUI: {fileID: 1601212412130996728}
+  lootBeam: {fileID: 6882925513878516566}
+  shotgunSpreadAngle: 15
+  shotgunPelletCount: 15
+--- !u!54 &11591579810887109
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4324839365179884087}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5107871969411145301
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,6 +353,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2836316349367317634}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6882925513878516566 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8708148553062041556, guid: 909e7fd0100aa86418109786769a86f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 2836316349367317634}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5563815974032147205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -448,11 +496,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Worldspace weapon stats (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6561185086943212285, guid: a23ebab5fd4173544b24593c704037ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a23ebab5fd4173544b24593c704037ba, type: 3}
 --- !u!224 &1601212412130996723 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6561185086943212278, guid: a23ebab5fd4173544b24593c704037ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 5563815974032147205}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1601212412130996728 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6561185086943212285, guid: a23ebab5fd4173544b24593c704037ba,
     type: 3}
   m_PrefabInstance: {fileID: 5563815974032147205}
   m_PrefabAsset: {fileID: 0}
