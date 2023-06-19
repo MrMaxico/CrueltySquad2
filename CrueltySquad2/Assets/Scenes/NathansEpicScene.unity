@@ -742,11 +742,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teleporter (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2355378838208690141, guid: 0ffa3af5e92bf27418b77faf2a8ba2f5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b89dbc9bcc4dc184981aa677d17ff7a1, type: 2}
     - target: {fileID: 4761767020522687682, guid: 0ffa3af5e92bf27418b77faf2a8ba2f5,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 52162a04e923da74e887a82673f05e89, type: 2}
+      objectReference: {fileID: 2100000, guid: b89dbc9bcc4dc184981aa677d17ff7a1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ffa3af5e92bf27418b77faf2a8ba2f5, type: 3}
 --- !u!1 &410087039
