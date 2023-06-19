@@ -44,7 +44,7 @@ public class PlayerStats : MonoBehaviour
         healthcript.SetMaxHealth(playerMaxHealth);
         healthcript.Heal(playerMaxHealth);
         healthcript.shield = playerMaxHealth / 4;
-        healthcript.updateShieldBar();
+        healthcript.UpdateShieldBar();
         nextLevelUpExp += 50;
         UpdateXPBar();
     }

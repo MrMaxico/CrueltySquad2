@@ -234,12 +234,12 @@ MonoBehaviour:
   damagePerBullet: 15
   magSize: 100
   currentAmmo: 100
-  fireRate: 0.1
+  fireRate: 0.08
   bloom: 0.05
   range: 100
   reloadspeed: 3
   gunType: 1
-  gunStatUI: {fileID: 1841526258827373891}
+  gunStatUI: {fileID: 1841526259874949609}
   lootBeam: {fileID: 6265506061313247811}
   shotgunSpreadAngle: 15
   shotgunPelletCount: 15
@@ -580,17 +580,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Worldspace weapon stats (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6561185086943212285, guid: a23ebab5fd4173544b24593c704037ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a23ebab5fd4173544b24593c704037ba, type: 3}
---- !u!1 &1841526258827373891 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6561185086943212285, guid: a23ebab5fd4173544b24593c704037ba,
-    type: 3}
-  m_PrefabInstance: {fileID: 4791945945243885502}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1841526258827373896 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6561185086943212278, guid: a23ebab5fd4173544b24593c704037ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 4791945945243885502}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1841526259874949609 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6561185085876663895, guid: a23ebab5fd4173544b24593c704037ba,
     type: 3}
   m_PrefabInstance: {fileID: 4791945945243885502}
   m_PrefabAsset: {fileID: 0}

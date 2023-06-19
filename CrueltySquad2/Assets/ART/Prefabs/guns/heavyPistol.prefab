@@ -58,7 +58,7 @@ MonoBehaviour:
   range: 1000
   reloadspeed: 2.5
   gunType: 0
-  gunStatUI: {fileID: 4487729892461872326}
+  gunStatUI: {fileID: 4487729891412033644}
   lootBeam: {fileID: 3823807419424320611}
   shotgunSpreadAngle: 15
   shotgunPelletCount: 15
@@ -89,7 +89,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -150708487618154739, guid: 63b7080bd45a85643a378497df09b716, type: 3}
 --- !u!1 &6743090323386014953
@@ -503,9 +503,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a23ebab5fd4173544b24593c704037ba, type: 3}
---- !u!1 &4487729892461872326 stripped
+--- !u!1 &4487729891412033644 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 6561185086943212285, guid: a23ebab5fd4173544b24593c704037ba,
+  m_CorrespondingSourceObject: {fileID: 6561185085876663895, guid: a23ebab5fd4173544b24593c704037ba,
     type: 3}
   m_PrefabInstance: {fileID: 7298537970993247803}
   m_PrefabAsset: {fileID: 0}

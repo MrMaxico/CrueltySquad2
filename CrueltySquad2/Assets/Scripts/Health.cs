@@ -35,10 +35,10 @@ public class Health : MonoBehaviour
     public float timeOutOfCombat;
     private void Start() {
         if (healthType == HealthType.Player) {
-            updateHealthBar();
+            UpdateHealthBar();
             maxShield = maxHealth / 4;
             shield = maxShield;
-            updateShieldBar();
+            UpdateShieldBar();
         }
     }
     // Update is called once per frame
@@ -60,7 +60,7 @@ public class Health : MonoBehaviour
         if (timeOutOfCombat >= shieldRegenTime && shield <= maxShield && inCombat == false && healthType == HealthType.Player) {
             timeOutOfCombat = 0f; // Reset the timer
             shield += shieldRegenAmount;
-            updateShieldBar();
+            UpdateShieldBar();
         }
     }
     //returns the current amount of health
@@ -98,8 +98,8 @@ public class Health : MonoBehaviour
             } else {
                 shield -= amount;
             }
-            updateShieldBar();
-            updateHealthBar();
+            UpdateShieldBar();
+            UpdateHealthBar();
             StartCoroutine(InCombatShieldRegenDelay());
         }
         if (healthType == HealthType.Enemy || healthType == HealthType.prop) {
@@ -116,7 +116,7 @@ public class Health : MonoBehaviour
             health += amount;
         }
         if (healthType == HealthType.Player) {
-            updateHealthBar();
+            UpdateHealthBar();
         }
     }
 
@@ -124,15 +124,15 @@ public class Health : MonoBehaviour
     {
         maxHealth = max;
         if(healthType == HealthType.Player) {
-            updateHealthBar();
+            UpdateHealthBar();
         }
     }
     //Only for player:
-    public void updateHealthBar() {
+    public void UpdateHealthBar() {
         healthBar.GetComponent<Slider>().value = health / maxHealth;
         maxHealthText.text = Mathf.Round(health).ToString();
     }
-    public void updateShieldBar() {
+    public void UpdateShieldBar() {
         shieldBar.GetComponent<Slider>().value = shield / maxShield;
         maxShieldText.text = Mathf.Round(shield).ToString();
     }
@@ -158,7 +158,8 @@ public class Health : MonoBehaviour
             if (healthType == HealthType.Enemy) {
                 GameObject.Instantiate(deathSplash, transform.position, transform.rotation);
                 int randomIndex = Random.Range(0, gunsToDropOnKill.Length);
-                GameObject.Instantiate(gunsToDropOnKill[randomIndex], transform.position, transform.rotation);
+                GameObject Gun = (GameObject)Instantiate(gunsToDropOnKill[randomIndex], transform.position, transform.rotation);
+                Gun.name = gunsToDropOnKill[randomIndex].name;
                 GetComponent<Enemy>().spawner.OnEnemyKill();
             }
             else if (healthType == HealthType.prop)

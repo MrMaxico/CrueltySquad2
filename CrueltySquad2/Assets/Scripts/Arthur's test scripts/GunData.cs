@@ -37,6 +37,5 @@ public class GunData : MonoBehaviour {
         gunStatUI.transform.GetChild(5).GetComponent<TextMeshProUGUI>().text = magSize.ToString(); //magSize
         gunStatUI.transform.GetChild(6).GetComponent<TextMeshProUGUI>().text = fireRate.ToString(); //FireRate
         gunStatUI.transform.GetChild(7).GetComponent<TextMeshProUGUI>().text = range.ToString(); //Range
-
     }
 }
