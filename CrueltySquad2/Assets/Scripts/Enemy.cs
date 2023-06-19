@@ -81,13 +81,15 @@ public class Enemy : MonoBehaviour
             {
                 if (attackTimer <= 0)
                 {
+                    attackTimer = attackSpeed;
                     Vector3 spherePosition = transform.position + transform.forward * relativeHitPosition.z +
                                              transform.right * relativeHitPosition.x +
                                              transform.up * relativeHitPosition.y;
                     if (Physics.CheckSphere(spherePosition, .3f, pLayer))
                     {
+                        float playerHealthBeforeDamage = player.GetComponent<Health>().GetHealth();
                         player.GetComponent<Health>().Damage(damage);
-                        attackTimer = attackSpeed;
+                        Debug.Log($"Damaged player. Health went from {playerHealthBeforeDamage} to {player.GetComponent<Health>().GetHealth()}");
                     }
                 }
             }
@@ -95,13 +97,15 @@ public class Enemy : MonoBehaviour
             {
                 if (attackTimer <= 0)
                 {
+                    attackTimer = attackSpeed;
                     Vector3 spherePosition = transform.position + transform.forward * relativeHitPosition.z +
                                              transform.right * relativeHitPosition.x +
                                              transform.up * relativeHitPosition.y;
                     if (Physics.CheckSphere(spherePosition, .3f, pLayer))
                     {
+                        float playerHealthBeforeDamage = player.GetComponent<Health>().GetHealth();
                         player.GetComponent<Health>().Damage(damage);
-                        attackTimer = attackSpeed;
+                        Debug.Log($"Damaged player. Health went from {playerHealthBeforeDamage} to {player.GetComponent<Health>().GetHealth()}");
                     }
                 }
             }

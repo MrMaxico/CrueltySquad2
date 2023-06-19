@@ -19,6 +19,7 @@ public class PlayerStats : MonoBehaviour
     private void Start() {
         playerLevel = 1;
         nextLevelUpExp = 50;
+        playerMaxHealth = healthcript.GetMaxHealth();
         UpdateXPBar();
     }
     public void AddExp(float exp) {
@@ -39,7 +40,7 @@ public class PlayerStats : MonoBehaviour
     }
     public void LevelUp(int level) {
         playerLevel += level;
-        playerMaxHealth = playerMaxHealth * healthMultiplier;
+        playerMaxHealth *= healthMultiplier;
         meleeDamage = meleeDamage * meleedamageMultiplier;
         healthcript.SetMaxHealth(playerMaxHealth);
         healthcript.Heal(playerMaxHealth);

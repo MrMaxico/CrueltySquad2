@@ -94,6 +94,7 @@ public class Health : MonoBehaviour
             if(amount >= shield) {
                 amount -= shield;
                 shield = 0;
+                Debug.Log($"damage amount is {amount}");
                 health -= amount;
             } else {
                 shield -= amount;
