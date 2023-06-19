@@ -16,10 +16,14 @@ public class PlayerStats : MonoBehaviour
     public float healthMultiplier = 1.2f;
     public float meleeDamage = 100f;
     public float meleedamageMultiplier = 1.2f;
+
     private void Start() {
-        playerLevel = 1;
-        nextLevelUpExp = 50;
-        playerMaxHealth = healthcript.GetMaxHealth();
+        if (playerLevel == 0)
+        {
+            playerLevel = 1;
+            nextLevelUpExp = 50;
+            playerMaxHealth = healthcript.GetMaxHealth();
+        }
         UpdateXPBar();
     }
     public void AddExp(float exp) {
