@@ -1402,10 +1402,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.16111618
-  m_Height: 0.55
+  m_Radius: 0.11336485
+  m_Height: 0.5500001
   m_Direction: 2
-  m_Center: {x: 0, y: 0.041116178, z: -0.09}
+  m_Center: {x: 0, y: 0.102318764, z: -0.089999996}
 --- !u!95 &5988360007182109878
 Animator:
   serializedVersion: 5
@@ -1454,6 +1454,7 @@ MonoBehaviour:
   relativeHitPosition: {x: 0, y: 0, z: 0.85}
   attackSpeed: 2
   attackTimer: 0
+  animationTimeTillHit: 0
   flyEnemyFlightHeight: 0.5
   renderer: {fileID: 751887907167583691}
   activeIdle: 0
