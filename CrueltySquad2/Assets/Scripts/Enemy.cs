@@ -76,21 +76,13 @@ public class Enemy : MonoBehaviour
         }
         else if (angry && path.Count == 1)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position - transform.forward * (relativeHitPosition.z * 1.5f), speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position - transform.forward * (relativeHitPosition.z * 1.7f), speed * Time.deltaTime);
             if (enemyType == EnemyTypes.flyEnemy)
             {
                 if (attackTimer <= 0)
                 {
                     attackTimer = attackSpeed;
-                    Vector3 spherePosition = transform.position + transform.forward * relativeHitPosition.z +
-                                             transform.right * relativeHitPosition.x +
-                                             transform.up * relativeHitPosition.y;
-                    if (Physics.CheckSphere(spherePosition, .3f, pLayer))
-                    {
-                        float playerHealthBeforeDamage = player.GetComponent<Health>().GetHealth();
-                        player.GetComponent<Health>().Damage(damage);
-                        Debug.Log($"Damaged player. Health went from {playerHealthBeforeDamage} to {player.GetComponent<Health>().GetHealth()}");
-                    }
+                    StartCoroutine(RunAnimation());
                 }
             }
             else if (enemyType == EnemyTypes.crawlerEnemy)
@@ -176,6 +168,32 @@ public class Enemy : MonoBehaviour
                     path[i] = newWaypoint;
                 }
                 Profiler.EndSample();
+            }
+        }
+    }
+
+    public IEnumerator RunAnimation()
+    {
+        if (enemyType == EnemyTypes.flyEnemy)
+        {
+            GetComponent<Animator>().SetTrigger("isAttacking");
+            yield return new WaitForEndOfFrame();
+            GetComponent<Animator>().ResetTrigger("isAttacking");
+        }
+    }
+
+    public void DamagePlayer()
+    {
+        if (enemyType == EnemyTypes.flyEnemy)
+        {
+            Vector3 spherePosition = transform.position + transform.forward * relativeHitPosition.z +
+                                                     transform.right * relativeHitPosition.x +
+                                                     transform.up * relativeHitPosition.y;
+            if (Physics.CheckSphere(spherePosition, .3f, pLayer))
+            {
+                float playerHealthBeforeDamage = player.GetComponent<Health>().GetHealth();
+                player.GetComponent<Health>().Damage(damage);
+                Debug.Log($"Damaged player. Health went from {playerHealthBeforeDamage} to {player.GetComponent<Health>().GetHealth()}");
             }
         }
     }
