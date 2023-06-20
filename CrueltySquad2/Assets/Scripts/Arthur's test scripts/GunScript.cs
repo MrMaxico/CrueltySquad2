@@ -22,6 +22,7 @@ public class GunScript : MonoBehaviour
     public GameObject enemyHitParticlePrefab;
     public AudioSource shootingSound;
     public AudioSource reloadSound;
+    public RaycastHit lastHit;
     private void Start() {
         originalRotation = transform.localRotation.eulerAngles;
     }
@@ -99,10 +100,13 @@ public class GunScript : MonoBehaviour
                 // Perform hit detection and damage logic here
                 Debug.Log("Hit: " + hit.collider.gameObject.name + "With: " + currentGunData.gunType);
                 if (hit.transform.CompareTag("Enemy") || hit.transform.CompareTag("Destroyable")) {
-                    if (hit.transform.GetComponent<Health>().GetHealth() <= currentGunData.damagePerBullet && !hit.transform.CompareTag("Destroyable")) {
-                        hit.transform.GetComponent<Health>().EnemyDeath();
-                        playerStats.AddExp(hit.transform.GetComponent<Health>().xpOnDeath);
+                    if (hit.transform.GetComponent<Health>().GetHealth() <= currentGunData.damagePerBullet && !hit.transform.CompareTag("Destroyable") && hit.collider != lastHit.collider) {
+                        if (hit.collider != lastHit.collider) {
+                            hit.transform.GetComponent<Health>().EnemyDeath();
+                            playerStats.AddExp(hit.transform.GetComponent<Health>().xpOnDeath);
+                        }
                     }
+                    lastHit = hit;
                     if (hit.transform.CompareTag("Enemy")) {
                         Instantiate(enemyHitParticlePrefab, hit.point, Quaternion.identity);
                     }
