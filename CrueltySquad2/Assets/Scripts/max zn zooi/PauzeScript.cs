@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauzeMenuScript : MonoBehaviour
+public class PauzeScript : MonoBehaviour
 {
     public static bool gameIsPaused = false;
 
@@ -14,7 +14,7 @@ public class PauzeMenuScript : MonoBehaviour
     public KeyCode pauseKey;
     void Update()
     {
-        if (Input.GetButtonDown("Pause"))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (gameIsPaused)
             {
@@ -51,11 +51,11 @@ public class PauzeMenuScript : MonoBehaviour
         buttonClick.Play();
         Time.timeScale = 1f;
         gameIsPaused = false;
-        SceneManager.LoadScene("Main Menu");
-        FindObjectOfType<AudioManagerScript>().StopPlaying("DefenceSetupMusic");
-        FindObjectOfType<AudioManagerScript>().StopPlaying("WaveMusic1");
-        FindObjectOfType<AudioManagerScript>().StopPlaying("WaveMusic2");
-        FindObjectOfType<AudioManagerScript>().StopPlaying("MamaSquidMusic");
+        SceneManager.LoadScene("MainMenu");
+        //FindObjectOfType<AudioManagerScript>().StopPlaying("DefenceSetupMusic");
+       // FindObjectOfType<AudioManagerScript>().StopPlaying("WaveMusic1");
+       // FindObjectOfType<AudioManagerScript>().StopPlaying("WaveMusic2");
+       // FindObjectOfType<AudioManagerScript>().StopPlaying("MamaSquidMusic");
     }
 
     public void RestartGame()
