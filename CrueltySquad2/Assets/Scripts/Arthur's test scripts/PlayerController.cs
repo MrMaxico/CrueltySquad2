@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour {
         //Jump
         Vector3 jump = new Vector3();
         if (canJump || infJump) {
-            if (Input.GetKeyUp("space")) {
+            if (Input.GetKeyDown("space")) {
                 jump.y = jumpPower * 5;
                 rb.AddForce(jump, ForceMode.Impulse);
                 Debug.Log("jumped");
