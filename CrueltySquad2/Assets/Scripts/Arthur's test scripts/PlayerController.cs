@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour {
     public GunScript gunScript;
     public GameObject pickUpUI;
     private bool raycastHit;
+    public AudioSource walkingSound;
 
 
     // Update is called once per frame
@@ -162,6 +163,7 @@ public class PlayerController : MonoBehaviour {
         else
         {
             moveVector = transform.TransformDirection(movement) * speed * Time.deltaTime;
+           //walkingSound.enabled = true;
         }
         rb.velocity = new Vector3(moveVector.x, rb.velocity.y, moveVector.z);
     }
