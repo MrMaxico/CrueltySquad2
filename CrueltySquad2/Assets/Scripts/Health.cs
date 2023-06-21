@@ -159,9 +159,11 @@ public class Health : MonoBehaviour
             Debug.Log("Enemy Died");
             if (healthType == HealthType.Enemy) {
                 GameObject.Instantiate(deathSplash, transform.position, transform.rotation);
-                int randomIndex = Random.Range(0, gunsToDropOnKill.Length);
                 GameObject gun = lootTable.GetRandom();
-                GameObject.Instantiate(gun, null);
+                if (Random.Range(0, 100) < 25) {
+                    GameObject.Instantiate(gun, transform.position, transform.rotation);
+                }
+                Debug.Log(gun.name);
                 //gun.name = gunsToDropOnKill[randomIndex].name;
                 GetComponent<Enemy>().spawner.OnEnemyKill();
             }
