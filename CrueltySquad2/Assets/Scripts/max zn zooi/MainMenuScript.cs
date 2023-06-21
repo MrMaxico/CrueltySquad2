@@ -159,7 +159,7 @@ public class MainMenuScript : MonoBehaviour
     public void LoadLevel1()
     {
         buttonClick.Play();
-        SceneManager.LoadScene("franswildit");
+        SceneManager.LoadScene("Nicker");
         //FindObjectOfType<AudioManagerScript>().Play("DefenceSetupMusic");
     }
 
