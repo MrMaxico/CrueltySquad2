@@ -77,8 +77,9 @@ public class Enemy : MonoBehaviour
         }
         else if (angry && path.Count == 1)
         {
-
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position - transform.forward * (relativeHitPosition.z * attackDistanceMultiplyer), speed * Time.deltaTime);
+            Vector3 goalPosition = player.transform.position - transform.forward * (relativeHitPosition.z * attackDistanceMultiplyer);
+            goalPosition.y = path[0].y;
+            transform.position = Vector3.MoveTowards(transform.position, goalPosition, speed * Time.deltaTime);
 
             if (attackTimer <= 0)
             {
