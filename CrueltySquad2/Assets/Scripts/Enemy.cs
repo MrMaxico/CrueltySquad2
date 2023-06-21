@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
     public LayerMask pLayer;
     public float damage;
     public Vector3 relativeHitPosition;
+    public float attackDistanceMultiplyer;
     public float attackSpeed;
     public float attackTimer;
     [Space(20)]
@@ -76,30 +77,13 @@ public class Enemy : MonoBehaviour
         }
         else if (angry && path.Count == 1)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position - transform.forward * (relativeHitPosition.z * 1.7f), speed * Time.deltaTime);
-            if (enemyType == EnemyTypes.flyEnemy)
+
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position - transform.forward * (relativeHitPosition.z * attackDistanceMultiplyer), speed * Time.deltaTime);
+
+            if (attackTimer <= 0)
             {
-                if (attackTimer <= 0)
-                {
-                    attackTimer = attackSpeed;
-                    StartCoroutine(RunAnimation());
-                }
-            }
-            else if (enemyType == EnemyTypes.crawlerEnemy)
-            {
-                if (attackTimer <= 0)
-                {
-                    attackTimer = attackSpeed;
-                    Vector3 spherePosition = transform.position + transform.forward * relativeHitPosition.z +
-                                             transform.right * relativeHitPosition.x +
-                                             transform.up * relativeHitPosition.y;
-                    if (Physics.CheckSphere(spherePosition, .3f, pLayer))
-                    {
-                        float playerHealthBeforeDamage = player.GetComponent<Health>().GetHealth();
-                        player.GetComponent<Health>().Damage(damage);
-                        Debug.Log($"Damaged player. Health went from {playerHealthBeforeDamage} to {player.GetComponent<Health>().GetHealth()}");
-                    }
-                }
+                attackTimer = attackSpeed;
+                StartCoroutine(RunAnimation());
             }
         }
         //else if (path.Count > 0)
@@ -180,6 +164,12 @@ public class Enemy : MonoBehaviour
             yield return new WaitForEndOfFrame();
             GetComponent<Animator>().ResetTrigger("isAttacking");
         }
+        else if (enemyType == EnemyTypes.crawlerEnemy)
+        {
+            GetComponent<Animator>().SetTrigger("Attack2");
+            yield return new WaitForEndOfFrame();
+            GetComponent<Animator>().ResetTrigger("Attack2");
+        }
     }
 
     public void DamagePlayer()
@@ -189,6 +179,19 @@ public class Enemy : MonoBehaviour
             Vector3 spherePosition = transform.position + transform.forward * relativeHitPosition.z +
                                                      transform.right * relativeHitPosition.x +
                                                      transform.up * relativeHitPosition.y;
+            if (Physics.CheckSphere(spherePosition, .3f, pLayer))
+            {
+                float playerHealthBeforeDamage = player.GetComponent<Health>().GetHealth();
+                player.GetComponent<Health>().Damage(damage);
+                Debug.Log($"Damaged player. Health went from {playerHealthBeforeDamage} to {player.GetComponent<Health>().GetHealth()}");
+            }
+        }
+
+        if (enemyType == EnemyTypes.crawlerEnemy)
+        {
+            Vector3 spherePosition = transform.position + transform.forward * relativeHitPosition.z +
+                                     transform.right * relativeHitPosition.x +
+                                     transform.up * relativeHitPosition.y;
             if (Physics.CheckSphere(spherePosition, .3f, pLayer))
             {
                 float playerHealthBeforeDamage = player.GetComponent<Health>().GetHealth();
