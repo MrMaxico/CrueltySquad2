@@ -10,6 +10,7 @@ public class PlayerStats : MonoBehaviour
     static float playerExp;
     static float nextLevelUpExp;
     static float playerMaxHealth;
+    static float maxShield;
     public Slider xpBar;
     public TextMeshProUGUI levelText;
     public Health healthcript;
@@ -23,9 +24,25 @@ public class PlayerStats : MonoBehaviour
             playerLevel = 1;
             nextLevelUpExp = 50;
             playerMaxHealth = healthcript.GetMaxHealth();
+            maxShield = healthcript.GetMaxShield();
         }
+        healthcript.SetMaxHealth(playerMaxHealth);
+        healthcript.Heal(playerMaxHealth);
+        healthcript.maxShield = maxShield;
+        healthcript.shield = maxShield;
         UpdateXPBar();
+        healthcript.UpdateHealthBar();
+        healthcript.UpdateShieldBar();
     }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LevelUp(1);
+        }
+    }
+
     public void AddExp(float exp) {
         playerExp += exp;
         UpdateXPBar();
@@ -49,6 +66,8 @@ public class PlayerStats : MonoBehaviour
         healthcript.SetMaxHealth(playerMaxHealth);
         healthcript.Heal(playerMaxHealth);
         healthcript.shield = playerMaxHealth / 4;
+        healthcript.maxShield = healthcript.shield;
+        maxShield = healthcript.maxShield;
         healthcript.UpdateShieldBar();
         nextLevelUpExp += 50;
         UpdateXPBar();
