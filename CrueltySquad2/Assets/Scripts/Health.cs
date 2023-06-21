@@ -22,6 +22,7 @@ public class Health : MonoBehaviour
     [Header("Death (Only for Enemies)", order = 1)]
     public GameObject deathSplash;
     public GameObject[] gunsToDropOnKill;
+    public WeightedRandomList<GameObject> lootTable;
     [Header("HealthBar (Only For Player)", order = 2)]
     public GameObject healthBar;
     public TextMeshProUGUI maxHealthText;
@@ -159,8 +160,9 @@ public class Health : MonoBehaviour
             if (healthType == HealthType.Enemy) {
                 GameObject.Instantiate(deathSplash, transform.position, transform.rotation);
                 int randomIndex = Random.Range(0, gunsToDropOnKill.Length);
-                GameObject Gun = (GameObject)Instantiate(gunsToDropOnKill[randomIndex], transform.position, transform.rotation);
-                Gun.name = gunsToDropOnKill[randomIndex].name;
+                GameObject gun = lootTable.GetRandom();
+                GameObject.Instantiate(gun, null);
+                //gun.name = gunsToDropOnKill[randomIndex].name;
                 GetComponent<Enemy>().spawner.OnEnemyKill();
             }
             else if (healthType == HealthType.prop)
