@@ -11880,6 +11880,8 @@ GameObject:
   - component: {fileID: 521188058568476376}
   - component: {fileID: 7476276795362259167}
   - component: {fileID: 3383373795579253198}
+  - component: {fileID: 1828378529921839754}
+  - component: {fileID: 3274924860239896047}
   m_Layer: 0
   m_Name: Crusher
   m_TagString: Untagged
@@ -12054,6 +12056,67 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1828378529921839754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9018616310742069954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba15951d3b58eb2419c326b6c126c584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 0
+  shield: 0
+  maxShield: 0
+  xpOnDeath: 40
+  healthType: 0
+  deathSplash: {fileID: 0}
+  gunsToDropOnKill: []
+  healthBar: {fileID: 0}
+  maxHealthText: {fileID: 0}
+  shieldBar: {fileID: 0}
+  maxShieldText: {fileID: 0}
+  shieldRegenTime: 0
+  shieldRegenAmount: 0
+  inCombat: 0
+  inCombatShieldRegenDelay: 0
+  timeOutOfCombat: 0
+--- !u!114 &3274924860239896047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9018616310742069954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fccfb354b2db77d4abe4c49b412d26f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: 1
+  generator: {fileID: 0}
+  spawner: {fileID: 0}
+  player: {fileID: 0}
+  speed: 8
+  angry: 0
+  followDistance: 30
+  path: []
+  pathRefreshRate: 0.1
+  pLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  damage: 10
+  relativeHitPosition: {x: 0, y: 0, z: 0.85}
+  attackDistanceMultiplyer: 1.5
+  attackSpeed: 2
+  attackTimer: 0
+  flyEnemyFlightHeight: 0.5
+  renderer: {fileID: 0}
+  activeIdle: 0
 --- !u!1 &9205216774867011033
 GameObject:
   m_ObjectHideFlags: 0
