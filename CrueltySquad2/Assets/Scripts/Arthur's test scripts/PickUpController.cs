@@ -28,6 +28,7 @@ public class PickUpController : MonoBehaviour {
     private void Start() {
         holdingPrimary = true;
         holdingSecondary = false;
+        PickUpGun(primaryholder.GetChild(0).transform);
     }
     // Update is called once per frame
     void Update() {
@@ -69,7 +70,9 @@ public class PickUpController : MonoBehaviour {
     }
 
     void PickUpGun(Transform gunTransform) {
-        this.GetComponent<PlayerController>().lastGunStats.SetActive(false);
+        if (this.GetComponent<PlayerController>().lastGunStats != null) {
+            this.GetComponent<PlayerController>().lastGunStats.SetActive(false);
+        }
         Rigidbody gunRigidbody = gunTransform.GetComponent<Rigidbody>();
         if (holdingPrimary) {
             holder = primaryholder;

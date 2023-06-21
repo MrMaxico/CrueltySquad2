@@ -9,6 +9,7 @@ public enum GunType {
 }
 
 public class GunData : MonoBehaviour {
+    public string gunName;
     public float damagePerBullet;
     public float magSize = 30f;
     public float currentAmmo = 30f;
@@ -23,10 +24,12 @@ public class GunData : MonoBehaviour {
     public float shotgunSpreadAngle = 15f;
     public float shotgunPelletCount = 15f;
     // Other gun-related variables and functions can be added here
-
     public void Start() {
-        gunStatUI.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = gunType.ToString(); //Weapon name
-        gunStatUI.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "lvl: 1".ToString(); //make Level of gun
+        for (int i = 0; i < Teleporter.islandNumber; i++) {
+            damagePerBullet += 0.2f * damagePerBullet;
+        }
+        gunStatUI.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = gunName.ToString(); //Weapon name
+        gunStatUI.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = Teleporter.islandNumber.ToString(); //make Level of gun
         gunStatUI.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = " "; //make modifier name
         if (gunType == GunType.Shotgun) {
             int result = 5 * 15;
