@@ -15,7 +15,7 @@ public class Health : MonoBehaviour
     [SerializeField] float health;
     [SerializeField] float maxHealth;
     public float shield;
-    [SerializeField] float maxShield;
+    public float maxShield;
     public float xpOnDeath = 10;
     [Header("Type of user", order = 0)]
     public HealthType healthType;
