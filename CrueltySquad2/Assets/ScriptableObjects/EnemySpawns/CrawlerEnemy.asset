@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 901aadb56dd3d064da94520b0af66ce3, type: 3}
+  m_Script: {fileID: 11500000, guid: a4c647e360e5b28428d6ed857d5a7b92, type: 3}
   m_Name: CrawlerEnemy
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 6113339365441053707, guid: 74c027458ef3d594dba1f3cc57424c57,
-    type: 3}
   spawnChance: 10
+  type: 0
+  GameObject: {fileID: 4511667148044793745, guid: 7f43446b440dcaf4ca0ecc5688c7926a,
+    type: 3}
+  String: 

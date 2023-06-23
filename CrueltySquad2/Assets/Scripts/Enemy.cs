@@ -38,6 +38,11 @@ public class Enemy : MonoBehaviour
     {
         path = new List<Vector3> { };
 
+        if (enemyType == EnemyTypes.lootJalla)
+        {
+            generator = FindObjectOfType<IslandGenerator>();
+        }
+
         FindPath();
     }
 
@@ -51,7 +56,22 @@ public class Enemy : MonoBehaviour
             FindPath();
         }
 
-        if (player == null)
+
+        if (!angry && path.Count <= 1)
+        {
+            idleDestination = generator.grid.RandomNode().position;
+        }
+
+        if (renderer.isVisible && activeIdle == false)
+        {
+            activeIdle = true;
+        }
+        else if (!renderer.isVisible && activeIdle == true)
+        {
+            activeIdle = false;
+        }
+
+        if (player == null && enemyType != EnemyTypes.lootJalla)
         {
             player = GameObject.FindGameObjectWithTag("Player");
             return;
@@ -86,25 +106,6 @@ public class Enemy : MonoBehaviour
                 attackTimer = attackSpeed;
                 StartCoroutine(RunAnimation());
             }
-        }
-        //else if (path.Count > 0)
-        //{
-        //    transform.position = Vector3.MoveTowards(transform.position, path[0], speed * Time.deltaTime);
-        //}
-
-        //if (!angry && path.Count == 0) //
-        if (!angry && path.Count == 1)
-        {
-            idleDestination = generator.grid.RandomNode().position;
-        }
-
-        if (renderer.isVisible && activeIdle == false)
-        {
-            activeIdle = true;
-        }
-        else if (!renderer.isVisible && activeIdle == true)
-        {
-            activeIdle = false;
         }
     }
 
@@ -214,6 +215,7 @@ public class Enemy : MonoBehaviour
     public enum EnemyTypes
     {
         flyEnemy,
-        crawlerEnemy
+        crawlerEnemy,
+        lootJalla
     }
 }

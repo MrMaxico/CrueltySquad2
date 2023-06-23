@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] int spawnCap;
     int spawnedEnemies;
     [Space(20)]
-    [SerializeField] EnemySpawn[] enemySpawns;
+    [SerializeField] RandomVariable[] enemySpawns;
     [SerializeField] float preperationTime;
     bool preparing = true;
     [SerializeField] float spawnInterval;
@@ -36,7 +36,7 @@ public class Spawner : MonoBehaviour
         }
         if (spawnedEnemies < spawnCap)
         {
-            GameObject spawnedEnemy = Instantiate(RandomEnemySpawn().enemyPrefab, transform.position, Quaternion.identity);
+            GameObject spawnedEnemy = Instantiate(RandomEnemySpawn().GameObject, transform.position, Quaternion.identity);
             spawnedEnemy.GetComponent<Enemy>().generator = generator;
             spawnedEnemy.GetComponent<Enemy>().spawner = this;
             spawnedEnemies++;
@@ -48,10 +48,10 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    EnemySpawn RandomEnemySpawn()
+    RandomVariable RandomEnemySpawn()
     {
-        List<EnemySpawn> enemySpawnChanceList = new();
-        foreach (EnemySpawn enemySpawn in enemySpawns)
+        List<RandomVariable> enemySpawnChanceList = new();
+        foreach (RandomVariable enemySpawn in enemySpawns)
         {
             for (int i = 0; i < enemySpawn.spawnChance; i++)
             {
