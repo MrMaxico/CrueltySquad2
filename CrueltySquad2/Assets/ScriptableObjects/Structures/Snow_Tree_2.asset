@@ -10,19 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9411e39b001651c41abff753c0011848, type: 3}
-  m_Name: LootJalla
+  m_Name: Snow_Tree_2
   m_EditorClassIdentifier: 
-  structurePrefab: {fileID: 4743459456124045508, guid: fe7a2392cfeea7546838b95998435b7b,
+  structurePrefab: {fileID: 7636606399664404578, guid: 242ffa0a8b5e92949bc6149d8ae0a489,
     type: 3}
   structureType: 0
-  minimalInstances: 2
-  maximalInstances: 5
+  minimalInstances: 15
+  maximalInstances: 35
   allowedBiomes:
-  - {fileID: 11400000, guid: 6eda92a647189534d99701a503fe656c, type: 2}
   - {fileID: 11400000, guid: 417e4e94842cc844da19e4cb4bd628d3, type: 2}
-  - {fileID: 11400000, guid: 564991b0750f1a24ab40bb066408be3d, type: 2}
-  variableSize: 0
-  minSize: 0
-  maxSize: 0
+  variableSize: 1
+  minSize: 0.8
+  maxSize: 1.2
   ignoreSlopes: 1
   spawnAltitude: 0

@@ -343,6 +343,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnersLeft: 0
+  nextIslandPresets:
+  - {fileID: 11400000, guid: ed311d3822c4f1c4fb2e1565fa88fd9d, type: 2}
+  - {fileID: 11400000, guid: a46d891bd6f344a42a79cd850d86a6de, type: 2}
+  - {fileID: 11400000, guid: 4230a44aba04e474a82aa9f929e75d1f, type: 2}
 --- !u!1 &8662936564460280953
 GameObject:
   m_ObjectHideFlags: 0

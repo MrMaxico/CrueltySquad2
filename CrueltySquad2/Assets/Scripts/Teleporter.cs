@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Teleporter : MonoBehaviour
 {
-    static public int islandNumber; 
+    static public int islandNumber;
     public int spawnersLeft;
+    public List<RandomVariable> nextIslandPresets;
     bool open;
 
     private void Start()
@@ -39,7 +40,20 @@ public class Teleporter : MonoBehaviour
         if (open)
         {
             islandNumber++;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene(RandomIsland());
         }
+    }
+
+    string RandomIsland()
+    {
+        List<string> islandTypeChanceList = new();
+        foreach (RandomVariable islandType in nextIslandPresets)
+        {
+            for (int i = 0; i < islandType.spawnChance; i++)
+            {
+                islandTypeChanceList.Add(islandType.String);
+            }
+        }
+        return islandTypeChanceList[Mathf.RoundToInt(Random.Range(0, islandTypeChanceList.Count))];
     }
 }

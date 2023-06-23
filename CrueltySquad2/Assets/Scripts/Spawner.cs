@@ -36,7 +36,7 @@ public class Spawner : MonoBehaviour
         }
         if (spawnedEnemies < spawnCap)
         {
-            GameObject spawnedEnemy = Instantiate(RandomEnemySpawn().GameObject, transform.position, Quaternion.identity);
+            GameObject spawnedEnemy = Instantiate(RandomEnemySpawn(), transform.position, Quaternion.identity);
             spawnedEnemy.GetComponent<Enemy>().generator = generator;
             spawnedEnemy.GetComponent<Enemy>().spawner = this;
             spawnedEnemies++;
@@ -48,14 +48,14 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    RandomVariable RandomEnemySpawn()
+    GameObject RandomEnemySpawn()
     {
-        List<RandomVariable> enemySpawnChanceList = new();
+        List<GameObject> enemySpawnChanceList = new();
         foreach (RandomVariable enemySpawn in enemySpawns)
         {
             for (int i = 0; i < enemySpawn.spawnChance; i++)
             {
-                enemySpawnChanceList.Add(enemySpawn);
+                enemySpawnChanceList.Add(enemySpawn.GameObject);
             }
         }
         return enemySpawnChanceList[Mathf.RoundToInt(Random.Range(0, enemySpawnChanceList.Count))];
