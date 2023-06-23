@@ -1174,6 +1174,32 @@ MonoBehaviour:
   - {fileID: 5757830153032026586, guid: 73b525c524275584788cf1f76c237516, type: 3}
   - {fileID: 8727148447041403267, guid: cab80110cbe443e42be05462952db51f, type: 3}
   - {fileID: 7078281866280998902, guid: c7ac059add731e54eabba1ac8070cc19, type: 3}
+  lootTable:
+    list:
+    - item: {fileID: 3685379672084113396, guid: c88368ae1ee451246a2a7f5a93238568,
+        type: 3}
+      weight: 4
+    - item: {fileID: 9135655798291575255, guid: 824231a585538834c831c28a1ebe67b7,
+        type: 3}
+      weight: 1
+    - item: {fileID: 1823316254484109225, guid: ac5abc356152f414cacb6be6f5707242,
+        type: 3}
+      weight: 2
+    - item: {fileID: 8318553358585603384, guid: fca9192614561734fb039f29a33937e0,
+        type: 3}
+      weight: 1
+    - item: {fileID: 4324839365179884087, guid: 756f5baec6db3d443961c50ea1a7662e,
+        type: 3}
+      weight: 0.5
+    - item: {fileID: 5757830153032026586, guid: 73b525c524275584788cf1f76c237516,
+        type: 3}
+      weight: 4
+    - item: {fileID: 8727148447041403267, guid: cab80110cbe443e42be05462952db51f,
+        type: 3}
+      weight: 3
+    - item: {fileID: 7078281866280998902, guid: c7ac059add731e54eabba1ac8070cc19,
+        type: 3}
+      weight: 2
   healthBar: {fileID: 0}
   maxHealthText: {fileID: 0}
   shieldBar: {fileID: 0}
