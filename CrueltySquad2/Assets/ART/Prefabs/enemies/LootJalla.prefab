@@ -1188,6 +1188,9 @@ GameObject:
   - component: {fileID: 2566184088057076486}
   - component: {fileID: 6368172830985461527}
   - component: {fileID: -196825257648440110}
+  - component: {fileID: 1731672958292391879}
+  - component: {fileID: 6217327271846483360}
+  - component: {fileID: 1635504959809079096}
   m_Layer: 0
   m_Name: LootJalla
   m_TagString: Enemy
@@ -1255,6 +1258,8 @@ MonoBehaviour:
   - {fileID: 5757830153032026586, guid: 73b525c524275584788cf1f76c237516, type: 3}
   - {fileID: 8727148447041403267, guid: cab80110cbe443e42be05462952db51f, type: 3}
   - {fileID: 7078281866280998902, guid: c7ac059add731e54eabba1ac8070cc19, type: 3}
+  lootTable:
+    list: []
   healthBar: {fileID: 0}
   maxHealthText: {fileID: 0}
   shieldBar: {fileID: 0}
@@ -1290,11 +1295,62 @@ MonoBehaviour:
     m_Bits: 0
   damage: 0
   relativeHitPosition: {x: 0, y: 0, z: 0}
+  attackDistanceMultiplyer: 0
   attackSpeed: 0
   attackTimer: 0
   flyEnemyFlightHeight: 0.5
   renderer: {fileID: 5627299878077381103}
   activeIdle: 0
+--- !u!95 &1731672958292391879
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4743459456124045508}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aeac68a81224ba946ab5d083df9e3821, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+--- !u!136 &6217327271846483360
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4743459456124045508}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.10133425
+  m_Height: 0.5500001
+  m_Direction: 2
+  m_Center: {x: 0, y: 0.114349365, z: -0.089999996}
+--- !u!54 &1635504959809079096
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4743459456124045508}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &4800211093864074740
 GameObject:
   m_ObjectHideFlags: 0

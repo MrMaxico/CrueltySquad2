@@ -61,6 +61,6 @@ public class PauzeScript : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        FindObjectOfType<AudioManagerScript>().Play("DefenceSetupMusic");
+        //FindObjectOfType<AudioManagerScript>().Play("DefenceSetupMusic");
     }
 }
