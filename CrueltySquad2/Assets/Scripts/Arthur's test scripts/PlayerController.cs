@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour {
     public GameObject pickUpUI;
     private bool raycastHit;
     public AudioSource walkingSound;
-    public PauzeScript pauzeScript;
 
 
     // Update is called once per frame

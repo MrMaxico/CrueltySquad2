@@ -459,7 +459,6 @@ MonoBehaviour:
   gunScript: {fileID: 1632680530}
   pickUpUI: {fileID: 430956939010270773}
   walkingSound: {fileID: 6760660690208930014}
-  pauzeScript: {fileID: 0}
 --- !u!114 &1725525705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,16 +498,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba15951d3b58eb2419c326b6c126c584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
-  maxHealth: 1
-  shield: 1
-  maxShield: 0
+  health: 180
+  maxHealth: 180
+  shield: 45
+  maxShield: 45
   xpOnDeath: 10
   healthType: 1
   deathSplash: {fileID: 0}
   gunsToDropOnKill: []
   lootTable:
     list: []
+  damageEffect: {fileID: 1577925984544192987}
   healthBar: {fileID: 430956938130279496}
   maxHealthText: {fileID: 430956938275898094}
   gameOverUI: {fileID: 4278806424813666656}
@@ -537,6 +537,7 @@ MonoBehaviour:
   healthMultiplier: 1.2
   meleeDamage: 100
   meleedamageMultiplier: 1.2
+  levelUP: {fileID: 430956938090515685}
 --- !u!82 &7704085561168789091
 AudioSource:
   m_ObjectHideFlags: 0
@@ -747,7 +748,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -1338,6 +1339,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &430956938090515685 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6155701161451422412, guid: ef56a2f2cd3fa3440a741b8c576ae6cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 5806934987431579177}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &430956938092730726 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6155701161440859983, guid: ef56a2f2cd3fa3440a741b8c576ae6cd,

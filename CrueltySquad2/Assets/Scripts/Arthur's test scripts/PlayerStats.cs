@@ -17,6 +17,7 @@ public class PlayerStats : MonoBehaviour
     public float healthMultiplier = 1.2f;
     public float meleeDamage = 100f;
     public float meleedamageMultiplier = 1.2f;
+    public Animator levelUP;
 
     private void Start() {
         if (playerLevel == 0)
@@ -71,6 +72,7 @@ public class PlayerStats : MonoBehaviour
         healthcript.UpdateShieldBar();
         nextLevelUpExp += 50;
         UpdateXPBar();
+        levelUP.SetTrigger("isLevelUp");
     }
     public void UpdateXPBar() {
         xpBar.value = playerExp / nextLevelUpExp;

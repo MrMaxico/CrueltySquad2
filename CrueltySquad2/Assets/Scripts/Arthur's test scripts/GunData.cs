@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public enum GunType {
     Pistol,
@@ -10,6 +11,7 @@ public enum GunType {
 
 public class GunData : MonoBehaviour {
     public string gunName;
+    public Texture icon;
     public float damagePerBullet;
     public float magSize = 30f;
     public float currentAmmo = 30f;

@@ -23,7 +23,8 @@ public class Health : MonoBehaviour
     public GameObject deathSplash;
     public GameObject[] gunsToDropOnKill;
     public WeightedRandomList<GameObject> lootTable;
-    [Header("HealthBar (Only For Player)", order = 2)]
+    [Header("HealthUI (Only For Player)", order = 2)]
+    public Animator damageEffect;
     public GameObject healthBar;
     public TextMeshProUGUI maxHealthText;
     public GameObject gameOverUI;
@@ -93,7 +94,7 @@ public class Health : MonoBehaviour
     public void Damage(float amount)
     {
         if (healthType == HealthType.Player) {
-            if(amount >= shield) {
+            if (amount >= shield) {
                 amount -= shield;
                 shield = 0;
                 Debug.Log($"damage amount is {amount}");
@@ -107,6 +108,7 @@ public class Health : MonoBehaviour
             if(health <= 0f) {
                 PlayerDeath();
             }
+            damageEffect.SetTrigger("isHit");
         }
         if (healthType == HealthType.Enemy || healthType == HealthType.prop) {
             health -= amount;

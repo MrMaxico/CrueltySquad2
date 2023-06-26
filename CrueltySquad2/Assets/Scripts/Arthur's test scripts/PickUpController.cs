@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PickUpController : MonoBehaviour {
     [Header("Holders for Guns", order = 0)]
@@ -24,7 +25,7 @@ public class PickUpController : MonoBehaviour {
     public bool holdingPrimary;
     public bool holdingSecondary;
     public bool pickUpDelay;
-
+    public RawImage gunicon;
     private void Start() {
         holdingPrimary = true;
         holdingSecondary = false;
@@ -81,7 +82,9 @@ public class PickUpController : MonoBehaviour {
             holder = secondaryHolder;
             secondary = gunTransform;
         }
-       
+
+        gunicon.texture = gunTransform.GetComponent<GunData>().icon;
+        gunTransform.GetComponent<GunData>().reloadSound.Play();
         gunTransform.SetParent(holder);
         gunTransform.position = holder.position;
         gunTransform.rotation = holder.rotation;
