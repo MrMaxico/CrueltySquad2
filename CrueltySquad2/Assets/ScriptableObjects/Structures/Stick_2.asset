@@ -10,17 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9411e39b001651c41abff753c0011848, type: 3}
-  m_Name: Tree_1
+  m_Name: Stick_2
   m_EditorClassIdentifier: 
-  structurePrefab: {fileID: 4035275105393958774, guid: 2387da8b5c4c9974b94f291fbdd6e486,
+  structurePrefab: {fileID: 6952141055307587088, guid: f3179a3b19e78f740af6eb751c4e3c09,
     type: 3}
   structureType: 0
-  minimalInstances: 25
-  maximalInstances: 45
+  minimalInstances: 20
+  maximalInstances: 50
   allowedBiomes:
   - {fileID: 11400000, guid: 6eda92a647189534d99701a503fe656c, type: 2}
-  variableSize: 1
-  minSize: 0.8
-  maxSize: 1
-  ignoreSlopes: 1
-  spawnAltitude: -1
+  - {fileID: 11400000, guid: 0a79697240e27434596175cb09d07cc8, type: 2}
+  - {fileID: 11400000, guid: 417e4e94842cc844da19e4cb4bd628d3, type: 2}
+  - {fileID: 11400000, guid: 564991b0750f1a24ab40bb066408be3d, type: 2}
+  variableSize: 0
+  minSize: 0
+  maxSize: 0
+  ignoreSlopes: 0
+  spawnAltitude: 0

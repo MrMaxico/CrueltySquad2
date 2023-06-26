@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9411e39b001651c41abff753c0011848, type: 3}
   m_Name: Tree_2
   m_EditorClassIdentifier: 
-  structurePrefab: {fileID: 7301897356230864170, guid: 70cfb5c255220994f9ae21018ef65f2c,
+  structurePrefab: {fileID: 8227797563093399543, guid: ea021c1a9ae91894ab041c29eb98fe82,
     type: 3}
   structureType: 0
   minimalInstances: 15
@@ -21,6 +21,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6eda92a647189534d99701a503fe656c, type: 2}
   variableSize: 1
   minSize: 0.8
-  maxSize: 1.2
+  maxSize: 1
   ignoreSlopes: 1
-  spawnAltitude: 0
+  spawnAltitude: -1
