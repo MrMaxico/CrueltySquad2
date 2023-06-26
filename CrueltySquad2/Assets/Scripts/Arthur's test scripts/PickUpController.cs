@@ -83,7 +83,6 @@ public class PickUpController : MonoBehaviour {
             secondary = gunTransform;
         }
 
-        gunicon.texture = gunTransform.GetComponent<GunData>().icon;
         gunTransform.GetComponent<GunData>().reloadSound.Play();
         gunTransform.SetParent(holder);
         gunTransform.position = holder.position;
@@ -96,6 +95,7 @@ public class PickUpController : MonoBehaviour {
         pickUpDelay = false;
         gunTransform.GetComponent<GunData>().lootBeam.SetActive(false);
         cam.GetComponent<GunScript>().updateAmmoCount();
+        gunicon.texture = gunTransform.GetComponent<GunData>().icon;
         // Additional gun pickup logic if needed
     }
     void SwapGun(Transform gunTransform) {

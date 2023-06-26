@@ -486,6 +486,7 @@ MonoBehaviour:
   holdingPrimary: 1
   holdingSecondary: 0
   pickUpDelay: 0
+  gunicon: {fileID: 430956938441115139}
 --- !u!114 &1402957547013441499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1381,6 +1382,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5806934987431579177}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &430956938441115139 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6155701161637726250, guid: ef56a2f2cd3fa3440a741b8c576ae6cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 5806934987431579177}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &430956938445199148 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6155701161625229573, guid: ef56a2f2cd3fa3440a741b8c576ae6cd,
@@ -1424,6 +1437,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1708610413}
     m_Modifications:
+    - target: {fileID: 771120114, guid: cab80110cbe443e42be05462952db51f, type: 3}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 8400000, guid: fb1b017164e16dc4b8b8a82eff5f50e8, type: 2}
     - target: {fileID: 4594354731552446329, guid: cab80110cbe443e42be05462952db51f,
         type: 3}
       propertyPath: m_RootOrder

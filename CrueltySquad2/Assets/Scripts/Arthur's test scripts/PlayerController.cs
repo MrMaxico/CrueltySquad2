@@ -87,6 +87,7 @@ public class PlayerController : MonoBehaviour {
                 pickUpController.holdingSecondary = false;
                 pickUpController.holdingPrimary = true;
                 gunScript.currentGunData.reloadSound.Play();
+                pickUpController.gunicon.texture = gunScript.currentGunData.icon;
                 gunScript.updateAmmoCount();
             } else if (Input.GetKeyDown(KeyCode.Alpha2) && !gunScript.reloading) {
                 pickUpController.primaryholder.gameObject.SetActive(false);
@@ -94,6 +95,7 @@ public class PlayerController : MonoBehaviour {
                 pickUpController.holdingPrimary = false;
                 pickUpController.holdingSecondary = true;
                 gunScript.currentGunData.reloadSound.Play();
+                pickUpController.gunicon.texture = gunScript.currentGunData.icon;
                 gunScript.updateAmmoCount();
             }
         }
