@@ -20,8 +20,6 @@ public class GunScript : MonoBehaviour
     public List<RaycastHit> lastHits = new List<RaycastHit>();
     public GameObject hitParticlePrefab;
     public GameObject enemyHitParticlePrefab;
-    public AudioSource shootingSound;
-    public AudioSource reloadSound;
     public RaycastHit lastHit;
     private void Start() {
         originalRotation = transform.localRotation.eulerAngles;
@@ -72,6 +70,7 @@ public class GunScript : MonoBehaviour
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, currentGunData.range, hitLayers)) {
+            currentGunData.shootingSound.Play();
             // Perform hit detection and damage logic here
             Debug.Log("Hit: " + hit.collider.gameObject.name);
             if (hit.transform.CompareTag("Enemy")) {
@@ -97,6 +96,7 @@ public class GunScript : MonoBehaviour
             Ray ray = new Ray(muzzle.position, pelletDirection);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, currentGunData.range, hitLayers)) {
+                currentGunData.shootingSound.Play();
                 // Perform hit detection and damage logic here
                 Debug.Log("Hit: " + hit.collider.gameObject.name + "With: " + currentGunData.gunType);
                 if (hit.transform.CompareTag("Enemy") || hit.transform.CompareTag("Destroyable")) {
@@ -139,6 +139,7 @@ public class GunScript : MonoBehaviour
     }
 
     private IEnumerator Reload() {
+        currentGunData.reloadSound.Play();
         reloading = true;
         ammoCount.enabled = false;
         reloadAnim.SetActive(true);

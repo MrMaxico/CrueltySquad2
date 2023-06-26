@@ -20,6 +20,8 @@ public class GunData : MonoBehaviour {
     public GunType gunType = GunType.Pistol;
     public GameObject gunStatUI;
     public GameObject lootBeam;
+    public AudioSource shootingSound;
+    public AudioSource reloadSound;
     [Header("Settings for shotguns", order = 0)]
     public float shotgunSpreadAngle = 15f;
     public float shotgunPelletCount = 15f;

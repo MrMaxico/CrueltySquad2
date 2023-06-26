@@ -81,10 +81,12 @@ public class PickUpController : MonoBehaviour {
             holder = secondaryHolder;
             secondary = gunTransform;
         }
+       
         gunTransform.SetParent(holder);
         gunTransform.position = holder.position;
         gunTransform.rotation = holder.rotation;
         gunTransform.GetComponent<MeshCollider>().enabled = false;
+        gunTransform.GetComponent<GunData>().reloadSound.Play();
         gunRigidbody.useGravity = false;
         gunRigidbody.freezeRotation = true;
         gunRigidbody.isKinematic = true;

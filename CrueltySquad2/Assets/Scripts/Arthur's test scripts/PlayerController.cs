@@ -86,12 +86,14 @@ public class PlayerController : MonoBehaviour {
             pickUpController.primaryholder.gameObject.SetActive(true);
             pickUpController.holdingSecondary = false;
             pickUpController.holdingPrimary = true;
+            gunScript.currentGunData.reloadSound.Play();
             gunScript.updateAmmoCount();
         } else if (Input.GetKeyDown(KeyCode.Alpha2) && !gunScript.reloading) {
             pickUpController.primaryholder.gameObject.SetActive(false);
             pickUpController.secondaryHolder.gameObject.SetActive(true);
             pickUpController.holdingPrimary = false;
             pickUpController.holdingSecondary = true;
+            gunScript.currentGunData.reloadSound.Play();
             gunScript.updateAmmoCount();
         }
         if (enemyHealthBarActive) {
@@ -103,7 +105,6 @@ public class PlayerController : MonoBehaviour {
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit, 1000)) {
                     raycastHit = true;
-                    Debug.Log("Kaas 2");
                     // Raycast hit something, do something with the hit information
                     if (hit.transform.CompareTag("Enemy")) {
                         UpdateEnemyHealthBar(hit);
