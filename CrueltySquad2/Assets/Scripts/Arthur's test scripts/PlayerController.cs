@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour {
     public GameObject pickUpUI;
     private bool raycastHit;
     public AudioSource walkingSound;
+    public PauzeScript pauzeScript;
 
 
     // Update is called once per frame
@@ -50,51 +51,52 @@ public class PlayerController : MonoBehaviour {
         }
     }
     void Update() {
-        Vector3 rotateBody = new Vector3();
-        Vector3 rotateCam = new Vector3();
+        if (!PauzeScript.gameIsPaused) {
+            Vector3 rotateBody = new Vector3();
+            Vector3 rotateCam = new Vector3();
 
-        //Jump
-        Vector3 jump = new Vector3();
-        if (canJump || infJump) {
-            if (Input.GetKeyDown("space")) {
-                jump.y = jumpPower * 5;
-                rb.AddForce(jump, ForceMode.Impulse);
-                Debug.Log("jumped");
-                canJump = false;
+            //Jump
+            Vector3 jump = new Vector3();
+            if (canJump || infJump) {
+                if (Input.GetKeyDown("space")) {
+                    jump.y = jumpPower * 5;
+                    rb.AddForce(jump, ForceMode.Impulse);
+                    Debug.Log("jumped");
+                    canJump = false;
+                }
             }
-        }
-        float mouseX = new float();
-        float mouseY = new float();
+            float mouseX = new float();
+            float mouseY = new float();
 
-        mouseX = Input.GetAxis("Mouse X");
-        mouseY = Input.GetAxis("Mouse Y");
+            mouseX = Input.GetAxis("Mouse X");
+            mouseY = Input.GetAxis("Mouse Y");
 
-        rotateCam.x = mouseY;
-        rotateBody.y = mouseX;
-        transform.Rotate(rotateBody * camSensitivity);
+            rotateCam.x = mouseY;
+            rotateBody.y = mouseX;
+            transform.Rotate(rotateBody * camSensitivity);
 
+            cameraPitch -= mouseY * camSensitivity;
 
-        cameraPitch -= mouseY * camSensitivity;
-
-        cameraPitch = Mathf.Clamp(cameraPitch, -90.0f, 90.0f);
+            cameraPitch = Mathf.Clamp(cameraPitch, -90.0f, 90.0f);
 
 
-        cam.localEulerAngles = new Vector3(cameraPitch, 0, 0);
+            cam.localEulerAngles = new Vector3(cameraPitch, 0, 0);
 
-        if (Input.GetKeyDown(KeyCode.Alpha1) && !gunScript.reloading) {
-            pickUpController.secondaryHolder.gameObject.SetActive(false);
-            pickUpController.primaryholder.gameObject.SetActive(true);
-            pickUpController.holdingSecondary = false;
-            pickUpController.holdingPrimary = true;
-            gunScript.currentGunData.reloadSound.Play();
-            gunScript.updateAmmoCount();
-        } else if (Input.GetKeyDown(KeyCode.Alpha2) && !gunScript.reloading) {
-            pickUpController.primaryholder.gameObject.SetActive(false);
-            pickUpController.secondaryHolder.gameObject.SetActive(true);
-            pickUpController.holdingPrimary = false;
-            pickUpController.holdingSecondary = true;
-            gunScript.currentGunData.reloadSound.Play();
-            gunScript.updateAmmoCount();
+            if (Input.GetKeyDown(KeyCode.Alpha1) && !gunScript.reloading) {
+                pickUpController.secondaryHolder.gameObject.SetActive(false);
+                pickUpController.primaryholder.gameObject.SetActive(true);
+                pickUpController.holdingSecondary = false;
+                pickUpController.holdingPrimary = true;
+                gunScript.currentGunData.reloadSound.Play();
+                gunScript.updateAmmoCount();
+            } else if (Input.GetKeyDown(KeyCode.Alpha2) && !gunScript.reloading) {
+                pickUpController.primaryholder.gameObject.SetActive(false);
+                pickUpController.secondaryHolder.gameObject.SetActive(true);
+                pickUpController.holdingPrimary = false;
+                pickUpController.holdingSecondary = true;
+                gunScript.currentGunData.reloadSound.Play();
+                gunScript.updateAmmoCount();
+            }
         }
         if (enemyHealthBarActive) {
             timer += Time.deltaTime; // Increase the timer by the elapsed time
@@ -138,6 +140,7 @@ public class PlayerController : MonoBehaviour {
 
             gunStatsTimer = 0f; // Reset the timer
         }
+
     }
     public void UpdateEnemyHealthBar(RaycastHit hit) {
         Debug.Log("Updating Enemy Heath bar");

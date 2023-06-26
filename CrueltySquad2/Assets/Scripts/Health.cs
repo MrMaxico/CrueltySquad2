@@ -26,6 +26,7 @@ public class Health : MonoBehaviour
     [Header("HealthBar (Only For Player)", order = 2)]
     public GameObject healthBar;
     public TextMeshProUGUI maxHealthText;
+    public GameObject gameOverUI;
     [Header("Shield (Only for player)", order = 3)]
     public GameObject shieldBar;
     public TextMeshProUGUI maxShieldText;
@@ -103,6 +104,9 @@ public class Health : MonoBehaviour
             UpdateShieldBar();
             UpdateHealthBar();
             StartCoroutine(InCombatShieldRegenDelay());
+            if(health <= 0f) {
+                PlayerDeath();
+            }
         }
         if (healthType == HealthType.Enemy || healthType == HealthType.prop) {
             health -= amount;
@@ -176,5 +180,11 @@ public class Health : MonoBehaviour
             }
             Destroy(this.gameObject);
         }
+    }
+    public void PlayerDeath() {
+        gameOverUI.SetActive(true);
+        PauzeScript.gameIsPaused = true;
+        Cursor.lockState = CursorLockMode.Confined;
+        Time.timeScale = 0f;
     }
 }

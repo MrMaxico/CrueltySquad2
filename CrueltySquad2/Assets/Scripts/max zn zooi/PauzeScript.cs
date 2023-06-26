@@ -42,7 +42,7 @@ public class PauzeScript : MonoBehaviour
         Time.timeScale = 0f;
         buttonClick.Play();
         pauseMenuUI.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         gameIsPaused = true;
     }
