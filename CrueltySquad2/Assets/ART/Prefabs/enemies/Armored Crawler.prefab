@@ -165,8 +165,10 @@ MonoBehaviour:
     - item: {fileID: 7078281866280998902, guid: c7ac059add731e54eabba1ac8070cc19,
         type: 3}
       weight: 2
+  damageEffect: {fileID: 0}
   healthBar: {fileID: 0}
   maxHealthText: {fileID: 0}
+  gameOverUI: {fileID: 0}
   shieldBar: {fileID: 0}
   maxShieldText: {fileID: 0}
   shieldRegenTime: 0
@@ -196,8 +198,10 @@ MonoBehaviour:
   gunsToDropOnKill: []
   lootTable:
     list: []
+  damageEffect: {fileID: 0}
   healthBar: {fileID: 0}
   maxHealthText: {fileID: 0}
+  gameOverUI: {fileID: 0}
   shieldBar: {fileID: 0}
   maxShieldText: {fileID: 0}
   shieldRegenTime: 0
@@ -981,7 +985,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4428355332491335499}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 2
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
