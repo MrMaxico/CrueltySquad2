@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SnowTree
+  m_Name: grass
   m_Shader: {fileID: 4800000, guid: 99134b1f0c27d54469a840832a28fadf, type: 3}
   m_ValidKeywords:
   - EFFECT_HUE_VARIATION
@@ -45,7 +45,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: b7b51c0fd98a0c84d8b269b8be13bda3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClearCoatMap:
@@ -81,7 +81,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b3d48fd9716ab904e9872c4c4b4a5023, type: 3}
+        m_Texture: {fileID: 2800000, guid: 159ea7af46cf53e49bc6bfd03fa0a37b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -154,7 +154,7 @@ Material:
     - _FlipbookBlending: 0
     - _FlipbookMode: 0
     - _GlossMapScale: 0
-    - _Glossiness: 0.207
+    - _Glossiness: 0
     - _GlossinessSource: 0
     - _GlossyReflections: 0
     - _HueVariationKwToggle: 1
@@ -191,13 +191,13 @@ Material:
     - _BaseColor: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
     - _BaseColorAddSubDiff: {r: -1, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0, g: 1, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
-    - _HueVariationColor: {r: 1, g: 1, b: 1, a: 0.1}
+    - _HueVariationColor: {r: 0.9273498, g: 1, b: 0, a: 0.1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _SubsurfaceColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SubsurfaceColor: {r: 0.6513567, g: 1, b: 0.5886792, a: 1}
     - _TranslucencyColor: {r: 0.73, g: 0.85, b: 0.40999997, a: 1}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
