@@ -10,20 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9411e39b001651c41abff753c0011848, type: 3}
-  m_Name: SpawnerCrawlers
+  m_Name: Autumn_Tree_3
   m_EditorClassIdentifier: 
-  structurePrefab: {fileID: 744586909009380642, guid: c7b729b2cfde63e4a8d1d8136e6fd80d,
+  structurePrefab: {fileID: 4035275105393958774, guid: 8467e853f35fbdd4d917c95c53a6e79c,
     type: 3}
-  structureType: 1
-  minimalInstances: 2
-  maximalInstances: 2
+  structureType: 0
+  minimalInstances: 25
+  maximalInstances: 45
   allowedBiomes:
-  - {fileID: 11400000, guid: 6eda92a647189534d99701a503fe656c, type: 2}
-  - {fileID: 11400000, guid: 417e4e94842cc844da19e4cb4bd628d3, type: 2}
-  - {fileID: 11400000, guid: 564991b0750f1a24ab40bb066408be3d, type: 2}
   - {fileID: 11400000, guid: b5c4a8a5a72cfa8498f01c878b88522a, type: 2}
-  variableSize: 0
-  minSize: 0
-  maxSize: 0
-  ignoreSlopes: 0
-  spawnAltitude: 0
+  variableSize: 1
+  minSize: 0.8
+  maxSize: 1
+  ignoreSlopes: 1
+  spawnAltitude: -1.7

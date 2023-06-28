@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9411e39b001651c41abff753c0011848, type: 3}
   m_Name: Snow_Tree_1
   m_EditorClassIdentifier: 
-  structurePrefab: {fileID: 2564813840384159338, guid: d8561bab12d46594bafcd1943399da7d,
+  structurePrefab: {fileID: 4035275105393958774, guid: da32dc36743d43b4aa2f6d0b7f1f9702,
     type: 3}
   structureType: 0
   minimalInstances: 25
@@ -23,4 +23,4 @@ MonoBehaviour:
   minSize: 0.8
   maxSize: 1.2
   ignoreSlopes: 1
-  spawnAltitude: 0
+  spawnAltitude: -1.7
