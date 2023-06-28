@@ -12,18 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9411e39b001651c41abff753c0011848, type: 3}
   m_Name: Satalite Small
   m_EditorClassIdentifier: 
-  structurePrefab: {fileID: 291013531659266260, guid: eeb05759d8318a24cbaed61bc00ade84,
+  structurePrefab: {fileID: 5458135096326395260, guid: bda391c6125fae1469419e00cb568e4b,
     type: 3}
   structureType: 0
-  minimalInstances: 1
-  maximalInstances: 1
+  minimalInstances: 10
+  maximalInstances: 30
   allowedBiomes:
-  - {fileID: 11400000, guid: 6eda92a647189534d99701a503fe656c, type: 2}
-  - {fileID: 11400000, guid: 417e4e94842cc844da19e4cb4bd628d3, type: 2}
   - {fileID: 11400000, guid: 564991b0750f1a24ab40bb066408be3d, type: 2}
-  - {fileID: 11400000, guid: b5c4a8a5a72cfa8498f01c878b88522a, type: 2}
+  - {fileID: 11400000, guid: 417e4e94842cc844da19e4cb4bd628d3, type: 2}
   variableSize: 0
   minSize: 0
   maxSize: 0
   ignoreSlopes: 1
-  spawnAltitude: 3
+  spawnAltitude: -1
