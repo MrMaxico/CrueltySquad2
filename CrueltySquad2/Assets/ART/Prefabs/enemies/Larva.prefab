@@ -40,7 +40,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3412357700203777836}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 2
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -359,8 +359,12 @@ MonoBehaviour:
   - {fileID: 5757830153032026586, guid: 73b525c524275584788cf1f76c237516, type: 3}
   - {fileID: 8727148447041403267, guid: cab80110cbe443e42be05462952db51f, type: 3}
   - {fileID: 7078281866280998902, guid: c7ac059add731e54eabba1ac8070cc19, type: 3}
+  lootTable:
+    list: []
+  damageEffect: {fileID: 0}
   healthBar: {fileID: 0}
   maxHealthText: {fileID: 0}
+  gameOverUI: {fileID: 0}
   shieldBar: {fileID: 0}
   maxShieldText: {fileID: 0}
   shieldRegenTime: 0
@@ -394,6 +398,7 @@ MonoBehaviour:
     m_Bits: 0
   damage: 0
   relativeHitPosition: {x: 0, y: 0, z: 0}
+  attackDistanceMultiplyer: 0
   attackSpeed: 0
   attackTimer: 0
   flyEnemyFlightHeight: 0.5

@@ -27,6 +27,8 @@ public class Enemy : MonoBehaviour
     public float attackDistanceMultiplyer;
     public float attackSpeed;
     public float attackTimer;
+    [Header("Spitter only")]
+    public float spitDistance;
     [Space(20)]
     [Tooltip("You only need this variable if the enemy is an fly enemy")]
     [SerializeField] float flyEnemyFlightHeight;
@@ -85,17 +87,15 @@ public class Enemy : MonoBehaviour
         {
             angry = false;
         }
-        
-        if (attackTimer > 0)
-        {
-            attackTimer -= Time.deltaTime;
-        }
+
+        attackTimer -= Time.deltaTime;
 
         if (path.Count > 1)
         {
             transform.position = Vector3.MoveTowards(transform.position, path[1], speed * Time.deltaTime);
         }
-        else if (angry && path.Count == 1)
+        
+        if (angry && path.Count <= 1)
         {
             Vector3 goalPosition = player.transform.position - transform.forward * (relativeHitPosition.z * attackDistanceMultiplyer);
             goalPosition.y = path[0].y;
@@ -114,7 +114,15 @@ public class Enemy : MonoBehaviour
         Profiler.BeginSample($"Finding path");
         if (angry)
         {
-            path = generator.grid.FindPath(transform.position, player.transform.position);
+            if (enemyType != EnemyTypes.spitter)
+            {
+                path = generator.grid.FindPath(transform.position, player.transform.position);
+            }
+            else
+            {
+                path = generator.grid.FindPath(transform.position, player.transform.position - transform.forward * spitDistance);
+            }
+
             transform.transform.LookAt(player.transform);
         }
         else if (!angry && activeIdle)
@@ -181,7 +189,7 @@ public class Enemy : MonoBehaviour
             Vector3 spherePosition = transform.position + transform.forward * relativeHitPosition.z +
                                                      transform.right * relativeHitPosition.x +
                                                      transform.up * relativeHitPosition.y;
-            if (Physics.CheckSphere(spherePosition, .3f, pLayer))
+            if (Physics.CheckSphere(spherePosition, .5f, pLayer))
             {
                 float playerHealthBeforeDamage = player.GetComponent<Health>().GetHealth();
                 player.GetComponent<Health>().Damage(damage);
@@ -209,13 +217,14 @@ public class Enemy : MonoBehaviour
         Vector3 spherePosition = transform.position + transform.forward * relativeHitPosition.z +
                                  transform.right * relativeHitPosition.x +
                                  transform.up * relativeHitPosition.y;
-        Gizmos.DrawSphere(spherePosition, .3f);
+        Gizmos.DrawSphere(spherePosition, .5f);
     }
 
     public enum EnemyTypes
     {
         flyEnemy,
         crawlerEnemy,
-        lootJalla
+        lootJalla,
+        spitter
     }
 }
