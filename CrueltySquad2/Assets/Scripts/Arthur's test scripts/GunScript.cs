@@ -9,6 +9,7 @@ public class GunScript : MonoBehaviour
     public LayerMask hitLayers;
     public GunData currentGunData;
     private float nextFireTime;
+    private float nextMeleeTime;
     private Vector3 originalRotation;
     public PickUpController pickUpController;
     public PlayerController playerController;
@@ -21,6 +22,7 @@ public class GunScript : MonoBehaviour
     public GameObject hitParticlePrefab;
     public GameObject enemyHitParticlePrefab;
     public RaycastHit lastHit;
+    public float meleeDamage;
     private void Start() {
         originalRotation = transform.localRotation.eulerAngles;
     }
@@ -51,13 +53,31 @@ public class GunScript : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.R)) {
                 StartCoroutine(Reload());
             }
+        } else {
+            if (Input.GetMouseButton(0) && Time.time >= nextMeleeTime) {
+                nextMeleeTime = Time.time + 0.4f;
+                if (!shot) {
+                    Melee();
+                }
+            }
         }
         if (Input.GetMouseButtonUp(0) && shot == true) {
             shot = false;
         }
 
     }
+    public void Melee() {
+        // Raycast from muzzle position
+        Ray ray = new Ray(muzzle.position, muzzle.forward);
+        RaycastHit hit;
 
+        if (Physics.Raycast(ray, out hit, 200, hitLayers)) {
+            // Perform hit detection and damage logic here
+            Debug.Log("Hit: " + hit.collider.gameObject.name);
+            DamageShotEnemy(hit);
+        }
+
+    }
     private void Fire() {
         currentGunData.currentAmmo -= 1;
         updateAmmoCount();
@@ -122,11 +142,15 @@ public class GunScript : MonoBehaviour
     }
     public void DamageShotEnemy(RaycastHit hit) {
         if (hit.transform.CompareTag("Enemy") || hit.transform.CompareTag("Destroyable")) {
-            if(hit.transform.GetComponent<Health>().GetHealth() <= currentGunData.damagePerBullet && !hit.transform.CompareTag("Destroyable")) {
+            if(pickUpController.holder.childCount == 0 && hit.transform.GetComponent<Health>().GetHealth() <= playerStats.meleeDamage && !hit.transform.CompareTag("Destroyable") || hit.transform.GetComponent<Health>().GetHealth() <= currentGunData.damagePerBullet && !hit.transform.CompareTag("Destroyable")) {
                 hit.transform.GetComponent<Health>().EnemyDeath();
                 playerStats.AddExp(hit.transform.GetComponent<Health>().xpOnDeath);
             }
-            hit.transform.GetComponent<Health>().Damage(currentGunData.damagePerBullet);
+            if(currentGunData == null) {
+                hit.transform.GetComponent<Health>().Damage(playerStats.meleeDamage);
+            } else {
+                hit.transform.GetComponent<Health>().Damage(currentGunData.damagePerBullet);
+            }
             playerController.UpdateEnemyHealthBar(hit);
         }
     }

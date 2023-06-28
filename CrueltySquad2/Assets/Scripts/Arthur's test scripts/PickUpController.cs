@@ -26,7 +26,8 @@ public class PickUpController : MonoBehaviour {
     public bool holdingSecondary;
     public bool pickUpDelay;
     public RawImage gunicon;
-    private void Start() {
+    public RawImage secondaryicon;
+    public void Start() {
         holdingPrimary = true;
         holdingSecondary = false;
         PickUpGun(primaryholder.GetChild(0).transform);
@@ -42,6 +43,7 @@ public class PickUpController : MonoBehaviour {
                     } else if (holdingSecondary && secondary == null){
                         Debug.Log("Gun");
                         PickUpGun(hit.transform);
+                        gunicon.enabled = true;
                     } else {
                         Debug.Log("Pressed E");
                         pickUpDelay = true;
@@ -70,20 +72,20 @@ public class PickUpController : MonoBehaviour {
         Gizmos.DrawWireSphere(medkitPickUpSphere.transform.position, medkitPickUpRadius);
     }
 
-    void PickUpGun(Transform gunTransform) {
+    public void PickUpGun(Transform gunTransform) {
         if (this.GetComponent<PlayerController>().lastGunStats != null) {
             this.GetComponent<PlayerController>().lastGunStats.SetActive(false);
         }
         Rigidbody gunRigidbody = gunTransform.GetComponent<Rigidbody>();
-        if (holdingPrimary) {
+
+        gunTransform.GetComponent<GunData>().reloadSound.Play();
+        if (holdingPrimary == true) {
             holder = primaryholder;
             primary = gunTransform;
-        } else if(holdingSecondary) {
+        } else if (holdingSecondary == true) {
             holder = secondaryHolder;
             secondary = gunTransform;
         }
-
-        gunTransform.GetComponent<GunData>().reloadSound.Play();
         gunTransform.SetParent(holder);
         gunTransform.position = holder.position;
         gunTransform.rotation = holder.rotation;
@@ -97,6 +99,8 @@ public class PickUpController : MonoBehaviour {
         cam.GetComponent<GunScript>().updateAmmoCount();
         gunicon.texture = gunTransform.GetComponent<GunData>().icon;
         // Additional gun pickup logic if needed
+
+
     }
     void SwapGun(Transform gunTransform) {
         if (holdingPrimary) {
