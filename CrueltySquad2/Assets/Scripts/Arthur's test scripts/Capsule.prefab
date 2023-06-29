@@ -320,6 +320,7 @@ GameObject:
   - component: {fileID: 1402957547013441499}
   - component: {fileID: 7101324643810257025}
   - component: {fileID: 7704085561168789091}
+  - component: {fileID: 1431429638411014083}
   m_Layer: 8
   m_Name: Capsule
   m_TagString: Player
@@ -409,9 +410,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 1.9998251
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.00008769333, z: 0}
 --- !u!54 &3350939800944548651
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -420,10 +421,10 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3350939800944548653}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 1000000
+  m_Drag: 10
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -445,7 +446,7 @@ MonoBehaviour:
   jumpPower: 1
   infJump: 0
   cameraPitch: 0
-  canJump: 0
+  onGround: 0
   enemyHealthBarActive: 1
   enemyHealthBar: {fileID: 430956938092730726}
   enemyHealthBarName: {fileID: 430956937123720952}
@@ -459,6 +460,7 @@ MonoBehaviour:
   gunScript: {fileID: 1632680530}
   pickUpUI: {fileID: 430956939010270773}
   walkingSound: {fileID: 6760660690208930014}
+  feet: {fileID: 0}
 --- !u!114 &1725525705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -637,6 +639,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &1431429638411014083
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3350939800944548653}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0378577, z: 1}
+  m_Center: {x: 0, y: -1.0829906, z: 0}
 --- !u!1 &3350939800970284990
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
     public bool infJump;
     [Header("Debug variables", order = 1)]
     public float cameraPitch = 0.0f;
-    public bool canJump;
+    public bool onGround;
     public bool enemyHealthBarActive;
     public Slider enemyHealthBar;
     public TextMeshProUGUI enemyHealthBarName;
@@ -33,20 +33,20 @@ public class PlayerController : MonoBehaviour {
     private bool raycastHit;
     public AudioSource walkingSound;
 
-
+    public GameObject feet;
     // Update is called once per frame
     private void Start() {
         cameraPitch = 0f;
         Cursor.lockState = CursorLockMode.Locked;
     }
-    private void OnCollisionStay(Collision collision) {
-        if (collision.gameObject.tag == "Ground") {
-            canJump = true;
+    private void OnTriggerEnter(Collider other) {
+        if (other.gameObject.tag == "Ground") {
+            onGround = true;
         }
     }
-    public void OnCollisionExit(Collision collision) {
-        if (collision.gameObject.tag == "Ground") {
-            canJump = false;
+    private void OnTriggerExit(Collider other) {
+        if (other.gameObject.tag == "Ground") {
+            onGround = false;
         }
     }
     void Update() {
@@ -56,12 +56,12 @@ public class PlayerController : MonoBehaviour {
 
             //Jump
             Vector3 jump = new Vector3();
-            if (canJump || infJump) {
+            if (onGround || infJump) {
                 if (Input.GetKeyDown("space")) {
                     jump.y = jumpPower * 5;
                     rb.AddForce(jump, ForceMode.Impulse);
                     Debug.Log("jumped");
-                    canJump = false;
+                    onGround = false;
                 }
             }
             float mouseX = new float();
@@ -165,6 +165,7 @@ public class PlayerController : MonoBehaviour {
 
     private void MovePlayer()
     {
+
         Vector3 moveVector = new Vector3();
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -175,8 +176,10 @@ public class PlayerController : MonoBehaviour {
             moveVector = transform.TransformDirection(movement) * speed * Time.deltaTime;
            //walkingSound.enabled = true;
         }
-        rb.velocity = new Vector3(moveVector.x, rb.velocity.y, moveVector.z);
+        if (onGround) {
+            rb.velocity = new Vector3(moveVector.x, rb.velocity.y, moveVector.z);
+        } else {
+            rb.velocity = new Vector3(moveVector.x, -9.81f, moveVector.z);
+        }
     }
-
-
 }
