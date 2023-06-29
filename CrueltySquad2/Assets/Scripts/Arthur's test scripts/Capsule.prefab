@@ -421,9 +421,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3350939800944548653}
   serializedVersion: 2
-  m_Mass: 1000000
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 1
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -460,6 +460,7 @@ MonoBehaviour:
   gunScript: {fileID: 1632680530}
   pickUpUI: {fileID: 430956939010270773}
   walkingSound: {fileID: 6760660690208930014}
+  isGrounded: 0
   feet: {fileID: 0}
 --- !u!114 &1725525705
 MonoBehaviour:
@@ -648,10 +649,10 @@ BoxCollider:
   m_GameObject: {fileID: 3350939800944548653}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.0378577, z: 1}
-  m_Center: {x: 0, y: -1.0829906, z: 0}
+  m_Size: {x: 1, y: 0.49192238, z: 1}
+  m_Center: {x: 0, y: -0.81002307, z: 0}
 --- !u!1 &3350939800970284990
 GameObject:
   m_ObjectHideFlags: 0

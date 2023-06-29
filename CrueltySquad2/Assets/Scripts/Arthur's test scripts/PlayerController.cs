@@ -32,8 +32,10 @@ public class PlayerController : MonoBehaviour {
     public GameObject pickUpUI;
     private bool raycastHit;
     public AudioSource walkingSound;
-
+    public bool isGrounded;
     public GameObject feet;
+    private Vector3 forwardDirection;
+
     // Update is called once per frame
     private void Start() {
         cameraPitch = 0f;
@@ -103,6 +105,13 @@ public class PlayerController : MonoBehaviour {
                 pickUpController.gunicon.texture = pickUpController.secondary.GetComponent<GunData>().icon;
                 gunScript.updateAmmoCount();
             }
+            var yVel = rb.velocity.y;
+            var localV = transform.InverseTransformDirection(rb.velocity);
+            localV.x = 0.0f;
+            localV.y = 0.0f;
+            var worldV = transform.TransformDirection(localV);
+            worldV.y = yVel;
+            rb.velocity = worldV;
         }
         if (enemyHealthBarActive) {
             timer += Time.deltaTime; // Increase the timer by the elapsed time
@@ -146,7 +155,6 @@ public class PlayerController : MonoBehaviour {
 
             gunStatsTimer = 0f; // Reset the timer
         }
-
     }
     public void UpdateEnemyHealthBar(RaycastHit hit) {
         Debug.Log("Updating Enemy Heath bar");
@@ -157,29 +165,42 @@ public class PlayerController : MonoBehaviour {
     }
     private void FixedUpdate()
     {
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, 1f);
         //movement
         movement.x = Input.GetAxis("Horizontal");
         movement.z = Input.GetAxis("Vertical");
         MovePlayer();
     }
 
-    private void MovePlayer()
-    {
-
+    private void MovePlayer() {
         Vector3 moveVector = new Vector3();
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
+        if (Input.GetKey(KeyCode.LeftShift)) {
             moveVector = transform.TransformDirection(movement) * sprintSpeed * Time.deltaTime;
-        }
-        else
-        {
+        } else {
             moveVector = transform.TransformDirection(movement) * speed * Time.deltaTime;
-           //walkingSound.enabled = true;
+            //walkingSound.enabled = true;
         }
-        if (onGround) {
+
+        if (isGrounded) {
             rb.velocity = new Vector3(moveVector.x, rb.velocity.y, moveVector.z);
         } else {
-            rb.velocity = new Vector3(moveVector.x, -9.81f, moveVector.z);
+            // Check for obstacles in front of the player
+            float radius = 0.3f; // Adjust the radius as needed
+            float distance = moveVector.magnitude;
+            Vector3 direction = moveVector.normalized;
+            RaycastHit hit;
+
+            if (Physics.SphereCast(transform.position, radius, direction, out hit, distance)) {
+                // If an obstacle is detected, adjust the movement vector
+                moveVector = direction * (hit.distance - radius);
+            }
+
+            rb.velocity = new Vector3(moveVector.x, rb.velocity.y, moveVector.z);
         }
+
+        rb.AddForce(Vector3.down * 19f, ForceMode.Acceleration);
     }
+
+
+
 }
