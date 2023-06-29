@@ -67,6 +67,7 @@ MonoBehaviour:
   spawnCap: 10
   enemySpawns:
   - {fileID: 11400000, guid: 9c17241c802a9e941be05d211343fd06, type: 2}
+  - {fileID: 11400000, guid: f0f8072367d6ca54da0bf053aeaac5e5, type: 2}
   preperationTime: 10
   spawnInterval: 7
   onDeathEnemySpawnAmount: 15
@@ -93,8 +94,10 @@ MonoBehaviour:
   gunsToDropOnKill: []
   lootTable:
     list: []
+  damageEffect: {fileID: 0}
   healthBar: {fileID: 0}
   maxHealthText: {fileID: 0}
+  gameOverUI: {fileID: 0}
   shieldBar: {fileID: 0}
   maxShieldText: {fileID: 0}
   shieldRegenTime: 0

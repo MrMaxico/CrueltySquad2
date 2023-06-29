@@ -1346,8 +1346,8 @@ GameObject:
   - component: {fileID: 5871246922743611898}
   - component: {fileID: 8596551747813358825}
   - component: {fileID: 5988360007182109878}
-  - component: {fileID: 1704609736146485741}
   - component: {fileID: 3958637398480195917}
+  - component: {fileID: 1704609736146485741}
   - component: {fileID: -4844800102174921560}
   m_Layer: 9
   m_Name: crawler
@@ -1427,38 +1427,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &1704609736146485741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6113339365441053707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fccfb354b2db77d4abe4c49b412d26f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyType: 1
-  generator: {fileID: 0}
-  spawner: {fileID: 0}
-  player: {fileID: 0}
-  speed: 8
-  angry: 0
-  followDistance: 30
-  path: []
-  pathRefreshRate: 0.1
-  pLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  damage: 10
-  relativeHitPosition: {x: 0, y: 0, z: 0.85}
-  attackDistanceMultiplyer: 1.5
-  attackSpeed: 2
-  attackTimer: 0
-  flyEnemyFlightHeight: 0.5
-  renderer: {fileID: 751887907167583691}
-  activeIdle: 0
 --- !u!114 &3958637398480195917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1525,6 +1493,39 @@ MonoBehaviour:
   inCombat: 0
   inCombatShieldRegenDelay: 0
   timeOutOfCombat: 0
+--- !u!114 &1704609736146485741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6113339365441053707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fccfb354b2db77d4abe4c49b412d26f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: 1
+  generator: {fileID: 0}
+  spawner: {fileID: 0}
+  player: {fileID: 0}
+  speed: 8
+  angry: 0
+  followDistance: 30
+  path: []
+  pathRefreshRate: 0.1
+  pLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  damage: 10
+  relativeHitPosition: {x: 0, y: 0, z: 0.85}
+  attackDistanceMultiplyer: 1.5
+  attackSpeed: 2
+  attackTimer: 0
+  spitDistance: 0
+  flyEnemyFlightHeight: 0.5
+  renderer: {fileID: 751887907167583691}
+  activeIdle: 0
 --- !u!54 &-4844800102174921560
 Rigidbody:
   m_ObjectHideFlags: 0

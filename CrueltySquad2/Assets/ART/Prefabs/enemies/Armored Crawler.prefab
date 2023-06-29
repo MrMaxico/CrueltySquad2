@@ -14,11 +14,10 @@ GameObject:
   - component: {fileID: 4864188592158663468}
   - component: {fileID: 4050408499395453060}
   - component: {fileID: 5564402625203671503}
-  - component: {fileID: 973069307262993442}
   - component: {fileID: 4830915267680282940}
   m_Layer: 0
   m_Name: Armored Crawler
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 649775281372685240}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 33.379414, y: -21.33507, z: -14.238914}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1899615107304494425}
   - {fileID: 8787107823293225653}
@@ -176,39 +175,6 @@ MonoBehaviour:
   inCombat: 0
   inCombatShieldRegenDelay: 0
   timeOutOfCombat: 0
---- !u!114 &973069307262993442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649775281372685240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba15951d3b58eb2419c326b6c126c584, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 0
-  shield: 0
-  maxShield: 0
-  xpOnDeath: 10
-  healthType: 0
-  deathSplash: {fileID: 0}
-  gunsToDropOnKill: []
-  lootTable:
-    list: []
-  damageEffect: {fileID: 0}
-  healthBar: {fileID: 0}
-  maxHealthText: {fileID: 0}
-  gameOverUI: {fileID: 0}
-  shieldBar: {fileID: 0}
-  maxShieldText: {fileID: 0}
-  shieldRegenTime: 0
-  shieldRegenAmount: 0
-  inCombat: 0
-  inCombatShieldRegenDelay: 0
-  timeOutOfCombat: 0
 --- !u!114 &4830915267680282940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +204,7 @@ MonoBehaviour:
   attackDistanceMultiplyer: 1.5
   attackSpeed: 2
   attackTimer: 0
+  spitDistance: 0
   flyEnemyFlightHeight: 0.5
   renderer: {fileID: 0}
   activeIdle: 0

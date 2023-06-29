@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9411e39b001651c41abff753c0011848, type: 3}
+  m_Name: Ice Block
+  m_EditorClassIdentifier: 
+  structurePrefab: {fileID: 8789193553241558241, guid: f517e5cdf63583d4b85ed3d60cd2cb61,
+    type: 3}
+  structureType: 0
+  minimalInstances: 4
+  maximalInstances: 12
+  allowedBiomes:
+  - {fileID: 11400000, guid: 417e4e94842cc844da19e4cb4bd628d3, type: 2}
+  variableSize: 1
+  minSize: 1
+  maxSize: 3
+  ignoreSlopes: 1
+  spawnAltitude: -0.3

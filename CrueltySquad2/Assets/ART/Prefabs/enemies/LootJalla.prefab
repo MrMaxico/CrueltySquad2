@@ -1207,8 +1207,8 @@ Transform:
   m_GameObject: {fileID: 4743459456124045508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 38.29513, y: -21.33507, z: 0.2530707}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3384194497729454092}
   - {fileID: 4717707236556957180}
@@ -1300,6 +1300,7 @@ MonoBehaviour:
   attackDistanceMultiplyer: 0
   attackSpeed: 0
   attackTimer: 0
+  spitDistance: 0
   flyEnemyFlightHeight: 0.5
   renderer: {fileID: 5627299878077381103}
   activeIdle: 0
