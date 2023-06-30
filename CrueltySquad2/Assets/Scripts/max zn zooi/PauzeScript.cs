@@ -60,6 +60,9 @@ public class PauzeScript : MonoBehaviour
 
     public void RestartGame()
     {
+        PlayerStats.playerLevel = 0;
+        PlayerStats.playerExp = 0;
+        Teleporter.islandNumber = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         //FindObjectOfType<AudioManagerScript>().Play("DefenceSetupMusic");
     }

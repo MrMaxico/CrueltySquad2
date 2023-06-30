@@ -6,8 +6,8 @@ using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
-    static int playerLevel;
-    static float playerExp;
+    static public int playerLevel;
+    static public float playerExp;
     static float nextLevelUpExp;
     static float playerMaxHealth;
     static float maxShield;
@@ -38,9 +38,9 @@ public class PlayerStats : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKey(KeyCode.L))
         {
-            LevelUp(1);
+            AddExp(1);
         }
     }
 

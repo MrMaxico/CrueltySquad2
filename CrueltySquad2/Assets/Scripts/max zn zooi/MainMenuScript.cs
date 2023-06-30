@@ -158,13 +158,17 @@ public class MainMenuScript : MonoBehaviour
 
     public void LoadLevel1()
     {
+        PlayerStats.playerLevel = 0;
+        PlayerStats.playerExp = 0;
+        Teleporter.islandNumber = 1;
         buttonClick.Play();
-        SceneManager.LoadScene("Nicker");
+        SceneManager.LoadScene("Standard");
         //FindObjectOfType<AudioManagerScript>().Play("DefenceSetupMusic");
     }
 
     public void LoadLevel2()
     {
+        PlayerStats.playerLevel = 1;
         buttonClick.Play();
         SceneManager.LoadScene("SunsetLevel");
         //FindObjectOfType<AudioManagerScript>().Play("DefenceSetupMusic");

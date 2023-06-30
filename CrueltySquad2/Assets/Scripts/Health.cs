@@ -36,6 +36,7 @@ public class Health : MonoBehaviour
     public bool inCombat;
     public float inCombatShieldRegenDelay;
     public float timeOutOfCombat;
+
     private void Start() {
         if (healthType == HealthType.Player) {
             UpdateHealthBar();
