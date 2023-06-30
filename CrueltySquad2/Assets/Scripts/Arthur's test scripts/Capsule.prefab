@@ -461,7 +461,8 @@ MonoBehaviour:
   pickUpUI: {fileID: 430956939010270773}
   walkingSound: {fileID: 6760660690208930014}
   isGrounded: 0
-  feet: {fileID: 0}
+  playerHeight: 0.5
+  maxSlopeAngle: 90
 --- !u!114 &1725525705
 MonoBehaviour:
   m_ObjectHideFlags: 0

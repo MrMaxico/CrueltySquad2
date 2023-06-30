@@ -33,8 +33,11 @@ public class PlayerController : MonoBehaviour {
     private bool raycastHit;
     public AudioSource walkingSound;
     public bool isGrounded;
-    public GameObject feet;
-    private Vector3 forwardDirection;
+    public float playerHeight;
+    private RaycastHit slopeHit;
+    public float maxSlopeAngle;
+    private Vector3 moveDirection;
+    private bool exitingSlope;
 
     // Update is called once per frame
     private void Start() {
@@ -197,10 +200,25 @@ public class PlayerController : MonoBehaviour {
 
             rb.velocity = new Vector3(moveVector.x, rb.velocity.y, moveVector.z);
         }
-
+        // limiting speed on slope
+        if (OnSlope() && !exitingSlope) {
+            if (rb.velocity.magnitude > speed)
+                rb.velocity = rb.velocity.normalized * speed;
+        }
         rb.AddForce(Vector3.down * 19f, ForceMode.Acceleration);
     }
 
+    private bool OnSlope() {
+        if (Physics.Raycast(transform.position, Vector3.down, out slopeHit, playerHeight * 0.5f + 0.3f)) {
+            float angle = Vector3.Angle(Vector3.up, slopeHit.normal);
+            return angle < maxSlopeAngle && angle != 0;
+        }
 
+        return false;
+    }
+
+    private Vector3 GetSlopeMoveDirection() {
+        return Vector3.ProjectOnPlane(moveDirection, slopeHit.normal).normalized;
+    }
 
 }

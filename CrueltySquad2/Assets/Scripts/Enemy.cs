@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
     [Header("Spitter only")]
     public float spitDistance;
     [Space(20)]
-    [Tooltip("You only need this variable if the enemy is an fly enemy")]
+    [Tooltip("You only need this variable if the enemy is a fly enemy")]
     [SerializeField] float flyEnemyFlightHeight;
     [Space(20)]
     public Renderer renderer;
@@ -58,27 +58,31 @@ public class Enemy : MonoBehaviour
             FindPath();
         }
 
-
+        // Check if the enemy is not angry and there are no more nodes in the path
+        // Set the idle destination to a random node on the grid
         if (!angry && path.Count <= 1)
         {
             idleDestination = generator.grid.RandomNode().position;
         }
 
-        if (renderer.isVisible && activeIdle == false)
+        // Check if the renderer is currently visible and set activeIdle accordingly
+        if (renderer.isVisible && !activeIdle)
         {
             activeIdle = true;
         }
-        else if (!renderer.isVisible && activeIdle == true)
+        else if (!renderer.isVisible && activeIdle)
         {
             activeIdle = false;
         }
 
+        // If the player is not assigned and the enemy type is not "lootJalla", find the player
         if (player == null && enemyType != EnemyTypes.lootJalla)
         {
             player = GameObject.FindGameObjectWithTag("Player");
             return;
         }
 
+        // Check the distance between the enemy and the player to determine if the enemy should be angry or not
         if (player != null && Vector3.Distance(transform.position, player.transform.position) < followDistance)
         {
             angry = true;
@@ -90,13 +94,15 @@ public class Enemy : MonoBehaviour
 
         attackTimer -= Time.deltaTime;
 
+        // Move towards the second node in the path if there are more than one nodes
         if (path.Count > 1)
         {
             transform.position = Vector3.MoveTowards(transform.position, path[1], speed * Time.deltaTime);
         }
-        
+
         if (angry && path.Count <= 1)
         {
+            // Calculate the goal position for the enemy when it is angry and about to attack the player
             Vector3 goalPosition = player.transform.position - transform.forward * (relativeHitPosition.z * attackDistanceMultiplyer);
             goalPosition.y = path[0].y;
             transform.position = Vector3.MoveTowards(transform.position, goalPosition, speed * Time.deltaTime);
@@ -154,7 +160,6 @@ public class Enemy : MonoBehaviour
 
                 for (int i = 0; i < path.Count; i++)
                 {
-                    //path[i] = new Vector3(path[i].x, averageHeight + flyEnemyFlightHeight, path[i].z);
                     Vector3 newWaypoint;
                     newWaypoint.x = path[i].x;
                     newWaypoint.y = averageHeight + flyEnemyFlightHeight;
@@ -213,6 +218,7 @@ public class Enemy : MonoBehaviour
 
     public void OnDrawGizmos()
     {
+        // Draw a yellow sphere to visualize the hit position of the enemy
         Gizmos.color = Color.yellow;
         Vector3 spherePosition = transform.position + transform.forward * relativeHitPosition.z +
                                  transform.right * relativeHitPosition.x +
