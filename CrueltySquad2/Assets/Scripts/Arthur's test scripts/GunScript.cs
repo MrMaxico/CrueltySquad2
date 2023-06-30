@@ -88,9 +88,10 @@ public class GunScript : MonoBehaviour
         // Raycast from muzzle position
         Ray ray = new Ray(muzzle.position, muzzle.forward);
         RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, currentGunData.range, hitLayers)) {
+        if (!reloading) {
             currentGunData.shootingSound.Play();
+        }
+        if (Physics.Raycast(ray, out hit, currentGunData.range, hitLayers)) {
             // Perform hit detection and damage logic here
             Debug.Log("Hit: " + hit.collider.gameObject.name);
             if (hit.transform.CompareTag("Enemy")) {
@@ -115,8 +116,10 @@ public class GunScript : MonoBehaviour
             // Raycast from muzzle position
             Ray ray = new Ray(muzzle.position, pelletDirection);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, currentGunData.range, hitLayers)) {
+            if (!reloading) {
                 currentGunData.shootingSound.Play();
+            }
+            if (Physics.Raycast(ray, out hit, currentGunData.range, hitLayers)) {
                 // Perform hit detection and damage logic here
                 Debug.Log("Hit: " + hit.collider.gameObject.name + "With: " + currentGunData.gunType);
                 if (hit.transform.CompareTag("Enemy") || hit.transform.CompareTag("Destroyable")) {
