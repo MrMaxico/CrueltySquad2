@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5265221247466465113}
+  - component: {fileID: 8101982973162285976}
   m_Layer: 0
   m_Name: adam 8 shotgun
   m_TagString: Untagged
@@ -35,6 +36,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8101982973162285976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4781136671471287779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0273260f417880742a466f808dffaaec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunName: shotgun
+  icon: {fileID: 8400000, guid: 1bdb53e2a257e3a40b50ff468b841a21, type: 2}
+  damagePerBullet: 5
+  magSize: 2
+  currentAmmo: 2
+  fireRate: 0.4
+  bloom: 0.05
+  range: 100
+  reloadspeed: 1
+  gunType: 2
+  gunStatUI: {fileID: 365905871607813892, guid: 73b525c524275584788cf1f76c237516,
+    type: 3}
+  lootBeam: {fileID: 1365513462155088352, guid: 73b525c524275584788cf1f76c237516,
+    type: 3}
+  shootingSound: {fileID: 6804489087219975484, guid: 73b525c524275584788cf1f76c237516,
+    type: 3}
+  reloadSound: {fileID: 2228579005450272131, guid: 73b525c524275584788cf1f76c237516,
+    type: 3}
+  muzzleFlash: {fileID: 0}
+  shotgunSpreadAngle: 15
+  shotgunPelletCount: 15
 --- !u!1 &4978456870171488982
 GameObject:
   m_ObjectHideFlags: 0
