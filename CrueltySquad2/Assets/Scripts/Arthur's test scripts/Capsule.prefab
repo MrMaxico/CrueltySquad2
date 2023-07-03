@@ -450,6 +450,7 @@ MonoBehaviour:
   enemyHealthBarActive: 1
   enemyHealthBar: {fileID: 430956938092730726}
   enemyHealthBarName: {fileID: 430956937123720952}
+  enemyHealthBarLvl: {fileID: 430956938965955372}
   enemyHealthBarAnimator: {fileID: 430956937681731837}
   timer: 0
   lastGunStats: {fileID: 0}
@@ -514,6 +515,7 @@ MonoBehaviour:
   gunsToDropOnKill: []
   lootTable:
     list: []
+  enemyStats: {fileID: 0}
   damageEffect: {fileID: 1577925984544192987}
   healthBar: {fileID: 430956938130279496}
   maxHealthText: {fileID: 430956938275898094}
@@ -2351,6 +2353,18 @@ MonoBehaviour:
 --- !u!114 &430956938951759153 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6155701162194508568, guid: ef56a2f2cd3fa3440a741b8c576ae6cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 5806934987431579177}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &430956938965955372 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6155701162179542277, guid: ef56a2f2cd3fa3440a741b8c576ae6cd,
     type: 3}
   m_PrefabInstance: {fileID: 5806934987431579177}
   m_PrefabAsset: {fileID: 0}

@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public IslandGenerator generator;
     public Spawner spawner;
     public GameObject player;
+    public EnemyStats enemyStats;
     [Space(20)]
     public float speed;
     [Space(20)]
@@ -22,7 +23,6 @@ public class Enemy : MonoBehaviour
     float pathRefreshTimer;
     [Space(20)]
     public LayerMask pLayer;
-    public float damage;
     public Vector3 relativeHitPosition;
     public float attackDistanceMultiplyer;
     public float attackSpeed;
@@ -44,8 +44,8 @@ public class Enemy : MonoBehaviour
         {
             generator = FindObjectOfType<IslandGenerator>();
         }
-
         FindPath();
+
     }
 
     private void Update()
@@ -192,12 +192,12 @@ public class Enemy : MonoBehaviour
         if (enemyType == EnemyTypes.flyEnemy)
         {
             Vector3 spherePosition = transform.position + transform.forward * relativeHitPosition.z +
-                                                     transform.right * relativeHitPosition.x +
-                                                     transform.up * relativeHitPosition.y;
+            transform.right * relativeHitPosition.x +
+            transform.up * relativeHitPosition.y;
             if (Physics.CheckSphere(spherePosition, .5f, pLayer))
             {
                 float playerHealthBeforeDamage = player.GetComponent<Health>().GetHealth();
-                player.GetComponent<Health>().Damage(damage);
+                player.GetComponent<Health>().Damage(enemyStats.damage);
                 Debug.Log($"Damaged player. Health went from {playerHealthBeforeDamage} to {player.GetComponent<Health>().GetHealth()}");
             }
         }
@@ -205,12 +205,12 @@ public class Enemy : MonoBehaviour
         if (enemyType == EnemyTypes.crawlerEnemy)
         {
             Vector3 spherePosition = transform.position + transform.forward * relativeHitPosition.z +
-                                     transform.right * relativeHitPosition.x +
-                                     transform.up * relativeHitPosition.y;
+            transform.right * relativeHitPosition.x +
+            transform.up * relativeHitPosition.y;
             if (Physics.CheckSphere(spherePosition, .3f, pLayer))
             {
                 float playerHealthBeforeDamage = player.GetComponent<Health>().GetHealth();
-                player.GetComponent<Health>().Damage(damage);
+                player.GetComponent<Health>().Damage(enemyStats.damage);
                 Debug.Log($"Damaged player. Health went from {playerHealthBeforeDamage} to {player.GetComponent<Health>().GetHealth()}");
             }
         }

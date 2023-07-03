@@ -23,6 +23,7 @@ public class Health : MonoBehaviour
     public GameObject deathSplash;
     public GameObject[] gunsToDropOnKill;
     public WeightedRandomList<GameObject> lootTable;
+    public EnemyStats enemyStats;
     [Header("HealthUI (Only For Player)", order = 2)]
     public Animator damageEffect;
     public GameObject healthBar;
@@ -43,6 +44,10 @@ public class Health : MonoBehaviour
             maxShield = maxHealth / 4;
             shield = maxShield;
             UpdateShieldBar();
+        }
+        if(healthType == HealthType.Enemy) {
+            health = enemyStats.health;
+            maxHealth = enemyStats.health;
         }
     }
     // Update is called once per frame

@@ -1191,6 +1191,7 @@ GameObject:
   - component: {fileID: 1731672958292391879}
   - component: {fileID: 6217327271846483360}
   - component: {fileID: 1635504959809079096}
+  - component: {fileID: 555878954371832560}
   m_Layer: 0
   m_Name: LootJalla
   m_TagString: Enemy
@@ -1260,6 +1261,7 @@ MonoBehaviour:
   - {fileID: 7078281866280998902, guid: c7ac059add731e54eabba1ac8070cc19, type: 3}
   lootTable:
     list: []
+  enemyStats: {fileID: 0}
   damageEffect: {fileID: 0}
   healthBar: {fileID: 0}
   maxHealthText: {fileID: 0}
@@ -1287,6 +1289,7 @@ MonoBehaviour:
   generator: {fileID: 0}
   spawner: {fileID: 0}
   player: {fileID: 0}
+  enemyStats: {fileID: 0}
   speed: 8
   angry: 0
   followDistance: 30
@@ -1295,7 +1298,6 @@ MonoBehaviour:
   pLayer:
     serializedVersion: 2
     m_Bits: 0
-  damage: 0
   relativeHitPosition: {x: 0, y: 0, z: 0}
   attackDistanceMultiplyer: 0
   attackSpeed: 0
@@ -1354,6 +1356,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &555878954371832560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4743459456124045508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e2a361b76a4ae42aaad103dee8bd67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: LootJalla
+  damage: 0
+  health: 0
 --- !u!1 &4800211093864074740
 GameObject:
   m_ObjectHideFlags: 0

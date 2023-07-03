@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
     public bool enemyHealthBarActive;
     public Slider enemyHealthBar;
     public TextMeshProUGUI enemyHealthBarName;
+    public TextMeshProUGUI enemyHealthBarLvl;
     public Animator enemyHealthBarAnimator;
     private Animator weaponStatsAnimator;
     public float timer;
@@ -163,8 +164,9 @@ public class PlayerController : MonoBehaviour {
         Debug.Log("Updating Enemy Heath bar");
         enemyHealthBarAnimator.SetBool("isActive", true);
         Debug.Log(hit.transform.GetComponent<Health>().GetHealth() / hit.transform.GetComponent<Health>().GetMaxHealth());
+        enemyHealthBarLvl.text = "Lvl. " + Teleporter.islandNumber.ToString();
         enemyHealthBar.value = hit.transform.GetComponent<Health>().GetHealth() / hit.transform.GetComponent<Health>().GetMaxHealth();
-        enemyHealthBarName.text = hit.transform.GetComponent<Enemy>().enemyType.ToString();
+        enemyHealthBarName.text = hit.transform.GetComponent<EnemyStats>().name;
     }
     private void FixedUpdate()
     {

@@ -624,6 +624,7 @@ GameObject:
   - component: {fileID: -4189406280180510114}
   - component: {fileID: 8013536926295903688}
   - component: {fileID: -3499860404386380306}
+  - component: {fileID: 343063969271190993}
   m_Layer: 0
   m_Name: Spitter Crawler
   m_TagString: Enemy
@@ -756,6 +757,7 @@ MonoBehaviour:
     - item: {fileID: 7078281866280998902, guid: c7ac059add731e54eabba1ac8070cc19,
         type: 3}
       weight: 2
+  enemyStats: {fileID: 0}
   damageEffect: {fileID: 0}
   healthBar: {fileID: 0}
   maxHealthText: {fileID: 0}
@@ -783,6 +785,7 @@ MonoBehaviour:
   generator: {fileID: 0}
   spawner: {fileID: 0}
   player: {fileID: 0}
+  enemyStats: {fileID: 0}
   speed: 8
   angry: 0
   followDistance: 30
@@ -791,7 +794,6 @@ MonoBehaviour:
   pLayer:
     serializedVersion: 2
     m_Bits: 256
-  damage: 10
   relativeHitPosition: {x: 0, y: 0, z: 0.85}
   attackDistanceMultiplyer: 1.5
   attackSpeed: 2
@@ -816,6 +818,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &343063969271190993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2860568356155975378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e2a361b76a4ae42aaad103dee8bd67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: spitter
+  damage: 10
+  health: 80
 --- !u!1 &3495618125680120293
 GameObject:
   m_ObjectHideFlags: 0

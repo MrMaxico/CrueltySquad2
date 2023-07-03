@@ -1349,6 +1349,7 @@ GameObject:
   - component: {fileID: 3958637398480195917}
   - component: {fileID: 1704609736146485741}
   - component: {fileID: -4844800102174921560}
+  - component: {fileID: 4224036960194649676}
   m_Layer: 9
   m_Name: crawler
   m_TagString: Enemy
@@ -1482,6 +1483,7 @@ MonoBehaviour:
     - item: {fileID: 7078281866280998902, guid: c7ac059add731e54eabba1ac8070cc19,
         type: 3}
       weight: 2
+  enemyStats: {fileID: 4224036960194649676}
   damageEffect: {fileID: 0}
   healthBar: {fileID: 0}
   maxHealthText: {fileID: 0}
@@ -1509,6 +1511,7 @@ MonoBehaviour:
   generator: {fileID: 0}
   spawner: {fileID: 0}
   player: {fileID: 0}
+  enemyStats: {fileID: 4224036960194649676}
   speed: 8
   angry: 0
   followDistance: 30
@@ -1517,7 +1520,6 @@ MonoBehaviour:
   pLayer:
     serializedVersion: 2
     m_Bits: 256
-  damage: 10
   relativeHitPosition: {x: 0, y: 0, z: 0.85}
   attackDistanceMultiplyer: 1.5
   attackSpeed: 2
@@ -1542,6 +1544,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &4224036960194649676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6113339365441053707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e2a361b76a4ae42aaad103dee8bd67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Crawler
+  damage: 10
+  health: 100
 --- !u!1 &6120365479548104984
 GameObject:
   m_ObjectHideFlags: 0
