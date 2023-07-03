@@ -86,6 +86,7 @@ public class GunScript : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(originalRotation + bloomRotation);
         if (!reloading) {
             currentGunData.shootingSound.Play();
+            Debug.Log(currentGunData.muzzleFlash.name);
             currentGunData.muzzleFlash.Play();
         }
         // Raycast from muzzle position

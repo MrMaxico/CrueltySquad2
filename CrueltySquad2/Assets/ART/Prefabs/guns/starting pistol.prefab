@@ -444,6 +444,7 @@ MonoBehaviour:
   lootBeam: {fileID: 2425732135054705043}
   shootingSound: {fileID: 5380959380233225305}
   reloadSound: {fileID: 3787522970426968375}
+  muzzleFlash: {fileID: 189189361966433817}
   shotgunSpreadAngle: 15
   shotgunPelletCount: 15
 --- !u!82 &5380959380233225305
@@ -820,7 +821,7 @@ PrefabInstance:
     - target: {fileID: 7266260436937499756, guid: 7b0177eaceda25d41abc835abcc3db76,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7635345848472713937, guid: 7b0177eaceda25d41abc835abcc3db76,
         type: 3}
@@ -877,11 +878,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7725205561194412926, guid: 7b0177eaceda25d41abc835abcc3db76,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b0177eaceda25d41abc835abcc3db76, type: 3}
 --- !u!4 &27973395466389430 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7635345848472713937, guid: 7b0177eaceda25d41abc835abcc3db76,
+    type: 3}
+  m_PrefabInstance: {fileID: 7608078678791535975}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &189189361966433817 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7725205561194412926, guid: 7b0177eaceda25d41abc835abcc3db76,
     type: 3}
   m_PrefabInstance: {fileID: 7608078678791535975}
   m_PrefabAsset: {fileID: 0}
