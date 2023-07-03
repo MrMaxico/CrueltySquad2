@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour {
     [Header("changeable variables", order = 0)]
     public int speed;
     public int sprintSpeed;
-    public int jumpPower;
+    public float jumpPower;
     public bool infJump;
     [Header("Debug variables", order = 1)]
     public float cameraPitch = 0.0f;
