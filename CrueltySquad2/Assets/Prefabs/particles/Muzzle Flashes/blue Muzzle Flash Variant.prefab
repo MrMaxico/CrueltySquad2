@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 7266260436937499756, guid: 7b0177eaceda25d41abc835abcc3db76,
         type: 3}
       propertyPath: m_Name
-      value: blue Muzzle Flash
+      value: blue Muzzle Flash Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7635345848472713937, guid: 7b0177eaceda25d41abc835abcc3db76,
         type: 3}
@@ -85,6 +85,21 @@ PrefabInstance:
     - target: {fileID: 7635345848472713937, guid: 7b0177eaceda25d41abc835abcc3db76,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725205561194412926, guid: 7b0177eaceda25d41abc835abcc3db76,
+        type: 3}
+      propertyPath: stopAction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725205561194412926, guid: 7b0177eaceda25d41abc835abcc3db76,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725205561194412926, guid: 7b0177eaceda25d41abc835abcc3db76,
+        type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
