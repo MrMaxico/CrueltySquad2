@@ -9,6 +9,7 @@ public class EnemyStats : MonoBehaviour
     public float health;
 
     public void Start() {
+
         for (int i = 0; i < Teleporter.islandNumber - 1; i++) {
             damage += 0.3f * damage;
             health += 0.3f * health;

@@ -24,6 +24,7 @@ public class GunData : MonoBehaviour {
     public GameObject lootBeam;
     public AudioSource shootingSound;
     public AudioSource reloadSound;
+    public ParticleSystem muzzleFlash;
     [Header("Settings for shotguns", order = 0)]
     public float shotgunSpreadAngle = 15f;
     public float shotgunPelletCount = 15f;
