@@ -39,6 +39,19 @@ public class Teleporter : MonoBehaviour
     {
         if (open)
         {
+            if (GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>().primary != null)
+            {
+                Debug.Log($"Saving slot 1 as {GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>().primary.gameObject.name}");
+                GameObject saveSlotOne = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>().primary.gameObject;
+                DontDestroyOnLoad(saveSlotOne);
+                PickUpController.primarySavedGun = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>().primary;
+            }
+            if (GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>().secondary != null)
+            {
+                Debug.Log($"Saving slot 2 as {GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>().secondary.gameObject.name}");
+                DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>().secondary.gameObject);
+                PickUpController.secondarySavedGun = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>().secondary;
+            }
             islandNumber++;
             SceneManager.LoadScene(RandomIsland());
         }

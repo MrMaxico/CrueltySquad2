@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class PickUpController : MonoBehaviour {
     [Header("Holders for Guns", order = 0)]
     public Transform primaryholder;
+    public static Transform primarySavedGun;
     public Transform primary;
     public Transform secondaryHolder;
+    public static Transform secondarySavedGun;
     public Transform secondary;
     public Transform holder;
     [Header("Medkit Pickup Radius and variables", order = 1)]
@@ -30,10 +32,36 @@ public class PickUpController : MonoBehaviour {
     public void Start() {
         holdingPrimary = true;
         holdingSecondary = false;
-        PickUpGun(primaryholder.GetChild(0).transform);
+        if (Teleporter.islandNumber == 1)
+        {
+            PickUpGun(primaryholder.GetChild(0).transform);
+        } else {
+            holder = secondaryHolder;
+            holdingPrimary = false;
+            holdingSecondary = true;
+            secondaryHolder.gameObject.SetActive(true);
+            primaryholder.gameObject.SetActive(true);
+            Debug.Log(secondarySavedGun);
+            if (secondarySavedGun != null)
+            {
+                PickUpGun(secondarySavedGun);
+                Debug.Log("secondary gun spawned");
+            }
+            holdingSecondary = false;
+            holder = primaryholder;
+            holdingPrimary = true;
+            if (primarySavedGun != null)
+            {
+                PickUpGun(primarySavedGun);
+                Debug.Log("primary gun spawned");
+            }
+            secondaryHolder.gameObject.SetActive(false);
+        }
     }
     // Update is called once per frame
     void Update() {
+        Debug.Log(primarySavedGun);
+
         if (Input.GetKey(KeyCode.E)) {
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 1000)) {
                 if (hit.transform && !pickUpDelay && hit.transform.CompareTag("Gun")) {
@@ -86,12 +114,13 @@ public class PickUpController : MonoBehaviour {
             holder = secondaryHolder;
             secondary = gunTransform;
         }
+        Debug.Log("snot aap");
+        gunRigidbody.useGravity = false;
         gunTransform.SetParent(holder);
         gunTransform.position = holder.position;
         gunTransform.rotation = holder.rotation;
         gunTransform.GetComponent<MeshCollider>().enabled = false;
         gunTransform.GetComponent<GunData>().reloadSound.Play();
-        gunRigidbody.useGravity = false;
         gunRigidbody.freezeRotation = true;
         gunRigidbody.isKinematic = true;
         pickUpDelay = false;
