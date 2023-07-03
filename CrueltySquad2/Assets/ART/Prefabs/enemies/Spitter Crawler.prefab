@@ -757,7 +757,7 @@ MonoBehaviour:
     - item: {fileID: 7078281866280998902, guid: c7ac059add731e54eabba1ac8070cc19,
         type: 3}
       weight: 2
-  enemyStats: {fileID: 0}
+  enemyStats: {fileID: 343063969271190993}
   damageEffect: {fileID: 0}
   healthBar: {fileID: 0}
   maxHealthText: {fileID: 0}
@@ -785,7 +785,7 @@ MonoBehaviour:
   generator: {fileID: 0}
   spawner: {fileID: 0}
   player: {fileID: 0}
-  enemyStats: {fileID: 0}
+  enemyStats: {fileID: 343063969271190993}
   speed: 8
   angry: 0
   followDistance: 30
@@ -799,6 +799,7 @@ MonoBehaviour:
   attackSpeed: 2
   attackTimer: 0
   spitDistance: 5
+  spitSpeed: 10
   flyEnemyFlightHeight: 0.5
   renderer: {fileID: 8722073975146053394}
   activeIdle: 0

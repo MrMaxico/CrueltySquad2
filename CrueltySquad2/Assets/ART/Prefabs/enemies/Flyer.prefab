@@ -1144,6 +1144,7 @@ MonoBehaviour:
   attackSpeed: 2
   attackTimer: 0
   spitDistance: 0
+  spitSpeed: 0
   flyEnemyFlightHeight: 0.5
   renderer: {fileID: 6763013070895334013}
   activeIdle: 0
@@ -1242,7 +1243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4e2a361b76a4ae42aaad103dee8bd67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Flyer
+  name: Quillstinger
   damage: 10
   health: 80
 --- !u!1 &5044591110332127042

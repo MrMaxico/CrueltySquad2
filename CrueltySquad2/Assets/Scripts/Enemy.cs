@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour
     public float attackTimer;
     [Header("Spitter only")]
     public float spitDistance;
+    public float spitSpeed;
     [Space(20)]
     [Tooltip("You only need this variable if the enemy is a fly enemy")]
     [SerializeField] float flyEnemyFlightHeight;
@@ -100,13 +101,21 @@ public class Enemy : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, path[1], speed * Time.deltaTime);
         }
 
-        if (angry && path.Count <= 1)
+        if (angry && path.Count <= 1 && enemyType != EnemyTypes.spitter)
         {
             // Calculate the goal position for the enemy when it is angry and about to attack the player
             Vector3 goalPosition = player.transform.position - transform.forward * (relativeHitPosition.z * attackDistanceMultiplyer);
             goalPosition.y = path[0].y;
             transform.position = Vector3.MoveTowards(transform.position, goalPosition, speed * Time.deltaTime);
 
+            if (attackTimer <= 0)
+            {
+                attackTimer = attackSpeed;
+                StartCoroutine(RunAnimation());
+            }
+        }
+        else if (angry && path.Count <= 1 && enemyType == EnemyTypes.spitter)
+        {
             if (attackTimer <= 0)
             {
                 attackTimer = attackSpeed;
@@ -185,6 +194,12 @@ public class Enemy : MonoBehaviour
             yield return new WaitForEndOfFrame();
             GetComponent<Animator>().ResetTrigger("Attack2");
         }
+        else if (enemyType == EnemyTypes.spitter)
+        {
+            GetComponent<Animator>().SetTrigger("Attack1");
+            yield return new WaitForEndOfFrame();
+            GetComponent<Animator>().ResetTrigger("Attack1");
+        }
     }
 
     public void DamagePlayer()
@@ -214,6 +229,17 @@ public class Enemy : MonoBehaviour
                 Debug.Log($"Damaged player. Health went from {playerHealthBeforeDamage} to {player.GetComponent<Health>().GetHealth()}");
             }
         }
+    }
+
+    public void Spit(GameObject spit)
+    {
+        Vector3 bulletSpawnPosition = transform.position + transform.forward * relativeHitPosition.z +
+                                 transform.right * relativeHitPosition.x +
+                                 transform.up * relativeHitPosition.y;
+        GameObject spittenObject = Instantiate(spit, bulletSpawnPosition, Quaternion.LookRotation(player.transform.position - transform.position));
+        spittenObject.GetComponent<Bullet>().spitSpeed = spitDistance;
+        spittenObject.GetComponent<Bullet>().player = player;
+        spittenObject.GetComponent<Bullet>().damage = enemyStats.damage;
     }
 
     public void OnDrawGizmos()
