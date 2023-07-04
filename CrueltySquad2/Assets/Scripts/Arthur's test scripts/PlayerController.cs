@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour {
 
             //Jump
             Vector3 jump = new Vector3();
-            if (onGround || infJump) {
+            if (isGrounded || infJump) {
                 if (Input.GetKeyDown("space")) {
                     jump.y = jumpPower * 5;
                     rb.AddForce(jump, ForceMode.Impulse);
