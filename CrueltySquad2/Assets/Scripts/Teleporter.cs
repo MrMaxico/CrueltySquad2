@@ -9,6 +9,8 @@ public class Teleporter : MonoBehaviour
     public int spawnersLeft;
     public List<RandomVariable> nextIslandPresets;
     bool open;
+    public WeaponManager weaponManager;
+    public PickUpController pickUp;
 
     private void Start()
     {
@@ -39,6 +41,13 @@ public class Teleporter : MonoBehaviour
     {
         if (open)
         {
+            pickUp = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>();
+            weaponManager = GameObject.FindGameObjectWithTag("WeaponManager").GetComponent<WeaponManager>();
+            DontDestroyOnLoad(weaponManager.gameObject);
+            weaponManager.currentWeapons[0] = pickUp.primary.gameObject.name;
+            if(pickUp.secondary != null) {
+                weaponManager.currentWeapons[1] = pickUp.secondary.gameObject.name;
+            }
             if (GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>().primary != null)
             {
                 Debug.Log($"Saving slot 1 as {GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>().primary.gameObject.name}");

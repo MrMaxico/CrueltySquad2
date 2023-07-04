@@ -36,6 +36,7 @@ public class PickUpController : MonoBehaviour {
         {
             PickUpGun(primaryholder.GetChild(0).transform);
         } else {
+
             holder = secondaryHolder;
             holdingPrimary = false;
             holdingSecondary = true;

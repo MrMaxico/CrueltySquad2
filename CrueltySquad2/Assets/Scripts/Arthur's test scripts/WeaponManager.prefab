@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7961685242110778267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7961685242110778266}
+  - component: {fileID: 7961685242110778265}
+  m_Layer: 0
+  m_Name: WeaponManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7961685242110778266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7961685242110778267}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 121.03143, y: 164.7702, z: 114.80159}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7961685242110778265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7961685242110778267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d1f2ff25ec10514b94a4dc14dd56f9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponPrefabs:
+  - {fileID: 3685379672084113396, guid: c88368ae1ee451246a2a7f5a93238568, type: 3}
+  - {fileID: 1823316254484109225, guid: ac5abc356152f414cacb6be6f5707242, type: 3}
+  - {fileID: 9135655798291575255, guid: 824231a585538834c831c28a1ebe67b7, type: 3}
+  - {fileID: 8727148447041403267, guid: cab80110cbe443e42be05462952db51f, type: 3}
+  - {fileID: 8318553358585603384, guid: fca9192614561734fb039f29a33937e0, type: 3}
+  - {fileID: 4324839365179884087, guid: 756f5baec6db3d443961c50ea1a7662e, type: 3}
+  - {fileID: 5757830153032026586, guid: 73b525c524275584788cf1f76c237516, type: 3}
+  - {fileID: 7078281866280998902, guid: c7ac059add731e54eabba1ac8070cc19, type: 3}
+  currentWeapons:
+  - {fileID: 0}
+  - {fileID: 0}
+  pickUp: {fileID: 1725525705, guid: d03fc2f98d9e7394caeee431e2524846, type: 3}
