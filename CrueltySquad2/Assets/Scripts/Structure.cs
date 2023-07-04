@@ -28,6 +28,8 @@ public class Structure : ScriptableObject
     public bool ignoreSlopes;
     [Tooltip("Use this to spawn this structure higher above the ground")]
     public float spawnAltitude;
+    [Tooltip("Use this to check a larger area to avoid structures spawning inside of eachother")]
+    public Vector3 halfExtends;
 
     public enum StructureType
     {
