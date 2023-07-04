@@ -56,6 +56,7 @@ public class GunScript : MonoBehaviour
         } else {
             if (Input.GetMouseButton(0) && Time.time >= nextMeleeTime) {
                 nextMeleeTime = Time.time + 0.4f;
+                Debug.Log("melee");
                 if (!shot) {
                     Melee();
                 }
@@ -147,7 +148,10 @@ public class GunScript : MonoBehaviour
     }
     public void DamageShotEnemy(RaycastHit hit) {
         if (hit.transform.CompareTag("Enemy") || hit.transform.CompareTag("Destroyable")) {
-            if(pickUpController.holder.childCount == 0 && hit.transform.GetComponent<Health>().GetHealth() <= playerStats.meleeDamage && !hit.transform.CompareTag("Destroyable") || hit.transform.GetComponent<Health>().GetHealth() <= currentGunData.damagePerBullet && !hit.transform.CompareTag("Destroyable")) {
+
+            if(null == 
+                
+                && hit.transform.GetComponent<Health>().GetHealth() <= playerStats.meleeDamage && !hit.transform.CompareTag("Destroyable") || hit.transform.GetComponent<Health>().GetHealth() <= currentGunData.damagePerBullet && !hit.transform.CompareTag("Destroyable")) {
                 hit.transform.GetComponent<Health>().EnemyDeath();
                 playerStats.AddExp(hit.transform.GetComponent<Health>().xpOnDeath);
             }
