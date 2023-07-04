@@ -47,10 +47,10 @@ public class GunScript : MonoBehaviour
                 } else if(currentGunData.gunType == GunType.Rifle) {
                     Fire();
                 }
-            }else if(Input.GetMouseButton(0) && currentGunData.currentAmmo <= 0) {
+            }else if(Input.GetMouseButton(0) && currentGunData.currentAmmo <= 0 && !reloading) {
                 StartCoroutine(Reload());
             }
-            if (Input.GetKeyDown(KeyCode.R)) {
+            if (Input.GetKeyDown(KeyCode.R) && !reloading) {
                 StartCoroutine(Reload());
             }
         } else {
@@ -170,8 +170,8 @@ public class GunScript : MonoBehaviour
     }
 
     private IEnumerator Reload() {
-        currentGunData.reloadSound.Play();
         reloading = true;
+        currentGunData.reloadSound.Play();
         ammoCount.enabled = false;
         reloadAnim.SetActive(true);
         yield return new WaitForSeconds(currentGunData.reloadspeed);

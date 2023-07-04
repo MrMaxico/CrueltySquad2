@@ -51,7 +51,7 @@ public class WeaponManager : MonoBehaviour {
     private GameObject FindWeaponPrefab(string weaponName) {
         // Find the weapon prefab in the list based on its name
         foreach (GameObject weaponPrefab in weaponPrefabs) {
-            if (weaponPrefab.name == weaponName) {
+            if (weaponPrefab.GetComponent<GunData>().gunName == weaponName) {
                 return weaponPrefab;
             }
         }

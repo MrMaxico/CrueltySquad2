@@ -12,6 +12,7 @@ public class PickUpController : MonoBehaviour {
     public static Transform secondarySavedGun;
     public Transform secondary;
     public Transform holder;
+    public GameObject startingPistol;
     [Header("Medkit Pickup Radius and variables", order = 1)]
     public Transform medkitPickUpSphere;
     public float medkitPickUpRadius;
@@ -34,7 +35,7 @@ public class PickUpController : MonoBehaviour {
         holdingSecondary = false;
         if (Teleporter.islandNumber == 1)
         {
-            PickUpGun(primaryholder.GetChild(0).transform);
+            PickUpGun(Instantiate(startingPistol, transform).transform);
         } else {
 
             holder = secondaryHolder;

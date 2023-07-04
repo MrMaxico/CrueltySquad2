@@ -44,9 +44,9 @@ public class Teleporter : MonoBehaviour
             pickUp = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>();
             weaponManager = GameObject.FindGameObjectWithTag("WeaponManager").GetComponent<WeaponManager>();
             DontDestroyOnLoad(weaponManager.gameObject);
-            weaponManager.currentWeapons[0] = pickUp.primary.gameObject.name;
+            weaponManager.currentWeapons[0] = pickUp.primary.GetComponent<GunData>().gunName;
             if(pickUp.secondary != null) {
-                weaponManager.currentWeapons[1] = pickUp.secondary.gameObject.name;
+                weaponManager.currentWeapons[1] = pickUp.secondary.GetComponent<GunData>().gunName;
             }
             if (GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>().primary != null)
             {

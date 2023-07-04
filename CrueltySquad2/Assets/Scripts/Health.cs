@@ -21,7 +21,6 @@ public class Health : MonoBehaviour
     public HealthType healthType;
     [Header("Death (Only for Enemies)", order = 1)]
     public GameObject deathSplash;
-    public GameObject[] gunsToDropOnKill;
     public WeightedRandomList<GameObject> lootTable;
     public EnemyStats enemyStats;
     [Header("HealthUI (Only For Player)", order = 2)]

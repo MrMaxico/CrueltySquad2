@@ -149,10 +149,12 @@ public class PlayerController : MonoBehaviour {
             if (Physics.Raycast(ray, out hit, 1000)) {
                 // Raycast hit something, do something with the hit information
                 if (hit.transform.CompareTag("Gun")) {
+                    pickUpUI.SetActive(true);
                     lastGunStats = hit.transform.GetComponent<GunData>().gunStatUI.transform.parent.parent.gameObject;
                     hit.transform.GetComponent<GunData>().gunStatUI.transform.parent.parent.gameObject.SetActive(true);
                     hit.transform.GetComponent<GunData>().gunStatUI.transform.parent.GetComponent<Animator>().Play("weapon stats popup");
                 } else {
+                    pickUpUI.SetActive(false);
                     lastGunStats.SetActive(false);
                 }
             }
