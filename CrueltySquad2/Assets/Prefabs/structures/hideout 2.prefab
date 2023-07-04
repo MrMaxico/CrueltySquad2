@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 6895990403506494152}
   - component: {fileID: 6895990403506494154}
   - component: {fileID: 6895990403506494153}
+  - component: {fileID: 381631359416299655}
   m_Layer: 7
   m_Name: bunker roof2 (9)
   m_TagString: Untagged
@@ -297,6 +298,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &381631359416299655
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6895990402423888253}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.20000029, z: 2}
+  m_Center: {x: 0, y: 1.9000001, z: 1}
 --- !u!1 &6895990402487695427
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,6 +735,7 @@ GameObject:
   - component: {fileID: 6895990402854423060}
   - component: {fileID: 6895990402854423062}
   - component: {fileID: 6895990402854423061}
+  - component: {fileID: 6166085245812648865}
   m_Layer: 7
   m_Name: bunker roof2 (11)
   m_TagString: Untagged
@@ -793,6 +808,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6166085245812648865
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6895990402680873088}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.20000029, z: 2}
+  m_Center: {x: 0, y: 1.9000001, z: 1}
 --- !u!1 &6895990402697813935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,6 +1028,7 @@ GameObject:
   - component: {fileID: 6895990403099662861}
   - component: {fileID: 6895990403099662863}
   - component: {fileID: 6895990403099662862}
+  - component: {fileID: 2350261669085366825}
   m_Layer: 7
   m_Name: bunker roof2 (8)
   m_TagString: Untagged
@@ -1072,6 +1101,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2350261669085366825
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6895990402848179492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.20000029, z: 2}
+  m_Center: {x: 0, y: 1.9000001, z: 1}
 --- !u!1 &6895990403033272372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1279,6 +1321,7 @@ GameObject:
   - component: {fileID: 6895990402372675949}
   - component: {fileID: 6895990403130906243}
   - component: {fileID: 6895990403130906242}
+  - component: {fileID: 451773446195077205}
   m_Layer: 7
   m_Name: bunker roof2 (7)
   m_TagString: Untagged
@@ -1351,6 +1394,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &451773446195077205
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6895990403130906241}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.20000029, z: 2}
+  m_Center: {x: 0, y: 1.9000001, z: 1}
 --- !u!1 &6895990403206924557
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,6 +1795,7 @@ GameObject:
   - component: {fileID: 6895990402939199229}
   - component: {fileID: 6895990403394076166}
   - component: {fileID: 6895990403394076165}
+  - component: {fileID: 6012292089535159188}
   m_Layer: 7
   m_Name: bunker roof2 (16)
   m_TagString: Untagged
@@ -1811,6 +1868,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6012292089535159188
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6895990403394076164}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.20000029, z: 2}
+  m_Center: {x: 0, y: 1.9000001, z: 1}
 --- !u!1 &6895990403399548839
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,6 +1892,7 @@ GameObject:
   - component: {fileID: 6895990403718501459}
   - component: {fileID: 6895990403718501469}
   - component: {fileID: 6895990403718501468}
+  - component: {fileID: 2320814596544595348}
   m_Layer: 7
   m_Name: bunker roof2 (12)
   m_TagString: Untagged
@@ -1894,6 +1965,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2320814596544595348
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6895990403399548839}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.20000029, z: 2}
+  m_Center: {x: 0, y: 1.9000001, z: 1}
 --- !u!1 &6895990403452915249
 GameObject:
   m_ObjectHideFlags: 0
@@ -2218,6 +2302,7 @@ GameObject:
   - component: {fileID: 6895990403409516412}
   - component: {fileID: 6895990403514579715}
   - component: {fileID: 6895990403514579714}
+  - component: {fileID: 1954014715754711806}
   m_Layer: 7
   m_Name: bunker roof2 (15)
   m_TagString: Untagged
@@ -2290,6 +2375,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1954014715754711806
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6895990403514579713}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.20000029, z: 2}
+  m_Center: {x: 0, y: 1.9000001, z: 1}
 --- !u!1 &6895990403588331212
 GameObject:
   m_ObjectHideFlags: 0
@@ -2678,6 +2776,7 @@ GameObject:
   - component: {fileID: 6895990402342082645}
   - component: {fileID: 6895990403618106051}
   - component: {fileID: 6895990403618106050}
+  - component: {fileID: 64504153042593282}
   m_Layer: 7
   m_Name: bunker roof2 (14)
   m_TagString: Untagged
@@ -2750,6 +2849,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &64504153042593282
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6895990403618106049}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.20000029, z: 2}
+  m_Center: {x: 0, y: 1.9000001, z: 1}
 --- !u!1 &6895990403638242342
 GameObject:
   m_ObjectHideFlags: 0
@@ -2860,6 +2972,7 @@ GameObject:
   - component: {fileID: 6895990404428971082}
   - component: {fileID: 6895990404428971060}
   - component: {fileID: 6895990404428971083}
+  - component: {fileID: 1724464068550265360}
   m_Layer: 7
   m_Name: bunker roof2 (13)
   m_TagString: Untagged
@@ -2932,6 +3045,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1724464068550265360
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6895990403673724723}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.20000029, z: 2}
+  m_Center: {x: 0, y: 1.9000001, z: 1}
 --- !u!1 &6895990403735473259
 GameObject:
   m_ObjectHideFlags: 0
@@ -3760,6 +3886,7 @@ GameObject:
   - component: {fileID: 6895990404190044635}
   - component: {fileID: 6895990404297227411}
   - component: {fileID: 6895990404297227410}
+  - component: {fileID: 4832114106198645223}
   m_Layer: 7
   m_Name: bunker roof2 (10)
   m_TagString: Untagged
@@ -3832,6 +3959,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4832114106198645223
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6895990404297227409}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.20000029, z: 2}
+  m_Center: {x: 0, y: 1.9000001, z: 1}
 --- !u!1 &6895990404349997501
 GameObject:
   m_ObjectHideFlags: 0
@@ -3875,6 +4015,7 @@ GameObject:
   - component: {fileID: 6895990403722968628}
   - component: {fileID: 6895990404413711970}
   - component: {fileID: 6895990404413711969}
+  - component: {fileID: 4186994705823420969}
   m_Layer: 7
   m_Name: bunker roof2 (6)
   m_TagString: Untagged
@@ -3947,6 +4088,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4186994705823420969
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6895990404413711968}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.20000029, z: 2}
+  m_Center: {x: 0, y: 1.9000001, z: 1}
 --- !u!1 &7118833992446705645
 GameObject:
   m_ObjectHideFlags: 0

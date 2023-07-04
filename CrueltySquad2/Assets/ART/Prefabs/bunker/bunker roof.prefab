@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 616234687181374545}
   - component: {fileID: 4549363206635080692}
   - component: {fileID: 1785223095828070206}
+  - component: {fileID: 6419064776896863019}
   m_Layer: 0
   m_Name: bunker roof
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6419064776896863019
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272079109776482027}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0004268, y: 0.10500538, z: 1.9999998}
+  m_Center: {x: -0.00014060736, y: 1.9326086, z: 1.0000001}
