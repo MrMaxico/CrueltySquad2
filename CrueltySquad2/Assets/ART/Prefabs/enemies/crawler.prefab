@@ -1449,14 +1449,14 @@ MonoBehaviour:
   deathSplash: {fileID: 7051397275747083860, guid: 164c25490eee22144972fb6bacc97839,
     type: 3}
   gunsToDropOnKill:
-  - {fileID: 8727148447041403267, guid: cab80110cbe443e42be05462952db51f, type: 3}
-  - {fileID: 7078281866280998902, guid: c7ac059add731e54eabba1ac8070cc19, type: 3}
-  - {fileID: 5757830153032026586, guid: 73b525c524275584788cf1f76c237516, type: 3}
-  - {fileID: 4324839365179884087, guid: 756f5baec6db3d443961c50ea1a7662e, type: 3}
-  - {fileID: 8318553358585603384, guid: fca9192614561734fb039f29a33937e0, type: 3}
-  - {fileID: 9135655798291575255, guid: 824231a585538834c831c28a1ebe67b7, type: 3}
-  - {fileID: 1823316254484109225, guid: ac5abc356152f414cacb6be6f5707242, type: 3}
-  - {fileID: 3685379672084113396, guid: c88368ae1ee451246a2a7f5a93238568, type: 3}
+  - {fileID: 8556561191792515728, guid: c88368ae1ee451246a2a7f5a93238568, type: 3}
+  - {fileID: 5852689407715769175, guid: ac5abc356152f414cacb6be6f5707242, type: 3}
+  - {fileID: 5690403266726689397, guid: 824231a585538834c831c28a1ebe67b7, type: 3}
+  - {fileID: 7517111349010968992, guid: cab80110cbe443e42be05462952db51f, type: 3}
+  - {fileID: 2933850869437615341, guid: fca9192614561734fb039f29a33937e0, type: 3}
+  - {fileID: 369066601621911381, guid: 756f5baec6db3d443961c50ea1a7662e, type: 3}
+  - {fileID: 8002604935769822035, guid: 73b525c524275584788cf1f76c237516, type: 3}
+  - {fileID: 762242232789388025, guid: c7ac059add731e54eabba1ac8070cc19, type: 3}
   lootTable:
     list:
     - item: {fileID: 3685379672084113396, guid: c88368ae1ee451246a2a7f5a93238568,
@@ -1525,6 +1525,7 @@ MonoBehaviour:
   attackSpeed: 2
   attackTimer: 0
   spitDistance: 0
+  spitSpeed: 0
   flyEnemyFlightHeight: 0.5
   renderer: {fileID: 751887907167583691}
   activeIdle: 0
