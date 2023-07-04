@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7791548720208106295}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: big sattelite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 2830381621812760937}
   - component: {fileID: 2770576284083023800}
   - component: {fileID: 1799128591050176837}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,6 +201,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence corner (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4480111316009971113, guid: a0b163669a194da429e0b816a6df8b28,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0b163669a194da429e0b816a6df8b28, type: 3}
 --- !u!4 &4428257271879666057 stripped
@@ -275,6 +280,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence corner (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4480111316009971113, guid: a0b163669a194da429e0b816a6df8b28,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0b163669a194da429e0b816a6df8b28, type: 3}
@@ -351,6 +361,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence corner (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4480111316009971113, guid: a0b163669a194da429e0b816a6df8b28,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0b163669a194da429e0b816a6df8b28, type: 3}
 --- !u!4 &4428257271033866998 stripped
@@ -426,6 +441,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: big sattelite (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7563881071851616672, guid: 95829a298185acc45aa61084a699ac5e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95829a298185acc45aa61084a699ac5e, type: 3}
 --- !u!4 &7755362134516920724 stripped
@@ -500,6 +520,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence corner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4480111316009971113, guid: a0b163669a194da429e0b816a6df8b28,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0b163669a194da429e0b816a6df8b28, type: 3}

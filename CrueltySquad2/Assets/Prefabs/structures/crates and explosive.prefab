@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1367900379705864272}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: crates and explosive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,6 +123,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: explosive barrel (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618685086161121115, guid: 6eea2df13c8e01847935a82829c67d6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3394764805529105889, guid: 6eea2df13c8e01847935a82829c67d6e,
         type: 3}
@@ -349,6 +354,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: explosive barrel (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2618685086161121115, guid: 6eea2df13c8e01847935a82829c67d6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3394764805529105889, guid: 6eea2df13c8e01847935a82829c67d6e,
         type: 3}
       propertyPath: m_RootOrder
@@ -423,6 +433,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: explosive barrel (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618685086161121115, guid: 6eea2df13c8e01847935a82829c67d6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3394764805529105889, guid: 6eea2df13c8e01847935a82829c67d6e,
         type: 3}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6613073992012335907}
   - component: {fileID: 2610207427872585296}
   - component: {fileID: 7574832286504069063}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8020773754255409566}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: sattelite dish fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,6 +143,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sattelites (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568256330259899627, guid: fabf561cefbf48d458a11096d79f7edc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2200079329278721617, guid: fabf561cefbf48d458a11096d79f7edc,
         type: 3}
@@ -274,6 +279,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence corner (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4480111316009971113, guid: a0b163669a194da429e0b816a6df8b28,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0b163669a194da429e0b816a6df8b28, type: 3}
 --- !u!4 &40249222401150459 stripped
@@ -348,6 +358,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence corner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4480111316009971113, guid: a0b163669a194da429e0b816a6df8b28,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0b163669a194da429e0b816a6df8b28, type: 3}

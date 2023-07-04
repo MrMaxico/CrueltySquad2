@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3777336262390064384}
   - component: {fileID: 7458958591430636030}
   - component: {fileID: 4524245699644274050}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3940640797919425429}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: small hideout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,6 +165,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: industrial stairs (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071001325993227481, guid: 32efaf24c8a5b894eb47736fb254c961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8883953197651603043, guid: 32efaf24c8a5b894eb47736fb254c961,
         type: 3}
@@ -241,6 +246,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: industrial stairs (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8071001325993227481, guid: 32efaf24c8a5b894eb47736fb254c961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8883953197651603043, guid: 32efaf24c8a5b894eb47736fb254c961,
         type: 3}
       propertyPath: m_RootOrder
@@ -315,6 +325,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker roof2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454160824336083183, guid: 6e898b9a297d1f243842575ec842467e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7798457100570407509, guid: 6e898b9a297d1f243842575ec842467e,
         type: 3}
@@ -446,6 +461,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker tube3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8977371065572953202, guid: 4d444940f528e9a4fba9467174ab14e4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d444940f528e9a4fba9467174ab14e4, type: 3}
 --- !u!4 &633183075703063007 stripped
@@ -465,6 +485,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: plank (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859488653246307989, guid: 1cc387327132eca449b8aa3745e76571,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6492718751683560495, guid: 1cc387327132eca449b8aa3745e76571,
         type: 3}
@@ -596,6 +621,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &7768962291128544790 stripped
@@ -615,6 +645,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker roof2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454160824336083183, guid: 6e898b9a297d1f243842575ec842467e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7798457100570407509, guid: 6e898b9a297d1f243842575ec842467e,
         type: 3}
@@ -766,6 +801,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker tube4 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 214525546118952865, guid: b8a24a83380170e4fa017e380f30407e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 698609297413303579, guid: b8a24a83380170e4fa017e380f30407e,
         type: 3}
       propertyPath: m_RootOrder
@@ -896,6 +936,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &7768962290366297927 stripped
@@ -911,6 +956,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3940640797919425429}
     m_Modifications:
+    - target: {fileID: 3129157805321924912, guid: 99f64aeef0b8e0a45a83799e80e1339a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3561837456429073466, guid: 99f64aeef0b8e0a45a83799e80e1339a,
         type: 3}
       propertyPath: m_RootOrder
@@ -966,10 +1016,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4045631975026612159, guid: 99f64aeef0b8e0a45a83799e80e1339a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4190002311224008320, guid: 99f64aeef0b8e0a45a83799e80e1339a,
         type: 3}
       propertyPath: m_Name
       value: weaponChest
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190002311224008320, guid: 99f64aeef0b8e0a45a83799e80e1339a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4470334363501523287, guid: 99f64aeef0b8e0a45a83799e80e1339a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622185307111075877, guid: 99f64aeef0b8e0a45a83799e80e1339a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287358557679410926, guid: 99f64aeef0b8e0a45a83799e80e1339a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7736853717916105453, guid: 99f64aeef0b8e0a45a83799e80e1339a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99f64aeef0b8e0a45a83799e80e1339a, type: 3}
@@ -1046,6 +1126,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &7768962290155937987 stripped
@@ -1120,6 +1205,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker muur (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
@@ -1196,6 +1286,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &7768962290129781069 stripped
@@ -1215,6 +1310,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker roof2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454160824336083183, guid: 6e898b9a297d1f243842575ec842467e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7798457100570407509, guid: 6e898b9a297d1f243842575ec842467e,
         type: 3}
@@ -1290,6 +1390,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker roof2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454160824336083183, guid: 6e898b9a297d1f243842575ec842467e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7798457100570407509, guid: 6e898b9a297d1f243842575ec842467e,
         type: 3}
@@ -1421,6 +1526,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &7768962291020599431 stripped
@@ -1440,6 +1550,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker roof2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454160824336083183, guid: 6e898b9a297d1f243842575ec842467e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7798457100570407509, guid: 6e898b9a297d1f243842575ec842467e,
         type: 3}
@@ -1516,6 +1631,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker door (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7103201812221556528, guid: d78c8ff0c0dd36f4c8934c32b77121ab,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7103201812221556533, guid: d78c8ff0c0dd36f4c8934c32b77121ab,
         type: 3}
       propertyPath: m_RootOrder
@@ -1591,6 +1711,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker tube5 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1407726502620327892, guid: 8f0459f12c340a345b8bb2d3680ba8b4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1784251628776732014, guid: 8f0459f12c340a345b8bb2d3680ba8b4,
         type: 3}
       propertyPath: m_RootOrder
@@ -1665,6 +1790,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: plank (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859488653246307989, guid: 1cc387327132eca449b8aa3745e76571,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6492718751683560495, guid: 1cc387327132eca449b8aa3745e76571,
         type: 3}
@@ -1796,6 +1926,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &7768962290571152925 stripped
@@ -1871,6 +2006,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &7768962290575048857 stripped
@@ -1945,6 +2085,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker muur (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}

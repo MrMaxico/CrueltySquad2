@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 572626391756128998}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grote basis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,6 +245,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &1787922993092016194 stripped
@@ -319,6 +324,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker muur (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
@@ -395,6 +405,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &1627565631246432066 stripped
@@ -414,6 +429,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker pillar (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879345880164589452, guid: d68544834f86e2041a74768f93e2b71c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4512013273530729782, guid: d68544834f86e2041a74768f93e2b71c,
         type: 3}
@@ -545,6 +565,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &1164524008422333800 stripped
@@ -619,6 +644,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker muur (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
@@ -695,6 +725,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &1289345142383208007 stripped
@@ -770,6 +805,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &2253319044628777298 stripped
@@ -789,6 +829,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal bunker floor (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
@@ -920,6 +965,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &2195690095627238751 stripped
@@ -995,6 +1045,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &2056575173512095283 stripped
@@ -1014,6 +1069,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker pillar (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879345880164589452, guid: d68544834f86e2041a74768f93e2b71c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4512013273530729782, guid: d68544834f86e2041a74768f93e2b71c,
         type: 3}
@@ -1089,6 +1149,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -1235,6 +1300,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &1170783931165951853 stripped
@@ -1310,6 +1380,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &2165370220228454895 stripped
@@ -1329,6 +1404,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker pillar (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879345880164589452, guid: d68544834f86e2041a74768f93e2b71c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4512013273530729782, guid: d68544834f86e2041a74768f93e2b71c,
         type: 3}
@@ -1460,6 +1540,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &1691467862031875339 stripped
@@ -1479,6 +1564,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal bunker floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
@@ -1554,6 +1644,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -1700,6 +1795,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &1946511892170323658 stripped
@@ -1774,6 +1874,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker floor (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
@@ -1850,6 +1955,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &322130515569085227 stripped
@@ -1869,6 +1979,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker stairs (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375811803071313699, guid: 797761051af7e6640a524bb24f44453d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8375811803071313700, guid: 797761051af7e6640a524bb24f44453d,
         type: 3}
@@ -1945,6 +2060,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker pillar (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3879345880164589452, guid: d68544834f86e2041a74768f93e2b71c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4512013273530729782, guid: d68544834f86e2041a74768f93e2b71c,
         type: 3}
       propertyPath: m_RootOrder
@@ -2019,6 +2139,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal bunker floor (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
@@ -2150,6 +2275,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &107213223415582480 stripped
@@ -2224,6 +2354,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker floor (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
@@ -2300,6 +2435,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &255389276147401487 stripped
@@ -2319,6 +2459,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker pillar (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879345880164589452, guid: d68544834f86e2041a74768f93e2b71c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4512013273530729782, guid: d68544834f86e2041a74768f93e2b71c,
         type: 3}
@@ -2450,6 +2595,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &957005652322206867 stripped
@@ -2469,6 +2619,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: hangend beeldscherm
+      objectReference: {fileID: 0}
+    - target: {fileID: 1256246636931003040, guid: 883250d5923ece44ab300214bdd63187,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1883847171732498458, guid: 883250d5923ece44ab300214bdd63187,
         type: 3}
@@ -2545,6 +2700,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: metal bunker floor (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
       propertyPath: m_RootOrder
@@ -2619,6 +2779,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker door
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103201812221556528, guid: d78c8ff0c0dd36f4c8934c32b77121ab,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7103201812221556533, guid: d78c8ff0c0dd36f4c8934c32b77121ab,
         type: 3}
@@ -2750,6 +2915,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &293337990738833617 stripped
@@ -2824,6 +2994,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker muur (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
@@ -2900,6 +3075,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &816491120017586816 stripped
@@ -2975,6 +3155,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &815605832544822827 stripped
@@ -2994,6 +3179,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker pillar (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879345880164589452, guid: d68544834f86e2041a74768f93e2b71c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4512013273530729782, guid: d68544834f86e2041a74768f93e2b71c,
         type: 3}
@@ -3069,6 +3259,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal bunker floor (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
@@ -3200,6 +3395,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &4068821650357781427 stripped
@@ -3274,6 +3474,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker muur (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
@@ -3350,6 +3555,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &4466990479308348557 stripped
@@ -3425,6 +3635,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &4349477978998573551 stripped
@@ -3444,6 +3659,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: small metal fence (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6085651663071433121, guid: 47ac41b98a318ba4a94a9cc0fc45945a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6863278425433639707, guid: 47ac41b98a318ba4a94a9cc0fc45945a,
         type: 3}
@@ -3575,6 +3795,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &3635030579426776670 stripped
@@ -3650,6 +3875,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &3708761129279144678 stripped
@@ -3669,6 +3899,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -3815,6 +4050,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &4346772093642575491 stripped
@@ -3889,6 +4129,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker muur (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
@@ -3965,6 +4210,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &4357918850576060217 stripped
@@ -3984,6 +4234,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal bunker floor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
@@ -4115,6 +4370,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &3648927747700647422 stripped
@@ -4190,6 +4450,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &3812798525588299748 stripped
@@ -4209,6 +4474,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker pillar (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879345880164589452, guid: d68544834f86e2041a74768f93e2b71c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4512013273530729782, guid: d68544834f86e2041a74768f93e2b71c,
         type: 3}
@@ -4284,6 +4554,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: small metal fence (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6085651663071433121, guid: 47ac41b98a318ba4a94a9cc0fc45945a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6863278425433639707, guid: 47ac41b98a318ba4a94a9cc0fc45945a,
         type: 3}
@@ -4415,6 +4690,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &2613044878915430475 stripped
@@ -4490,6 +4770,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &2602638353177220138 stripped
@@ -4509,6 +4794,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal bunker floor (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
@@ -4584,6 +4874,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -4730,6 +5025,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &2413129570674863433 stripped
@@ -4749,6 +5049,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -4895,6 +5200,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &2486445007742052888 stripped
@@ -4970,6 +5280,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &3418201451870897212 stripped
@@ -4989,6 +5304,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -5079,6 +5399,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker pillar (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879345880164589452, guid: d68544834f86e2041a74768f93e2b71c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4512013273530729782, guid: d68544834f86e2041a74768f93e2b71c,
         type: 3}
@@ -5210,6 +5535,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &3205417885849653754 stripped
@@ -5229,6 +5559,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal bunker floor (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
@@ -5360,6 +5695,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &2734008221146474043 stripped
@@ -5379,6 +5719,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker pillar (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879345880164589452, guid: d68544834f86e2041a74768f93e2b71c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4512013273530729782, guid: d68544834f86e2041a74768f93e2b71c,
         type: 3}
@@ -5455,6 +5800,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: metal bunker floor (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
       propertyPath: m_RootOrder
@@ -5530,6 +5880,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker pillar (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3879345880164589452, guid: d68544834f86e2041a74768f93e2b71c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4512013273530729782, guid: d68544834f86e2041a74768f93e2b71c,
         type: 3}
       propertyPath: m_RootOrder
@@ -5604,6 +5959,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -5750,6 +6110,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &6140967231803510412 stripped
@@ -5769,6 +6134,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -5915,6 +6285,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &6240902619867279213 stripped
@@ -5934,6 +6309,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -6080,6 +6460,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &6321077409196348587 stripped
@@ -6099,6 +6484,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal bunker floor (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
@@ -6174,6 +6564,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: small metal fence (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6085651663071433121, guid: 47ac41b98a318ba4a94a9cc0fc45945a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6863278425433639707, guid: 47ac41b98a318ba4a94a9cc0fc45945a,
         type: 3}
@@ -6305,6 +6700,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &6638976715328512796 stripped
@@ -6324,6 +6724,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker stairs (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375811803071313699, guid: 797761051af7e6640a524bb24f44453d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8375811803071313700, guid: 797761051af7e6640a524bb24f44453d,
         type: 3}
@@ -6455,6 +6860,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &5900041267027875904 stripped
@@ -6474,6 +6884,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker pillar (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879345880164589452, guid: d68544834f86e2041a74768f93e2b71c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4512013273530729782, guid: d68544834f86e2041a74768f93e2b71c,
         type: 3}
@@ -6549,6 +6964,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -6695,6 +7115,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &6678138005994582604 stripped
@@ -6714,6 +7139,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker pillar (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879345880164589452, guid: d68544834f86e2041a74768f93e2b71c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4512013273530729782, guid: d68544834f86e2041a74768f93e2b71c,
         type: 3}
@@ -6790,6 +7220,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: small metal fence
       objectReference: {fileID: 0}
+    - target: {fileID: 6085651663071433121, guid: 47ac41b98a318ba4a94a9cc0fc45945a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6863278425433639707, guid: 47ac41b98a318ba4a94a9cc0fc45945a,
         type: 3}
       propertyPath: m_RootOrder
@@ -6864,6 +7299,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal bunker floor (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
@@ -6940,6 +7380,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: metal bunker floor (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
       propertyPath: m_RootOrder
@@ -7015,6 +7460,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker pillar (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3879345880164589452, guid: d68544834f86e2041a74768f93e2b71c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4512013273530729782, guid: d68544834f86e2041a74768f93e2b71c,
         type: 3}
       propertyPath: m_RootOrder
@@ -7089,6 +7539,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -7235,6 +7690,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &6444149930384601071 stripped
@@ -7254,6 +7714,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker pillar (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879345880164589452, guid: d68544834f86e2041a74768f93e2b71c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4512013273530729782, guid: d68544834f86e2041a74768f93e2b71c,
         type: 3}
@@ -7329,6 +7794,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal bunker floor (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
@@ -7460,6 +7930,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &6424144475730821372 stripped
@@ -7479,6 +7954,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal bunker floor (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
@@ -7555,6 +8035,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker stairs (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8375811803071313699, guid: 797761051af7e6640a524bb24f44453d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8375811803071313700, guid: 797761051af7e6640a524bb24f44453d,
         type: 3}
       propertyPath: m_RootOrder
@@ -7630,6 +8115,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker pillar (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 3879345880164589452, guid: d68544834f86e2041a74768f93e2b71c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4512013273530729782, guid: d68544834f86e2041a74768f93e2b71c,
         type: 3}
       propertyPath: m_RootOrder
@@ -7704,6 +8194,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -7794,6 +8289,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -7940,6 +8440,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &4737626202743291058 stripped
@@ -8015,6 +8520,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &5621610428235190712 stripped
@@ -8034,6 +8544,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal bunker floor (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
@@ -8165,6 +8680,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &5530410064669564403 stripped
@@ -8184,6 +8704,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal bunker floor (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
@@ -8259,6 +8784,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal bunker floor (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
@@ -8390,6 +8920,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &5626628783069493337 stripped
@@ -8464,6 +8999,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker muur (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
@@ -8540,6 +9080,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &4831844521431079212 stripped
@@ -8615,6 +9160,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &5249461101877137897 stripped
@@ -8634,6 +9184,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal bunker floor (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
@@ -8765,6 +9320,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &5393673264218809464 stripped
@@ -8840,6 +9400,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &5186048298334863428 stripped
@@ -8859,6 +9424,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal bunker floor (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
@@ -8935,6 +9505,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker pillar (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 3879345880164589452, guid: d68544834f86e2041a74768f93e2b71c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4512013273530729782, guid: d68544834f86e2041a74768f93e2b71c,
         type: 3}
       propertyPath: m_RootOrder
@@ -9009,6 +9584,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -9155,6 +9735,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &8490914644507869010 stripped
@@ -9229,6 +9814,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker muur (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
@@ -9305,6 +9895,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &8489571372590755844 stripped
@@ -9324,6 +9919,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal bunker floor (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
@@ -9399,6 +9999,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -9545,6 +10150,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &8556001468560539652 stripped
@@ -9564,6 +10174,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker stairs (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375811803071313699, guid: 797761051af7e6640a524bb24f44453d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8375811803071313700, guid: 797761051af7e6640a524bb24f44453d,
         type: 3}
@@ -9695,6 +10310,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &8978899945016211325 stripped
@@ -9770,6 +10390,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &8988473359775907351 stripped
@@ -9789,6 +10414,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal bunker floor (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
@@ -9864,6 +10494,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker door (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103201812221556528, guid: d78c8ff0c0dd36f4c8934c32b77121ab,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7103201812221556533, guid: d78c8ff0c0dd36f4c8934c32b77121ab,
         type: 3}
@@ -9995,6 +10630,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &8157795026913694341 stripped
@@ -10069,6 +10709,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker muur (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
@@ -10145,6 +10790,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &8278859533432952460 stripped
@@ -10220,6 +10870,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &9178731741209386723 stripped
@@ -10239,6 +10894,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker pillar
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879345880164589452, guid: d68544834f86e2041a74768f93e2b71c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4512013273530729782, guid: d68544834f86e2041a74768f93e2b71c,
         type: 3}
@@ -10315,6 +10975,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: metal bunker floor (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
       propertyPath: m_RootOrder
@@ -10389,6 +11054,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -10480,6 +11150,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker stairs
       objectReference: {fileID: 0}
+    - target: {fileID: 8375811803071313699, guid: 797761051af7e6640a524bb24f44453d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8375811803071313700, guid: 797761051af7e6640a524bb24f44453d,
         type: 3}
       propertyPath: m_RootOrder
@@ -10555,6 +11230,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: metal bunker floor (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
       propertyPath: m_RootOrder
@@ -10629,6 +11309,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal bunker floor (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
@@ -10760,6 +11445,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &7029963984552181400 stripped
@@ -10779,6 +11469,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -10925,6 +11620,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &7831427976109569724 stripped
@@ -10944,6 +11644,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker pillar (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879345880164589452, guid: d68544834f86e2041a74768f93e2b71c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4512013273530729782, guid: d68544834f86e2041a74768f93e2b71c,
         type: 3}
@@ -11019,6 +11724,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -11165,6 +11875,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker muur (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 1496520446797886939, guid: f5442f55c281220469241b3a1c1aca32,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5442f55c281220469241b3a1c1aca32, type: 3}
 --- !u!4 &8017314117589663655 stripped
@@ -11184,6 +11899,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -11274,6 +11994,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal bunker floor (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081106355400845176, guid: 208804f8050114a41a3922cb4c114be8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8081106355400845181, guid: 208804f8050114a41a3922cb4c114be8,
         type: 3}
@@ -11405,6 +12130,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker floor (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1860549619865044871, guid: 1a61cadf2f97b9949ba605f71a78ae3c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a61cadf2f97b9949ba605f71a78ae3c, type: 3}
 --- !u!4 &7373566341887911210 stripped
@@ -11424,6 +12154,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker stairs (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375811803071313699, guid: 797761051af7e6640a524bb24f44453d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8375811803071313700, guid: 797761051af7e6640a524bb24f44453d,
         type: 3}
