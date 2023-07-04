@@ -236,7 +236,7 @@ public class Enemy : MonoBehaviour
         Vector3 bulletSpawnPosition = transform.position + transform.forward * relativeHitPosition.z +
                                  transform.right * relativeHitPosition.x +
                                  transform.up * relativeHitPosition.y;
-        GameObject spittenObject = Instantiate(spit, bulletSpawnPosition, Quaternion.LookRotation(player.transform.position - transform.position));
+        GameObject spittenObject = Instantiate(spit, bulletSpawnPosition, Quaternion.LookRotation(player.transform.position + new Vector3(0, .5f, 0) - transform.position));
         spittenObject.GetComponent<Bullet>().spitSpeed = spitDistance;
         spittenObject.GetComponent<Bullet>().player = player;
         spittenObject.GetComponent<Bullet>().damage = enemyStats.damage;
