@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4050408499395453060}
   - component: {fileID: 5564402625203671503}
   - component: {fileID: 4830915267680282940}
+  - component: {fileID: 1771844046659020239}
   m_Layer: 0
   m_Name: Armored Crawler
   m_TagString: Enemy
@@ -153,7 +154,7 @@ MonoBehaviour:
     - item: {fileID: 5690403266726689397, guid: 824231a585538834c831c28a1ebe67b7,
         type: 3}
       weight: 2
-  enemyStats: {fileID: 0}
+  enemyStats: {fileID: 1771844046659020239}
   damageEffect: {fileID: 0}
   healthBar: {fileID: 0}
   maxHealthText: {fileID: 0}
@@ -199,6 +200,21 @@ MonoBehaviour:
   flyEnemyFlightHeight: 0.5
   renderer: {fileID: 0}
   activeIdle: 0
+--- !u!114 &1771844046659020239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649775281372685240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e2a361b76a4ae42aaad103dee8bd67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Armored Crawler
+  damage: 0
+  health: 220
 --- !u!1 &1024146230195448636
 GameObject:
   m_ObjectHideFlags: 0
