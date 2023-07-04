@@ -338,7 +338,7 @@ public class IslandGenerator : MonoBehaviour
         Vector3 n_inAirPos = new(Random.Range(center - islandRadius, center + islandRadius), 500, Random.Range(center - islandRadius, center + islandRadius));
         if (Physics.Raycast(n_inAirPos, -Vector3.up, out RaycastHit hitpoint, 1000))
         {
-            if (hitpoint.transform.gameObject.TryGetComponent<IslandGenerator>(out IslandGenerator n_island) && CheckValidBiome(n_inAirPos, n_structure.allowedBiomes))
+            if (hitpoint.transform.gameObject.TryGetComponent<IslandGenerator>(out IslandGenerator n_island) && CheckValidBiome(n_inAirPos, n_structure.allowedBiomes) && !Physics.CheckBox(hitpoint.point, n_structure.halfExtends, Quaternion.Euler(0,0,0), grid.unwalkable))
             {
                 n_postion = hitpoint.point;
                 if (!n_structure.ignoreSlopes)
