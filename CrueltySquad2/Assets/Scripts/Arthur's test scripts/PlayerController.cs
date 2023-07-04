@@ -146,7 +146,7 @@ public class PlayerController : MonoBehaviour {
             Ray ray = new Ray(cam.transform.position, cam.transform.forward);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 1000)) {
+            if (Physics.Raycast(ray, out hit, 2)) {
                 // Raycast hit something, do something with the hit information
                 if (hit.transform.CompareTag("Gun")) {
                     pickUpUI.SetActive(true);

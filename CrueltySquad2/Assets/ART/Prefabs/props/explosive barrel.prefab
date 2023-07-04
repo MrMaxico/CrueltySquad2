@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1779901586382813764}
   - component: {fileID: 4564270980000681614}
   - component: {fileID: 6900878043383727662}
+  - component: {fileID: 1799018609124185379}
   m_Layer: 0
   m_Name: explosive barrel
-  m_TagString: Untagged
+  m_TagString: Explosive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,3 +99,39 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8691780276856062721, guid: 030f2e9155abbb547af9f61b6c2449b0, type: 3}
+--- !u!114 &1799018609124185379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618685086161121115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba15951d3b58eb2419c326b6c126c584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  maxHealth: 100
+  shield: 0
+  maxShield: 0
+  xpOnDeath: 10
+  healthType: 2
+  deathSplash: {fileID: 0}
+  lootTable:
+    list: []
+  enemyStats: {fileID: 0}
+  damageEffect: {fileID: 0}
+  healthBar: {fileID: 0}
+  maxHealthText: {fileID: 0}
+  gameOverUI: {fileID: 0}
+  shieldBar: {fileID: 0}
+  maxShieldText: {fileID: 0}
+  shieldRegenTime: 0
+  shieldRegenAmount: 0
+  inCombat: 0
+  inCombatShieldRegenDelay: 0
+  timeOutOfCombat: 0
+  explosionRadius: 5
+  explosionForce: 1000
+  exposionDamage: 100

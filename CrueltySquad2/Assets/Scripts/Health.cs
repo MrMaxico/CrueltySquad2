@@ -36,6 +36,10 @@ public class Health : MonoBehaviour
     public bool inCombat;
     public float inCombatShieldRegenDelay;
     public float timeOutOfCombat;
+    [Header("Explosive (Only for Explosive Props)", order = 4)]
+    public float explosionRadius;
+    public float explosionForce;
+    public float exposionDamage;
 
     private void Start() {
         if (healthType == HealthType.Player) {
@@ -170,11 +174,9 @@ public class Health : MonoBehaviour
             Debug.Log("Enemy Died");
             if (healthType == HealthType.Enemy) {
                 GameObject.Instantiate(deathSplash, transform.position, transform.rotation);
-                GameObject gun = lootTable.GetRandom();
-                if (Random.Range(0, 100) < 25) {
-                    GameObject.Instantiate(gun, transform.position, transform.rotation);
+                if (Random.Range(0, 100) < 25 || enemyStats.name == "LootJalla") {
+                    GameObject.Instantiate(lootTable.GetRandom(), transform.position, transform.rotation);
                 }
-                Debug.Log(gun.name);
                 //gun.name = gunsToDropOnKill[randomIndex].name;
                 if (GetComponent<Enemy>().enemyType != Enemy.EnemyTypes.lootJalla)
                 {
@@ -183,7 +185,28 @@ public class Health : MonoBehaviour
             }
             else if (healthType == HealthType.prop)
             {
-                GetComponent<Spawner>().generator.Teleporter().GetComponent<Teleporter>().spawnersLeft -= 1;
+                if (gameObject.CompareTag("Spawner")) {
+                    GetComponent<Spawner>().generator.Teleporter().GetComponent<Teleporter>().spawnersLeft -= 1;
+                }
+                if (gameObject.CompareTag("Crate")) {
+                    if (Random.Range(0, 100) < 15) {
+                        GameObject.Instantiate(lootTable.GetRandom(), transform.position, transform.rotation);
+                    }
+                }
+                if (gameObject.CompareTag("Explosive")) {
+                    // Collect nearby colliders within the explosion radius
+                    Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
+
+                    foreach (Collider nearbyObject in colliders) {
+                        // Apply explosion force to rigidbodies
+                        if (nearbyObject.TryGetComponent<Rigidbody>(out Rigidbody rb)) {
+                            rb.AddExplosionForce(explosionForce, transform.position, explosionRadius);
+                        }
+                        if (nearbyObject.GetComponent<Health>()) {
+                            nearbyObject.GetComponent<Health>().Damage(exposionDamage);
+                        }
+                    }
+                }
             }
             Destroy(this.gameObject);
         }

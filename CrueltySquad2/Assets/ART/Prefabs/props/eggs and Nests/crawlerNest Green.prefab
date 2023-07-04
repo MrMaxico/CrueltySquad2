@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6986453834996188230}
   - component: {fileID: -6007826255658738229}
   - component: {fileID: -9089907726358001920}
+  - component: {fileID: 8438102601516171232}
   m_Layer: 0
   m_Name: crawlerNest Green
   m_TagString: Destroyable
@@ -91,9 +92,9 @@ MonoBehaviour:
   xpOnDeath: 10
   healthType: 2
   deathSplash: {fileID: 0}
-  gunsToDropOnKill: []
   lootTable:
     list: []
+  enemyStats: {fileID: 0}
   damageEffect: {fileID: 0}
   healthBar: {fileID: 0}
   maxHealthText: {fileID: 0}
@@ -105,6 +106,21 @@ MonoBehaviour:
   inCombat: 0
   inCombatShieldRegenDelay: 0
   timeOutOfCombat: 0
+--- !u!114 &8438102601516171232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744586909009380642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e2a361b76a4ae42aaad103dee8bd67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Spawner
+  damage: 0
+  health: 1000
 --- !u!1 &4498641857153531153
 GameObject:
   m_ObjectHideFlags: 0

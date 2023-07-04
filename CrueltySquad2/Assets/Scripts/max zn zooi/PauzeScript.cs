@@ -63,6 +63,8 @@ public class PauzeScript : MonoBehaviour
         PlayerStats.playerLevel = 0;
         PlayerStats.playerExp = 0;
         Teleporter.islandNumber = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         //FindObjectOfType<AudioManagerScript>().Play("DefenceSetupMusic");
     }

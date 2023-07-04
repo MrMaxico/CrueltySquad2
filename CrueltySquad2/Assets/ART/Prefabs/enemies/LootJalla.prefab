@@ -1242,8 +1242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba15951d3b58eb2419c326b6c126c584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  maxHealth: 100
+  health: 300
+  maxHealth: 300
   shield: 0
   maxShield: 0
   xpOnDeath: 10
@@ -1274,6 +1274,15 @@ MonoBehaviour:
     - item: {fileID: 5690403266726689397, guid: 824231a585538834c831c28a1ebe67b7,
         type: 3}
       weight: 2
+    - item: {fileID: 2130549661398004797, guid: 4f65563676a8b634097f6f711577522f,
+        type: 3}
+      weight: 1
+    - item: {fileID: 4239105873075604270, guid: ca71c5ab592f36144abdac682bcb370c,
+        type: 3}
+      weight: 1
+    - item: {fileID: 8615458531096432867, guid: dc698144a9f78c843aea87fef414b6cf,
+        type: 3}
+      weight: 1
   enemyStats: {fileID: 555878954371832560}
   damageEffect: {fileID: 0}
   healthBar: {fileID: 0}
@@ -1384,7 +1393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: LootJalla
   damage: 0
-  health: 100
+  health: 300
 --- !u!1 &4800211093864074740
 GameObject:
   m_ObjectHideFlags: 0

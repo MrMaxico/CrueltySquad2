@@ -65,7 +65,7 @@ public class PickUpController : MonoBehaviour {
         Debug.Log(primarySavedGun);
 
         if (Input.GetKey(KeyCode.E)) {
-            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 1000)) {
+            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 2)) {
                 if (hit.transform && !pickUpDelay && hit.transform.CompareTag("Gun")) {
                     if (holdingPrimary && primary == null) {
                         Debug.Log("Gun");

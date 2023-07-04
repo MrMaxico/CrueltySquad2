@@ -808,7 +808,7 @@ MonoBehaviour:
     type: 3}
   enemyHitParticlePrefab: {fileID: 7051397275747083860, guid: fee8b3bef35c2c740a77d960aeead8ea,
     type: 3}
-  meleeDamage: 0
+  meleeDamage: 100
 --- !u!1 &3528437917025365391
 GameObject:
   m_ObjectHideFlags: 0
@@ -2046,6 +2046,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Texture
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155701162136299548, guid: ef56a2f2cd3fa3440a741b8c576ae6cd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6155701162168161954, guid: ef56a2f2cd3fa3440a741b8c576ae6cd,
         type: 3}

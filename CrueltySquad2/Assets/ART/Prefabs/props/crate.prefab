@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2683572364233374492}
   m_Layer: 7
   m_Name: crate
-  m_TagString: Untagged
+  m_TagString: Destroyable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,9 +117,15 @@ MonoBehaviour:
   xpOnDeath: 10
   healthType: 2
   deathSplash: {fileID: 0}
-  gunsToDropOnKill: []
+  lootTable:
+    list:
+    - item: {fileID: 370623768839318421, guid: d99e79127bcf821489d90decd16e5f05, type: 3}
+      weight: 100
+  enemyStats: {fileID: 0}
+  damageEffect: {fileID: 0}
   healthBar: {fileID: 0}
   maxHealthText: {fileID: 0}
+  gameOverUI: {fileID: 0}
   shieldBar: {fileID: 0}
   maxShieldText: {fileID: 0}
   shieldRegenTime: 0

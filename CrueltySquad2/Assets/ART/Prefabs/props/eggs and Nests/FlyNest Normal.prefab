@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 7397461631327375516}
   - component: {fileID: 6303953448152420848}
   - component: {fileID: 8105229620461105695}
+  - component: {fileID: 1958403742705163469}
   m_Layer: 0
   m_Name: FlyNest Normal
   m_TagString: Destroyable
@@ -272,11 +273,13 @@ MonoBehaviour:
   xpOnDeath: 10
   healthType: 2
   deathSplash: {fileID: 0}
-  gunsToDropOnKill: []
   lootTable:
     list: []
+  enemyStats: {fileID: 0}
+  damageEffect: {fileID: 0}
   healthBar: {fileID: 0}
   maxHealthText: {fileID: 0}
+  gameOverUI: {fileID: 0}
   shieldBar: {fileID: 0}
   maxShieldText: {fileID: 0}
   shieldRegenTime: 0
@@ -304,6 +307,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1958403742705163469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6334143924725207683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e2a361b76a4ae42aaad103dee8bd67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Spawner
+  damage: 0
+  health: 1500
 --- !u!1 &6564729533878060128
 GameObject:
   m_ObjectHideFlags: 0

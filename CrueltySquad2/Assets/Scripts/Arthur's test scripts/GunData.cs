@@ -30,11 +30,13 @@ public class GunData : MonoBehaviour {
     public float shotgunPelletCount = 15f;
     // Other gun-related variables and functions can be added here
     public void Start() {
-        for (int i = 0; i < Teleporter.islandNumber - 1; i++) {
-            damagePerBullet += 0.2f * damagePerBullet;
+        if (gameObject != GameObject.FindGameObjectWithTag("WeaponManager").GetComponent<WeaponManager>().newWeapons[0] && gameObject != GameObject.FindGameObjectWithTag("WeaponManager").GetComponent<WeaponManager>().newWeapons[1]) {
+            for (int i = 0; i < Teleporter.islandNumber - 1; i++) {
+                damagePerBullet += 0.2f * damagePerBullet;
+            }
         }
         gunStatUI.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = gunName.ToString(); //Weapon name
-        gunStatUI.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = Teleporter.islandNumber.ToString(); //make Level of gun
+        gunStatUI.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Lvl. " + Teleporter.islandNumber.ToString(); //make Level of gun
         gunStatUI.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = " "; //make modifier name
         if (gunType == GunType.Shotgun) {
             int result = 5 * 15;
