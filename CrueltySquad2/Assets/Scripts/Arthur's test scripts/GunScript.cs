@@ -149,9 +149,7 @@ public class GunScript : MonoBehaviour
     public void DamageShotEnemy(RaycastHit hit) {
         if (hit.transform.CompareTag("Enemy") || hit.transform.CompareTag("Destroyable")) {
 
-            if(null == 
-                
-                && hit.transform.GetComponent<Health>().GetHealth() <= playerStats.meleeDamage && !hit.transform.CompareTag("Destroyable") || hit.transform.GetComponent<Health>().GetHealth() <= currentGunData.damagePerBullet && !hit.transform.CompareTag("Destroyable")) {
+            if(null == currentGunData && hit.transform.GetComponent<Health>().GetHealth() <= playerStats.meleeDamage && !hit.transform.CompareTag("Destroyable") || hit.transform.GetComponent<Health>().GetHealth() <= currentGunData.damagePerBullet && !hit.transform.CompareTag("Destroyable")) {
                 hit.transform.GetComponent<Health>().EnemyDeath();
                 playerStats.AddExp(hit.transform.GetComponent<Health>().xpOnDeath);
             }
