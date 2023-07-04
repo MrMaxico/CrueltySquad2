@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 572626391756128998}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grote base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,6 +44,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker roof
+      objectReference: {fileID: 0}
+    - target: {fileID: 272079109776482027, guid: eedcc4bd4f77b73498f628ec666c91c1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 616234687181374545, guid: eedcc4bd4f77b73498f628ec666c91c1,
         type: 3}
@@ -119,6 +124,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker door
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103201812221556528, guid: d78c8ff0c0dd36f4c8934c32b77121ab,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7103201812221556533, guid: d78c8ff0c0dd36f4c8934c32b77121ab,
         type: 3}

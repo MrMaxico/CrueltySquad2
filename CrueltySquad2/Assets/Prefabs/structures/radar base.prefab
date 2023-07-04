@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4267742034122763968}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: radar base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 2397272890109486445}
   - component: {fileID: 8364116418106414293}
   - component: {fileID: 4497444761158858115}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,6 +215,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
       propertyPath: m_RootOrder
@@ -290,6 +295,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
       propertyPath: m_RootOrder
@@ -364,6 +374,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: industrial stairs (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071001325993227481, guid: 32efaf24c8a5b894eb47736fb254c961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8883953197651603043, guid: 32efaf24c8a5b894eb47736fb254c961,
         type: 3}
@@ -495,6 +510,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence corner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4480111316009971113, guid: a0b163669a194da429e0b816a6df8b28,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0b163669a194da429e0b816a6df8b28, type: 3}
 --- !u!4 &1495546378516463442 stripped
@@ -514,6 +534,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -590,6 +615,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: medkit
       objectReference: {fileID: 0}
+    - target: {fileID: 370623768839318421, guid: d99e79127bcf821489d90decd16e5f05,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1040165445728710959, guid: d99e79127bcf821489d90decd16e5f05,
         type: 3}
       propertyPath: m_RootOrder
@@ -645,6 +675,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4885809122372715354, guid: d99e79127bcf821489d90decd16e5f05,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d99e79127bcf821489d90decd16e5f05, type: 3}
 --- !u!4 &2471185184010785626 stripped
@@ -664,6 +699,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fence (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
@@ -802,6 +842,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -903,6 +948,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: small metal fence (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
         type: 3}
@@ -1015,6 +1065,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1056,6 +1111,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: industrial stairs (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071001325993227481, guid: 32efaf24c8a5b894eb47736fb254c961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8883953197651603043, guid: 32efaf24c8a5b894eb47736fb254c961,
         type: 3}
@@ -1194,6 +1254,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1231,10 +1296,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4267742034122763968}
     m_Modifications:
+    - target: {fileID: 484539569803206678, guid: aa0a0119b76851d419c82ca4dac086f2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5980074030285660609, guid: aa0a0119b76851d419c82ca4dac086f2,
         type: 3}
       propertyPath: m_Name
       value: desktop with laptop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5980074030285660609, guid: aa0a0119b76851d419c82ca4dac086f2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174566998043274996, guid: aa0a0119b76851d419c82ca4dac086f2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6464544569488276347, guid: aa0a0119b76851d419c82ca4dac086f2,
         type: 3}
@@ -1311,6 +1391,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
       propertyPath: m_RootOrder
@@ -1386,6 +1471,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1549795076933358984, guid: 21206e71b0941254aad53ef8aa8af44b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2218632795552698162, guid: 21206e71b0941254aad53ef8aa8af44b,
         type: 3}
       propertyPath: m_RootOrder
@@ -1460,6 +1550,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker metal mesh (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 231605358071282162, guid: 3b7647f23376eea4d96153c4c5113511,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 611648921367356232, guid: 3b7647f23376eea4d96153c4c5113511,
         type: 3}
@@ -1598,6 +1693,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1639,6 +1739,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker metal mesh (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 231605358071282162, guid: 3b7647f23376eea4d96153c4c5113511,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 611648921367356232, guid: 3b7647f23376eea4d96153c4c5113511,
         type: 3}
@@ -1777,6 +1882,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1878,6 +1988,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal beam (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
         type: 3}
@@ -2065,6 +2180,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -2106,6 +2226,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker metal mesh (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 231605358071282162, guid: 3b7647f23376eea4d96153c4c5113511,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 611648921367356232, guid: 3b7647f23376eea4d96153c4c5113511,
         type: 3}
@@ -2182,6 +2307,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker metal mesh (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 231605358071282162, guid: 3b7647f23376eea4d96153c4c5113511,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 611648921367356232, guid: 3b7647f23376eea4d96153c4c5113511,
         type: 3}
       propertyPath: m_RootOrder
@@ -2256,6 +2386,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker metal mesh (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 231605358071282162, guid: 3b7647f23376eea4d96153c4c5113511,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 611648921367356232, guid: 3b7647f23376eea4d96153c4c5113511,
         type: 3}
@@ -2394,6 +2529,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -2495,6 +2635,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal beam (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
         type: 3}
@@ -2602,6 +2747,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -2706,6 +2856,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -2747,6 +2902,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker metal mesh (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 231605358071282162, guid: 3b7647f23376eea4d96153c4c5113511,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 611648921367356232, guid: 3b7647f23376eea4d96153c4c5113511,
         type: 3}
@@ -2885,6 +3045,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -2986,6 +3151,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal beam (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
         type: 3}
@@ -3093,6 +3263,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -3194,6 +3369,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: metal beam (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
         type: 3}
@@ -3301,6 +3481,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -3405,6 +3590,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -3446,6 +3636,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker metal mesh (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 231605358071282162, guid: 3b7647f23376eea4d96153c4c5113511,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 611648921367356232, guid: 3b7647f23376eea4d96153c4c5113511,
         type: 3}
@@ -3584,6 +3779,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -3685,6 +3885,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: small metal fence (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
         type: 3}
@@ -3792,6 +3997,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -3896,6 +4106,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -3997,6 +4212,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: small metal fence (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
         type: 3}
@@ -4184,6 +4404,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -4288,6 +4513,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -4329,6 +4559,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker metal mesh (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 231605358071282162, guid: 3b7647f23376eea4d96153c4c5113511,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 611648921367356232, guid: 3b7647f23376eea4d96153c4c5113511,
         type: 3}
@@ -4467,6 +4702,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -4508,6 +4748,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker metal mesh (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 231605358071282162, guid: 3b7647f23376eea4d96153c4c5113511,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 611648921367356232, guid: 3b7647f23376eea4d96153c4c5113511,
         type: 3}
@@ -4646,6 +4891,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -4747,6 +4997,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: small metal fence (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
         type: 3}
@@ -4854,6 +5109,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -4958,6 +5218,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -4999,6 +5264,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker metal mesh (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 231605358071282162, guid: 3b7647f23376eea4d96153c4c5113511,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 611648921367356232, guid: 3b7647f23376eea4d96153c4c5113511,
         type: 3}
@@ -5075,6 +5345,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker metal mesh (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 231605358071282162, guid: 3b7647f23376eea4d96153c4c5113511,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 611648921367356232, guid: 3b7647f23376eea4d96153c4c5113511,
         type: 3}
       propertyPath: m_RootOrder
@@ -5150,6 +5425,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker metal mesh (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 231605358071282162, guid: 3b7647f23376eea4d96153c4c5113511,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 611648921367356232, guid: 3b7647f23376eea4d96153c4c5113511,
         type: 3}
       propertyPath: m_RootOrder
@@ -5224,6 +5504,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: explosive barrel (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618685086161121115, guid: 6eea2df13c8e01847935a82829c67d6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2618685086161121115, guid: 6eea2df13c8e01847935a82829c67d6e,
         type: 3}
@@ -5367,6 +5652,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -5408,6 +5698,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker metal mesh (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 231605358071282162, guid: 3b7647f23376eea4d96153c4c5113511,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 611648921367356232, guid: 3b7647f23376eea4d96153c4c5113511,
         type: 3}
@@ -5483,6 +5778,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker metal mesh (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 231605358071282162, guid: 3b7647f23376eea4d96153c4c5113511,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 611648921367356232, guid: 3b7647f23376eea4d96153c4c5113511,
         type: 3}
@@ -5639,6 +5939,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunker metal mesh (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 231605358071282162, guid: 3b7647f23376eea4d96153c4c5113511,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 611648921367356232, guid: 3b7647f23376eea4d96153c4c5113511,
         type: 3}
       propertyPath: m_RootOrder
@@ -5776,6 +6081,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -5817,6 +6127,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bunker metal mesh (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 231605358071282162, guid: 3b7647f23376eea4d96153c4c5113511,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 611648921367356232, guid: 3b7647f23376eea4d96153c4c5113511,
         type: 3}
@@ -5955,6 +6270,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -6052,6 +6372,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: radar beacon (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7835404201633655867, guid: 35b74fc1bc06ba546b5dbe0eb1e3b4fd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35b74fc1bc06ba546b5dbe0eb1e3b4fd, type: 3}
 --- !u!4 &378677355341301096 stripped
@@ -6071,6 +6396,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: explosive barrel (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618685086161121115, guid: 6eea2df13c8e01847935a82829c67d6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2618685086161121115, guid: 6eea2df13c8e01847935a82829c67d6e,
         type: 3}
@@ -6214,6 +6544,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e76923bafc0463e4fa7ee6f2ba9c2806,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -6323,6 +6658,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -6420,6 +6760,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence corner (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4480111316009971113, guid: a0b163669a194da429e0b816a6df8b28,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0b163669a194da429e0b816a6df8b28, type: 3}
 --- !u!4 &5999032148806519623 stripped
@@ -6504,6 +6849,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: small metal fence (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
         type: 3}
@@ -6611,6 +6961,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -6708,6 +7063,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: fence corner (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4480111316009971113, guid: a0b163669a194da429e0b816a6df8b28,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0b163669a194da429e0b816a6df8b28, type: 3}
 --- !u!4 &4707305326349254904 stripped
@@ -6790,6 +7150,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0729a11334d3c3c4cafb159f29fc8992,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -6831,6 +7196,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: industrial stairs (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071001325993227481, guid: 32efaf24c8a5b894eb47736fb254c961,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8883953197651603043, guid: 32efaf24c8a5b894eb47736fb254c961,
         type: 3}
