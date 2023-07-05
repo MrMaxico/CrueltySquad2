@@ -444,6 +444,10 @@ MonoBehaviour:
   sprintSpeed: 500
   jumpPower: 2
   infJump: 0
+  swimRotationSpeed: 0
+  swimSpeed: 10
+  swimUpSpeed: 1
+  swimGravity: 0.2
   cameraPitch: 0
   onGround: 0
   enemyHealthBarActive: 1
@@ -453,6 +457,7 @@ MonoBehaviour:
   enemyHealthBarAnimator: {fileID: 430956937681731837}
   timer: 0
   lastGunStats: {fileID: 0}
+  inWater: 0
   camSensitivity: 5
   cam: {fileID: 3350939800970284989}
   rb: {fileID: 3350939800944548651}

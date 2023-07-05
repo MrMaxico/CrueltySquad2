@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour {
     public int sprintSpeed;
     public float jumpPower;
     public bool infJump;
+    public float swimRotationSpeed;
+    public float swimSpeed;
+    public float swimUpSpeed = 1;
+    public float swimGravity;
     [Header("Debug variables", order = 1)]
     public float cameraPitch = 0.0f;
     public bool onGround;
@@ -24,6 +28,7 @@ public class PlayerController : MonoBehaviour {
     private float gunStatsTimer;
     public GameObject lastGunStats;
     private Vector3 movement;
+    public bool inWater;
     [Header("Config variables", order = 2)]
     public int camSensitivity;
     public Transform cam;
@@ -49,10 +54,18 @@ public class PlayerController : MonoBehaviour {
         if (other.gameObject.tag == "Ground") {
             onGround = true;
         }
+        if(other.gameObject.tag == "Water") {
+            rb.velocity = new Vector3(0, 0, 0);
+            inWater = true;
+        }
     }
     private void OnTriggerExit(Collider other) {
         if (other.gameObject.tag == "Ground") {
             onGround = false;
+        }
+        if (other.gameObject.tag == "Water") {
+            rb.velocity = new Vector3(0, 0, 0);
+            inWater = false;
         }
     }
     void Update() {
@@ -63,7 +76,7 @@ public class PlayerController : MonoBehaviour {
             //Jump
             Vector3 jump = new Vector3();
             if (isGrounded || infJump) {
-                if (Input.GetKeyDown("space")) {
+                if (Input.GetKeyDown("space") && !inWater) {
                     jump.y = jumpPower * 5;
                     rb.AddForce(jump, ForceMode.Impulse);
                     Debug.Log("jumped");
@@ -175,11 +188,35 @@ public class PlayerController : MonoBehaviour {
     }
     private void FixedUpdate()
     {
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, 1f);
-        //movement
-        movement.x = Input.GetAxis("Horizontal");
-        movement.z = Input.GetAxis("Vertical");
-        MovePlayer();
+        if (inWater) {
+            Swim();
+        } else {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, 1f)) {
+                if (!hit.transform.CompareTag("Water")) {
+                    isGrounded = true;
+                }
+            } else {
+                isGrounded = false;
+            }
+            //movement
+            movement.x = Input.GetAxis("Horizontal");
+            movement.z = Input.GetAxis("Vertical");
+            MovePlayer();
+        }
+    }
+
+    private void Swim() {
+        // Get input for movement and rotation
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+        float swimUp = Input.GetKey(KeyCode.Space) ? swimUpSpeed : -swimGravity;
+
+        // Calculate movement and rotation vectors
+        Vector3 movement = new Vector3(moveHorizontal, swimUp, moveVertical) * swimSpeed * Time.deltaTime;
+        // Apply movement and rotation to the rigidbody
+        rb.MovePosition(rb.position + transform.TransformDirection(movement));
+        GetComponent<Health>().Damage(GetComponent<Health>().GetMaxHealth() / 200);
     }
 
     private void MovePlayer() {
