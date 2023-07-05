@@ -20,13 +20,15 @@ public class ObjectiveUI : MonoBehaviour
         if (teleporter == null)
         {
             teleporter = GameObject.FindGameObjectWithTag("Teleporter");
+            return;
         }
-        else if (teleporter.GetComponent<Teleporter>().spawnersLeft > 0)
+
+        if (teleporter.GetComponent<Teleporter>().spawnersLeft > 0)
         {
             objectiveOne.text = $"Destroy all bug nests";
             objectiveTwo.text = $"Bug nests left: {teleporter.GetComponent<Teleporter>().spawnersLeft}";
         }
-        else if (teleporter.GetComponent<Teleporter>().spawnersLeft <= 0)
+        else
         {
             objectiveOne.text = $"Find and activate the teleporter";
             objectiveTwo.text = $"";
