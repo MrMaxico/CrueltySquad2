@@ -36,7 +36,9 @@ public class Health : MonoBehaviour
     public bool inCombat;
     public float inCombatShieldRegenDelay;
     public float timeOutOfCombat;
-    [Header("Explosive (Only for Explosive Props)", order = 4)]
+    [Header("Props (Only for Props)", order = 4)]
+    public GameObject propDestroyParticle;
+    [Header("Explosive (Only for Explosive Props)", order = 5)]
     public float explosionRadius;
     public float explosionForce;
     public float exposionDamage;
@@ -207,6 +209,7 @@ public class Health : MonoBehaviour
                         }
                     }
                 }
+                GameObject.Instantiate(propDestroyParticle, transform.position, transform.rotation);
             }
             Destroy(this.gameObject);
         }

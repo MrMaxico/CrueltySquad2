@@ -132,6 +132,8 @@ MonoBehaviour:
   inCombat: 0
   inCombatShieldRegenDelay: 0
   timeOutOfCombat: 0
-  explosionRadius: 5
-  explosionForce: 1000
+  propDestroyParticle: {fileID: 540295766514913189, guid: 5d3be2d556fe82a49a26b2e20bc74733,
+    type: 3}
+  explosionRadius: 3
+  explosionForce: 100000
   exposionDamage: 100

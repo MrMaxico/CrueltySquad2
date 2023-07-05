@@ -527,6 +527,10 @@ MonoBehaviour:
   inCombat: 0
   inCombatShieldRegenDelay: 10
   timeOutOfCombat: 0
+  propDestroyParticle: {fileID: 0}
+  explosionRadius: 0
+  explosionForce: 0
+  exposionDamage: 0
 --- !u!114 &7101324643810257025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -809,6 +813,7 @@ MonoBehaviour:
   enemyHitParticlePrefab: {fileID: 7051397275747083860, guid: fee8b3bef35c2c740a77d960aeead8ea,
     type: 3}
   meleeDamage: 100
+  melee: {fileID: 5320385183875133679}
 --- !u!1 &3528437917025365391
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,6 +1001,7 @@ MonoBehaviour:
   islandNumber: {fileID: 430956938359849856}
   objectiveOne: {fileID: 430956937741070625}
   objectiveTwo: {fileID: 430956936946540462}
+  teleporter: {fileID: 0}
 --- !u!1 &6167789208807979049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1997,6 +2003,12 @@ MonoBehaviour:
 --- !u!4 &3375494990175944786 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2189627163261049638, guid: 5d7b64f1cf4eb8749b9f9aa99f9e69d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 3511458071680703348}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5320385183875133679 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8750206691784797083, guid: 5d7b64f1cf4eb8749b9f9aa99f9e69d8,
     type: 3}
   m_PrefabInstance: {fileID: 3511458071680703348}
   m_PrefabAsset: {fileID: 0}

@@ -23,6 +23,7 @@ public class GunScript : MonoBehaviour
     public GameObject enemyHitParticlePrefab;
     public RaycastHit lastHit;
     public float meleeDamage;
+    public Animator melee;
     private void Start() {
         originalRotation = transform.localRotation.eulerAngles;
     }
@@ -64,8 +65,8 @@ public class GunScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Q) && Time.time >= nextMeleeTime) {
             nextMeleeTime = Time.time + 0.4f;
-            Debug.Log("melee");
             if (!shot) {
+                Debug.Log("melee");
                 Melee();
             }
         }
@@ -75,17 +76,19 @@ public class GunScript : MonoBehaviour
 
     }
     public void Melee() {
+        melee.SetTrigger("IsPunching");
         // Raycast from muzzle position
         Ray ray = new Ray(muzzle.position, muzzle.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, 200, hitLayers)) {
+        if (Physics.Raycast(ray, out hit, 1, hitLayers)) {
             // Perform hit detection and damage logic here
             Debug.Log("Hit: " + hit.collider.gameObject.name);
-            if (hit.transform.CompareTag("Enemy") || hit.transform.CompareTag("Destroyable")) {
+            if (hit.transform.CompareTag("Enemy") || hit.transform.CompareTag("Destroyable") || hit.transform.CompareTag("Spawner")) {
                 if (hit.transform.GetComponent<Health>().GetHealth() <= playerStats.meleeDamage && !hit.transform.CompareTag("Destroyable")) {
                     hit.transform.GetComponent<Health>().EnemyDeath();
                     playerStats.AddExp(hit.transform.GetComponent<Health>().xpOnDeath);
+
                 }
                 hit.transform.GetComponent<Health>().Damage(playerStats.meleeDamage);
             }
