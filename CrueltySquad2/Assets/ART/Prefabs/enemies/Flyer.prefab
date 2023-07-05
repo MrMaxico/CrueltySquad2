@@ -1217,6 +1217,7 @@ MonoBehaviour:
   inCombat: 0
   inCombatShieldRegenDelay: 0
   timeOutOfCombat: 0
+  propDestroyParticle: {fileID: 0}
   explosionRadius: 0
   explosionForce: 0
   exposionDamage: 0
@@ -1249,7 +1250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Quillstinger
-  damage: 10
+  damage: 20
   health: 80
 --- !u!1 &5044591110332127042
 GameObject:

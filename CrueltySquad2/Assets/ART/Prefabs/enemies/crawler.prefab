@@ -1495,6 +1495,10 @@ MonoBehaviour:
   inCombat: 0
   inCombatShieldRegenDelay: 0
   timeOutOfCombat: 0
+  propDestroyParticle: {fileID: 0}
+  explosionRadius: 0
+  explosionForce: 0
+  exposionDamage: 0
 --- !u!114 &1704609736146485741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1558,7 +1562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Crawler
-  damage: 10
+  damage: 30
   health: 100
 --- !u!1 &6120365479548104984
 GameObject:
