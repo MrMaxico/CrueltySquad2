@@ -12419,7 +12419,7 @@ MonoBehaviour:
   damagePerBullet: 12
   magSize: 2
   currentAmmo: 2
-  fireRate: 1
+  fireRate: 0.7
   bloom: 0.05
   range: 60
   reloadspeed: 0.8
@@ -12429,7 +12429,7 @@ MonoBehaviour:
   shootingSound: {fileID: 7301519105502249774}
   reloadSound: {fileID: 7301519105502249774}
   muzzleFlash: {fileID: 1029943975144409444}
-  shotgunSpreadAngle: 16
+  shotgunSpreadAngle: 14
   shotgunPelletCount: 40
 --- !u!82 &6439845094732230203
 AudioSource:
