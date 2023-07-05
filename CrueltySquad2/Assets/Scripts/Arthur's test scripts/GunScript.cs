@@ -144,7 +144,7 @@ public class GunScript : MonoBehaviour
             if (Physics.Raycast(ray, out hit, currentGunData.range, hitLayers)) {
                 // Perform hit detection and damage logic here
                 Debug.Log("Hit: " + hit.collider.gameObject.name + "With: " + currentGunData.gunType);
-                if (hit.transform.CompareTag("Enemy") || hit.transform.GetComponent<Health>().healthType == HealthType.prop) {
+                if (hit.transform.CompareTag("Enemy") || hit.transform.GetComponent<Health>() && hit.transform.GetComponent<Health>().healthType == HealthType.prop) {
                     if (hit.transform.GetComponent<Health>().GetHealth() <= currentGunData.damagePerBullet && !hit.transform.CompareTag("Destroyable") && hit.collider != lastHit.collider) {
                         if (hit.collider != lastHit.collider) {
                             hit.transform.GetComponent<Health>().EnemyDeath();

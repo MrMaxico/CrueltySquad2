@@ -177,7 +177,7 @@ public class Health : MonoBehaviour
             if (healthType == HealthType.Enemy) {
                 GameObject.Instantiate(deathSplash, transform.position, transform.rotation);
                 if (Random.Range(0, 100) < 25 || enemyStats.name == "LootJalla") {
-                    GameObject.Instantiate(lootTable.GetRandom(), transform.position, transform.rotation);
+                    GameObject.Instantiate(lootTable.GetRandom(), new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), transform.rotation);
                 }
                 //gun.name = gunsToDropOnKill[randomIndex].name;
                 if (GetComponent<Enemy>().enemyType != Enemy.EnemyTypes.lootJalla)
