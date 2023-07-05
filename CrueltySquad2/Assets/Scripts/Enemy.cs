@@ -101,7 +101,7 @@ public class Enemy : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, path[1], speed * Time.deltaTime);
         }
 
-        if (angry && path.Count <= 1 && enemyType != EnemyTypes.spitter)
+        if (angry && path.Count <= 1 && enemyType != EnemyTypes.spitter && enemyType != EnemyTypes.flyingSpitter)
         {
             // Calculate the goal position for the enemy when it is angry and about to attack the player
             Vector3 goalPosition = player.transform.position - transform.forward * (relativeHitPosition.z * attackDistanceMultiplyer);
@@ -122,6 +122,14 @@ public class Enemy : MonoBehaviour
                 StartCoroutine(RunAnimation());
             }
         }
+        else if (angry && path.Count <= 1 && enemyType == EnemyTypes.flyingSpitter)
+        {
+            if (attackTimer <= 0)
+            {
+                attackTimer = attackSpeed;
+                StartCoroutine(RunAnimation());
+            }
+        }
     }
 
     private void FindPath()
@@ -129,7 +137,7 @@ public class Enemy : MonoBehaviour
         Profiler.BeginSample($"Finding path");
         if (angry)
         {
-            if (enemyType != EnemyTypes.spitter)
+            if (enemyType != EnemyTypes.spitter && enemyType != EnemyTypes.flyingSpitter)
             {
                 path = generator.grid.FindPath(transform.position, player.transform.position);
             }
@@ -146,7 +154,7 @@ public class Enemy : MonoBehaviour
         }
         Profiler.EndSample();
 
-        if (enemyType == EnemyTypes.flyEnemy)
+        if (enemyType == EnemyTypes.flyEnemy || enemyType == EnemyTypes.flyingSpitter)
         {
             if (activeIdle || angry)
             {
@@ -200,6 +208,12 @@ public class Enemy : MonoBehaviour
             yield return new WaitForEndOfFrame();
             GetComponent<Animator>().ResetTrigger("Attack1");
         }
+        else if (enemyType == EnemyTypes.flyingSpitter)
+        {
+            GetComponent<Animator>().SetTrigger("isAttacking");
+            yield return new WaitForEndOfFrame();
+            GetComponent<Animator>().ResetTrigger("isAttacking");
+        }
     }
 
     public void DamagePlayer()
@@ -236,7 +250,7 @@ public class Enemy : MonoBehaviour
         Vector3 bulletSpawnPosition = transform.position + transform.forward * relativeHitPosition.z +
                                  transform.right * relativeHitPosition.x +
                                  transform.up * relativeHitPosition.y;
-        GameObject spittenObject = Instantiate(spit, bulletSpawnPosition, Quaternion.LookRotation(player.transform.position + new Vector3(0, .5f, 0) - transform.position));
+        GameObject spittenObject = Instantiate(spit, bulletSpawnPosition, Quaternion.LookRotation(player.transform.position - bulletSpawnPosition));
         spittenObject.GetComponent<Bullet>().spitSpeed = spitDistance;
         spittenObject.GetComponent<Bullet>().player = player;
         spittenObject.GetComponent<Bullet>().damage = enemyStats.damage;
@@ -257,6 +271,7 @@ public class Enemy : MonoBehaviour
         flyEnemy,
         crawlerEnemy,
         lootJalla,
-        spitter
+        spitter,
+        flyingSpitter
     }
 }

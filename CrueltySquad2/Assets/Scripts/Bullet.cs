@@ -17,6 +17,11 @@ public class Bullet : MonoBehaviour
 
         exsistingTime += Time.deltaTime;
 
+        if (exsistingTime > 15)
+        {
+            Destroy(this.gameObject);
+        }
+
         if (Vector3.Distance(transform.position, player.transform.position) <= transform.lossyScale.x)
         {
             Debug.Log("spit-hit");
