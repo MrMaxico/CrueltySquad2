@@ -6,7 +6,7 @@ using UnityEngine;
 public class ChestScript : MonoBehaviour {
     public WeightedRandomList<GameObject> lootTable;
     public Transform gunSpawnLocation;
-    private float cycleSpeed = 1;
+    public float cycleSpeed = 1;
     public float amountOfCycles = 10;
     private bool waiting;
     private bool Delay = true;
