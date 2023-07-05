@@ -42,8 +42,8 @@ public class PlayerController : MonoBehaviour {
     public float playerHeight;
     private RaycastHit slopeHit;
     public float maxSlopeAngle;
-    private Vector3 moveDirection;
-    private bool exitingSlope;
+    public GameObject uiSlot1;
+    public GameObject uiSlot2;
 
     // Update is called once per frame
     private void Start() {
@@ -105,24 +105,20 @@ public class PlayerController : MonoBehaviour {
                 pickUpController.primaryholder.gameObject.SetActive(true);
                 pickUpController.holdingSecondary = false;
                 pickUpController.holdingPrimary = true;
-                pickUpController.gunicon.enabled = true;
                 gunScript.ammoCount.enabled = true;
+                uiSlot2.SetActive(false);
+                uiSlot1.SetActive(true);
                 gunScript.currentGunData.reloadSound.Play();
-                pickUpController.gunicon.texture = pickUpController.primary.GetComponent<GunData>().icon;
                 gunScript.updateAmmoCount();
             } else if (Input.GetKeyDown(KeyCode.Alpha2) && !gunScript.reloading) {
                 pickUpController.primaryholder.gameObject.SetActive(false);
                 pickUpController.secondaryHolder.gameObject.SetActive(true);
                 pickUpController.holdingPrimary = false;
                 pickUpController.holdingSecondary = true;
-                gunScript.currentGunData.reloadSound.Play();
-                pickUpController.gunicon.enabled = true;
                 gunScript.ammoCount.enabled = true;
-                if (pickUpController.secondary == null) {
-                    pickUpController.gunicon.enabled = false;
-                    gunScript.ammoCount.enabled = false;
-                }
-                pickUpController.gunicon.texture = pickUpController.secondary.GetComponent<GunData>().icon;
+                uiSlot2.SetActive(true);
+                uiSlot1.SetActive(false);
+                gunScript.currentGunData.reloadSound.Play();
                 gunScript.updateAmmoCount();
             }
             var yVel = rb.velocity.y;
@@ -244,25 +240,6 @@ public class PlayerController : MonoBehaviour {
 
             rb.velocity = new Vector3(moveVector.x, rb.velocity.y, moveVector.z);
         }
-        // limiting speed on slope
-        if (OnSlope() && !exitingSlope) {
-            if (rb.velocity.magnitude > speed)
-                rb.velocity = rb.velocity.normalized * speed;
-        }
         rb.AddForce(Vector3.down * 19f, ForceMode.Acceleration);
     }
-
-    private bool OnSlope() {
-        if (Physics.Raycast(transform.position, Vector3.down, out slopeHit, playerHeight * 0.5f + 0.3f)) {
-            float angle = Vector3.Angle(Vector3.up, slopeHit.normal);
-            return angle < maxSlopeAngle && angle != 0;
-        }
-
-        return false;
-    }
-
-    private Vector3 GetSlopeMoveDirection() {
-        return Vector3.ProjectOnPlane(moveDirection, slopeHit.normal).normalized;
-    }
-
 }
