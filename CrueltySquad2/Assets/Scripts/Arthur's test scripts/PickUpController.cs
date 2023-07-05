@@ -84,6 +84,9 @@ public class PickUpController : MonoBehaviour {
                 {
                     hit.transform.parent.transform.gameObject.GetComponent<Teleporter>().Teleport();
                 }
+                else if (hit.transform.CompareTag("Chest")) {
+                    hit.transform.GetComponent<ChestScript>().Open();
+                }
             }
         }
         Collider[] colliders = Physics.OverlapSphere(medkitPickUpSphere.transform.position, medkitPickUpRadius);

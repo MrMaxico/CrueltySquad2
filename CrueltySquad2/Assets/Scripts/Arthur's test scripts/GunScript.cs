@@ -81,7 +81,7 @@ public class GunScript : MonoBehaviour
         Ray ray = new Ray(muzzle.position, muzzle.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, 1, hitLayers)) {
+        if (Physics.Raycast(ray, out hit, 1.5f, hitLayers)) {
             // Perform hit detection and damage logic here
             Debug.Log("Hit: " + hit.collider.gameObject.name);
             if (hit.transform.CompareTag("Enemy") || hit.transform.CompareTag("Destroyable") || hit.transform.CompareTag("Spawner")) {

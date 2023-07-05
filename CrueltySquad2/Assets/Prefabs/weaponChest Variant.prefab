@@ -4812,6 +4812,37 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1 &8993238448529701017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4263986337682462252}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4263986337682462252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8993238448529701017}
+  m_LocalRotation: {x: -0, y: -0.6757687, z: 0, w: 0.7371138}
+  m_LocalPosition: {x: -0.00000088744855, y: 0.537, z: 0.0023664653}
+  m_LocalScale: {x: 0.9999999, y: 1, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7418444504564741401}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6313391039988461859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4842,7 +4873,7 @@ PrefabInstance:
     - target: {fileID: 3561837456429073466, guid: 99f64aeef0b8e0a45a83799e80e1339a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -131.52484
+      value: -126.58
       objectReference: {fileID: 0}
     - target: {fileID: 3561837456429073466, guid: 99f64aeef0b8e0a45a83799e80e1339a,
         type: 3}
@@ -4852,27 +4883,27 @@ PrefabInstance:
     - target: {fileID: 3561837456429073466, guid: 99f64aeef0b8e0a45a83799e80e1339a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.460518
+      value: -17.42
       objectReference: {fileID: 0}
     - target: {fileID: 3561837456429073466, guid: 99f64aeef0b8e0a45a83799e80e1339a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7371138
       objectReference: {fileID: 0}
     - target: {fileID: 3561837456429073466, guid: 99f64aeef0b8e0a45a83799e80e1339a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3561837456429073466, guid: 99f64aeef0b8e0a45a83799e80e1339a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.6757687
       objectReference: {fileID: 0}
     - target: {fileID: 3561837456429073466, guid: 99f64aeef0b8e0a45a83799e80e1339a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3561837456429073466, guid: 99f64aeef0b8e0a45a83799e80e1339a,
         type: 3}
@@ -4882,7 +4913,7 @@ PrefabInstance:
     - target: {fileID: 3561837456429073466, guid: 99f64aeef0b8e0a45a83799e80e1339a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 85.028
       objectReference: {fileID: 0}
     - target: {fileID: 3561837456429073466, guid: 99f64aeef0b8e0a45a83799e80e1339a,
         type: 3}
@@ -4893,6 +4924,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: weaponChest Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4190002311224008320, guid: 99f64aeef0b8e0a45a83799e80e1339a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Chest
       objectReference: {fileID: 0}
     - target: {fileID: 5611174082973865124, guid: 99f64aeef0b8e0a45a83799e80e1339a,
         type: 3}
@@ -5136,6 +5172,21 @@ MonoBehaviour:
   - {fileID: 571312110}
   walking: []
   normalsound: []
+--- !u!114 &995234189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7906151971914510243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3064d6fab8ea24c96c88520c7a872f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootTable:
+    list: []
+  gunSpawnLocation: {fileID: 0}
 --- !u!114 &1583819808766138700
 MonoBehaviour:
   m_ObjectHideFlags: 0
