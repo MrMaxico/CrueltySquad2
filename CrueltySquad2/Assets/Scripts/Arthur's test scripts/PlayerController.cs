@@ -93,6 +93,7 @@ public class PlayerController : MonoBehaviour {
                 pickUpController.holdingSecondary = false;
                 pickUpController.holdingPrimary = true;
                 pickUpController.gunicon.enabled = true;
+                gunScript.ammoCount.enabled = true;
                 gunScript.currentGunData.reloadSound.Play();
                 pickUpController.gunicon.texture = pickUpController.primary.GetComponent<GunData>().icon;
                 gunScript.updateAmmoCount();
@@ -103,8 +104,10 @@ public class PlayerController : MonoBehaviour {
                 pickUpController.holdingSecondary = true;
                 gunScript.currentGunData.reloadSound.Play();
                 pickUpController.gunicon.enabled = true;
+                gunScript.ammoCount.enabled = true;
                 if (pickUpController.secondary == null) {
                     pickUpController.gunicon.enabled = false;
+                    gunScript.ammoCount.enabled = false;
                 }
                 pickUpController.gunicon.texture = pickUpController.secondary.GetComponent<GunData>().icon;
                 gunScript.updateAmmoCount();
