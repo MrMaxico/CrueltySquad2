@@ -247,6 +247,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed48e50a31852734faaec2cbfb1ba473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lvlOneSpawner: 1
+  lvlTwoSpawner: {fileID: 2466972892652103198, guid: 932f5c8c09d00844e872e1e51f04b946,
+    type: 3}
+  lvlThreeSpawner: {fileID: 0}
   healthManager: {fileID: 6303953448152420848}
   spawnCap: 5
   enemySpawns:
