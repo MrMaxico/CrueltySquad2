@@ -15,14 +15,14 @@ MonoBehaviour:
   structurePrefab: {fileID: 5174587237263863303, guid: 57c8921795b8d4d45abc5594caebe2f1,
     type: 3}
   structureType: 0
-  minimalInstances: 10
-  maximalInstances: 25
+  minimalInstances: 4
+  maximalInstances: 7
   allowedBiomes:
   - {fileID: 11400000, guid: 0a79697240e27434596175cb09d07cc8, type: 2}
   - {fileID: 11400000, guid: 564991b0750f1a24ab40bb066408be3d, type: 2}
   variableSize: 1
   minSize: 1
-  maxSize: 6
+  maxSize: 2.5
   ignoreSlopes: 0
-  spawnAltitude: 0
+  spawnAltitude: -0.16
   halfExtends: {x: 0, y: 0, z: 0}
