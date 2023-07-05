@@ -2753,6 +2753,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74c027458ef3d594dba1f3cc57424c57, type: 3}
+--- !u!95 &249542695 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8898692040308107990, guid: 6f0edc3b518ce894ca1d1efc73f28844,
+    type: 3}
+  m_PrefabInstance: {fileID: 6313391038686035984}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &260254804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20704,6 +20710,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 995234189, guid: 6f0edc3b518ce894ca1d1efc73f28844, type: 3}
+      propertyPath: chestAnim
+      value: 
+      objectReference: {fileID: 249542695}
+    - target: {fileID: 995234189, guid: 6f0edc3b518ce894ca1d1efc73f28844, type: 3}
+      propertyPath: chestAnimDelay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263986337682462252, guid: 6f0edc3b518ce894ca1d1efc73f28844,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263986337682462252, guid: 6f0edc3b518ce894ca1d1efc73f28844,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263986337682462252, guid: 6f0edc3b518ce894ca1d1efc73f28844,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7418444504564741401, guid: 6f0edc3b518ce894ca1d1efc73f28844,
         type: 3}
       propertyPath: m_RootOrder

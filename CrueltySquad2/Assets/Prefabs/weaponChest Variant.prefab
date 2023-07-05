@@ -4836,7 +4836,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8993238448529701017}
   m_LocalRotation: {x: -0, y: -0.6757687, z: 0, w: 0.7371138}
-  m_LocalPosition: {x: -0.00000088744855, y: 0.537, z: 0.0023664653}
+  m_LocalPosition: {x: 0, y: 0.7, z: 0}
   m_LocalScale: {x: 0.9999999, y: 1, z: 0.9999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4923,7 +4923,7 @@ PrefabInstance:
     - target: {fileID: 4190002311224008320, guid: 99f64aeef0b8e0a45a83799e80e1339a,
         type: 3}
       propertyPath: m_Name
-      value: weaponChest Variant
+      value: weaponChest
       objectReference: {fileID: 0}
     - target: {fileID: 4190002311224008320, guid: 99f64aeef0b8e0a45a83799e80e1339a,
         type: 3}
@@ -5057,6 +5057,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6313391039988461859}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &249542690
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7906151971914510243}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.85, y: 0.5384417, z: 0.70734376}
+  m_Center: {x: 0.000000032875445, y: 0.26922, z: 0.0023634732}
 --- !u!82 &571312110
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5185,8 +5198,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lootTable:
-    list: []
-  gunSpawnLocation: {fileID: 0}
+    list:
+    - item: {fileID: 369066601621911381, guid: 756f5baec6db3d443961c50ea1a7662e, type: 3}
+      weight: 1
+    - item: {fileID: 2933850869437615341, guid: fca9192614561734fb039f29a33937e0,
+        type: 3}
+      weight: 1
+    - item: {fileID: 5852689407715769175, guid: ac5abc356152f414cacb6be6f5707242,
+        type: 3}
+      weight: 1
+    - item: {fileID: 369066601621911381, guid: 756f5baec6db3d443961c50ea1a7662e, type: 3}
+      weight: 1
+    - item: {fileID: 8556561191792515728, guid: c88368ae1ee451246a2a7f5a93238568,
+        type: 3}
+      weight: 1
+    - item: {fileID: 5690403266726689397, guid: 824231a585538834c831c28a1ebe67b7,
+        type: 3}
+      weight: 1
+    - item: {fileID: 2130549661398004797, guid: 4f65563676a8b634097f6f711577522f,
+        type: 3}
+      weight: 1
+    - item: {fileID: 8615458531096432867, guid: dc698144a9f78c843aea87fef414b6cf,
+        type: 3}
+      weight: 1
+    - item: {fileID: 4239105873075604270, guid: ca71c5ab592f36144abdac682bcb370c,
+        type: 3}
+      weight: 1
+    - item: {fileID: 370623768839318421, guid: d99e79127bcf821489d90decd16e5f05, type: 3}
+      weight: 1
+  gunSpawnLocation: {fileID: 4263986337682462252}
+  amountOfCycles: 10
+  weapon: {fileID: 0}
+  prevWeapon: {fileID: 0}
+  chestAnim: {fileID: 8898692040308107990}
+  chestAnimDelay: 2
 --- !u!114 &1583819808766138700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5201,3 +5246,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterAttack: {fileID: 8866271485925058330}
   monsterAttack2: {fileID: 0}
+--- !u!95 &8898692040308107990 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3234476168040963061, guid: 99f64aeef0b8e0a45a83799e80e1339a,
+    type: 3}
+  m_PrefabInstance: {fileID: 6313391039988461859}
+  m_PrefabAsset: {fileID: 0}
