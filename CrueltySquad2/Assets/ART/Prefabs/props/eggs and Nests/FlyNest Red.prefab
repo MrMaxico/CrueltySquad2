@@ -42,6 +42,9 @@ GameObject:
   - component: {fileID: 2988035457754578084}
   - component: {fileID: 5769665600131750113}
   - component: {fileID: 1115737949344309078}
+  - component: {fileID: 91705173710239001}
+  - component: {fileID: 4967479684684375837}
+  - component: {fileID: 7342348579612602259}
   m_Layer: 0
   m_Name: FlyNest Red
   m_TagString: Untagged
@@ -100,6 +103,84 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &91705173710239001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2466972892652103198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed48e50a31852734faaec2cbfb1ba473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvlOneSpawner: 0
+  lvlTwoSpawner: {fileID: 0}
+  lvlThreeSpawner: {fileID: 0}
+  healthManager: {fileID: 6303953448152420848, guid: b3df371b8bd589d428725b58979ecbf0,
+    type: 3}
+  spawnCap: 5
+  enemySpawns:
+  - {fileID: 11400000, guid: 83882dc9652b18a4493e3fd32ce3fc96, type: 2}
+  - {fileID: 11400000, guid: f41c895ff8993004f9b7e9131b1ac061, type: 2}
+  preperationTime: 10
+  spawnInterval: 4
+  onDeathEnemySpawnAmount: 10
+  generator: {fileID: 0}
+--- !u!114 &4967479684684375837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2466972892652103198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba15951d3b58eb2419c326b6c126c584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1500
+  maxHealth: 1500
+  shield: 0
+  maxShield: 0
+  xpOnDeath: 10
+  healthType: 2
+  deathSplash: {fileID: 0}
+  lootTable:
+    list: []
+  enemyStats: {fileID: 7342348579612602259}
+  damageEffect: {fileID: 0}
+  healthBar: {fileID: 0}
+  maxHealthText: {fileID: 0}
+  gameOverUI: {fileID: 0}
+  shieldBar: {fileID: 0}
+  maxShieldText: {fileID: 0}
+  shieldRegenTime: 0
+  shieldRegenAmount: 0
+  inCombat: 0
+  inCombatShieldRegenDelay: 0
+  timeOutOfCombat: 0
+  propDestroyParticle: {fileID: 7051397275747083860, guid: 164c25490eee22144972fb6bacc97839,
+    type: 3}
+  explosionRadius: 0
+  explosionForce: 0
+  exposionDamage: 0
+--- !u!114 &7342348579612602259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2466972892652103198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e2a361b76a4ae42aaad103dee8bd67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Spawner
+  damage: 0
+  health: 1500
 --- !u!1 &3369130308584304893
 GameObject:
   m_ObjectHideFlags: 0

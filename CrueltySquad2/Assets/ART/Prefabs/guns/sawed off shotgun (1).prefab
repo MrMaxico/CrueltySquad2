@@ -245,7 +245,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 938533132969793976}
   m_LocalRotation: {x: -0.6023947, y: 0.3321869, z: -0.65927505, w: 0.30352744}
-  m_LocalPosition: {x: 0, y: 0.90772307, z: 1.2110004}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0.253}
   m_LocalScale: {x: 0.78787, y: 0.78787005, z: 0.78787}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12419,7 +12419,7 @@ MonoBehaviour:
   damagePerBullet: 12
   magSize: 2
   currentAmmo: 2
-  fireRate: 1
+  fireRate: 0.7
   bloom: 0.05
   range: 60
   reloadspeed: 0.8
@@ -12429,7 +12429,7 @@ MonoBehaviour:
   shootingSound: {fileID: 7301519105502249774}
   reloadSound: {fileID: 7301519105502249774}
   muzzleFlash: {fileID: 1029943975144409444}
-  shotgunSpreadAngle: 16
+  shotgunSpreadAngle: 14
   shotgunPelletCount: 40
 --- !u!82 &6439845094732230203
 AudioSource:

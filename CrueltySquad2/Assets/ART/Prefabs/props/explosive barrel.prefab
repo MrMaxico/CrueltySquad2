@@ -111,11 +111,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba15951d3b58eb2419c326b6c126c584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  maxHealth: 100
+  health: 20
+  maxHealth: 20
   shield: 0
   maxShield: 0
-  xpOnDeath: 10
+  xpOnDeath: 2
   healthType: 2
   deathSplash: {fileID: 0}
   lootTable:
@@ -135,5 +135,5 @@ MonoBehaviour:
   propDestroyParticle: {fileID: 540295766514913189, guid: 5d3be2d556fe82a49a26b2e20bc74733,
     type: 3}
   explosionRadius: 3
-  explosionForce: 100000
+  explosionForce: 5
   exposionDamage: 100
