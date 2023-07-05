@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8438102601516171232}
   m_Layer: 0
   m_Name: crawlerNest Green
-  m_TagString: Destroyable
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,6 +106,9 @@ MonoBehaviour:
   inCombat: 0
   inCombatShieldRegenDelay: 0
   timeOutOfCombat: 0
+  explosionRadius: 0
+  explosionForce: 0
+  exposionDamage: 0
 --- !u!114 &8438102601516171232
 MonoBehaviour:
   m_ObjectHideFlags: 0

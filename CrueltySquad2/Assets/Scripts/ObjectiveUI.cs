@@ -8,7 +8,7 @@ public class ObjectiveUI : MonoBehaviour
     public TextMeshProUGUI islandNumber;
     public TextMeshProUGUI objectiveOne;
     public TextMeshProUGUI objectiveTwo;
-    GameObject teleporter;
+    public GameObject teleporter;
 
     private void Start()
     {

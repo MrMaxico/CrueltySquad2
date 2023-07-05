@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 1958403742705163469}
   m_Layer: 0
   m_Name: FlyNest Normal
-  m_TagString: Destroyable
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -287,6 +287,9 @@ MonoBehaviour:
   inCombat: 0
   inCombatShieldRegenDelay: 0
   timeOutOfCombat: 0
+  explosionRadius: 0
+  explosionForce: 0
+  exposionDamage: 0
 --- !u!95 &8105229620461105695
 Animator:
   serializedVersion: 5
