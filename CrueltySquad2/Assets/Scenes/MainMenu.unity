@@ -8777,6 +8777,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1174689486}
     m_Modifications:
+    - target: {fileID: 641323420828546901, guid: e110387f57bad0d409a1afc3a496a866,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 641323420828546901, guid: e110387f57bad0d409a1afc3a496a866,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 641323420828546901, guid: e110387f57bad0d409a1afc3a496a866,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1174689487}
+    - target: {fileID: 641323420828546901, guid: e110387f57bad0d409a1afc3a496a866,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 641323420828546901, guid: e110387f57bad0d409a1afc3a496a866,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 641323420828546901, guid: e110387f57bad0d409a1afc3a496a866,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenuScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 641323420828546901, guid: e110387f57bad0d409a1afc3a496a866,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1065361602956725280, guid: e110387f57bad0d409a1afc3a496a866,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
