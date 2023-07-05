@@ -209,7 +209,7 @@ public class Enemy : MonoBehaviour
             Vector3 spherePosition = transform.position + transform.forward * relativeHitPosition.z +
             transform.right * relativeHitPosition.x +
             transform.up * relativeHitPosition.y;
-            if (Physics.CheckSphere(spherePosition, .5f, pLayer))
+            if (Physics.CheckSphere(spherePosition, .7f, pLayer))
             {
                 float playerHealthBeforeDamage = player.GetComponent<Health>().GetHealth();
                 player.GetComponent<Health>().Damage(enemyStats.damage);
@@ -249,7 +249,7 @@ public class Enemy : MonoBehaviour
         Vector3 spherePosition = transform.position + transform.forward * relativeHitPosition.z +
                                  transform.right * relativeHitPosition.x +
                                  transform.up * relativeHitPosition.y;
-        Gizmos.DrawSphere(spherePosition, .5f);
+        Gizmos.DrawSphere(spherePosition, .7f);
     }
 
     public enum EnemyTypes
