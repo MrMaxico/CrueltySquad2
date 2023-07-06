@@ -17258,7 +17258,7 @@ MonoBehaviour:
   magSize: 30
   currentAmmo: 30
   fireRate: 0.1
-  bloom: 0.05
+  maxBloom: 1
   range: 100
   reloadspeed: 1
   gunType: 1
@@ -17270,6 +17270,7 @@ MonoBehaviour:
   shotgunSpreadAngle: 15
   shotgunPelletCount: 15
   rocket: {fileID: 0}
+  rocketExplodeAnim: {fileID: 0}
   rocketSpeed: 0
   explosionForce: 0
   explosionRadius: 0

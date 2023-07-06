@@ -139,15 +139,14 @@ public class GunScript : MonoBehaviour
         currentGunData.currentAmmo -= 1;
         updateAmmoCount();
         // Add random rotation for bloom effect
-        Vector3 bloomRotation = Random.insideUnitCircle * currentGunData.bloom;
-        Quaternion rotation = Quaternion.Euler(originalRotation + bloomRotation);
+        Vector3 rayDirection = Quaternion.Euler(0.0f, Random.Range(-currentGunData.maxBloom, currentGunData.maxBloom), Random.Range(-currentGunData.maxBloom, currentGunData.maxBloom)) * muzzle.forward;
         if (!reloading) {
             currentGunData.shootingSound.Play();
             Debug.Log(currentGunData.muzzleFlash.name);
             currentGunData.muzzleFlash.Play();
         }
         // Raycast from muzzle position
-        Ray ray = new Ray(muzzle.position, muzzle.forward);
+        Ray ray = new Ray(muzzle.position, rayDirection);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, currentGunData.range, hitLayers)) {
             // Perform hit detection and damage logic here

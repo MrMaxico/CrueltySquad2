@@ -17,7 +17,7 @@ public class GunData : MonoBehaviour {
     public float magSize = 30f;
     public float currentAmmo = 30f;
     public float fireRate = 0.5f;
-    public float bloom = 0.05f;
+    public float maxBloom = 0.05f;
     public float range = 100;
     public float reloadspeed = 1f;
     public GunType gunType = GunType.Pistol;
