@@ -11474,10 +11474,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunName: light machine gun
   icon: {fileID: 8400000, guid: 50d3f379e0e4c3d46a1a5b4b72ecd34f, type: 2}
-  damagePerBullet: 40
+  damagePerBullet: 30
   magSize: 40
   currentAmmo: 40
-  fireRate: 0.2
+  fireRate: 0.17
   bloom: 0.1
   range: 100
   reloadspeed: 1.2
@@ -11489,6 +11489,10 @@ MonoBehaviour:
   muzzleFlash: {fileID: 4515054467247747011}
   shotgunSpreadAngle: 15
   shotgunPelletCount: 15
+  rocket: {fileID: 0}
+  rocketSpeed: 0
+  explosionForce: 0
+  explosionRadius: 0
 --- !u!64 &8817158138084867952
 MeshCollider:
   m_ObjectHideFlags: 0

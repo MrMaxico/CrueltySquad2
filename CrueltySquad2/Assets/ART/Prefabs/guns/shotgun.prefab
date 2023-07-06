@@ -12072,7 +12072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunName: shotgun
   icon: {fileID: 8400000, guid: 1bdb53e2a257e3a40b50ff468b841a21, type: 2}
-  damagePerBullet: 5
+  damagePerBullet: 9
   magSize: 5
   currentAmmo: 5
   fireRate: 1
@@ -12087,6 +12087,10 @@ MonoBehaviour:
   muzzleFlash: {fileID: 7500167397024086167}
   shotgunSpreadAngle: 6
   shotgunPelletCount: 15
+  rocket: {fileID: 0}
+  rocketSpeed: 0
+  explosionForce: 0
+  explosionRadius: 0
 --- !u!82 &3234808576611564544
 AudioSource:
   m_ObjectHideFlags: 0

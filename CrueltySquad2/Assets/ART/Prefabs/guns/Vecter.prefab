@@ -5286,7 +5286,7 @@ MonoBehaviour:
   damagePerBullet: 10
   magSize: 30
   currentAmmo: 30
-  fireRate: 0.08
+  fireRate: 0.075
   bloom: 0.05
   range: 100
   reloadspeed: 1
@@ -5298,6 +5298,10 @@ MonoBehaviour:
   muzzleFlash: {fileID: 5065298670050751134}
   shotgunSpreadAngle: 15
   shotgunPelletCount: 15
+  rocket: {fileID: 0}
+  rocketSpeed: 0
+  explosionForce: 0
+  explosionRadius: 0
 --- !u!64 &599715576040877138
 MeshCollider:
   m_ObjectHideFlags: 0
