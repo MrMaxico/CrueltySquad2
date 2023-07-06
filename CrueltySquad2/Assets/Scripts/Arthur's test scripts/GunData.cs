@@ -31,6 +31,7 @@ public class GunData : MonoBehaviour {
     public float shotgunPelletCount = 15f;
     [Header("Settings for Rocket Luancher", order = 1)]
     public GameObject rocket;
+    public GameObject rocketExplodeAnim;
     public float rocketSpeed;
     public float explosionForce;
     public float explosionRadius;

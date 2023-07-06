@@ -82,7 +82,7 @@ public class GunScript : MonoBehaviour
         }
         if (firedRocket) {
             if (!rocketExploding) {
-                rocket.GetComponent<Rigidbody>().AddForce(rocket.transform.forward * currentGunData.rocketSpeed, ForceMode.Impulse);
+                rocket.GetComponent<Rigidbody>().velocity = rocket.transform.forward * currentGunData.rocketSpeed;
             } else {
                 rocket.GetComponent<Rigidbody>().velocity = Vector3.zero;
             }
@@ -93,12 +93,12 @@ public class GunScript : MonoBehaviour
                 // Apply explosion force to rigidbodies
                 if (!nearbyObject.CompareTag("Gun") && !nearbyObject.CompareTag("Player")) {
                     rocketExploding = true;
-                    Debug.Log("Biem");
+                    GameObject.Instantiate(currentGunData.rocketExplodeAnim, rocket.transform.position, rocket.transform.rotation);
                     Collider[] hits = Physics.OverlapSphere(rocket.transform.position, currentGunData.explosionRadius);
                     foreach (Collider hit in hits) {
                         Debug.Log(hit.name + " hit by explosion");
                         if (hit.TryGetComponent<Rigidbody>(out Rigidbody hitRB)) {
-                            hitRB.AddExplosionForce(currentGunData.explosionForce, transform.position, currentGunData.explosionRadius);
+                            hitRB.AddExplosionForce(currentGunData.explosionForce, rocket.transform.position, currentGunData.explosionRadius);
                         }
                         if (hit.TryGetComponent<Health>(out Health hitHP)) {
                             hitHP.GetComponent<Health>().Damage(currentGunData.damagePerBullet);
@@ -192,8 +192,9 @@ public class GunScript : MonoBehaviour
                     lastHit = hit;
                     if (hit.transform.CompareTag("Enemy")) {
                         Instantiate(enemyHitParticlePrefab, hit.point, Quaternion.identity);
+                    } else {
+                        Instantiate(hitParticlePrefab, hit.point, Quaternion.identity);
                     }
-                    Debug.Log("Kont");
                     hit.transform.GetComponent<Health>().Damage(currentGunData.damagePerBullet);
                     if (hit.transform.TryGetComponent<EnemyStats>(out EnemyStats enemyStats) && enemyStats.name == "Spawner" || hit.transform.CompareTag("Enemy")) {
                         playerController.UpdateEnemyHealthBar(hit);
@@ -208,7 +209,7 @@ public class GunScript : MonoBehaviour
 
     }
     private void FireRocketLauncher() {
-        
+        currentGunData.currentAmmo -= 1;
         rocket = Instantiate(currentGunData.rocket, currentGunData.transform.position, currentGunData.transform.rotation);
         firedRocket = true;
     }
