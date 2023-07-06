@@ -24,6 +24,10 @@ public class GunScript : MonoBehaviour
     public RaycastHit lastHit;
     public float meleeDamage;
     public Animator melee;
+    private bool firedRocket;
+    private GameObject rocket;
+    private bool rocketExploding;
+
     private void Start() {
         originalRotation = transform.localRotation.eulerAngles;
     }
@@ -40,15 +44,18 @@ public class GunScript : MonoBehaviour
             if (Input.GetMouseButton(0) && Time.time >= nextFireTime && currentGunData.currentAmmo >= 0 && !reloading) {
                 nextFireTime = Time.time + currentGunData.fireRate;
                 if (currentGunData.gunType == GunType.Pistol && !shot) {
+                    shot = true;
                     Fire();
-                    shot = true;
                 } else if(currentGunData.gunType == GunType.Shotgun && !shot) {
-                    FireShotgun();
                     shot = true;
+                    FireShotgun();
                 } else if(currentGunData.gunType == GunType.Rifle) {
                     Fire();
+                } else if (currentGunData.gunType == GunType.RocketLauncher && !shot) {
+                    shot = true;
+                    FireRocketLauncher();
                 }
-            }else if(Input.GetMouseButton(0) && currentGunData.currentAmmo <= 0 && !reloading) {
+            } else if(Input.GetMouseButton(0) && currentGunData.currentAmmo <= 0 && !reloading) {
                 StartCoroutine(Reload());
             }
             if (Input.GetKeyDown(KeyCode.R) && !reloading) {
@@ -72,6 +79,36 @@ public class GunScript : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0) && shot == true) {
             shot = false;
+        }
+        if (firedRocket) {
+            if (!rocketExploding) {
+                rocket.GetComponent<Rigidbody>().AddForce(rocket.transform.forward * currentGunData.rocketSpeed, ForceMode.Impulse);
+            } else {
+                rocket.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            }
+            // Collect nearby colliders within the explosion radius
+            Collider[] colliders = Physics.OverlapSphere(rocket.transform.position, 0.1f);
+
+            foreach (Collider nearbyObject in colliders) {
+                // Apply explosion force to rigidbodies
+                if (!nearbyObject.CompareTag("Gun") && !nearbyObject.CompareTag("Player")) {
+                    rocketExploding = true;
+                    Debug.Log("Biem");
+                    Collider[] hits = Physics.OverlapSphere(rocket.transform.position, currentGunData.explosionRadius);
+                    foreach (Collider hit in hits) {
+                        Debug.Log(hit.name + " hit by explosion");
+                        if (hit.TryGetComponent<Rigidbody>(out Rigidbody hitRB)) {
+                            hitRB.AddExplosionForce(currentGunData.explosionForce, transform.position, currentGunData.explosionRadius);
+                        }
+                        if (hit.TryGetComponent<Health>(out Health hitHP)) {
+                            hitHP.GetComponent<Health>().Damage(currentGunData.damagePerBullet);
+                        }
+                    }
+                    Destroy(rocket);
+                    firedRocket = false;
+                    rocketExploding = false;
+                }
+            }
         }
 
     }
@@ -167,6 +204,11 @@ public class GunScript : MonoBehaviour
             Debug.DrawRay(ray.origin, ray.direction * currentGunData.range, Color.red, 0.1f);
         }
 
+    }
+    private void FireRocketLauncher() {
+        
+        rocket = Instantiate(currentGunData.rocket, currentGunData.transform.position, currentGunData.transform.rotation);
+        firedRocket = true;
     }
     public void DamageShotEnemy(RaycastHit hit) {
         if (hit.transform.CompareTag("Enemy") || hit.transform.GetComponent<Health>().healthType == HealthType.prop) {

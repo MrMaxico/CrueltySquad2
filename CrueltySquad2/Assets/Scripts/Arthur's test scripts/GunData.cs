@@ -6,6 +6,7 @@ public enum GunType {
     Pistol,
     Rifle,
     Shotgun,
+    RocketLauncher,
     // Add more gun types as needed
 }
 
@@ -28,6 +29,12 @@ public class GunData : MonoBehaviour {
     [Header("Settings for shotguns", order = 0)]
     public float shotgunSpreadAngle = 15f;
     public float shotgunPelletCount = 15f;
+    [Header("Settings for Rocket Luancher", order = 1)]
+    public GameObject rocket;
+    public float rocketSpeed;
+    public float explosionForce;
+    public float explosionRadius;
+
     // Other gun-related variables and functions can be added here
     public void Start() {
         if (gameObject != GameObject.FindGameObjectWithTag("WeaponManager").GetComponent<WeaponManager>().newWeapons[0] && gameObject != GameObject.FindGameObjectWithTag("WeaponManager").GetComponent<WeaponManager>().newWeapons[1]) {

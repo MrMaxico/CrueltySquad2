@@ -757,6 +757,9 @@ MonoBehaviour:
       weight: 3
     - item: {fileID: 370623768839318421, guid: d99e79127bcf821489d90decd16e5f05, type: 3}
       weight: 1
+    - item: {fileID: 7707431517442744506, guid: 2c61ceb957ef142418aa9357e0aabf54,
+        type: 3}
+      weight: 1
   enemyStats: {fileID: 343063969271190993}
   damageEffect: {fileID: 0}
   healthBar: {fileID: 0}
@@ -769,6 +772,11 @@ MonoBehaviour:
   inCombat: 0
   inCombatShieldRegenDelay: 0
   timeOutOfCombat: 0
+  godMode: 0
+  propDestroyParticle: {fileID: 0}
+  explosionRadius: 0
+  explosionForce: 0
+  explosionDamage: 0
 --- !u!114 &8013536926295903688
 MonoBehaviour:
   m_ObjectHideFlags: 0

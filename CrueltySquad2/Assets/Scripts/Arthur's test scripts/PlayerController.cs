@@ -151,6 +151,13 @@ public class PlayerController : MonoBehaviour {
                 raycastHit = false;
                 timer = 0f; // Reset the timer
             }
+            if (Input.GetKey(KeyCode.G)) {
+                if (!GetComponent<Health>().godMode) {
+                    GetComponent<Health>().godMode = true;
+                } else {
+                    GetComponent<Health>().godMode = false;
+                }
+            }
         }
         gunStatsTimer += Time.deltaTime; // Increase the timer by the elapsed time
         if (gunStatsTimer >= 0.5) {

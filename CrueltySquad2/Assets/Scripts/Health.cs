@@ -36,12 +36,13 @@ public class Health : MonoBehaviour
     public bool inCombat;
     public float inCombatShieldRegenDelay;
     public float timeOutOfCombat;
+    public bool godMode;
     [Header("Props (Only for Props)", order = 4)]
     public GameObject propDestroyParticle;
     [Header("Explosive (Only for Explosive Props)", order = 5)]
     public float explosionRadius;
     public float explosionForce;
-    public float exposionDamage;
+    public float explosionDamage;
 
     private void Start() {
         if (healthType == HealthType.Player) {
@@ -104,7 +105,7 @@ public class Health : MonoBehaviour
     //damage the player
     public void Damage(float amount)
     {
-        if (healthType == HealthType.Player) {
+        if (healthType == HealthType.Player && !godMode) {
             if (amount >= shield) {
                 amount -= shield;
                 shield = 0;
@@ -205,7 +206,7 @@ public class Health : MonoBehaviour
                             rb.AddExplosionForce(explosionForce, transform.position, explosionRadius);
                         }
                         if (nearbyObject.GetComponent<Health>()) {
-                            nearbyObject.GetComponent<Health>().Damage(exposionDamage);
+                            nearbyObject.GetComponent<Health>().Damage(explosionDamage);
                         }
                     }
                 }

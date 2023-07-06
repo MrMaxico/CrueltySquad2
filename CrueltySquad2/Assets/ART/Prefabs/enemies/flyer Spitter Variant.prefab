@@ -5172,6 +5172,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: flyer Spitter Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1102877597458454026, guid: 045ec845bd1a13841858afb67c2b703d,
+        type: 3}
+      propertyPath: lootTable.list.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1102877597458454026, guid: 045ec845bd1a13841858afb67c2b703d,
+        type: 3}
+      propertyPath: lootTable.list.Array.data[12].item
+      value: 
+      objectReference: {fileID: 7707431517442744506, guid: 2c61ceb957ef142418aa9357e0aabf54,
+        type: 3}
+    - target: {fileID: 1102877597458454026, guid: 045ec845bd1a13841858afb67c2b703d,
+        type: 3}
+      propertyPath: lootTable.list.Array.data[12].weight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1240846704384819800, guid: 045ec845bd1a13841858afb67c2b703d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
