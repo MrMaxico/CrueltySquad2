@@ -337,33 +337,39 @@ MonoBehaviour:
   lootTable:
     list:
     - item: {fileID: 369066601621911381, guid: 756f5baec6db3d443961c50ea1a7662e, type: 3}
-      weight: 1
+      weight: 0.2
     - item: {fileID: 2933850869437615341, guid: fca9192614561734fb039f29a33937e0,
         type: 3}
-      weight: 1
+      weight: 1.4
     - item: {fileID: 5852689407715769175, guid: ac5abc356152f414cacb6be6f5707242,
         type: 3}
       weight: 1
-    - item: {fileID: 369066601621911381, guid: 756f5baec6db3d443961c50ea1a7662e, type: 3}
-      weight: 1
     - item: {fileID: 8556561191792515728, guid: c88368ae1ee451246a2a7f5a93238568,
         type: 3}
-      weight: 1
+      weight: 1.5
     - item: {fileID: 5690403266726689397, guid: 824231a585538834c831c28a1ebe67b7,
         type: 3}
       weight: 1
     - item: {fileID: 2130549661398004797, guid: 4f65563676a8b634097f6f711577522f,
         type: 3}
-      weight: 1
+      weight: 1.1
     - item: {fileID: 8615458531096432867, guid: dc698144a9f78c843aea87fef414b6cf,
         type: 3}
-      weight: 1
+      weight: 0.8
     - item: {fileID: 4239105873075604270, guid: ca71c5ab592f36144abdac682bcb370c,
         type: 3}
-      weight: 1
+      weight: 0.9
+    - item: {fileID: 762242232789388025, guid: c7ac059add731e54eabba1ac8070cc19, type: 3}
+      weight: 1.15
+    - item: {fileID: 7707431517442744506, guid: 2c61ceb957ef142418aa9357e0aabf54,
+        type: 3}
+      weight: 0.6
+    - item: {fileID: 8002604935769822035, guid: 73b525c524275584788cf1f76c237516,
+        type: 3}
+      weight: 1.1
   gunSpawnLocation: {fileID: 4263986337682462252}
-  cycleSpeed: 0.5
-  amountOfCycles: 10
+  cycleSpeed: 0.3
+  amountOfCycles: 14
   weapon: {fileID: 0}
   prevWeapon: {fileID: 0}
   chestAnim: {fileID: 3234476168040963061}
