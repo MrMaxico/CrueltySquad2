@@ -21,6 +21,7 @@ public class Health : MonoBehaviour
     public HealthType healthType;
     [Header("Death (Only for Enemies)", order = 1)]
     public GameObject deathSplash;
+    public int dropChance = 25;
     public WeightedRandomList<GameObject> lootTable;
     public EnemyStats enemyStats;
     [Header("HealthUI (Only For Player)", order = 2)]
@@ -177,7 +178,7 @@ public class Health : MonoBehaviour
             Debug.Log("Enemy Died");
             if (healthType == HealthType.Enemy) {
                 GameObject.Instantiate(deathSplash, transform.position, transform.rotation);
-                if (Random.Range(0, 100) < 25 || enemyStats.name == "LootJalla") {
+                if (Random.Range(0, 100) < dropChance || enemyStats.name == "LootJalla") {
                     GameObject.Instantiate(lootTable.GetRandom(), new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), transform.rotation);
                 }
                 //gun.name = gunsToDropOnKill[randomIndex].name;
@@ -192,7 +193,7 @@ public class Health : MonoBehaviour
                     GetComponent<Spawner>().generator.Teleporter().GetComponent<Teleporter>().spawnersLeft -= 1;
                 }
                 if (gameObject.CompareTag("Crate")) {
-                    if (Random.Range(0, 100) < 15) {
+                    if (Random.Range(0, 100) < dropChance) {
                         GameObject.Instantiate(lootTable.GetRandom(), transform.position, transform.rotation);
                     }
                 }
