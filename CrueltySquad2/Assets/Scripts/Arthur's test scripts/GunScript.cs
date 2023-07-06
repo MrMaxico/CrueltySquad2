@@ -181,7 +181,8 @@ public class GunScript : MonoBehaviour
             if (Physics.Raycast(ray, out hit, currentGunData.range, hitLayers)) {
                 // Perform hit detection and damage logic here
                 Debug.Log("Hit: " + hit.collider.gameObject.name + "With: " + currentGunData.gunType);
-                if (hit.transform.CompareTag("Enemy") || hit.transform.GetComponent<Health>() && hit.transform.GetComponent<Health>().healthType == HealthType.prop) {
+                if (hit.transform.CompareTag("Enemy") || hit.transform.TryGetComponent<Health>(out Health hitHP) && hitHP.healthType == HealthType.prop) {
+                    Debug.Log("Kont");
                     if (hit.transform.GetComponent<Health>().GetHealth() <= currentGunData.damagePerBullet && !hit.transform.CompareTag("Destroyable") && hit.collider != lastHit.collider) {
                         if (hit.collider != lastHit.collider) {
                             hit.transform.GetComponent<Health>().EnemyDeath();
@@ -192,8 +193,9 @@ public class GunScript : MonoBehaviour
                     if (hit.transform.CompareTag("Enemy")) {
                         Instantiate(enemyHitParticlePrefab, hit.point, Quaternion.identity);
                     }
+                    Debug.Log("Kont");
                     hit.transform.GetComponent<Health>().Damage(currentGunData.damagePerBullet);
-                    if (hit.transform.GetComponent<EnemyStats>().name == "Spawner" || hit.transform.CompareTag("Enemy")) {
+                    if (hit.transform.TryGetComponent<EnemyStats>(out EnemyStats enemyStats) && enemyStats.name == "Spawner" || hit.transform.CompareTag("Enemy")) {
                         playerController.UpdateEnemyHealthBar(hit);
                     }
                 } else {
@@ -211,7 +213,7 @@ public class GunScript : MonoBehaviour
         firedRocket = true;
     }
     public void DamageShotEnemy(RaycastHit hit) {
-        if (hit.transform.CompareTag("Enemy") || hit.transform.GetComponent<Health>().healthType == HealthType.prop) {
+        if (hit.transform.CompareTag("Enemy") || hit.transform.TryGetComponent<Health>(out Health hitHP) && hitHP.healthType == HealthType.prop) {
             if (currentGunData != null) {
                 if (hit.transform.GetComponent<Health>().GetHealth() <= currentGunData.damagePerBullet && hit.transform.GetComponent<Health>().healthType != HealthType.prop) {
                     hit.transform.GetComponent<Health>().EnemyDeath();
