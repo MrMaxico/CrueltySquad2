@@ -5016,10 +5016,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunName: rail minigun
   icon: {fileID: 8400000, guid: 0a57e86a983186649845f9dcb5c061c8, type: 2}
-  damagePerBullet: 8
+  damagePerBullet: 7.5
   magSize: 200
   currentAmmo: 200
-  fireRate: 0.05
+  fireRate: 0.045
   bloom: 1
   range: 200
   reloadspeed: 4
@@ -5031,6 +5031,10 @@ MonoBehaviour:
   muzzleFlash: {fileID: 5254774058568182979}
   shotgunSpreadAngle: 15
   shotgunPelletCount: 15
+  rocket: {fileID: 0}
+  rocketSpeed: 0
+  explosionForce: 0
+  explosionRadius: 0
 --- !u!54 &1273824808621003180
 Rigidbody:
   m_ObjectHideFlags: 0
