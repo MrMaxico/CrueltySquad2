@@ -5658,6 +5658,7 @@ MonoBehaviour:
   shotgunSpreadAngle: 15
   shotgunPelletCount: 15
   rocket: {fileID: 0}
+  rocketExplodeAnim: {fileID: 0}
   rocketSpeed: 0
   explosionForce: 0
   explosionRadius: 0
@@ -5688,9 +5689,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -5655002689109311560, guid: dd9152d01f3b26b4d8bf6b6a6ca11e3d,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: d74a39889c58ee241b7f42a706476098, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fc40b53117fa4b042a7f526eb2777080, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.47
   m_Pitch: 1
   Loop: 0
   Mute: 0
