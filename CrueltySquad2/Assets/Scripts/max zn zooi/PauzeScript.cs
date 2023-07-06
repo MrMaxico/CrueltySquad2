@@ -62,6 +62,7 @@ public class PauzeScript : MonoBehaviour
     {
         PlayerStats.playerLevel = 0;
         PlayerStats.playerExp = 0;
+        Time.timeScale = 1f;
         Teleporter.islandNumber = 1;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
