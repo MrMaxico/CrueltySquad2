@@ -1250,6 +1250,7 @@ MonoBehaviour:
   healthType: 0
   deathSplash: {fileID: 7051397275747083860, guid: 164c25490eee22144972fb6bacc97839,
     type: 3}
+  dropChance: 25
   lootTable:
     list:
     - item: {fileID: 7517111349010968992, guid: cab80110cbe443e42be05462952db51f,
@@ -1286,6 +1287,8 @@ MonoBehaviour:
     - item: {fileID: 7707431517442744506, guid: 2c61ceb957ef142418aa9357e0aabf54,
         type: 3}
       weight: 5
+    - item: {fileID: 762242232789388025, guid: c7ac059add731e54eabba1ac8070cc19, type: 3}
+      weight: 1
   enemyStats: {fileID: 555878954371832560}
   damageEffect: {fileID: 0}
   healthBar: {fileID: 0}
