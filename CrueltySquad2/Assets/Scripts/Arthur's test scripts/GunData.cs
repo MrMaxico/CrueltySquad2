@@ -24,6 +24,8 @@ public class GunData : MonoBehaviour {
     public GameObject gunStatUI;
     public GameObject lootBeam;
     public AudioSource shootingSound;
+    public float maxPitch = 0.8f;
+    public float minPitch = 1.0f;
     public AudioSource reloadSound;
     public ParticleSystem muzzleFlash;
     [Header("Settings for shotguns", order = 0)]

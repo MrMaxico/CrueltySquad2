@@ -141,6 +141,9 @@ public class GunScript : MonoBehaviour
         // Add random rotation for bloom effect
         Vector3 rayDirection = Quaternion.Euler(0.0f, Random.Range(-currentGunData.maxBloom, currentGunData.maxBloom), Random.Range(-currentGunData.maxBloom, currentGunData.maxBloom)) * muzzle.forward;
         if (!reloading) {
+            float normalizedPitch = Mathf.Lerp(currentGunData.maxPitch, currentGunData.minPitch, currentGunData.currentAmmo / currentGunData.magSize);
+
+            currentGunData.shootingSound.pitch = normalizedPitch;
             currentGunData.shootingSound.Play();
             Debug.Log(currentGunData.muzzleFlash.name);
             currentGunData.muzzleFlash.Play();
@@ -174,6 +177,10 @@ public class GunScript : MonoBehaviour
             Ray ray = new Ray(muzzle.position, pelletDirection);
             RaycastHit hit;
             if (!reloading) {
+
+                float normalizedPitch = Mathf.Lerp(currentGunData.maxPitch, currentGunData.minPitch, currentGunData.currentAmmo / currentGunData.magSize);
+
+                currentGunData.shootingSound.pitch = normalizedPitch;
                 currentGunData.shootingSound.Play();
                 currentGunData.muzzleFlash.Play();
             }

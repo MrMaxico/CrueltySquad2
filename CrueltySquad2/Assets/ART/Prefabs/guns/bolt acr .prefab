@@ -5800,18 +5800,22 @@ MonoBehaviour:
   magSize: 30
   currentAmmo: 30
   fireRate: 0.09
-  bloom: 0.05
+  maxBloom: 0.05
   range: 100
   reloadspeed: 1
   gunType: 1
   gunStatUI: {fileID: 807529276392142240}
   lootBeam: {fileID: 8047443977401946181}
-  shootingSound: {fileID: 5320253641800371827}
+  shootingSound: {fileID: 4186836729989307486, guid: 824231a585538834c831c28a1ebe67b7,
+    type: 3}
+  maxPitch: 0.8
+  minPitch: 1
   reloadSound: {fileID: 2529497307774888471}
   muzzleFlash: {fileID: 3046652052205381013}
   shotgunSpreadAngle: 15
   shotgunPelletCount: 15
   rocket: {fileID: 0}
+  rocketExplodeAnim: {fileID: 0}
   rocketSpeed: 0
   explosionForce: 0
   explosionRadius: 0
