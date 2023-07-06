@@ -5657,6 +5657,10 @@ MonoBehaviour:
   muzzleFlash: {fileID: 1340716808460032477}
   shotgunSpreadAngle: 15
   shotgunPelletCount: 15
+  rocket: {fileID: 0}
+  rocketSpeed: 0
+  explosionForce: 0
+  explosionRadius: 0
 --- !u!54 &1440994000077037646
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6503,7 +6507,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -5655002689109311560, guid: dd9152d01f3b26b4d8bf6b6a6ca11e3d,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: d74a39889c58ee241b7f42a706476098, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 73c313230ea46f045ae5fc5c5e4f771c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
