@@ -12087,8 +12087,8 @@ MonoBehaviour:
   minPitch: 1
   reloadSound: {fileID: 6469154049011430400}
   muzzleFlash: {fileID: 7500167397024086167}
-  shotgunSpreadAngle: 6
-  shotgunPelletCount: 15
+  shotgunSpreadAngle: 15
+  shotgunPelletCount: 17
   rocket: {fileID: 0}
   rocketExplodeAnim: {fileID: 0}
   rocketSpeed: 0
@@ -12108,7 +12108,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: f256317ca900ea54e9a0870f29a2e99a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 0.8
   Loop: 0
   Mute: 0
   Spatialize: 0
