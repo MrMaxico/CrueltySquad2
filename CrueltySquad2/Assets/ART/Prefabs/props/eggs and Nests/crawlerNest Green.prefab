@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -6007826255658738229}
   - component: {fileID: -9089907726358001920}
   - component: {fileID: 8438102601516171232}
+  - component: {fileID: -8070186778991111213}
   m_Layer: 0
   m_Name: crawlerNest Green
   m_TagString: Spawner
@@ -136,6 +137,20 @@ MonoBehaviour:
   name: Spawner
   damage: 0
   health: 1000
+--- !u!64 &-8070186778991111213
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744586909009380642}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -462981019419857548, guid: d171596d9b792204ca9142727452fa0d, type: 3}
 --- !u!1 &4498641857153531153
 GameObject:
   m_ObjectHideFlags: 0
