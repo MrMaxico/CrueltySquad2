@@ -290,8 +290,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8151258067159337269}
   - component: {fileID: 7245451659316638150}
-  - component: {fileID: -8058398626043715902}
   - component: {fileID: -5535227784523301044}
+  - component: {fileID: -4206417826365220439}
+  - component: {fileID: 925590503484020998}
   m_Layer: 0
   m_Name: Larva
   m_TagString: Enemy
@@ -324,13 +325,47 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8814888807458509711}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.06
   m_Height: 0.31
   m_Direction: 2
   m_Center: {x: 0, y: 0.06, z: 0}
---- !u!114 &-8058398626043715902
+--- !u!114 &-5535227784523301044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8814888807458509711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fccfb354b2db77d4abe4c49b412d26f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: 5
+  generator: {fileID: 0}
+  spawner: {fileID: 0}
+  player: {fileID: 0}
+  enemyStats: {fileID: 0}
+  speed: 0.3
+  angry: 0
+  followDistance: 30
+  path: []
+  pathRefreshRate: 1
+  pLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  relativeHitPosition: {x: 0, y: 0, z: 0}
+  attackDistanceMultiplyer: 0
+  attackSpeed: 0
+  attackTimer: 0
+  spitDistance: 0
+  spitSpeed: 0
+  flyEnemyFlightHeight: 0.5
+  renderer: {fileID: 2541653014957958575}
+  activeIdle: 0
+--- !u!114 &-4206417826365220439
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -348,19 +383,48 @@ MonoBehaviour:
   maxShield: 0
   xpOnDeath: 10
   healthType: 0
-  deathSplash: {fileID: 7051397275747083860, guid: fee8b3bef35c2c740a77d960aeead8ea,
+  deathSplash: {fileID: 7051397275747083860, guid: 164c25490eee22144972fb6bacc97839,
     type: 3}
-  gunsToDropOnKill:
-  - {fileID: 3685379672084113396, guid: c88368ae1ee451246a2a7f5a93238568, type: 3}
-  - {fileID: 1823316254484109225, guid: ac5abc356152f414cacb6be6f5707242, type: 3}
-  - {fileID: 9135655798291575255, guid: 824231a585538834c831c28a1ebe67b7, type: 3}
-  - {fileID: 8318553358585603384, guid: fca9192614561734fb039f29a33937e0, type: 3}
-  - {fileID: 4324839365179884087, guid: 756f5baec6db3d443961c50ea1a7662e, type: 3}
-  - {fileID: 5757830153032026586, guid: 73b525c524275584788cf1f76c237516, type: 3}
-  - {fileID: 8727148447041403267, guid: cab80110cbe443e42be05462952db51f, type: 3}
-  - {fileID: 7078281866280998902, guid: c7ac059add731e54eabba1ac8070cc19, type: 3}
+  dropChance: 0
   lootTable:
-    list: []
+    list:
+    - item: {fileID: 7517111349010968992, guid: cab80110cbe443e42be05462952db51f,
+        type: 3}
+      weight: 1
+    - item: {fileID: 369066601621911381, guid: 756f5baec6db3d443961c50ea1a7662e, type: 3}
+      weight: 8
+    - item: {fileID: 2933850869437615341, guid: fca9192614561734fb039f29a33937e0,
+        type: 3}
+      weight: 8
+    - item: {fileID: 5852689407715769175, guid: ac5abc356152f414cacb6be6f5707242,
+        type: 3}
+      weight: 6
+    - item: {fileID: 369066601621911381, guid: 756f5baec6db3d443961c50ea1a7662e, type: 3}
+      weight: 8
+    - item: {fileID: 8002604935769822035, guid: 73b525c524275584788cf1f76c237516,
+        type: 3}
+      weight: 1
+    - item: {fileID: 8556561191792515728, guid: c88368ae1ee451246a2a7f5a93238568,
+        type: 3}
+      weight: 1
+    - item: {fileID: 5690403266726689397, guid: 824231a585538834c831c28a1ebe67b7,
+        type: 3}
+      weight: 2
+    - item: {fileID: 2130549661398004797, guid: 4f65563676a8b634097f6f711577522f,
+        type: 3}
+      weight: 3
+    - item: {fileID: 4239105873075604270, guid: ca71c5ab592f36144abdac682bcb370c,
+        type: 3}
+      weight: 1
+    - item: {fileID: 8615458531096432867, guid: dc698144a9f78c843aea87fef414b6cf,
+        type: 3}
+      weight: 1
+    - item: {fileID: 7707431517442744506, guid: 2c61ceb957ef142418aa9357e0aabf54,
+        type: 3}
+      weight: 5
+    - item: {fileID: 762242232789388025, guid: c7ac059add731e54eabba1ac8070cc19, type: 3}
+      weight: 1
+  enemyStats: {fileID: 925590503484020998}
   damageEffect: {fileID: 0}
   healthBar: {fileID: 0}
   maxHealthText: {fileID: 0}
@@ -372,7 +436,12 @@ MonoBehaviour:
   inCombat: 0
   inCombatShieldRegenDelay: 0
   timeOutOfCombat: 0
---- !u!114 &-5535227784523301044
+  godMode: 0
+  propDestroyParticle: {fileID: 0}
+  explosionRadius: 0
+  explosionForce: 0
+  explosionDamage: 0
+--- !u!114 &925590503484020998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -381,27 +450,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8814888807458509711}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fccfb354b2db77d4abe4c49b412d26f6, type: 3}
+  m_Script: {fileID: 11500000, guid: b4e2a361b76a4ae42aaad103dee8bd67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyType: 1
-  generator: {fileID: 0}
-  spawner: {fileID: 0}
-  player: {fileID: 0}
-  speed: 5
-  angry: 0
-  followDistance: 30
-  path: []
-  pathRefreshRate: 0.1
-  pLayer:
-    serializedVersion: 2
-    m_Bits: 0
+  name: Larva
   damage: 0
-  relativeHitPosition: {x: 0, y: 0, z: 0}
-  attackDistanceMultiplyer: 0
-  attackSpeed: 0
-  attackTimer: 0
-  spitDistance: 0
-  flyEnemyFlightHeight: 0.5
-  renderer: {fileID: 2541653014957958575}
-  activeIdle: 0
+  health: 1

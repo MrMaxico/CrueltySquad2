@@ -17,6 +17,8 @@ public class Spawner : MonoBehaviour
     bool preparing = true;
     [SerializeField] float spawnInterval;
     [SerializeField] int onDeathEnemySpawnAmount;
+    [SerializeField] GameObject larva;
+    [SerializeField] int larvaAmount;
     [Space(20)]
     public IslandGenerator generator;
 
@@ -36,6 +38,11 @@ public class Spawner : MonoBehaviour
         }
         generator.Teleporter().GetComponent<Teleporter>().spawnersLeft += 1;
         StartCoroutine(SpawnCycle());
+
+        for (int i = 0; i < larvaAmount; i++)
+        {
+            Instantiate(larva, transform.position, Quaternion.identity);
+        }
     }
 
     public void OnEnemyKill()

@@ -41,7 +41,7 @@ public class Enemy : MonoBehaviour
     {
         path = new List<Vector3> { };
 
-        if (enemyType == EnemyTypes.lootJalla)
+        if (enemyType == EnemyTypes.lootJalla || enemyType == EnemyTypes.larva)
         {
             generator = FindObjectOfType<IslandGenerator>();
         }
@@ -61,9 +61,13 @@ public class Enemy : MonoBehaviour
 
         // Check if the enemy is not angry and there are no more nodes in the path
         // Set the idle destination to a random node on the grid
-        if (!angry && path.Count <= 1)
+        if (!angry && path.Count <= 1 && enemyType != EnemyTypes.larva)
         {
             idleDestination = generator.grid.RandomNode().position;
+        }
+        else if (!angry && path.Count <= 1 && enemyType == EnemyTypes.larva)
+        {
+            idleDestination = transform.position + new Vector3(Random.Range(-7, 7), 0, Random.Range(-7, 7));
         }
 
         // Check if the renderer is currently visible and set activeIdle accordingly
@@ -77,7 +81,7 @@ public class Enemy : MonoBehaviour
         }
 
         // If the player is not assigned and the enemy type is not "lootJalla", find the player
-        if (player == null && enemyType != EnemyTypes.lootJalla)
+        if (player == null && enemyType != EnemyTypes.lootJalla && enemyType != EnemyTypes.larva)
         {
             player = GameObject.FindGameObjectWithTag("Player");
             return;
@@ -151,6 +155,8 @@ public class Enemy : MonoBehaviour
         else if (!angry && activeIdle)
         {
             path = generator.grid.FindPath(transform.position, idleDestination);
+            Vector3 lookPosition = new Vector3(path[1].x, transform.position.y, path[1].z);
+            transform.transform.LookAt(lookPosition);
         }
         Profiler.EndSample();
 
@@ -272,6 +278,7 @@ public class Enemy : MonoBehaviour
         crawlerEnemy,
         lootJalla,
         spitter,
-        flyingSpitter
+        flyingSpitter,
+        larva
     }
 }
