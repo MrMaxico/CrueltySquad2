@@ -220,6 +220,7 @@ public class Health : MonoBehaviour
         gameOverUI.SetActive(true);
         PauzeScript.gameIsPaused = true;
         Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
         Time.timeScale = 0f;
     }
 }
