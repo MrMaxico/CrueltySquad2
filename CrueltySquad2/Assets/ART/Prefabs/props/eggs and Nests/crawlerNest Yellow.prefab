@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: -8382010386985378114}
   - component: {fileID: -7444784332125553151}
   - component: {fileID: -100341520018523876}
+  - component: {fileID: 6984307414142933598}
   m_Layer: 0
   m_Name: crawlerNest Yellow
   m_TagString: Spawner
@@ -217,6 +218,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6a59c1b3272a61b40960d36cce23e828, type: 2}
   - {fileID: 11400000, guid: 5e46f38c8dc3af44393342808f621382, type: 2}
   - {fileID: 11400000, guid: f0f8072367d6ca54da0bf053aeaac5e5, type: 2}
+  - {fileID: 11400000, guid: 2069c5538d50bf643b71c680e84bfaa6, type: 2}
   preperationTime: 5
   spawnInterval: 7
   onDeathEnemySpawnAmount: 15
@@ -278,6 +280,20 @@ MonoBehaviour:
   name: Spawner
   damage: 0
   health: 3000
+--- !u!64 &6984307414142933598
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3612687129126041145}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -462981019419857548, guid: d171596d9b792204ca9142727452fa0d, type: 3}
 --- !u!1 &5241315411228866996
 GameObject:
   m_ObjectHideFlags: 0

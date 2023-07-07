@@ -45,21 +45,10 @@ public class Teleporter : MonoBehaviour
             weaponManager = GameObject.FindGameObjectWithTag("WeaponManager").GetComponent<WeaponManager>();
             DontDestroyOnLoad(weaponManager.gameObject);
             weaponManager.currentWeapons[0] = pickUp.primary.GetComponent<GunData>().gunName;
+            weaponManager.primaryGunIslandNumber = pickUp.primary.GetComponent<GunData>().ogislandNummer;
             if(pickUp.secondary != null) {
                 weaponManager.currentWeapons[1] = pickUp.secondary.GetComponent<GunData>().gunName;
-            }
-            if (GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>().primary != null)
-            {
-                Debug.Log($"Saving slot 1 as {GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>().primary.gameObject.name}");
-                GameObject saveSlotOne = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>().primary.gameObject;
-                DontDestroyOnLoad(saveSlotOne);
-                PickUpController.primarySavedGun = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>().primary;
-            }
-            if (GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>().secondary != null)
-            {
-                Debug.Log($"Saving slot 2 as {GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>().secondary.gameObject.name}");
-                DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>().secondary.gameObject);
-                PickUpController.secondarySavedGun = GameObject.FindGameObjectWithTag("Player").GetComponent<PickUpController>().secondary;
+                weaponManager.secondaryGunIslandNumber = pickUp.primary.GetComponent<GunData>().ogislandNummer;
             }
             islandNumber++;
             SceneManager.LoadScene(RandomIsland());

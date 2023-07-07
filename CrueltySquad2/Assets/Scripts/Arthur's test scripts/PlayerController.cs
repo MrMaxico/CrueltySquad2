@@ -174,10 +174,11 @@ public class PlayerController : MonoBehaviour {
                     hit.transform.GetComponent<GunData>().gunStatUI.transform.parent.GetComponent<Animator>().Play("weapon stats popup");
                 } else {
                     pickUpUI.SetActive(false);
-                    lastGunStats.SetActive(false);
+                    if (lastGunStats != null) {
+                        lastGunStats.SetActive(false);
+                    }
                 }
             }
-
             gunStatsTimer = 0f; // Reset the timer
         }
     }
