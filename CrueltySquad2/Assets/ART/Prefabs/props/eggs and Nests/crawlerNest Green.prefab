@@ -64,9 +64,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed48e50a31852734faaec2cbfb1ba473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvlOneSpawner: 0
-  lvlTwoSpawner: {fileID: 0}
-  lvlThreeSpawner: {fileID: 0}
+  lvlOneSpawner: 1
+  lvlTwoSpawner: {fileID: 8606229659361486720, guid: 682027e1a1ade5e46842af3af1f19553,
+    type: 3}
+  lvlThreeSpawner: {fileID: 3612687129126041145, guid: da32a4346c7a6d048ae3416cd9e94a92,
+    type: 3}
   healthManager: {fileID: 6303953448152420848, guid: b3df371b8bd589d428725b58979ecbf0,
     type: 3}
   spawnCap: 10
@@ -76,6 +78,8 @@ MonoBehaviour:
   preperationTime: 10
   spawnInterval: 7
   onDeathEnemySpawnAmount: 15
+  larva: {fileID: 0}
+  larvaAmount: 0
   generator: {fileID: 0}
 --- !u!114 &-9089907726358001920
 MonoBehaviour:
@@ -96,6 +100,7 @@ MonoBehaviour:
   xpOnDeath: 20
   healthType: 2
   deathSplash: {fileID: 0}
+  dropChance: 25
   lootTable:
     list: []
   enemyStats: {fileID: 0}
@@ -110,11 +115,12 @@ MonoBehaviour:
   inCombat: 0
   inCombatShieldRegenDelay: 0
   timeOutOfCombat: 0
+  godMode: 0
   propDestroyParticle: {fileID: 7051397275747083860, guid: 164c25490eee22144972fb6bacc97839,
     type: 3}
   explosionRadius: 0
   explosionForce: 0
-  exposionDamage: 0
+  explosionDamage: 0
 --- !u!114 &8438102601516171232
 MonoBehaviour:
   m_ObjectHideFlags: 0
