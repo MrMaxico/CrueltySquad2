@@ -24,6 +24,11 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
+        if (lvlOneSpawner)
+        {
+            generator.Teleporter().GetComponent<Teleporter>().spawnersLeft += 1;
+        }
+
         if (Teleporter.islandNumber >= 3 && Teleporter.islandNumber < 10 && lvlOneSpawner)
         {
             GameObject spawnedStructure = Instantiate(lvlTwoSpawner, transform.position, transform.rotation);
@@ -36,7 +41,7 @@ public class Spawner : MonoBehaviour
             spawnedStructure.GetComponent<Spawner>().generator = generator;
             Destroy(this.gameObject);
         }
-        generator.Teleporter().GetComponent<Teleporter>().spawnersLeft += 1;
+
         StartCoroutine(SpawnCycle());
 
         for (int i = 0; i < larvaAmount; i++)
