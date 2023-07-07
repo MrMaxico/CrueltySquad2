@@ -23,7 +23,7 @@ public class PlayerStats : MonoBehaviour
         if (playerLevel == 0)
         {
             playerLevel = 1;
-            nextLevelUpExp = 50;
+            nextLevelUpExp = 75;
             playerMaxHealth = healthcript.GetMaxHealth();
             maxShield = healthcript.GetMaxShield();
         }
