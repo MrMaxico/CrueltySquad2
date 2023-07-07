@@ -86,6 +86,7 @@ public class Grid : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
         Debug.Log("Nodes neighbouring completed");
+        IslandGenerator.generationDone = true;
         loadingScreen.SetActive(false);
     }
 
