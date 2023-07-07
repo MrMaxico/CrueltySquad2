@@ -231,9 +231,9 @@ public class Grid : MonoBehaviour
     public Node RandomNode()
     {
         List<Node> walkableNodes = new() { };
-        for (int i = 0; i <= gridSize.x + 1; i++)
+        for (int i = 0; i < gridSize.x + 1; i++)
         {
-            for (int j = 0; j <= gridSize.y + 1; j++)
+            for (int j = 0; j < gridSize.y + 1; j++)
             {
                 if (nodes[i, j].walkable)
                 {
