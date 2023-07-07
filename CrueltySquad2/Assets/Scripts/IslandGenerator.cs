@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IslandGenerator : MonoBehaviour
 {
@@ -70,6 +71,9 @@ public class IslandGenerator : MonoBehaviour
 
     public Grid grid;
 
+    static public bool generationDone;
+    float loadingTime;
+
     // Start is called before the first frame update
     public void Start()
     {
@@ -87,6 +91,15 @@ public class IslandGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!generationDone && loadingTime < 12.495f)
+        {
+            loadingTime += Time.deltaTime;
+        }
+        else if (!generationDone && loadingTime >= 12.495f)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().ToString());
+        }
+
         //when you trigger the bool in the inspector, a new terrain generates
         if (regenTerrain)
         {
@@ -102,6 +115,7 @@ public class IslandGenerator : MonoBehaviour
 
     public void StartGenerating(int n_seed)
     {
+        generationDone = false;
         seed = n_seed;
         colorSeed = Random.Range(0, 99999);
         mesh = new Mesh();

@@ -8886,6 +8886,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 20.6
       objectReference: {fileID: 0}
+    - target: {fileID: 5033840353872946707, guid: 74d1e6d55dc75bd41a55dfc00d65deaa,
+        type: 3}
+      propertyPath: m_text
+      value: Ambience volume
+      objectReference: {fileID: 0}
     - target: {fileID: 5415123669697560985, guid: 74d1e6d55dc75bd41a55dfc00d65deaa,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -9035,10 +9040,25 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1351971315400282833, guid: e110387f57bad0d409a1afc3a496a866,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4316626664608326102, guid: e110387f57bad0d409a1afc3a496a866,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -110
+      objectReference: {fileID: 0}
+    - target: {fileID: 4713918728694431450, guid: e110387f57bad0d409a1afc3a496a866,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5651297275959235302, guid: e110387f57bad0d409a1afc3a496a866,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -225.2
+      value: -238
       objectReference: {fileID: 0}
     - target: {fileID: 5651297275959235302, guid: e110387f57bad0d409a1afc3a496a866,
         type: 3}
