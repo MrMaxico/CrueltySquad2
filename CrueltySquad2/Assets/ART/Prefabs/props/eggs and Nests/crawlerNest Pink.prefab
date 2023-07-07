@@ -257,9 +257,12 @@ GameObject:
   - component: {fileID: 8945460489804873018}
   - component: {fileID: 1990425127006197053}
   - component: {fileID: 6858900321589028900}
+  - component: {fileID: -6260828980298444883}
+  - component: {fileID: -116631766289680753}
+  - component: {fileID: 6839889459541804466}
   m_Layer: 0
   m_Name: crawlerNest Pink
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -316,6 +319,89 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &-6260828980298444883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8606229659361486720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed48e50a31852734faaec2cbfb1ba473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvlOneSpawner: 0
+  lvlTwoSpawner: {fileID: 0}
+  lvlThreeSpawner: {fileID: 0}
+  healthManager: {fileID: 6303953448152420848, guid: b3df371b8bd589d428725b58979ecbf0,
+    type: 3}
+  spawnCap: 10
+  enemySpawns:
+  - {fileID: 11400000, guid: 9c17241c802a9e941be05d211343fd06, type: 2}
+  - {fileID: 11400000, guid: 078939955fd8e3e46a6a0328389ff186, type: 2}
+  - {fileID: 11400000, guid: 6a59c1b3272a61b40960d36cce23e828, type: 2}
+  preperationTime: 10
+  spawnInterval: 7
+  onDeathEnemySpawnAmount: 15
+  larva: {fileID: 0}
+  larvaAmount: 0
+  generator: {fileID: 0}
+--- !u!114 &-116631766289680753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8606229659361486720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba15951d3b58eb2419c326b6c126c584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2000
+  maxHealth: 2000
+  shield: 0
+  maxShield: 0
+  xpOnDeath: 20
+  healthType: 2
+  deathSplash: {fileID: 0}
+  dropChance: 25
+  lootTable:
+    list: []
+  enemyStats: {fileID: 0}
+  damageEffect: {fileID: 0}
+  healthBar: {fileID: 0}
+  maxHealthText: {fileID: 0}
+  gameOverUI: {fileID: 0}
+  shieldBar: {fileID: 0}
+  maxShieldText: {fileID: 0}
+  shieldRegenTime: 0
+  shieldRegenAmount: 0
+  inCombat: 0
+  inCombatShieldRegenDelay: 0
+  timeOutOfCombat: 0
+  godMode: 0
+  propDestroyParticle: {fileID: 7051397275747083860, guid: 164c25490eee22144972fb6bacc97839,
+    type: 3}
+  explosionRadius: 0
+  explosionForce: 0
+  explosionDamage: 0
+--- !u!114 &6839889459541804466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8606229659361486720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e2a361b76a4ae42aaad103dee8bd67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Spawner
+  damage: 0
+  health: 2000
 --- !u!1001 &8338617246271595487
 PrefabInstance:
   m_ObjectHideFlags: 0

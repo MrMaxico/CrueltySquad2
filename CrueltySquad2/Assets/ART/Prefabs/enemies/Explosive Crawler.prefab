@@ -869,7 +869,7 @@ GameObject:
   - component: {fileID: -3979135921094910333}
   m_Layer: 0
   m_Name: Explosive Crawler
-  m_TagString: Enemy
+  m_TagString: Explosive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -883,8 +883,8 @@ Transform:
   m_GameObject: {fileID: 4921160370628864640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.4109037, y: -21.33507, z: 0.46420932}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 543571893548433730}
   - {fileID: 7019537241724120065}
@@ -956,12 +956,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba15951d3b58eb2419c326b6c126c584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  maxHealth: 100
+  health: 200
+  maxHealth: 200
   shield: 0
   maxShield: 0
   xpOnDeath: 10
-  healthType: 0
+  healthType: 2
   deathSplash: {fileID: 7051397275747083860, guid: 164c25490eee22144972fb6bacc97839,
     type: 3}
   dropChance: 25
@@ -1019,10 +1019,11 @@ MonoBehaviour:
   inCombatShieldRegenDelay: 0
   timeOutOfCombat: 0
   godMode: 0
-  propDestroyParticle: {fileID: 0}
-  explosionRadius: 0
-  explosionForce: 0
-  explosionDamage: 0
+  propDestroyParticle: {fileID: 540295766514913189, guid: 5d3be2d556fe82a49a26b2e20bc74733,
+    type: 3}
+  explosionRadius: 15
+  explosionForce: 15
+  explosionDamage: 200
 --- !u!54 &-4352867751257567685
 Rigidbody:
   m_ObjectHideFlags: 0
