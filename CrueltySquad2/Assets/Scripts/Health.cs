@@ -184,7 +184,9 @@ public class Health : MonoBehaviour
                 //gun.name = gunsToDropOnKill[randomIndex].name;
                 if (GetComponent<Enemy>().enemyType != Enemy.EnemyTypes.lootJalla)
                 {
-                    GetComponent<Enemy>().spawner.OnEnemyKill();
+                    if (GetComponent<Enemy>().spawner != null) {
+                        GetComponent<Enemy>().spawner.OnEnemyKill();
+                    }
                 }
             }
             else if (healthType == HealthType.prop)
