@@ -24,7 +24,7 @@ public class IslandGenerator : MonoBehaviour
     [Tooltip("Set the amount of layers of noise that will generate on top of each other")]
     [Range(5, 15)] public int octaves = 15;
     [Tooltip("Set the frequency of noise")]
-    [Range(1, 4)] public float frequencyMultiplier = 1;
+    [Range(0.1f, 4)] public float frequencyMultiplier = 1;
     [Tooltip("Set the frequency of noise in the lower area")]
     [Range(1, 4)] public float lowGroundFrequencyMultiplier = 1;
     [Tooltip("Set the intensity of the noise")]
