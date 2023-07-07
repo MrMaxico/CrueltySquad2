@@ -1467,16 +1467,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba15951d3b58eb2419c326b6c126c584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 0
+  health: 300
+  maxHealth: 300
   shield: 0
   maxShield: 0
-  xpOnDeath: 40
+  xpOnDeath: 80
   healthType: 0
-  deathSplash: {fileID: 0}
-  dropChance: 25
+  deathSplash: {fileID: 7051397275747083860, guid: 164c25490eee22144972fb6bacc97839,
+    type: 3}
+  dropChance: 45
   lootTable:
-    list: []
+    list:
+    - item: {fileID: 7517111349010968992, guid: cab80110cbe443e42be05462952db51f,
+        type: 3}
+      weight: 4
+    - item: {fileID: 369066601621911381, guid: 756f5baec6db3d443961c50ea1a7662e, type: 3}
+      weight: 1
+    - item: {fileID: 2933850869437615341, guid: fca9192614561734fb039f29a33937e0,
+        type: 3}
+      weight: 2
+    - item: {fileID: 5852689407715769175, guid: ac5abc356152f414cacb6be6f5707242,
+        type: 3}
+      weight: 1
+    - item: {fileID: 369066601621911381, guid: 756f5baec6db3d443961c50ea1a7662e, type: 3}
+      weight: 0.5
+    - item: {fileID: 8002604935769822035, guid: 73b525c524275584788cf1f76c237516,
+        type: 3}
+      weight: 4
+    - item: {fileID: 8556561191792515728, guid: c88368ae1ee451246a2a7f5a93238568,
+        type: 3}
+      weight: 3
+    - item: {fileID: 5690403266726689397, guid: 824231a585538834c831c28a1ebe67b7,
+        type: 3}
+      weight: 2
+    - item: {fileID: 2130549661398004797, guid: 4f65563676a8b634097f6f711577522f,
+        type: 3}
+      weight: 3
+    - item: {fileID: 8615458531096432867, guid: dc698144a9f78c843aea87fef414b6cf,
+        type: 3}
+      weight: 3
+    - item: {fileID: 4239105873075604270, guid: ca71c5ab592f36144abdac682bcb370c,
+        type: 3}
+      weight: 3
+    - item: {fileID: 370623768839318421, guid: d99e79127bcf821489d90decd16e5f05, type: 3}
+      weight: 1
+    - item: {fileID: 7707431517442744506, guid: 2c61ceb957ef142418aa9357e0aabf54,
+        type: 3}
+      weight: 1
+    - item: {fileID: 762242232789388025, guid: c7ac059add731e54eabba1ac8070cc19, type: 3}
+      weight: 3
   enemyStats: {fileID: 0}
   damageEffect: {fileID: 0}
   healthBar: {fileID: 0}
