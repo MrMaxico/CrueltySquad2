@@ -17,21 +17,21 @@ public class ObjectiveUI : MonoBehaviour
 
     public void Update()
     {
-        if (teleporter == null)
-        {
-            teleporter = GameObject.FindGameObjectWithTag("Teleporter");
-            return;
-        }
+        //if (teleporter == null)
+        //{
+        //    teleporter = GameObject.FindGameObjectWithTag("Teleporter");
+        //    return;
+        //}
 
-        if (teleporter.GetComponent<Teleporter>().spawnersLeft > 0)
-        {
-            objectiveOne.text = $"Destroy all bug nests";
-            objectiveTwo.text = $"Bug nests left: {teleporter.GetComponent<Teleporter>().spawnersLeft}";
-        }
-        else
-        {
-            objectiveOne.text = $"Find and activate the teleporter";
-            objectiveTwo.text = $"";
-        }
+        //if (teleporter.GetComponent<Teleporter>().spawnersLeft > 0)
+        //{
+        //    objectiveOne.text = $"Destroy all bug nests";
+        //    objectiveTwo.text = $"Bug nests left: {teleporter.GetComponent<Teleporter>().spawnersLeft}";
+        //}
+        //else
+        //{
+        //    objectiveOne.text = $"Find and activate the teleporter";
+        //    objectiveTwo.text = $"";
+        //}
     }
 }
