@@ -292,6 +292,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 36.109436
       objectReference: {fileID: 0}
+    - target: {fileID: 3274924860239896047, guid: 052af0cf9d89f2c4495aa7df4814d026,
+        type: 3}
+      propertyPath: renderer
+      value: 
+      objectReference: {fileID: 123046827618553479}
+    - target: {fileID: 3274924860239896047, guid: 052af0cf9d89f2c4495aa7df4814d026,
+        type: 3}
+      propertyPath: enemyStats
+      value: 
+      objectReference: {fileID: 5650686209346529215}
     - target: {fileID: 3371857378766954852, guid: 052af0cf9d89f2c4495aa7df4814d026,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -496,6 +506,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -23.256514
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690595595336815595, guid: 052af0cf9d89f2c4495aa7df4814d026,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6451217940572451335, guid: 052af0cf9d89f2c4495aa7df4814d026,
         type: 3}
@@ -810,7 +825,7 @@ PrefabInstance:
     - target: {fileID: 9018616310742069954, guid: 052af0cf9d89f2c4495aa7df4814d026,
         type: 3}
       propertyPath: m_Name
-      value: ArmoredCrab (1)
+      value: ArmoredCrab (1) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 9196380774960597080, guid: 052af0cf9d89f2c4495aa7df4814d026,
         type: 3}
@@ -829,12 +844,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 052af0cf9d89f2c4495aa7df4814d026, type: 3}
+--- !u!137 &123046827618553479 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8158169841657023256, guid: 052af0cf9d89f2c4495aa7df4814d026,
+    type: 3}
+  m_PrefabInstance: {fileID: 8107185556505806239}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &805866976474746613 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 8911922111925848938, guid: 052af0cf9d89f2c4495aa7df4814d026,
     type: 3}
   m_PrefabInstance: {fileID: 8107185556505806239}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &984614377051649885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9018616310742069954, guid: 052af0cf9d89f2c4495aa7df4814d026,
+    type: 3}
+  m_PrefabInstance: {fileID: 8107185556505806239}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5650686209346529215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984614377051649885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e2a361b76a4ae42aaad103dee8bd67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Crusher
+  damage: 60
+  health: 500
+--- !u!64 &7215903032470363537
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984614377051649885}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3049012613398227167, guid: 4f70b75819a2f414f8f2e175db7ef50e, type: 3}
 --- !u!1 &1098312807878656070 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9205216774867011033, guid: 052af0cf9d89f2c4495aa7df4814d026,
