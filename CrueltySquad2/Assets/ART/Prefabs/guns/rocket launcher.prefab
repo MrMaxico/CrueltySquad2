@@ -7126,13 +7126,15 @@ MonoBehaviour:
   magSize: 1
   currentAmmo: 1
   fireRate: 2
-  bloom: 0.05
+  maxBloom: 0.05
   range: 100
   reloadspeed: 3
   gunType: 3
   gunStatUI: {fileID: 3614158064166285882}
   lootBeam: {fileID: 2028108007197047113}
   shootingSound: {fileID: 7499288875567195169}
+  maxPitch: 0.8
+  minPitch: 1
   reloadSound: {fileID: 1757662807066762722}
   muzzleFlash: {fileID: 0}
   shotgunSpreadAngle: 15
@@ -7445,7 +7447,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9023073940675645649}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.6529999}
+  m_LocalPosition: {x: 0, y: 0, z: 0.079}
   m_LocalScale: {x: 0.0015799999, y: 0.0015799999, z: 0.0015799999}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7455,7 +7457,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.02799511, y: -0.37768298}
+  m_AnchoredPosition: {x: -0.02799511, y: 0.409}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1647457324417065831

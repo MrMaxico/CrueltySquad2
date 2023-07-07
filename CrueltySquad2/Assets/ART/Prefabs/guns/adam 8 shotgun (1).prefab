@@ -5715,18 +5715,21 @@ MonoBehaviour:
   magSize: 6
   currentAmmo: 6
   fireRate: 0.3
-  bloom: 0.05
+  maxBloom: 0.05
   range: 100
   reloadspeed: 2
   gunType: 2
   gunStatUI: {fileID: 5450712226308591707}
   lootBeam: {fileID: 7843976630641297906}
   shootingSound: {fileID: 871641560258836699}
+  maxPitch: 0.8
+  minPitch: 1
   reloadSound: {fileID: 5520101873244471396}
   muzzleFlash: {fileID: 1717319151407590792}
   shotgunSpreadAngle: 11
   shotgunPelletCount: 14
   rocket: {fileID: 0}
+  rocketExplodeAnim: {fileID: 0}
   rocketSpeed: 0
   explosionForce: 0
   explosionRadius: 0
@@ -7151,7 +7154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.027995586, y: 0.61599994}
+  m_AnchoredPosition: {x: -0.027995586, y: 0.428}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4255345698818235574
@@ -12646,7 +12649,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fdd323fe5c9f4964fa0605706e0830a8, type: 2}
+  - {fileID: 2100000, guid: 70c6b46b2be5c6144b90e330b59ab9fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

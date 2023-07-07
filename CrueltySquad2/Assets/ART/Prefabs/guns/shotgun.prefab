@@ -11626,7 +11626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7581074467094242774
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11645,7 +11645,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.027995586, y: 0.61599994}
+  m_AnchoredPosition: {x: -0.027995586, y: 0.389}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6503601232791204447
@@ -12076,18 +12076,21 @@ MonoBehaviour:
   magSize: 5
   currentAmmo: 5
   fireRate: 1
-  bloom: 0.05
+  maxBloom: 0.05
   range: 100
   reloadspeed: 1
   gunType: 2
   gunStatUI: {fileID: 4413844180626034633}
   lootBeam: {fileID: 6202170040963558865}
   shootingSound: {fileID: 3234808576611564544}
+  maxPitch: 0.8
+  minPitch: 1
   reloadSound: {fileID: 6469154049011430400}
   muzzleFlash: {fileID: 7500167397024086167}
   shotgunSpreadAngle: 6
   shotgunPelletCount: 15
   rocket: {fileID: 0}
+  rocketExplodeAnim: {fileID: 0}
   rocketSpeed: 0
   explosionForce: 0
   explosionRadius: 0
