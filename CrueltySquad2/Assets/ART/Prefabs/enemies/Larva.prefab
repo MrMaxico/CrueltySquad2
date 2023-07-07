@@ -293,6 +293,7 @@ GameObject:
   - component: {fileID: -5535227784523301044}
   - component: {fileID: -4206417826365220439}
   - component: {fileID: 925590503484020998}
+  - component: {fileID: 2428862544023955840}
   m_Layer: 0
   m_Name: Larva
   m_TagString: Enemy
@@ -456,3 +457,23 @@ MonoBehaviour:
   name: Larva
   damage: 0
   health: 1
+--- !u!95 &2428862544023955840
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8814888807458509711}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 86da7448a8401214ebe16e67d146c7ed, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
