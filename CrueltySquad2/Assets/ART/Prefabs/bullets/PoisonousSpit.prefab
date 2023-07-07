@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1270774584671384804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 26.302801, y: 26.302801, z: 26.302801}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8300494549588913391}
@@ -83,7 +83,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.73983765
+        value: 1
         inSlope: -0.6058018
         outSlope: -0.6058018
         tangentMode: 0
@@ -283,6 +283,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385393331685834344, guid: 164c25490eee22144972fb6bacc97839,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.764
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385393331685834344, guid: 164c25490eee22144972fb6bacc97839,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385393331685834344, guid: 164c25490eee22144972fb6bacc97839,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2cbb0c49c22282b4aaa6461c0e1848be, type: 3}
+    - target: {fileID: 2385393331685834344, guid: 164c25490eee22144972fb6bacc97839,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385393331685834344, guid: 164c25490eee22144972fb6bacc97839,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7051397275747083860, guid: 164c25490eee22144972fb6bacc97839,
         type: 3}
