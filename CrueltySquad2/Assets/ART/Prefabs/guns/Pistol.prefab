@@ -2476,11 +2476,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunName: pistol
   icon: {fileID: 8400000, guid: fb1b017164e16dc4b8b8a82eff5f50e8, type: 2}
-  damagePerBullet: 25
+  damagePerBullet: 30
   magSize: 10
   currentAmmo: 10
   fireRate: 0.4
-  maxBloom: 0.05
+  maxBloom: 0.2
   range: 100
   reloadspeed: 1
   gunType: 0
