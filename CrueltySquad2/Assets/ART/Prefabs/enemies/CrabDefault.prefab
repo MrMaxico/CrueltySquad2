@@ -11876,8 +11876,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8530767040487843960}
-  - component: {fileID: 584093661420057057}
   - component: {fileID: 521188058568476376}
+  - component: {fileID: 584093661420057057}
   - component: {fileID: 7476276795362259167}
   - component: {fileID: 3383373795579253198}
   - component: {fileID: 1828378529921839754}
@@ -11909,20 +11909,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &584093661420057057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9018616310742069954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d7deb7c11d75b34b8ddf1e2708f6c15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monsterAttack: {fileID: 8831327871762627687}
-  monsterAttack2: {fileID: 0}
 --- !u!114 &521188058568476376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11939,6 +11925,20 @@ MonoBehaviour:
   monsterAttack2: []
   walking: []
   normalsound: []
+--- !u!114 &584093661420057057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9018616310742069954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7deb7c11d75b34b8ddf1e2708f6c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterAttack: {fileID: 8831327871762627687}
+  monsterAttack2: {fileID: 0}
 --- !u!95 &7476276795362259167
 Animator:
   serializedVersion: 5

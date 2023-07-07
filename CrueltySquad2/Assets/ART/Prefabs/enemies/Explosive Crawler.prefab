@@ -866,6 +866,7 @@ GameObject:
   - component: {fileID: 4462013162879969262}
   - component: {fileID: -4352867751257567685}
   - component: {fileID: 6411058727514339712}
+  - component: {fileID: -3979135921094910333}
   m_Layer: 0
   m_Name: Explosive Crawler
   m_TagString: Enemy
@@ -1053,6 +1054,41 @@ MonoBehaviour:
   name: Crawler
   damage: 20
   health: 100
+--- !u!114 &-3979135921094910333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4921160370628864640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fccfb354b2db77d4abe4c49b412d26f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: 1
+  generator: {fileID: 0}
+  spawner: {fileID: 0}
+  player: {fileID: 0}
+  enemyStats: {fileID: 4224036960194649676, guid: 74c027458ef3d594dba1f3cc57424c57,
+    type: 3}
+  speed: 8
+  angry: 0
+  followDistance: 30
+  path: []
+  pathRefreshRate: 0.1
+  pLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  relativeHitPosition: {x: 0, y: 0, z: 0.85}
+  attackDistanceMultiplyer: 1.5
+  attackSpeed: 2
+  attackTimer: 0
+  spitDistance: 0
+  spitSpeed: 0
+  flyEnemyFlightHeight: 0.5
+  renderer: {fileID: 751887907167583691, guid: 74c027458ef3d594dba1f3cc57424c57, type: 3}
+  activeIdle: 0
 --- !u!1 &4932127076444651411
 GameObject:
   m_ObjectHideFlags: 0
