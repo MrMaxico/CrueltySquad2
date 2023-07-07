@@ -121,7 +121,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8915604459056195484}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5788320032687528827}
+        m_TargetAssemblyTypeName: CheatMenuScript, Assembly-CSharp
+        m_MethodName: ChangeIslandType
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Snow
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &150934906568053193
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +391,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6027759393621644696}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5788320032687528827}
+        m_TargetAssemblyTypeName: CheatMenuScript, Assembly-CSharp
+        m_MethodName: InstantiateWapens
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: heavy Pistol
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &408504423010650062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,7 +1193,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1226633416032704440}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5788320032687528827}
+        m_TargetAssemblyTypeName: CheatMenuScript, Assembly-CSharp
+        m_MethodName: ChangeIslandType
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Dessert
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1151413765360062091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,6 +1368,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 647944929625560392}
+  - component: {fileID: 5788320032687528827}
   m_Layer: 5
   m_Name: Cheatmenu
   m_TagString: Untagged
@@ -1365,6 +1402,19 @@ RectTransform:
   m_AnchoredPosition: {x: 1331.1243, y: -318}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5788320032687528827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473169008251209989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b3e0bf43ab89044a891137463d471ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponManager: {fileID: 0}
 --- !u!1 &1608788371391472322
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,7 +2055,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4392428942367683264}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5788320032687528827}
+        m_TargetAssemblyTypeName: CheatMenuScript, Assembly-CSharp
+        m_MethodName: InstantiateWapens
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: light machine gun
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2223332160360751225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2880,7 +2942,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1539363490009105980}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5788320032687528827}
+        m_TargetAssemblyTypeName: CheatMenuScript, Assembly-CSharp
+        m_MethodName: InstantiateWapens
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: plasma rifle
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2941504260945544247
 GameObject:
   m_ObjectHideFlags: 0
@@ -3486,7 +3560,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8169264060971902463}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5788320032687528827}
+        m_TargetAssemblyTypeName: CheatMenuScript, Assembly-CSharp
+        m_MethodName: InstantiateWapens
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: assault rifle
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3362809476728511846
 GameObject:
   m_ObjectHideFlags: 0
@@ -3893,7 +3979,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 459344943024894263}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5788320032687528827}
+        m_TargetAssemblyTypeName: CheatMenuScript, Assembly-CSharp
+        m_MethodName: InstantiateWapens
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: sawed off shotgun
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3833071982635495840
 GameObject:
   m_ObjectHideFlags: 0
@@ -4151,7 +4249,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4401540632159133332}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5788320032687528827}
+        m_TargetAssemblyTypeName: CheatMenuScript, Assembly-CSharp
+        m_MethodName: InstantiateWapens
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: shotgun
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4181070392161740857
 GameObject:
   m_ObjectHideFlags: 0
@@ -4478,7 +4588,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8053427272702097049}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5788320032687528827}
+        m_TargetAssemblyTypeName: CheatMenuScript, Assembly-CSharp
+        m_MethodName: InstantiateWapens
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Vecter
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4810102437220898964
 GameObject:
   m_ObjectHideFlags: 0
@@ -5217,7 +5339,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6632440730006314682}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5788320032687528827}
+        m_TargetAssemblyTypeName: CheatMenuScript, Assembly-CSharp
+        m_MethodName: InstantiateWapens
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: adam-8 shotgun
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5538531694548409730
 GameObject:
   m_ObjectHideFlags: 0
@@ -5565,7 +5699,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4410308036254770877}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5788320032687528827}
+        m_TargetAssemblyTypeName: CheatMenuScript, Assembly-CSharp
+        m_MethodName: InstantiateWapens
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: RocketLauncher
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5847640131276971324
 GameObject:
   m_ObjectHideFlags: 0
@@ -13981,7 +14127,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2224037797502537535}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5788320032687528827}
+        m_TargetAssemblyTypeName: CheatMenuScript, Assembly-CSharp
+        m_MethodName: ChangeIslandType
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Standard
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6390059127283448490
 GameObject:
   m_ObjectHideFlags: 0
@@ -14238,7 +14396,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2180313085572227105}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5788320032687528827}
+        m_TargetAssemblyTypeName: CheatMenuScript, Assembly-CSharp
+        m_MethodName: InstantiateWapens
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: bolt acr
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6502999215727339136
 GameObject:
   m_ObjectHideFlags: 0
@@ -15337,7 +15507,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8722717130394732697}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5788320032687528827}
+        m_TargetAssemblyTypeName: CheatMenuScript, Assembly-CSharp
+        m_MethodName: InstantiateWapens
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: pistol
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7504351198153242061
 GameObject:
   m_ObjectHideFlags: 0
@@ -16237,7 +16419,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8355623461632432994}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5788320032687528827}
+        m_TargetAssemblyTypeName: CheatMenuScript, Assembly-CSharp
+        m_MethodName: InstantiateWapens
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: rail minigun
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8659307679647800893
 GameObject:
   m_ObjectHideFlags: 0
@@ -16707,7 +16901,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2211971508923437886}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5788320032687528827}
+        m_TargetAssemblyTypeName: CheatMenuScript, Assembly-CSharp
+        m_MethodName: ChangeIslandType
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Autumn
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8961930070224772574
 GameObject:
   m_ObjectHideFlags: 0

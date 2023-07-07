@@ -520,6 +520,7 @@ MonoBehaviour:
   xpOnDeath: 10
   healthType: 1
   deathSplash: {fileID: 0}
+  dropChance: 25
   lootTable:
     list: []
   enemyStats: {fileID: 0}
@@ -2027,6 +2028,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1661395344589911478}
     m_Modifications:
+    - target: {fileID: 762167719889002944, guid: ef56a2f2cd3fa3440a741b8c576ae6cd,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 762167719889002944, guid: ef56a2f2cd3fa3440a741b8c576ae6cd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 762167719889002944, guid: ef56a2f2cd3fa3440a741b8c576ae6cd,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6155701161637726244, guid: ef56a2f2cd3fa3440a741b8c576ae6cd,
         type: 3}
       propertyPath: m_IsActive
