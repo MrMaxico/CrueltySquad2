@@ -977,9 +977,10 @@ GameObject:
   - component: {fileID: 4855140160379726397}
   - component: {fileID: 4382034197627633684}
   - component: {fileID: 1683894618420592019}
+  - component: {fileID: 3463854164570359119}
   m_Layer: 0
   m_Name: HiveQueen
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1136,11 +1137,12 @@ MonoBehaviour:
   maxShield: 0
   xpOnDeath: 40
   healthType: 0
-  deathSplash: {fileID: 0}
-  gunsToDropOnKill: []
+  deathSplash: {fileID: 7051397275747083860, guid: 1fe6ba5d9f848c7478ca5eeb3b81fea4,
+    type: 3}
+  dropChance: 100
   lootTable:
     list: []
-  enemyStats: {fileID: 0}
+  enemyStats: {fileID: 3463854164570359119}
   damageEffect: {fileID: 0}
   healthBar: {fileID: 0}
   maxHealthText: {fileID: 0}
@@ -1152,6 +1154,11 @@ MonoBehaviour:
   inCombat: 0
   inCombatShieldRegenDelay: 0
   timeOutOfCombat: 0
+  godMode: 0
+  propDestroyParticle: {fileID: 0}
+  explosionRadius: 0
+  explosionForce: 0
+  explosionDamage: 0
 --- !u!114 &4855140160379726397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1164,11 +1171,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fccfb354b2db77d4abe4c49b412d26f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyType: 1
+  enemyType: 4
   generator: {fileID: 0}
   spawner: {fileID: 0}
   player: {fileID: 0}
-  enemyStats: {fileID: 0}
+  enemyStats: {fileID: 3463854164570359119}
   speed: 8
   angry: 0
   followDistance: 30
@@ -1181,10 +1188,10 @@ MonoBehaviour:
   attackDistanceMultiplyer: 1.5
   attackSpeed: 2
   attackTimer: 0
-  spitDistance: 0
-  spitSpeed: 0
-  flyEnemyFlightHeight: 0.5
-  renderer: {fileID: 0}
+  spitDistance: 15
+  spitSpeed: 1
+  flyEnemyFlightHeight: 3
+  renderer: {fileID: 7884611804140094242}
   activeIdle: 0
 --- !u!114 &4382034197627633684
 MonoBehaviour:
@@ -1219,6 +1226,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterAttack: {fileID: 0}
   monsterAttack2: {fileID: 0}
+--- !u!114 &3463854164570359119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8062137945334453427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e2a361b76a4ae42aaad103dee8bd67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Hive Queen
+  damage: 50
+  health: 400
 --- !u!1 &8471733585719152637
 GameObject:
   m_ObjectHideFlags: 0
