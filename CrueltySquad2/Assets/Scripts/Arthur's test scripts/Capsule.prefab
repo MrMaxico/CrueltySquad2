@@ -470,6 +470,7 @@ MonoBehaviour:
   maxSlopeAngle: 90
   uiSlot1: {fileID: 1844592311619969128}
   uiSlot2: {fileID: 3227193554107765751}
+  swimmingUI: {fileID: 4438468881413096434}
 --- !u!114 &1725525705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2508,6 +2509,12 @@ GameObject:
 --- !u!1 &4278806424813666656 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7779756559399653193, guid: ef56a2f2cd3fa3440a741b8c576ae6cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 5806934987431579177}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4438468881413096434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7858494878544907739, guid: ef56a2f2cd3fa3440a741b8c576ae6cd,
     type: 3}
   m_PrefabInstance: {fileID: 5806934987431579177}
   m_PrefabAsset: {fileID: 0}

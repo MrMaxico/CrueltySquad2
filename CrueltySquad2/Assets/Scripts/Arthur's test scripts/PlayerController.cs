@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour {
     public float maxSlopeAngle;
     public GameObject uiSlot1;
     public GameObject uiSlot2;
+    public GameObject swimmingUI;
 
     // Update is called once per frame
     private void Start() {
@@ -57,6 +58,7 @@ public class PlayerController : MonoBehaviour {
         if(other.gameObject.tag == "Water") {
             rb.velocity = new Vector3(0, 0, 0);
             inWater = true;
+            swimmingUI.SetActive(true);
         }
     }
     private void OnTriggerExit(Collider other) {
@@ -66,6 +68,7 @@ public class PlayerController : MonoBehaviour {
         if (other.gameObject.tag == "Water") {
             rb.velocity = new Vector3(0, 0, 0);
             inWater = false;
+            swimmingUI.SetActive(false);
         }
     }
     void Update() {
