@@ -40,7 +40,8 @@ public class GunData : MonoBehaviour {
 
     // Other gun-related variables and functions can be added here
     public void Start() {
-        if (gameObject != GameObject.FindGameObjectWithTag("WeaponManager").GetComponent<WeaponManager>().newWeapons[0] && gameObject != GameObject.FindGameObjectWithTag("WeaponManager").GetComponent<WeaponManager>().newWeapons[1]) {
+        if (gameObject != GameObject.FindGameObjectWithTag("WeaponManager").GetComponent<WeaponManager>().newWeapons[0] && 
+            gameObject != GameObject.FindGameObjectWithTag("WeaponManager").GetComponent<WeaponManager>().newWeapons[1]) {
             for (int i = 0; i < Teleporter.islandNumber - 1; i++) {
                 damagePerBullet += 0.2f * damagePerBullet;
             }

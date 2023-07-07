@@ -11886,7 +11886,7 @@ MonoBehaviour:
   buttonClick: {fileID: 6146592448751940352}
   buttonHover: {fileID: 6921898652333705584}
   audioMixer: {fileID: 24100000, guid: dd9152d01f3b26b4d8bf6b6a6ca11e3d, type: 2}
-  resolutionsDropdown: {fileID: 0}
+  resolutionsDropdown: {fileID: 2033167514736518460}
 --- !u!114 &7941243894375405627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14937,8 +14937,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 214311909392633077}
   m_HandleRect: {fileID: 762167719889002944}
   m_Direction: 2
-  m_Value: 1.0000018
-  m_Size: 0.6393645
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -16086,7 +16086,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.9283981, y: 27.517458}
+  m_AnchoredPosition: {x: -2.9283981, y: -107.932526}
   m_SizeDelta: {x: 192.7589, y: 727.4411}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8340556431324028249
@@ -17463,6 +17463,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+--- !u!114 &2033167514736518460 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4212111777163842351, guid: 74d1e6d55dc75bd41a55dfc00d65deaa,
+    type: 3}
+  m_PrefabInstance: {fileID: 2757098305743549971}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2033167516278905174 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4212111777766715205, guid: 74d1e6d55dc75bd41a55dfc00d65deaa,
