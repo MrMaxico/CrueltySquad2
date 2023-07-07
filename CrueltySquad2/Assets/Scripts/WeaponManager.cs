@@ -18,7 +18,9 @@ public class WeaponManager : MonoBehaviour {
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
-        StartCoroutine(LoadingDelay());
+        if (Teleporter.islandNumber > 1) {
+            StartCoroutine(LoadingDelay());
+        }
     }
 
     public void LoadWeapon(string weaponName, int slotIndex) {
@@ -35,7 +37,6 @@ public class WeaponManager : MonoBehaviour {
                 pickUp.secondaryHolder.gameObject.SetActive(false);
                 pickUp.primaryholder.gameObject.SetActive(true);
             } else if (slotIndex == 1) {
-                Debug.Log("StinkBil");
                 pickUp.holder = pickUp.secondaryHolder;
                 pickUp.holdingPrimary = false;
                 pickUp.holdingSecondary = true;
@@ -48,7 +49,7 @@ public class WeaponManager : MonoBehaviour {
         }
     }
 
-    private GameObject FindWeaponPrefab(string weaponName) {
+    public GameObject FindWeaponPrefab(string weaponName) {
         // Find the weapon prefab in the list based on its name
         foreach (GameObject weaponPrefab in weaponPrefabs) {
             if (weaponPrefab.GetComponent<GunData>().gunName == weaponName) {
