@@ -53,9 +53,9 @@ public class PauzeScript : MonoBehaviour
         gameIsPaused = false;
         SceneManager.LoadScene("MainMenu");
         //FindObjectOfType<AudioManagerScript>().StopPlaying("DefenceSetupMusic");
-       // FindObjectOfType<AudioManagerScript>().StopPlaying("WaveMusic1");
-       // FindObjectOfType<AudioManagerScript>().StopPlaying("WaveMusic2");
-       // FindObjectOfType<AudioManagerScript>().StopPlaying("MamaSquidMusic");
+        //FindObjectOfType<AudioManagerScript>().StopPlaying("WaveMusic1");
+        //FindObjectOfType<AudioManagerScript>().StopPlaying("WaveMusic2");
+        //FindObjectOfType<AudioManagerScript>().StopPlaying("MamaSquidMusic");
     }
 
     public void RestartGame()
@@ -65,6 +65,7 @@ public class PauzeScript : MonoBehaviour
         Time.timeScale = 1f;
         Teleporter.islandNumber = 1;
         Cursor.lockState = CursorLockMode.Locked;
+        gameIsPaused = false;
         Cursor.visible = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         //FindObjectOfType<AudioManagerScript>().Play("DefenceSetupMusic");
