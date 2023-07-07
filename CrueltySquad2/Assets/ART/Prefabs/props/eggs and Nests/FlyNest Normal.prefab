@@ -259,6 +259,8 @@ MonoBehaviour:
   preperationTime: 10
   spawnInterval: 4
   onDeathEnemySpawnAmount: 10
+  larva: {fileID: 8814888807458509711, guid: 5a1e8a05387e7ea428fced48d87b290f, type: 3}
+  larvaAmount: 10
   generator: {fileID: 0}
 --- !u!114 &6303953448152420848
 MonoBehaviour:
@@ -279,6 +281,7 @@ MonoBehaviour:
   xpOnDeath: 20
   healthType: 2
   deathSplash: {fileID: 0}
+  dropChance: 25
   lootTable:
     list: []
   enemyStats: {fileID: 0}
@@ -293,11 +296,12 @@ MonoBehaviour:
   inCombat: 0
   inCombatShieldRegenDelay: 0
   timeOutOfCombat: 0
+  godMode: 0
   propDestroyParticle: {fileID: 7051397275747083860, guid: 164c25490eee22144972fb6bacc97839,
     type: 3}
   explosionRadius: 0
   explosionForce: 0
-  exposionDamage: 0
+  explosionDamage: 0
 --- !u!95 &8105229620461105695
 Animator:
   serializedVersion: 5
