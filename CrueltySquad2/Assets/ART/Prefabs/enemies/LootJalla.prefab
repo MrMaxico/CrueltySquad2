@@ -325,6 +325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4717707236556957180}
+  - component: {fileID: 392886667250252291}
   m_Layer: 0
   m_Name: LootJalla
   m_TagString: Untagged
@@ -354,6 +355,20 @@ Transform:
   m_Father: {fileID: 5377288689930834558}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &392886667250252291
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939282154617127786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  m_Radius: 0.10133425
+  m_Height: 0.5500001
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.06, z: 0.1}
 --- !u!1 &969208885270033901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,7 +1200,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5377288689930834558}
-  - component: {fileID: 2566184088057076486}
   - component: {fileID: 6368172830985461527}
   - component: {fileID: -196825257648440110}
   - component: {fileID: 1731672958292391879}
@@ -1216,20 +1230,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &2566184088057076486
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4743459456124045508}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!114 &6368172830985461527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1369,7 +1369,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 4743459456124045508}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.10133425
   m_Height: 0.5500001
   m_Direction: 2
@@ -1385,7 +1385,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -1954,6 +1954,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9055392846052577642}
+  - component: {fileID: 6078504020251733595}
   m_Layer: 0
   m_Name: spine
   m_TagString: Untagged
@@ -1989,6 +1990,20 @@ Transform:
   m_Father: {fileID: 4717707236556957180}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &6078504020251733595
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7551696736745276582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.10133425
+  m_Height: 0.5500001
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.06, z: 0}
 --- !u!1 &8015273759579503707
 GameObject:
   m_ObjectHideFlags: 0
