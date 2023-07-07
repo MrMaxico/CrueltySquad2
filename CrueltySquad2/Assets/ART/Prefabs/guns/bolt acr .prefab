@@ -5806,8 +5806,7 @@ MonoBehaviour:
   gunType: 1
   gunStatUI: {fileID: 807529276392142240}
   lootBeam: {fileID: 8047443977401946181}
-  shootingSound: {fileID: 4186836729989307486, guid: 824231a585538834c831c28a1ebe67b7,
-    type: 3}
+  shootingSound: {fileID: 5320253641800371827}
   maxPitch: 0.8
   minPitch: 1
   reloadSound: {fileID: 2529497307774888471}
@@ -5846,7 +5845,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -5655002689109311560, guid: dd9152d01f3b26b4d8bf6b6a6ca11e3d,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 90f9041bfbda20e4aa1f9bfaebfd4818, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f1fffd9280acaba44b35216d1db12ac4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -16625,7 +16624,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 44ddd8d2245526349b9ab9604e6dec7a, type: 2}
+  - {fileID: 2100000, guid: fdd323fe5c9f4964fa0605706e0830a8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21703,7 +21702,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5005960817140178731
 RectTransform:
   m_ObjectHideFlags: 0
