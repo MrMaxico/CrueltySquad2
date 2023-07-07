@@ -28,6 +28,7 @@ public class GunData : MonoBehaviour {
     public float minPitch = 1.0f;
     public AudioSource reloadSound;
     public ParticleSystem muzzleFlash;
+    public int ogislandNummer;
     [Header("Settings for shotguns", order = 0)]
     public float shotgunSpreadAngle = 15f;
     public float shotgunPelletCount = 15f;
@@ -40,14 +41,20 @@ public class GunData : MonoBehaviour {
 
     // Other gun-related variables and functions can be added here
     public void Start() {
-        if (gameObject != GameObject.FindGameObjectWithTag("WeaponManager").GetComponent<WeaponManager>().newWeapons[0] && 
-            gameObject != GameObject.FindGameObjectWithTag("WeaponManager").GetComponent<WeaponManager>().newWeapons[1]) {
-            for (int i = 0; i < Teleporter.islandNumber - 1; i++) {
+        ogislandNummer = Teleporter.islandNumber;
+        ApplyGunData(ogislandNummer);
+    }
+    public void ApplyGunData(int islandNummer) {
+        ogislandNummer = islandNummer;
+        if (gameObject != GameObject.FindGameObjectWithTag("WeaponManager").GetComponent<WeaponManager>().newWeapons[0] && gameObject != GameObject.FindGameObjectWithTag("WeaponManager").GetComponent<WeaponManager>().newWeapons[1]) {
+            for (int i = 0; i < islandNummer - 1; i++) {
                 damagePerBullet += 0.2f * damagePerBullet;
+                Debug.Log("kaas");
             }
         }
         gunStatUI.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = gunName.ToString(); //Weapon name
-        gunStatUI.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Lvl. " + Teleporter.islandNumber.ToString(); //make Level of gun
+        gunStatUI.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Lvl. " + islandNummer.ToString(); //make Level of gun
+        Debug.Log("kes");
         gunStatUI.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = " "; //make modifier name
         if (gunType == GunType.Shotgun) {
             int result = 5 * 15;

@@ -6,7 +6,8 @@ public class WeaponManager : MonoBehaviour {
     public GameObject[] weaponPrefabs;
     public string[] currentWeapons = new string[2];
     public GameObject[] newWeapons = new GameObject[2];
-
+    public int primaryGunIslandNumber;
+    public int secondaryGunIslandNumber;
     public PickUpController pickUp;
 
     void OnEnable() {
@@ -36,12 +37,14 @@ public class WeaponManager : MonoBehaviour {
                 pickUp.holdingSecondary = false;
                 pickUp.secondaryHolder.gameObject.SetActive(false);
                 pickUp.primaryholder.gameObject.SetActive(true);
+                newWeapons[0].GetComponent<GunData>().ApplyGunData(primaryGunIslandNumber);
             } else if (slotIndex == 1) {
                 pickUp.holder = pickUp.secondaryHolder;
                 pickUp.holdingPrimary = false;
                 pickUp.holdingSecondary = true;
                 pickUp.secondaryHolder.gameObject.SetActive(true);
                 pickUp.primaryholder.gameObject.SetActive(false);
+                newWeapons[0].GetComponent<GunData>().ApplyGunData(secondaryGunIslandNumber);
             }
             pickUp.PickUpGun(newWeapons[slotIndex].transform);
         } else {
